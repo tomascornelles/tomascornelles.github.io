@@ -6,6 +6,8 @@ module.exports = function(eleventyConfig) {
     components: "../_includes/layouts/**/*.webc"
   });
 
+  eleventyConfig.addPassthroughCopy({ "_includes/assets": "assets" });
+
   eleventyConfig.setServerOptions({
     watch: ['dist/**/*.*'],
   });
