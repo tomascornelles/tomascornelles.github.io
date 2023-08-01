@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="beige">
+    <title @text="title || metadata.title"></title>
+
+    <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16">
+
+    <link rel="stylesheet" href="../../assets/main.css">
+    <style webc:keep @raw="getBundle('css')"></style>
+  </head>
+
+  <body @raw="content">
+</html>
