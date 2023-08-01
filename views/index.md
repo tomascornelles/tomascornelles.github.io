@@ -1,6 +1,6 @@
 ---
 layout: "home.webc"
-title: Index - Frontend Developer
+title: Index
 ---
 
 ## WebC
