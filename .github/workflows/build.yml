@@ -1,4 +1,4 @@
-name: NodeJS with Webpack
+name: 11ty build with npm
 
 on:
   push:
