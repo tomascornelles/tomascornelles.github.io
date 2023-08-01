@@ -9,19 +9,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install dependencies & build
-        run: |
-          npm ci
-          npm run serve
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          publish_dir: ./docs
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Cypress runTests
         uses: cypress-io/github-action@v5
         with:
-          test: npm run test
+          test: |
+            npm ci
+            npm run server
+            npm run test
           wait-on: "http://localhost:8080"
