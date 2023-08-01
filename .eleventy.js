@@ -16,7 +16,7 @@ module.exports = function(eleventyConfig) {
       includes: "../_includes",
       layouts: "../_includes/layouts",
       input: "views",
-      output: "dist"
+      output: "docs" // hack for github pages
     }
   }
 };
