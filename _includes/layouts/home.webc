@@ -3,20 +3,3 @@ layout: components/base.webc
 ---
 
 <main @raw="content"></main>
-<div>pepe</div>
-
-<article>
-article
-</article>
-
-<style>
-body {
-background-color: gold;
-font-family: monospace;
-}
-article {
-background-color: white;
-padding: 1em;
-border-radius: 1em
-}
-</style>
