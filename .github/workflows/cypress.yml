@@ -12,8 +12,7 @@ jobs:
       - name: Cypress runTests
         uses: cypress-io/github-action@v5
         with:
-          test: |
+          start: |
             npm ci
             npm run server
             npm run test
-          wait-on: "http://localhost:8080"
