@@ -14,5 +14,5 @@ jobs:
         with:
           start: |
             npm ci
-            npm run server
+            npm run serve
             npm run test
