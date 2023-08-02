@@ -9,7 +9,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "_includes/assets": "assets" });
 
   eleventyConfig.setServerOptions({
-    watch: ['dist/**/*.*'],
+    watch: ['docs/**/*.*'],
   });
 
   // Return your Object options:
@@ -17,7 +17,7 @@ module.exports = function(eleventyConfig) {
     dir: {
       includes: "../_includes",
       layouts: "../_includes/layouts",
-      input: "views",
+      input: "_views",
       output: "docs" // hack for github pages
     }
   }

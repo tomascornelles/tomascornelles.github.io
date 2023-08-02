@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy",
+    "build": "npx @11ty/eleventy && mv docs/404/index.html docs/404.html && rm -rf docs/404",
     "serve": "npx @11ty/eleventy --serve",
     "clean": "rm -rf docs",
-    "dev": "npm run clean & npm run serve",
-    "test": "cypress run"
+    "dev": "npm run clean && npm run serve",
+    "test": "cypress run --quiet"
   },
   "keywords": [],
   "author": "Tomas Cornelles",
