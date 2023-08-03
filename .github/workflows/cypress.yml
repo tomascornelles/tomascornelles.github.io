@@ -11,6 +11,6 @@ jobs:
 
       - name: Cypress runTests
         uses: cypress-io/github-action@v5
-        run: npm i
-        run: npm run dev
-        run: npm run test
+      - run: npm i
+      - run: npm run dev
+      - run: npm run test
