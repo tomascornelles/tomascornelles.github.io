@@ -10,7 +10,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "test": "cypress run --quiet",
-    "move": "rm -rf docs && mv .output/public docs && mv docs/404/index.html docs/404.html && rmdir docs/404"
+    "move": "rm -rf docs && mv .output/public docs && mv docs/404/index.html docs/404.html && rm -rf docs/404",
+    "deploy": "npm run generate && npm run move"
   },
   "keywords": [],
   "author": "Tomas Cornelles",
