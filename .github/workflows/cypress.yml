@@ -8,10 +8,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      - name: Cypress runTests
+        uses: cypress-io/github-action@v5
         with:
           start: |
             npm i
             npm run dev
-
-      - name: Cypress runTests
-        uses: cypress-io/github-action@v5
