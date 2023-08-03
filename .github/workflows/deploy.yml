@@ -16,5 +16,4 @@ jobs:
           node-version: 18.x
       - run: npm i
       - run: npm run generate
-      - name: Deploy
       - run: npm move
