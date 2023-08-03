@@ -11,5 +11,10 @@
     <style webc:keep @raw="getBundle('css')"></style>
   </head>
 
-  <body @raw="content">
+  <body @raw="content"></body>
+
+  <script>
+const pepe = 1;
+pepe = 2;
+  </script>
 </html>
