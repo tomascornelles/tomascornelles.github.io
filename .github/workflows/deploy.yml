@@ -14,4 +14,4 @@ jobs:
           node-version: 18.x
       - run: npm i
       - run: npm run generate
-      - run: npm move
+      - run: npm run move
