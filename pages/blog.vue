@@ -1,6 +1,5 @@
 <template>
-  <Header />
   <h1>
-    Nuxt way
+    Blog
   </h1>
 </template>

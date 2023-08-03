@@ -1,6 +1,5 @@
 <template>
-  <Header />
   <h1>
-    Nuxt way
+    Sobre mi
   </h1>
 </template>

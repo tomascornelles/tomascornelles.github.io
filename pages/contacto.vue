@@ -1,6 +1,5 @@
 <template>
-  <Header />
   <h1>
-    Nuxt way
+    Contacto
   </h1>
 </template>
