@@ -9,7 +9,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test": "cypress run --quiet"
+    "test": "cypress run --quiet",
+    "move": "rm -rf docs && mv .output/public docs"
   },
   "keywords": [],
   "author": "Tomas Cornelles",
@@ -17,7 +18,7 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@types/node": "^18.17.1",
-    "nuxt": "^3.6.5",
-    "cypress": "^12.17.2"
+    "cypress": "^4.2.0",
+    "nuxt": "^3.6.5"
   }
 }
