@@ -20,6 +20,7 @@
     "@nuxt/devtools": "latest",
     "@types/node": "^18.17.1",
     "cypress": "^12.17.3",
-    "nuxt": "^3.6.5"
+    "nuxt": "^3.6.5",
+    "sass": "^1.64.2"
   }
 }
