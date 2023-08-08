@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "move404": "mv docs/404/index.html docs/404.html && rm -rf docs/404",
-    "build": "npx @11ty/eleventy && npm run move404",
-    "serve": "npx @11ty/eleventy --serve",
     "clean": "rm -rf docs",
-    "dev": "npm run clean && npm run serve",
+    "build": "run clean && npx @11ty/eleventy && npm run move404",
+    "serve": "npm run clean && npx @11ty/eleventy --serve",
     "test": "cypress run --quiet"
   },
   "keywords": [],

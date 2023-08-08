@@ -8,14 +8,15 @@
 
   <link rel="icon" type="image/png" href="/assets/images/favicon-16x16.png" sizes="16x16">
 
-  <link rel="stylesheet" href="../../assets/styles/main.css">
   <style webc:keep @raw="getBundle('css')"></style>
 </head>
 
-<body @raw="content"></body>
-<script>
-  const pepe = 1;
-  pepe = 2;
-</script>
+<body>
+  <main @raw="content"></main>
 
+  <script webc:keep>
+    const pepe = 'Pepe';
+   alert(pepe);
+  </script>
+</body>
 </html>
