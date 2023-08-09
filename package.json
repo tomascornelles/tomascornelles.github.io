@@ -6,7 +6,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate --dest docs",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "test": "cypress run --quiet",
