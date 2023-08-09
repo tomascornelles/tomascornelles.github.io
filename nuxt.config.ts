@@ -2,7 +2,8 @@
 const path = require('path');
 
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
+  ssr: false,
   nitro: {
     output: {
       publicDir: path.join(__dirname, 'docs')
