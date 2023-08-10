@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="beige">
+  <title>Index</title>
+
+  
+  <style>ul {
+  background-color: lightblue;
+}
+html {
+      font-size: 10px;
+    }
+    
+    body {
+      font-family: monospace;
+      font-size: 1.5rem;
+    }</style>
+  
+  <link rel="icon" href="/assets/images/favicon.svg">
+</head>
+
+<body>
+  <main><tc-menu><ul>
+  <li>Hola</li>
+  <li>Mundo</li>
+</ul>
+
+
+</tc-menu>
+
+<main><h2>WebC</h2>
+<p>The web components way</p>
+</main>
+</main>
+
+  <tc-favicon>
+</tc-favicon>
+
+  <script>class TcFavicon extends HTMLElement {
+    connectedCallback() {
+      const link = document.querySelector("link")
+
+      const icons = {
+        6: '🌈',
+        8: '🏖️',
+        10: '🎃',
+        12: '🎄',
+      }
+
+      const getToday = () => new Date();
+
+      const currentMonth = () => getToday().getMonth() + 1;
+
+      const favicon = (() => {
+        if (icons[currentMonth()]){
+          link.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>${icons[currentMonth()]}</text></svg>`
+        }
+      })();
+    }
+  }
+
+  window.customElements.define("tc-favicon", TcFavicon);</script>
+
+
+</body>
+</html>

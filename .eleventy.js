@@ -3,13 +3,15 @@ const pluginWebc = require("@11ty/eleventy-plugin-webc");
 module.exports = function(eleventyConfig) {
   // Add support for WebC
   eleventyConfig.addPlugin(pluginWebc, {
-    components: "../_includes/layouts/**/*.webc"
+    components: "_includes/components/**/*.webc"
   });
 
-  // eleventyConfig.addPassthroughCopy({ "_includes/assets": "assets" });
+    eleventyConfig.addWatchTarget("_includes/components/**/*.webc");
 
+  eleventyConfig.addPassthroughCopy({ "_includes/assets": "assets" });
+  
   eleventyConfig.setServerOptions({
-    watch: ['docs/**/*.*'],
+    watch: ['docs/**/*.*', '_includes/components/**/*.webc'],
   });
 
   // Return your Object options:

@@ -1,0 +1,10 @@
+<ul>
+  <li>Hola</li>
+  <li>Mundo</li>
+</ul>
+
+<style>
+ul {
+  background-color: lightblue;
+}
+</style>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="beige">
+  <title @text="title || metadata.title"></title>
+
+  <style>
+    html {
+      font-size: 10px;
+    }
+    
+    body {
+      font-family: monospace;
+      font-size: 1.5rem;
+    }
+  </style>
+  <style @raw="getBundle('css')" webc:keep></style>
+  
+  <link rel="icon" href="/assets/images/favicon.svg">
+</head>
+
+<body>
+  <main @raw="content"></main>
+
+  <tc-favicon></tc-favicon>
+
+  <script @raw="getBundle('js', 'defer')" webc:keep></script>
+</body>
+</html>

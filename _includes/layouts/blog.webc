@@ -1,0 +1,21 @@
+---
+layout: base.webc
+---
+
+<tc-menu></tc-menu>
+
+<main @raw="content"></main>
+
+<article webc:for="post of collections.blog">
+  <h2><a :href="post.url" @text="post.data.title"></a></h2>
+  <p @html="post.content"></p>
+</article>
+
+<style>
+article {
+  border: 4px solid black;
+  border-radius: 2px;
+  box-shadow: 0 4px 4px rgba(0,0,0,.5);
+  padding: 8px;
+}
+</style>
