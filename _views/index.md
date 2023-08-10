@@ -3,6 +3,6 @@ layout: "home.webc"
 title: Index
 ---
 
-## WebC
+# WebC
 
 The web components way

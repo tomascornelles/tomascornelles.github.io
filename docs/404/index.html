@@ -5,20 +5,68 @@
   <meta name="theme-color" content="beige">
   <title>Index</title>
 
+  <link rel="icon" href="/assets/images/favicon.svg">
+
   
-  <style>ul {
-  background-color: lightblue;
-}
-html {
+
+  <style>@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+    :root {
+      --font-size: 1.5rem;
+      --font-family: 'Source Code Pro', monospace;
+      --gap: 8px;
+      --color-bg: beige;
+      --color-bg-alt: white;
+      --color-fg: black;
+      --color-accent: crimson;
+    }
+
+    html {
       font-size: 10px;
     }
     
     body {
-      font-family: monospace;
+      font-family: var(--font-family);
       font-size: 1.5rem;
+      color: var(--color-fg);
+      background-color: var(--color-bg);
+      padding: 0;
+      margin: 0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: var(--gap);
+    }
+
+    h1, h2, h3 {
+      font-weight: 100;
+      text-shadow: 0 1px 0 white;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: calc(var(--font-size) * 3);
+      margin-block-end: var(--gap);
+    }
+
+    h2 {
+      font-size: calc(var(--font-size) * 2);
+    }
+
+    h3 {
+      font-size: calc(var(--font-size) * 1.5);
+    }
+    
+    a, [role=link] {
+      color: var(--color-accent);
+      cursor: pointer;
+      text-decoration: underline;
     }</style>
+  <style>ul {
+  background-color: lightblue;
+}</style>
   
-  <link rel="icon" href="/assets/images/favicon.svg">
 </head>
 
 <body>

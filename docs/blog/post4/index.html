@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="es">
-
 <head>
   <meta charset="utf-8">
   <meta name="theme-color" content="beige">
-  <title @text="title || metadata.title"></title>
+  <title>Post 4</title>
 
   <link rel="icon" href="/assets/images/favicon.svg">
 
-  <style webc:bucket="base">
-    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+  
+
+  <style>@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
     :root {
       --font-size: 1.5rem;
       --font-family: 'Source Code Pro', monospace;
@@ -62,19 +62,45 @@
       color: var(--color-accent);
       cursor: pointer;
       text-decoration: underline;
-    }
-  </style>
-
-  <style @raw="getBundle('css', 'base')" webc:keep></style>
-  <style @raw="getBundle('css')" webc:keep></style>
+    }</style>
+  <style></style>
   
 </head>
 
 <body>
-  <main @raw="content"></main>
+  <main><h1>Post 4</h1>
+<article><p>Lorem <strong>ipsum</strong></p>
+</article>
+</main>
 
-  <tc-favicon></tc-favicon>
+  <tc-favicon>
+</tc-favicon>
 
-  <script @raw="getBundle('js', 'defer')" webc:keep></script>
+  <script>class TcFavicon extends HTMLElement {
+    connectedCallback() {
+      const link = document.querySelector("link")
+
+      const icons = {
+        6: '🌈',
+        8: '🏖️',
+        10: '🎃',
+        12: '🎄',
+      }
+
+      const getToday = () => new Date();
+
+      const currentMonth = () => getToday().getMonth() + 1;
+
+      const favicon = (() => {
+        if (icons[currentMonth()]){
+          link.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>${icons[currentMonth()]}</text></svg>`
+        }
+      })();
+    }
+  }
+
+  window.customElements.define("tc-favicon", TcFavicon);</script>
+
+
 </body>
 </html>

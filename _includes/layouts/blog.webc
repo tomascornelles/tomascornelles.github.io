@@ -2,20 +2,80 @@
 layout: base.webc
 ---
 
-<tc-menu></tc-menu>
+<tc-menu webc:nokeep></tc-menu>
 
-<main @raw="content"></main>
+<main @raw="content" webc:nokeep></main>
 
-<article webc:for="post of collections.blog">
-  <h2><a :href="post.url" @text="post.data.title"></a></h2>
-  <p @html="post.content"></p>
-</article>
+<section>
+  <article webc:for="post of collections.blog">
+    <img :src="post.data.image">
+    <h2>
+      <a :href="post.url" 
+         @text="post.data.title"></a>
+    </h2>
+    <div @html="post.content"></div>
+  </article>
+</section>
 
 <style>
-article {
-  border: 4px solid black;
-  border-radius: 2px;
-  box-shadow: 0 4px 4px rgba(0,0,0,.5);
-  padding: 8px;
-}
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(4 * var(--gap));
+  }
+  article {
+    border-radius: calc(var(--gap) / 2);
+    box-shadow: 0 var(--gap) var(--gap) rgba(0,0,0,.1);
+    padding: calc(var(--gap) * 2);
+    transition: all .4s ease;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--color-bg-alt);
+    position: relative;
+    overflow: hidden;
+  }
+
+  article > * {
+    position: relative;
+  }
+
+  article > img {
+    position: absolute;
+    inset-inline: 50%;
+    inset-block: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.1;
+  }
+
+  article > div {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+  }
+
+  article:nth-child(n+2) > div {
+    -webkit-line-clamp: 2;
+  }
+
+  article:nth-child(n+4) {
+    width: 100%;
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  article:nth-child(n+4) > div {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    article:nth-child(n+2) {
+      width: calc(50% - 2 * var(--gap));
+    }
+
+    article:nth-child(-n+3):hover {
+    }
+  }
+
 </style>
