@@ -6,7 +6,7 @@
   "scripts": {
     "move404": "mv docs/404/index.html docs/404.html && rm -rf docs/404",
     "clean": "rm -rf docs",
-    "build": "run clean && npx @11ty/eleventy && npm run move404",
+    "build": "npm run clean && npx @11ty/eleventy && npm run move404",
     "dev": "npx @11ty/eleventy --serve",
     "test": "cypress run --quiet"
   },

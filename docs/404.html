@@ -10,14 +10,15 @@
   
 
   <style>@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+
     :root {
       --font-size: 1.5rem;
       --font-family: 'Source Code Pro', monospace;
       --gap: 8px;
-      --color-bg: beige;
+      --color-bg: #eeeeee;
       --color-bg-alt: white;
       --color-fg: black;
-      --color-accent: crimson;
+      --color-accent: orange;
     }
 
     html {
@@ -40,28 +41,29 @@
     }
 
     h1, h2, h3 {
-      font-weight: 100;
-      text-shadow: 0 1px 0 white;
+      font-weight: 700;
       margin: 0;
+      color: var(--color-accent);
     }
 
     h1 {
-      font-size: calc(var(--font-size) * 3);
+      font-size: calc(var(--font-size) * 5);
       margin-block-end: var(--gap);
     }
 
     h2 {
-      font-size: calc(var(--font-size) * 2);
+      font-size: calc(var(--font-size) * 3);
     }
 
     h3 {
-      font-size: calc(var(--font-size) * 1.5);
+      font-size: calc(var(--font-size) * 2);
     }
     
     a, [role=link] {
-      color: var(--color-accent);
+      color: var(--color-fg);
       cursor: pointer;
-      text-decoration: underline;
+      text-decoration: none;
+      box-shadow: inset 0 -.5em var(--color-accent);
     }</style>
   <style>ul {
   background-color: lightblue;

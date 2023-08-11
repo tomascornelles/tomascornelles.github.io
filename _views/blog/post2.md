@@ -1,5 +1,6 @@
 ---
 title: Post 2 To delete a branch in Git, you can use the git branch command with the -d or -D flag. 
+image: https://picsum.photos/801
 ---
 
 To delete a branch in Git, you can use the git branch command with the -d or -D flag. Here's how you can do it:
