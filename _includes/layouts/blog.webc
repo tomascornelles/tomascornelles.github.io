@@ -6,14 +6,14 @@ layout: base.webc
 
 <main>
   <section>
-    <article webc:for="post of collections.blog">
+    <tc-card webc:for="post of collections.blog">
       <img :src="post.data.image">
       <h2>
         <a :href="post.url" 
              @text="post.data.title"></a>
       </h2>
       <div @html="post.content"></div>
-    </article>
+    </tc-card>
   </section>
 </main>
 
@@ -24,59 +24,37 @@ layout: base.webc
     gap: calc(4 * var(--gap));
   }
 
-  article {
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: calc(var(--gap) / 2);
-    box-shadow: 0 calc(var(--gap) / 2) calc(var(--gap) / 2) rgba(0,0,0,.1), 0 0 0 1px #dddddd;
-    padding: calc(var(--gap) * 2);
-    transition: all .4s ease;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: var(--color-bg-alt);
-    position: relative;
-    overflow: hidden;
-  }
-
-  article > * {
-    position: relative;
-  }
-
-  article > img {
-    position: absolute;
-    inset-inline: 50%;
-    inset-block: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.25;
-    filter: blur(10px);
-  }
-
-  article > div {
+  tc-card div {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     overflow: hidden;
   }
 
-  article:nth-child(n+2) > div {
+  tc-card:nth-child(n+2) div {
     -webkit-line-clamp: 2;
   }
 
-  article:nth-child(n+4) {
-    width: 100%;
+  tc-card:nth-child(n+4) article {
     padding: 0;
     box-shadow: none;
     background-color: transparent;
   }
 
-  article:nth-child(n+4) > div, 
-  article:nth-child(n+4) > img {
+  tc-card:nth-child(n+4) div, 
+  tc-card:nth-child(n+4) img {
     display: none;
   }
 
   @media (min-width: 768px) {
-    article:nth-child(n+2) {
+    tc-card:nth-child(n+2) {
       width: calc(50% - 2 * var(--gap));
     }
+
+    tc-card:nth-child(n+4) {
+      width: 100%;
+    }
+
   }
 
 </style>

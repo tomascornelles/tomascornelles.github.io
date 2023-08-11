@@ -66,65 +66,44 @@
       box-shadow: inset 0 -.5em var(--color-accent);
     }</style>
   <style>.wez5qpboh header{display:flex;width:100%;justify-content:space-between;align-items:center}.wez5qpboh header>*{width:100%;flex-grow:1}.wez5qpboh header>h1{font-size:calc(var(--font-size)*2);margin-bottom:0}.wez5qpboh header>div{text-align:center;width:calc(var(--gap)*8)}.wez5qpboh header>div a{box-shadow:none}.wez5qpboh ul{margin:0;padding:0;list-style:none;display:flex;justify-content:end;gap:var(--gap)}
+.wdueggzkb{width:100%}.wdueggzkb article{border-top:1px solid rgba(255,255,255,0.25);border-radius:calc(var(--gap)/2);box-shadow:0 calc(var(--gap)/2) calc(var(--gap)/2) rgba(0,0,0,.1),0 0 0 1px #dddddd;padding:calc(var(--gap)*2);transition:all .4s ease;width:100%;box-sizing:border-box;background-color:var(--color-bg-alt);position:relative;overflow:hidden}.wdueggzkb article>*{position:relative}.wdueggzkb article>img{position:absolute;inset-inline:50%;inset-block:50%;transform:translate(-50%,-50%);opacity:0.25;filter:blur(10px)}
 section {
     display: flex;
     flex-wrap: wrap;
     gap: calc(4 * var(--gap));
   }
 
-  article {
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: calc(var(--gap) / 2);
-    box-shadow: 0 calc(var(--gap) / 2) calc(var(--gap) / 2) rgba(0,0,0,.1), 0 0 0 1px #dddddd;
-    padding: calc(var(--gap) * 2);
-    transition: all .4s ease;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: var(--color-bg-alt);
-    position: relative;
-    overflow: hidden;
-  }
-
-  article > * {
-    position: relative;
-  }
-
-  article > img {
-    position: absolute;
-    inset-inline: 50%;
-    inset-block: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.25;
-    filter: blur(10px);
-  }
-
-  article > div {
+  tc-card div {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     overflow: hidden;
   }
 
-  article:nth-child(n+2) > div {
+  tc-card:nth-child(n+2) div {
     -webkit-line-clamp: 2;
   }
 
-  article:nth-child(n+4) {
-    width: 100%;
+  tc-card:nth-child(n+4) article {
     padding: 0;
     box-shadow: none;
     background-color: transparent;
   }
 
-  article:nth-child(n+4) > div, 
-  article:nth-child(n+4) > img {
+  tc-card:nth-child(n+4) div, 
+  tc-card:nth-child(n+4) img {
     display: none;
   }
 
   @media (min-width: 768px) {
-    article:nth-child(n+2) {
+    tc-card:nth-child(n+2) {
       width: calc(50% - 2 * var(--gap));
     }
+
+    tc-card:nth-child(n+4) {
+      width: 100%;
+    }
+
   }</style>
   
 </head>
@@ -150,7 +129,8 @@ section {
 
 <main>
   <section>
-    <article>
+    <tc-card class="wdueggzkb"><article>
+  
       <img src="https://picsum.photos/800/300">
       <h2>
         <a href="/blog/post1/">Post 1</a>
@@ -178,8 +158,13 @@ section {
 <p>This will unstage any changes you have staged and move the HEAD pointer to &lt;commit_hash&gt;, effectively "uncommitting" the commits after that point.</p>
 <p>Always be cautious when using git reset, especially with the --hard option, as it can result in permanent data loss if used improperly. It's recommended to create backups or use branches before performing operations that alter your commit history or working directory.</p>
 </div>
-    </article>
-<article>
+    
+</article>
+
+
+</tc-card>
+<tc-card class="wdueggzkb"><article>
+  
       <img src="https://picsum.photos/801">
       <h2>
         <a href="/blog/post2/">Post 2 To delete a branch in Git, you can use the git branch command with the -d or -D flag.</a>
@@ -197,23 +182,37 @@ section {
 <p>Again, replace branch_name with the name of the branch you want to delete.</p>
 <p>Remember that when you delete a branch, it's usually permanent. So make sure you're certain about deleting the branch before you proceed. If you accidentally delete a branch, it might be more challenging to recover it, especially if it hasn't been merged or backed up elsewhere.</p>
 </div>
-    </article>
-<article>
+    
+</article>
+
+
+</tc-card>
+<tc-card class="wdueggzkb"><article>
+  
       <img src="https://picsum.photos/800">
       <h2>
         <a href="/blog/post3/">Post 3</a>
       </h2>
       <div><p>Lorem <strong>ipsum</strong></p>
 </div>
-    </article>
-<article>
+    
+</article>
+
+
+</tc-card>
+<tc-card class="wdueggzkb"><article>
+  
       <img src="https://picsum.photos/800">
       <h2>
         <a href="/blog/post4/">Post 4</a>
       </h2>
       <div><p>Lorem <strong>ipsum</strong></p>
 </div>
-    </article>
+    
+</article>
+
+
+</tc-card>
   </section>
 </main>
 
