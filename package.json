@@ -4,22 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
     "move404": "mv docs/404/index.html docs/404.html && rm -rf docs/404",
     "clean": "rm -rf docs",
     "build": "npm run clean && npx @11ty/eleventy && npm run move404",
     "dev": "npx @11ty/eleventy --serve",
     "test": "cypress run --quiet"
-=======
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate --dest docs",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "test": "cypress run --quiet",
-    "move": "rm -rf docs && mv .output/public docs && mv docs/404/index.html docs/404.html && rm -rf docs/404",
-    "deploy": "npm run generate && npm run move"
->>>>>>> main
   },
   "keywords": [],
   "author": "Tomas Cornelles",

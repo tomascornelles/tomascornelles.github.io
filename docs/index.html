@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="beige">
+  <title>Index</title>
+
+  <link rel="icon" href="/assets/images/favicon.svg">
+
+  
+
+  <style>@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+
+    :root {
+      --font-size: 1.5rem;
+      --font-family: 'Source Code Pro', monospace;
+      --gap: 8px;
+      --color-bg: #eeeeee;
+      --color-bg-alt: white;
+      --color-fg: black;
+      --color-accent: orange;
+    }
+
+    html {
+      font-size: 10px;
+    }
+    
+    body {
+      font-family: var(--font-family);
+      font-size: 1.5rem;
+      color: var(--color-fg);
+      background-color: var(--color-bg);
+      padding: 0;
+      margin: 0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: var(--gap);
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+      margin: 0;
+      color: var(--color-accent);
+    }
+
+    h1 {
+      font-size: calc(var(--font-size) * 5);
+      margin-block-end: var(--gap);
+    }
+
+    h2 {
+      font-size: calc(var(--font-size) * 3);
+    }
+
+    h3 {
+      font-size: calc(var(--font-size) * 2);
+    }
+    
+    a, [role=link] {
+      color: var(--color-fg);
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: inset 0 -.5em var(--color-accent);
+    }</style>
+  <style>ul {
+  background-color: lightblue;
+}</style>
+  
+</head>
+
+<body>
+  <main><tc-menu><ul>
+  <li>Hola</li>
+  <li>Mundo</li>
+</ul>
+
+
+</tc-menu>
+
+<main><h1>WebC</h1>
+<p>The web components way</p>
+</main>
+</main>
+
+  <tc-favicon>
+</tc-favicon>
+
+  <script>class TcFavicon extends HTMLElement {
+    connectedCallback() {
+      const link = document.querySelector("link")
+
+      const icons = {
+        6: '🌈',
+        8: '🏖️',
+        10: '🎃',
+        12: '🎄',
+      }
+
+      const getToday = () => new Date();
+
+      const currentMonth = () => getToday().getMonth() + 1;
+
+      const favicon = (() => {
+        if (icons[currentMonth()]){
+          link.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>${icons[currentMonth()]}</text></svg>`
+        }
+      })();
+    }
+  }
+
+  window.customElements.define("tc-favicon", TcFavicon);</script>
+
+
+</body>
+</html>

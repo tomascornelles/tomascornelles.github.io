@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="beige">
+  <title>Post 2 To delete a branch in Git, you can use the git branch command with the -d or -D flag.</title>
+
+  <link rel="icon" href="/assets/images/favicon.svg">
+
+  
+
+  <style>@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+
+    :root {
+      --font-size: 1.5rem;
+      --font-family: 'Source Code Pro', monospace;
+      --gap: 8px;
+      --color-bg: #eeeeee;
+      --color-bg-alt: white;
+      --color-fg: black;
+      --color-accent: orange;
+    }
+
+    html {
+      font-size: 10px;
+    }
+    
+    body {
+      font-family: var(--font-family);
+      font-size: 1.5rem;
+      color: var(--color-fg);
+      background-color: var(--color-bg);
+      padding: 0;
+      margin: 0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: var(--gap);
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+      margin: 0;
+      color: var(--color-accent);
+    }
+
+    h1 {
+      font-size: calc(var(--font-size) * 5);
+      margin-block-end: var(--gap);
+    }
+
+    h2 {
+      font-size: calc(var(--font-size) * 3);
+    }
+
+    h3 {
+      font-size: calc(var(--font-size) * 2);
+    }
+    
+    a, [role=link] {
+      color: var(--color-fg);
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: inset 0 -.5em var(--color-accent);
+    }</style>
+  <style></style>
+  
+</head>
+
+<body>
+  <main><h1>Post 2 To delete a branch in Git, you can use the git branch command with the -d or -D flag.</h1>
+<article><p>To delete a branch in Git, you can use the git branch command with the -d or -D flag. Here's how you can do it:</p>
+<p>Delete a Merged Branch:</p>
+<p>If the branch you want to delete has been merged into another branch and you're sure you no longer need it, you can use the -d flag:</p>
+<p>bash</p>
+<p>git branch -d branch_name</p>
+<p>Replace branch_name with the name of the branch you want to delete.</p>
+<p>Force Delete an Unmerged Branch:</p>
+<p>If the branch you want to delete has not been merged yet, Git will prevent you from deleting it with the -d flag to avoid accidental data loss. In this case, you can use the -D flag to force delete the branch:</p>
+<p>bash</p>
+<p>git branch -D branch_name</p>
+<p>Again, replace branch_name with the name of the branch you want to delete.</p>
+<p>Remember that when you delete a branch, it's usually permanent. So make sure you're certain about deleting the branch before you proceed. If you accidentally delete a branch, it might be more challenging to recover it, especially if it hasn't been merged or backed up elsewhere.</p>
+</article>
+</main>
+
+  <tc-favicon>
+</tc-favicon>
+
+  <script>class TcFavicon extends HTMLElement {
+    connectedCallback() {
+      const link = document.querySelector("link")
+
+      const icons = {
+        6: '🌈',
+        8: '🏖️',
+        10: '🎃',
+        12: '🎄',
+      }
+
+      const getToday = () => new Date();
+
+      const currentMonth = () => getToday().getMonth() + 1;
+
+      const favicon = (() => {
+        if (icons[currentMonth()]){
+          link.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>${icons[currentMonth()]}</text></svg>`
+        }
+      })();
+    }
+  }
+
+  window.customElements.define("tc-favicon", TcFavicon);</script>
+
+
+</body>
+</html>

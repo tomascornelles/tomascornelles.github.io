@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="beige">
+  <title>Post 1</title>
+
+  <link rel="icon" href="/assets/images/favicon.svg">
+
+  
+
+  <style>@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+
+    :root {
+      --font-size: 1.5rem;
+      --font-family: 'Source Code Pro', monospace;
+      --gap: 8px;
+      --color-bg: #eeeeee;
+      --color-bg-alt: white;
+      --color-fg: black;
+      --color-accent: orange;
+    }
+
+    html {
+      font-size: 10px;
+    }
+    
+    body {
+      font-family: var(--font-family);
+      font-size: 1.5rem;
+      color: var(--color-fg);
+      background-color: var(--color-bg);
+      padding: 0;
+      margin: 0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: var(--gap);
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+      margin: 0;
+      color: var(--color-accent);
+    }
+
+    h1 {
+      font-size: calc(var(--font-size) * 5);
+      margin-block-end: var(--gap);
+    }
+
+    h2 {
+      font-size: calc(var(--font-size) * 3);
+    }
+
+    h3 {
+      font-size: calc(var(--font-size) * 2);
+    }
+    
+    a, [role=link] {
+      color: var(--color-fg);
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: inset 0 -.5em var(--color-accent);
+    }</style>
+  <style></style>
+  
+</head>
+
+<body>
+  <main><h1>Post 1</h1>
+<article><p>In Git, <span role="link">the</span> git reset <strong>command</strong> is <em>used</em> <em><strong>to</strong></em> reset the state of the <em>repository</em> to a specific point. There are different ways to use git reset depending on what you want to achieve. Here are a few common scenarios:</p>
+<p>Discard Uncommitted Changes:</p>
+<p>If you have made changes to your files but haven't committed them yet and you want to discard those changes, you can use git reset with the --hard option:</p>
+<p>bash</p>
+<p>git reset --hard</p>
+<p>This will reset your working directory to match the state of the last commit, discarding all your uncommitted changes.</p>
+<p>Unstage Changes:</p>
+<p>If you have staged changes but want to unstage them (move them back to the working directory), you can use git reset without the --hard option:</p>
+<p>bash</p>
+<p>git reset</p>
+<p>This will unstage the changes, but your working directory will still have the modified files.</p>
+<p>Move HEAD to a Previous Commit:</p>
+<p>If you want to move the HEAD pointer to a previous commit, effectively undoing the commits after that point, you can provide the commit hash to git reset:</p>
+<p>bash</p>
+<p>git reset &lt;commit_hash&gt;</p>
+<p>This will keep your changes in the working directory, but the commits after &lt;commit_hash&gt; will be removed.</p>
+<p>Mixed Reset:</p>
+<p>If you want to keep the changes in your working directory but reset the commit history to a specific point, you can use the --mixed option:</p>
+<p>bash</p>
+<p>git reset --mixed &lt;commit_hash&gt;</p>
+<p>This will unstage any changes you have staged and move the HEAD pointer to &lt;commit_hash&gt;, effectively "uncommitting" the commits after that point.</p>
+<p>Always be cautious when using git reset, especially with the --hard option, as it can result in permanent data loss if used improperly. It's recommended to create backups or use branches before performing operations that alter your commit history or working directory.</p>
+</article>
+</main>
+
+  <tc-favicon>
+</tc-favicon>
+
+  <script>class TcFavicon extends HTMLElement {
+    connectedCallback() {
+      const link = document.querySelector("link")
+
+      const icons = {
+        6: '🌈',
+        8: '🏖️',
+        10: '🎃',
+        12: '🎄',
+      }
+
+      const getToday = () => new Date();
+
+      const currentMonth = () => getToday().getMonth() + 1;
+
+      const favicon = (() => {
+        if (icons[currentMonth()]){
+          link.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>${icons[currentMonth()]}</text></svg>`
+        }
+      })();
+    }
+  }
+
+  window.customElements.define("tc-favicon", TcFavicon);</script>
+
+
+</body>
+</html>
