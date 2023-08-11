@@ -1,0 +1,7 @@
+---
+layout: base.webc
+---
+
+<tc-menu></tc-menu>
+
+<main @raw="content"></main>

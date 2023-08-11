@@ -4,23 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate --dest docs",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "test": "cypress run --quiet",
-    "move": "rm -rf docs && mv .output/public docs && mv docs/404/index.html docs/404.html && rm -rf docs/404",
-    "deploy": "npm run generate && npm run move"
+    "move404": "mv docs/404/index.html docs/404.html && rm -rf docs/404",
+    "clean": "rm -rf docs",
+    "build": "npm run clean && npx @11ty/eleventy && npm run move404",
+    "dev": "npx @11ty/eleventy --serve",
+    "test": "cypress run --quiet"
   },
   "keywords": [],
   "author": "Tomas Cornelles",
   "license": "ISC",
   "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "@types/node": "^18.17.1",
-    "cypress": "^12.17.3",
-    "nuxt": "^3.6.5",
-    "sass": "^1.64.2"
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-webc": "^0.11.1",
+    "@11ty/is-land": "^4.0.0",
+    "cypress": "^12.17.2"
   }
 }
