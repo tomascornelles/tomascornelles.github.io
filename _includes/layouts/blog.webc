@@ -2,20 +2,20 @@
 layout: base.webc
 ---
 
-<tc-menu webc:nokeep></tc-menu>
+<tc-menu :title="title"></tc-menu>
 
-<main @raw="content" webc:nokeep></main>
-
-<section>
-  <article webc:for="post of collections.blog">
-    <img :src="post.data.image">
-    <h2>
-      <a :href="post.url" 
-         @text="post.data.title"></a>
-    </h2>
-    <div @html="post.content"></div>
-  </article>
-</section>
+<main>
+  <section>
+    <article webc:for="post of collections.blog">
+      <img :src="post.data.image">
+      <h2>
+        <a :href="post.url" 
+             @text="post.data.title"></a>
+      </h2>
+      <div @html="post.content"></div>
+    </article>
+  </section>
+</main>
 
 <style>
   section {
@@ -23,9 +23,11 @@ layout: base.webc
     flex-wrap: wrap;
     gap: calc(4 * var(--gap));
   }
+
   article {
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: calc(var(--gap) / 2);
-    box-shadow: 0 calc(var(--gap) / 2) var(--gap) rgba(0,0,0,.1);
+    box-shadow: 0 calc(var(--gap) / 2) calc(var(--gap) / 2) rgba(0,0,0,.1), 0 0 0 1px #dddddd;
     padding: calc(var(--gap) * 2);
     transition: all .4s ease;
     width: 100%;
@@ -44,7 +46,8 @@ layout: base.webc
     inset-inline: 50%;
     inset-block: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.1;
+    opacity: 0.25;
+    filter: blur(10px);
   }
 
   article > div {

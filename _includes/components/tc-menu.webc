@@ -1,10 +1,51 @@
-<ul>
-  <li>Hola</li>
-  <li>Mundo</li>
-</ul>
+<main>
+  <header>
+    <h1 @text="title"></h1>
+    <div>
+      <a href="/"><img src="/assets/images/logo.svg" width="64"></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+</main>
 
-<style>
+<style webc:scoped>
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > * {
+  width: 100%;
+  flex-grow: 1;
+}
+
+header > h1 {
+  font-size: calc(var(--font-size) * 2);
+  margin-bottom: 0;
+}
+
+header > div {
+  text-align: center;
+  width: calc(var(--gap) * 8);
+}
+
+header > div a {
+  box-shadow: none;
+}
+
 ul {
-  background-color: lightblue;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  gap: var(--gap);
 }
 </style>
