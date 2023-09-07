@@ -36,7 +36,7 @@
         background-color: var(--color-bg);
         color: var(--color-fg);
         font-family: var(--font);
-        padding-top: 50dvh;
+        padding-top: 40dvh;
         margin: 0;
       }
 
