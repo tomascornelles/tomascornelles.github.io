@@ -1,23 +1,29 @@
 <footer>
   <main id="contacto">
     <h2>Contacto</h2>
-    <ul>
-      <li>
-        <span>mastodon</span>
-        <a href="https://mastodon.world/@tomascornelles">&nbsp;&nbsp;&nbsp;&nbsp;@<strong>tomascornelles</strong></a></li>
-      <li>
-        <span>linkedin</span>
-        <a href="https://www.linkedin.com/in/tomascornelles/">&nbsp;&nbsp;in/<strong>tomascornelles</strong></a></li>
-      <li>
-        <span>polywork</span>
-        <a href="https://poly.me/tomascornelles">&nbsp;&nbsp;&nbsp;&nbsp;/<strong>tomascornelles</strong></a></li>
-      <li>
-        <span>github</span>
-        <a href="https://github.com/tomascornelles">&nbsp;&nbsp;&nbsp;&nbsp;@<strong>tomascornelles</strong></a></li>
-      <li>
-        <span>email</span>
-        <a href="mailto:hola@tomascornelles.com">hola@<strong>tomascornelles</strong>.com</a></li>
-    </ul>
+    <div>
+      <p>
+      Tomás es un desarrollador frontend con experiencia desde 2012 que ha trabajado para startups, agencias y big tech.
+      </p>
+
+      <ul>
+        <li>
+          <span>mastodon</span>
+          <a href="https://mastodon.world/@tomascornelles" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;@<strong>tomascornelles</strong></a></li>
+        <li>
+          <span>linkedin</span>
+          <a href="https://www.linkedin.com/in/tomascornelles/" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;/<strong>tomascornelles</strong></a></li>
+        <li>
+          <span>polywork</span>
+          <a href="https://poly.me/tomascornelles" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;/<strong>tomascornelles</strong></a></li>
+        <li>
+          <span>github</span>
+          <a href="https://github.com/tomascornelles" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;@<strong>tomascornelles</strong></a></li>
+        <li>
+          <span>email</span>
+          <a href="mailto:hola@tomascornelles.com" target="_blank">hola@<strong>tomascornelles</strong>.com</a></li>
+      </ul>
+    </div>
   </main>
 
   <main>
@@ -33,27 +39,32 @@
 
 <style webc:scoped>
   footer {
-    background-color: var(--color-fg);
-    color: var(--color-bg);
+    /* background-color: var(--color-fg);
+    color: var(--color-bg); */
+    margin-top: 10rem;
   }
 
-  footer a {
+  /* a {
     color: var(--color-bg);
     box-shadow: inset 0 -2px var(--color-bg);
   }
 
-  footer a:hover {
+  a:hover {
     color: var(--color-fg);
     box-shadow: inset 0 -2em var(--color-bg);
+  } */
+
+  main:first-child p {
+    margin-bottom: 5em;
   }
 
-  footer ul {
+  ul {
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
-  footer ul span {
+  ul span {
     display: block;
     opacity: .5;
     margin-top: 1em;
@@ -61,7 +72,18 @@
   }
 
   main:last-child {
-    margin-top: 3em;
+    margin-top: 5em;
+  }
+
+  @media (min-width: 768px) {
+    main:first-child > div, main:last-child {
+      display: flex;
+      justify-content: space-between;
+      gap: 5rem;
+    }
+    main:first-child > div {
+      flex-direction: row-reverse;
+    }
   }
 </style>
 

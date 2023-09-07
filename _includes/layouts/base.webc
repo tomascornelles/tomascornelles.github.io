@@ -8,7 +8,7 @@
 
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
-    <link rel="icon" href="/assets/images/favicon.svg">
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 
     <style webc:bucket="base">
       @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
@@ -97,10 +97,13 @@
 
   <body>
 
+    <tc-menu :title="title"></tc-menu>
 
     <div @raw="content" webc:nokeep></div>
 
     <tc-favicon></tc-favicon>
+
+    <tc-footer></tc-footer>
 
     <script @raw="getBundle('js', 'defer')" webc:keep></script>
   </body>
