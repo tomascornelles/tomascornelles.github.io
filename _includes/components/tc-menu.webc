@@ -89,12 +89,16 @@
     transition: all .4s ease;
   }
 
+  header #logo path {
+    fill: var(--color-fg);
+  }
+
   header.sticky #logo {
     height: calc(var(--unit) * 3);
   }
 
   header.sticky #logo path {
-    fill: white;
+    fill: var(--color-bg);
   }
 
   header nav ul {
