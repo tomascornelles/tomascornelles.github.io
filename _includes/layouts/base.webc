@@ -86,10 +86,10 @@ code, pre {
   padding: 0 .2em;
 }
 
-pre > code {
-  padding: initial;
+pre {
+  padding: 1em;
 }
-    </style>
+</style>
 
     <style @raw="getBundle('css', 'base')" webc:keep></style>
     <style @raw="getBundle('css')" webc:keep></style>

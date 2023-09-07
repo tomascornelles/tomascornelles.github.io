@@ -1,5 +1,20 @@
 ---
 layout: base.webc
 ---
-<h1 @text="title"></h1>
-<article @html="content"></article>
+
+<tc-menu :title="title"></tc-menu>
+
+<main>
+  <h1 @text="title"></h1>
+  <article @html="content"></article>
+</main>
+
+<tc-footer></tc-footer>
+
+<script src="../assets/scripts/microlight.js" webc:bucket="defer"></script>
+<script webc:bucket="defer">
+  const codeBlocks = document.querySelectorAll('pre');
+  codeBlocks.forEach((block) => {
+    block.classList.add('microlight');
+  })
+</script>
