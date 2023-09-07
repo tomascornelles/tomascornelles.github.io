@@ -1,82 +1,98 @@
 <!doctype html>
 <html lang="es">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="theme-color" content="beige">
-  <title @text="title || metadata.title"></title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="beige">
+    <title @text="title || metadata.title"></title>
 
-  <link rel="icon" href="/assets/images/favicon.svg">
+    <link rel="icon" href="/assets/images/favicon.svg">
 
-  <style webc:bucket="base">
-    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+    <style webc:bucket="base">
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
-    :root {
-      --font-size: 1.5rem;
-      --font-family: 'Source Code Pro', monospace;
-      --gap: 8px;
-      --color-bg: white;
-      --color-bg-alt: white;
-      --color-fg: black;
-      --color-accent: #ff9933;
-    }
+:root {
+  --color-bg: white;
+  --color-fg: black;
+  --font: 'Space Mono', monospace;
+  --unit: 10px;
+}
 
-    html {
-      font-size: 10px;
-    }
-    
-    body {
-      font-family: var(--font-family);
-      font-size: 1.5rem;
-      color: var(--color-fg);
-      background-color: var(--color-bg);
-      padding: 0;
-      margin: 0;
-    }
+html {
+  font-size: var(--unit);
+}
 
-    main {
-      max-width: 800px;
-      margin: auto;
-      padding: var(--gap);
-    }
+body {
+  font-size: 1.6rem;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font);
+  padding-top: 50dvh;
+  margin: 0;
+}
 
-    h1, h2, h3 {
-      font-weight: 700;
-      margin: 0;
+main {
+  max-width: calc(var(--unit) * 120);
+  margin: auto;
+  padding: var(--unit);
+}
 
-    }
+h1, h2, h3 {
+  font-weight: normal;
+}
 
-    h1 {
-      font-size: calc(var(--font-size) * 5);
-      margin-block-end: var(--gap);
-    }
+h1 {
+  font-size: 7rem;
+}
 
-    h2 {
-      font-size: calc(var(--font-size) * 3);
-    }
+h2 {
+  font-size: 5rem;
+}
 
-    h3 {
-      font-size: calc(var(--font-size) * 2);
-    }
-    
-    a, [role=link] {
-      color: var(--color-fg);
-      cursor: pointer;
-      text-decoration: none;
-      box-shadow: inset 0 -.5em var(--color-accent);
-    }
-  </style>
+h3 {
+  font-size: 3rem;
+}
 
-  <style @raw="getBundle('css', 'base')" webc:keep></style>
-  <style @raw="getBundle('css')" webc:keep></style>
-  
-</head>
+a, [role=link] {
+  text-decoration: none;
+  box-shadow: inset 0 -2px var(--color-fg);
+  color: var(--color-fg);
+  transition: all .5s ease;
+}
 
-<body>
-  <div @raw="content" webc:nokeep></div>
+a:hover, [role=link]:hover {
+  color: var(--color-bg);
+  box-shadow: inset 0 -5em var(--color-fg);
+}
 
-  <tc-favicon></tc-favicon>
+kbd {
+  border: 1px solid var(--color-fg);
+  padding: 0 .2em;
+  box-shadow: 0 .1em var(--color-fg);
+}
 
-  <script @raw="getBundle('js', 'defer')" webc:keep></script>
-</body>
+code, pre {
+  background-color: var(--color-fg);
+  color: var(--color-bg);
+  padding: 0 .2em;
+}
+
+pre > code {
+  padding: initial;
+}
+    </style>
+
+    <style @raw="getBundle('css', 'base')" webc:keep></style>
+    <style @raw="getBundle('css')" webc:keep></style>
+  </head>
+
+  <body>
+
+
+    <div @raw="content" webc:nokeep></div>
+
+    <tc-favicon></tc-favicon>
+
+    <script @raw="getBundle('js', 'defer')" webc:keep></script>
+  </body>
 </html>
