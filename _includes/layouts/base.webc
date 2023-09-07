@@ -6,6 +6,8 @@
     <meta name="theme-color" content="beige">
     <title @text="title || metadata.title"></title>
 
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
     <link rel="icon" href="/assets/images/favicon.svg">
 
     <style webc:bucket="base">
