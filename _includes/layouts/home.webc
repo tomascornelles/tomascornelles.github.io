@@ -2,6 +2,8 @@
 layout: base.webc
 ---
 
-<tc-menu></tc-menu>
+<tc-menu @title="title"></tc-menu>
 
 <main @raw="content"></main>
+
+<tc-footer></tc-footer>

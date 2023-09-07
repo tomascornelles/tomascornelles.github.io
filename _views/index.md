@@ -3,6 +3,63 @@ layout: "home.webc"
 title: Index
 ---
 
-# WebC
+# {{ title }}
 
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
+The web components way
 The web components way

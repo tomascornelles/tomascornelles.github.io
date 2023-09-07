@@ -8,28 +8,7 @@
   }
 
   article {
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: calc(var(--gap) / 2);
-    box-shadow: 0 calc(var(--gap) / 2) calc(var(--gap) / 2) rgba(0,0,0,.1), 0 0 0 1px #dddddd;
-    padding: calc(var(--gap) * 2);
-    transition: all .4s ease;
     width: 100%;
     box-sizing: border-box;
-    background-color: var(--color-bg-alt);
-    position: relative;
-    overflow: hidden;
-  }
-
-  article > * {
-    position: relative;
-  }
-
-  article > img {
-    position: absolute;
-    inset-inline: 50%;
-    inset-block: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.25;
-    filter: blur(10px);
   }
 </style>
