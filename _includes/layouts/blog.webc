@@ -2,8 +2,6 @@
 layout: base.webc
 ---
 
-<tc-menu :title="title"></tc-menu>
-
 <main>
   <section>
     <tc-card webc:for="post of collections.blog">
@@ -15,8 +13,6 @@ layout: base.webc
     </tc-card>
   </section>
 </main>
-
-<tc-footer></tc-footer>
 
 <style>
 

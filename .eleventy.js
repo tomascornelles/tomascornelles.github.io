@@ -14,6 +14,8 @@ module.exports = function(eleventyConfig) {
     watch: ['docs/**/*.*', '_includes/components/**/*.webc'],
   });
 
+  eleventyConfig.addGlobalData("layout", "base.webc");
+
   // Return your Object options:
   return {
     dir: {

@@ -2,14 +2,10 @@
 layout: base.webc
 ---
 
-<tc-menu :title="title"></tc-menu>
-
 <main>
   <h1 @text="title"></h1>
   <article @html="content"></article>
 </main>
-
-<tc-footer></tc-footer>
 
 <script src="../assets/scripts/microlight.js" webc:bucket="defer"></script>
 <script webc:bucket="defer">
