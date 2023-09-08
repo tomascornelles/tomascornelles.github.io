@@ -16,4 +16,10 @@ describe('G002 - Header links', () => {
     cy.contains('blog').click({force: true});
     cy.location('pathname').should('eq', '/blog/');
   });
+  
+  it('Contact link', () => {
+    cy.visit('http://localhost:8080');
+    // cy.contains('contacto').click({force: true});
+    cy.contains('Contáctame').should('be.visible');
+  });
 })
