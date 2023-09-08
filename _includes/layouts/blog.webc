@@ -3,6 +3,7 @@ layout: base.webc
 ---
 
 <main>
+  <h1 @text="title"></h1>
   <section>
     <tc-card webc:for="post of collections.blog">
       <h2>
@@ -41,6 +42,7 @@ layout: base.webc
 
   tc-card h2 {
     font-size: 3rem;
+    line-height: 1.5;
   }
 
   tc-card:nth-child(n+4) div, 
