@@ -14,12 +14,12 @@ layout: base.webc
   </section>
 </main>
 
-<style>
+<style webc:scoped>
 
   section {
     display: flex;
     flex-wrap: wrap;
-    gap: calc(10 * var(--gap)) calc(4 * var(--gap));
+    gap: calc(10 * var(--unit)) calc(4 * var(--unit));
   }
 
   tc-card div {
@@ -39,6 +39,10 @@ layout: base.webc
     background-color: transparent;
   }
 
+  tc-card h2 {
+    font-size: 3rem;
+  }
+
   tc-card:nth-child(n+4) div, 
   tc-card:nth-child(n+4) img {
     display: none;
@@ -46,7 +50,7 @@ layout: base.webc
 
   @media (min-width: 768px) {
     tc-card:nth-child(n+2) {
-      width: calc(50% - 2 * var(--gap));
+      width: calc(50% - 2 * var(--unit));
     }
 
     tc-card:nth-child(n+4) {
