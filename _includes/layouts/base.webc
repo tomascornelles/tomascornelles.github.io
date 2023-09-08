@@ -36,7 +36,7 @@
       background-color: var(--color-bg);
       color: var(--color-fg);
       font-family: var(--font);
-      padding-top: 40dvh;
+      padding-top: 20rem;
       margin: 0;
     }
 
@@ -48,6 +48,7 @@
 
     h1, h2, h3 {
       font-weight: normal;
+      line-height: 1.0;
     }
 
     h1 {
