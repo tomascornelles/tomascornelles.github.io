@@ -1,9 +1,9 @@
 ---
 layout: "home.webc"
-title: Hola!
+title: ¡Hola!
 ---
 
-# {{ title }}<br> soy Tomas
+# {{ title }}<br> Soy Tomás
 
 Aunque no lo parezca soy un químico reciclado, tuve la oportunidad de trabajar para el laboratorio de una gran petrolera multinacional y afrontar la crisis del 2010 reinventándome.
 
