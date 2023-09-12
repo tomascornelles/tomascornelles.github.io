@@ -54,7 +54,7 @@
     white-space: nowrap;
   }
 
-  tc-menu a {
+  tc-menu a, tc-menu a:hover {
     box-shadow: none;
   }
 

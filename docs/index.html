@@ -36,7 +36,7 @@
       background-color: var(--color-bg);
       color: var(--color-fg);
       font-family: var(--font);
-      padding-top: 20rem;
+      padding-top: 20dvh;
       margin: 0;
     }
 
@@ -105,6 +105,14 @@
   .mono {
     font-family: monospace;
   }
+
+  #content h1 {
+    display: flex;
+    height: 75dvh;
+    align-items: flex-end;
+    margin-block: 0;
+    padding-block: 0;
+  }
 tc-menu header {
     position: fixed;
     top: 0;
@@ -143,7 +151,7 @@ tc-menu header {
     white-space: nowrap;
   }
 
-  tc-menu a {
+  tc-menu a, tc-menu a:hover {
     box-shadow: none;
   }
 
@@ -286,7 +294,7 @@ tc-menu header {
   const parts = hello.innerHTML.split('<br>');
   const replaced0 = parts[0].split('').map((letter) => `<span>${letter}</span>`);
   const replaced1 = parts[1].split('').map((letter) => `<span>${letter}</span>`);
-  hello.innerHTML = `${replaced0.join('')}<br>${replaced1.join('')}`;
+  hello.innerHTML = `<div class="title">${replaced0.join('')}<br>${replaced1.join('')}</div>`;
 
   const styles = ['mono', 'serif', 'sans'];
   const letters = hello.querySelectorAll('span');
