@@ -90,6 +90,10 @@
     pre {
       padding: 1em;
     }
+
+    svg path {
+      fill: var(--color-fg);
+    }
   </style>
 
   <style @raw="getBundle('css', 'base')" webc:keep></style>
