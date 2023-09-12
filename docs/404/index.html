@@ -154,7 +154,7 @@ tc-menu header {
 
   tc-menu nav a {
     display: block;
-    padding: 1em;
+    padding: 1em 1rem;
   }
 
   tc-menu nav a:hover {
@@ -179,12 +179,13 @@ tc-menu header {
     overflow: hidden;
     list-style: none;
     padding: 0;
-    margin: 3.7rem 0 0;
+    margin: 3.7rem auto 0;
     position: absolute;
     left: 0;
     right: 0;
     background: var(--color-bg);
     transition: all .4s ease;
+    max-width: calc(var(--unit) * 120);
   }
 
   tc-menu .sticky nav ul {
