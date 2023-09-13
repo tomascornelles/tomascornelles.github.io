@@ -49,6 +49,7 @@
     h1, h2, h3 {
       font-weight: normal;
       line-height: 1.0;
+      margin-top: 20rem;
     }
 
     h1 {
@@ -95,7 +96,7 @@
       fill: var(--color-fg);
     }</style>
   <style>.ww6vvljup{width:100%}.ww6vvljup article{width:100%;box-sizing:border-box}
-.wi1wfccaf section{display:flex;flex-wrap:wrap;gap:calc(10*var(--unit)) calc(4*var(--unit))}.wi1wfccaf tc-card div{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden}.wi1wfccaf tc-card:nth-child(n+2) div{-webkit-line-clamp:2}.wi1wfccaf tc-card:nth-child(n+4) article{padding:0;box-shadow:none;background-color:transparent}.wi1wfccaf tc-card h2{font-size:3rem;line-height:1.5}.wi1wfccaf tc-card:nth-child(n+4) div,.wi1wfccaf tc-card:nth-child(n+4) img{display:none}@media (min-width:768px){.wi1wfccaf tc-card:nth-child(n+2){width:calc(50% - 2*var(--unit))}.wi1wfccaf tc-card:nth-child(n+4){width:100%}}
+.wbipzay-i section{display:flex;flex-wrap:wrap;gap:calc(10*var(--unit)) calc(4*var(--unit))}.wbipzay-i tc-card:nth-child(n+4) article{padding:0;box-shadow:none;background-color:transparent}.wbipzay-i tc-card h2{font-size:3rem;line-height:1.5;margin-top:0}.wbipzay-i tc-card:nth-child(n+4) div,.wbipzay-i tc-card:nth-child(n+4) img{display:none}.wbipzay-i [role=image]{background-color:var(--color-fg);color:var(--color-bg);position:relative;height:10rem;overflow:hidden}.wbipzay-i [role=image] span{font-size:100dvh;line-height:0.1;font-weight:bold;letter-spacing:-.4em;white-space:nowrap}@media (min-width:768px){.wbipzay-i tc-card:nth-child(n+2){width:calc(50% - 2*var(--unit))}.wbipzay-i tc-card:nth-child(n+4){width:100%}}
 tc-menu header {
     position: fixed;
     top: 0;
@@ -187,7 +188,7 @@ tc-menu header {
   tc-menu nav:hover ul {
     height: calc(3 * 3.5em); /* 4 elements, 1.5 line-height + 1 padding-top + 1 padding-bottom */
   }
-.wha1xbcpd footer{margin-top:15rem}.wha1xbcpd main:first-child p{margin-bottom:5em}.wha1xbcpd ul{margin:0;padding:0;list-style:none}.wha1xbcpd ul span{display:block;opacity:.5;margin-top:1em;margin-bottom:0}.wha1xbcpd main:last-child{margin-top:5em}@media (min-width:768px){.wha1xbcpd main:first-child>div,.wha1xbcpd main:last-child{display:flex;justify-content:space-between;gap:5rem}.wha1xbcpd main:first-child>div{flex-direction:row-reverse}}</style>
+.wbgdkybz9 main:first-child p{margin-bottom:5em}.wbgdkybz9 ul{margin:0;padding:0;list-style:none}.wbgdkybz9 ul span{display:block;opacity:.5;margin-top:1em;margin-bottom:0}.wbgdkybz9 main:last-child{margin-top:5em}@media (min-width:768px){.wbgdkybz9 main:first-child>div,.wbgdkybz9 main:last-child{display:flex;justify-content:space-between;gap:5rem}.wbgdkybz9 main:first-child>div{flex-direction:row-reverse}}</style>
 </head>
 
 <body>
@@ -213,37 +214,19 @@ tc-menu header {
 
 </tc-menu>
 
-  <main class="wi1wfccaf">
-  <h1 class="wi1wfccaf">Blog</h1>
-  <section class="wi1wfccaf">
+  <main class="wbipzay-i">
+  <h1 class="wbipzay-i">Blog</h1>
+  <section class="wbipzay-i">
     <tc-card class="ww6vvljup"><article>
   
+      <div role="image"><span>Un titulo ...</span></div>
       <h2>
-        <a href="/blog/post1/">Post 1</a>
+        <a href="/blog/post1/">Un titulo cualquiera</a>
       </h2>
+      
       <div><p>In Git, <span role="link">the</span> git reset <strong>command</strong> is <em>used</em> <em><strong>to</strong></em> reset the state of the <em>repository</em> to a specific point. There are different ways to use git reset depending on what you want to achieve. Here are a few common scenarios:</p>
 <p>Discard Uncommitted Changes:</p>
-<p>If you have made changes to your files but haven't committed them yet and you want to discard those changes, you can use git reset with the --hard option:</p>
-<p>bash</p>
-<p>git reset --hard</p>
-<p>This will reset your working directory to match the state of the last commit, discarding all your uncommitted changes.</p>
-<p>Unstage Changes:</p>
-<p>If you have staged changes but want to unstage them (move them back to the working directory), you can use git reset without the --hard option:</p>
-<p>bash</p>
-<p>git reset</p>
-<p>This will unstage the changes, but your working directory will still have the modified files.</p>
-<p>Move HEAD to a Previous Commit:</p>
-<p>If you want to move the HEAD pointer to a previous commit, effectively undoing the commits after that point, you can provide the commit hash to git reset:</p>
-<p>bash</p>
-<p>git reset &lt;commit_hash&gt;</p>
-<p>This will keep your changes in the working directory, but the commits after &lt;commit_hash&gt; will be removed.</p>
-<p>Mixed Reset:</p>
-<p>If you want to keep the changes in your working directory but reset the commit history to a specific point, you can use the --mixed option:</p>
-<p>bash</p>
-<p>git reset --mixed &lt;commit_hash&gt;</p>
-<p>This will unstage any changes you have staged and move the HEAD pointer to &lt;commit_hash&gt;, effectively "uncommitting" the commits after that point.</p>
-<p>Always be cautious when using git reset, especially with the --hard option, as it can result in permanent data loss if used improperly. It's recommended to create backups or use branches before performing operations that alter your commit history or working directory.</p>
-</div>
+<p>If you have made changes to your files but haven't committed them yet and you want to discard those changes, you can use git reset with the --hard option:</p>...</div>
     
 </article>
 
@@ -251,22 +234,14 @@ tc-menu header {
 </tc-card>
 <tc-card class="ww6vvljup"><article>
   
+      <div role="image"><span>Post 2 To ...</span></div>
       <h2>
         <a href="/blog/post2/">Post 2 To delete a branch in Git, you can use the git branch command with the -d or -D flag.</a>
       </h2>
       <div><p>To delete a branch in Git, you can use the git branch command with the -d or -D flag. Here's how you can do it:</p>
 <p>Delete a Merged Branch:</p>
-<p>If the branch you want to delete has been merged into another branch and you're sure you no longer need it, you can use the -d flag:</p>
-<p>bash</p>
-<p>git branch -d branch_name</p>
-<p>Replace branch_name with the name of the branch you want to delete.</p>
-<p>Force Delete an Unmerged Branch:</p>
-<p>If the branch you want to delete has not been merged yet, Git will prevent you from deleting it with the -d flag to avoid accidental data loss. In this case, you can use the -D flag to force delete the branch:</p>
-<p>bash</p>
-<p>git branch -D branch_name</p>
-<p>Again, replace branch_name with the name of the branch you want to delete.</p>
-<p>Remember that when you delete a branch, it's usually permanent. So make sure you're certain about deleting the branch before you proceed. If you accidentally delete a branch, it might be more challenging to recover it, especially if it hasn't been merged or backed up elsewhere.</p>
-</div>
+<p>If the branch you want to delete has been merge...</p></div>
+      
     
 </article>
 
@@ -274,6 +249,7 @@ tc-menu header {
 </tc-card>
 <tc-card class="ww6vvljup"><article>
   
+      <div role="image"><span>Post 3</span></div>
       <h2>
         <a href="/blog/post3/">Post 3</a>
       </h2>
@@ -287,16 +263,8 @@ const pepe = () =&gt; true;
 <li>list</li>
 </ul>
 <ol>
-<li>this</li>
-<li>is a</li>
-<li>numered</li>
-<li>list</li>
-</ol>
-<pre><code>if (true) {
-    return false;
-}
-</code></pre>
-</div>
+</ol></div>
+      
     
 </article>
 
@@ -304,11 +272,13 @@ const pepe = () =&gt; true;
 </tc-card>
 <tc-card class="ww6vvljup"><article>
   
+      <div role="image"><span>Post 4</span></div>
       <h2>
         <a href="/blog/post4/">Post 4</a>
       </h2>
       <div><p>Lorem <strong>ipsum</strong></p>
 </div>
+      
     
 </article>
 
@@ -323,7 +293,7 @@ const pepe = () =&gt; true;
   <tc-favicon>
 </tc-favicon>
 
-  <tc-footer class="wha1xbcpd"><footer>
+  <tc-footer class="wbgdkybz9"><footer>
   <main id="contacto">
     <h2>Contáctame</h2>
     <div>

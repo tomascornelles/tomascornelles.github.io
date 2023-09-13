@@ -5,12 +5,14 @@ layout: base.webc
 <main>
   <h1 @text="title"></h1>
   <section>
-    <tc-card webc:for="post of collections.blog">
+    <tc-card webc:for="(post, index) of collections.blog">
+      <div role="image"><span @text="abstract(post.data.title,10)"></span></div>
       <h2>
         <a :href="post.url" 
              @text="post.data.title"></a>
       </h2>
-      <div @html="post.content"></div>
+      <div webc:if="index" @html="abstract(post.content)"></div>
+      <div webc:else @html="abstract(post.content, 500)"></div>
     </tc-card>
   </section>
 </main>
@@ -23,17 +25,6 @@ layout: base.webc
     gap: calc(10 * var(--unit)) calc(4 * var(--unit));
   }
 
-  tc-card div {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-    overflow: hidden;
-  }
-
-  tc-card:nth-child(n+2) div {
-    -webkit-line-clamp: 2;
-  }
-
   tc-card:nth-child(n+4) article {
     padding: 0;
     box-shadow: none;
@@ -43,11 +34,28 @@ layout: base.webc
   tc-card h2 {
     font-size: 3rem;
     line-height: 1.5;
+    margin-top: 0;
   }
 
   tc-card:nth-child(n+4) div, 
   tc-card:nth-child(n+4) img {
     display: none;
+  }
+
+  [role=image] {
+    background-color: var(--color-fg);
+    color: var(--color-bg);
+    position: relative;
+    height: 10rem;
+    overflow: hidden;
+  }
+
+  [role=image] span {
+    font-size: 100dvh;
+    line-height: 0.1;
+    font-weight: bold;
+    letter-spacing: -.4em;
+    white-space: nowrap;
   }
 
   @media (min-width: 768px) {
