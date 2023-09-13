@@ -3,12 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="theme-color" content="beige">
   <title @text="title || metadata.title"></title>
 
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
-  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="" type="image/svg+xml">
+  <meta name="theme-color" content="black" />
 
   <style webc:bucket="base">
     @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
