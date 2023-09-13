@@ -6,7 +6,7 @@ module.exports = function(eleventyConfig) {
     components: "_includes/components/**/*.webc"
   });
 
-    eleventyConfig.addWatchTarget("_includes/components/**/*.webc");
+  eleventyConfig.addWatchTarget("_includes/components/**/*.webc");
 
   eleventyConfig.addPassthroughCopy({ "_includes/assets": "assets" });
   
@@ -15,6 +15,12 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addGlobalData("layout", "base.webc");
+
+  // Filters
+  eleventyConfig.addFilter("abstract", (content, length = 200) => {
+    const ellipsis = content.length > length ? '...' : '';
+    return `${content.substring(0, length)}${ellipsis}`;
+  });
 
   // Return your Object options:
   return {

@@ -1,5 +1,5 @@
 ---
-title: Post 1
+title: Un titulo cualquiera
 image: https://picsum.photos/800/300
 ---
 

@@ -4,6 +4,20 @@ layout: base.webc
 
 <main @raw="content" id="content"></main>
 
+<main>
+  <section>
+    <tc-card webc:for="(post, index) of collections.blog" webc:if="!index">
+      <h1>
+        <a :href="post.url" 
+             @text="post.data.title"></a>
+      </h1>
+      <div @html="abstract(post.content, 500)"></div>
+      <p><a :href="post.url">Leer más</a></p>
+    </tc-card>
+    <h4><a href="/blog">Leer más artículos en el blog</a></h4>
+  </section>
+</main>
+
 <script webc:bucket="defer">
   const hello = document.querySelector('#content h1');
   const parts = hello.innerHTML.split('<br>');
@@ -22,6 +36,7 @@ layout: base.webc
 </script>
 
 <style>
+
   .serif {
     font-family: serif;
   }
@@ -46,6 +61,39 @@ layout: base.webc
   @media (min-width: 768px) {
     #content h1 {
       font-size: 11rem;
+    }
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(10 * var(--unit)) calc(4 * var(--unit));
+  }
+
+  tc-card:nth-child(n+4) article {
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  tc-card h2 {
+    font-size: 3rem;
+    line-height: 1.5;
+    margin-top: 0;
+  }
+
+  tc-card:nth-child(n+4) div, 
+  tc-card:nth-child(n+4) img {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    tc-card:nth-child(n+2) {
+      width: calc(50% - 2 * var(--unit));
+    }
+
+    tc-card:nth-child(n+4) {
+      width: 100%;
     }
   }
 
