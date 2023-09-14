@@ -40,7 +40,7 @@
       margin: 0;
     }
 
-    main {
+    section {
       max-width: calc(var(--unit) * 120);
       margin: auto;
       padding: var(--unit);
