@@ -15,6 +15,7 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addGlobalData("layout", "base.webc");
+  eleventyConfig.addGlobalData("description", "Web personal y blog de Tomas Cornelles, frontend developer.");
 
   // Filters
   eleventyConfig.addFilter("abstract", (content, length = 200) => {
