@@ -5,7 +5,7 @@ title: ¡Hola!
 
 # {{ title }}<br> Soy Tomás
 
-### Sobre mi
+## Sobre mi
 
 Aunque no lo parezca soy un químico reciclado, tuve la oportunidad de trabajar para el laboratorio de una gran petrolera multinacional y afrontar la crisis del 2010 reinventándome.
 

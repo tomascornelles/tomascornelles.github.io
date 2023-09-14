@@ -5,7 +5,6 @@ layout: base.webc
 <section @raw="content" id="content"></section>
 
 <section>
-  <h3>Blog</h3>
   <tc-card webc:for="(post, index) of collections.blog" webc:if="!index">
     <h2>
       <a :href="post.url" 
@@ -49,6 +48,10 @@ layout: base.webc
     font-family: monospace;
   }
 
+  #content h1 {
+    font-size: 15vw;
+  }
+
   @media (min-width: 768px) {
     #content h1 {
       font-size: 11rem;
@@ -58,7 +61,6 @@ layout: base.webc
   tc-card h2 {
     font-size: 3rem;
     line-height: 1.5;
-    margin-top: 0;
   }
 
   tc-card:nth-child(n+4) div, 

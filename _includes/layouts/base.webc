@@ -61,9 +61,7 @@
     }
 
     h3 {
-      font-size: 5rem;
-      margin-block-end: -.75em;
-      opacity: .1;
+      font-size: 2rem;
     }
 
     a, [role=link] {
