@@ -11,9 +11,9 @@ layout: base.webc
            @text="post.data.title"></a>
     </h2>
     <div @html="abstract(post.content, 500)"></div>
-    <p><a :href="post.url">Leer más</a></p>
+    <p><a :href="post.url">Seguir leyendo</a></p>
   </tc-card>
-  <h4><a href="/blog">Leer más artículos en el blog</a></h4>
+  <p><strong><a href="/blog">Leer más artículos en el blog</a></strong></p>
 </section>
 
 

@@ -6,7 +6,7 @@ layout: base.webc
   <h1 @text="title"></h1>
   <section>
     <tc-card webc:for="(post, index) of collections.blog">
-      <div role="img"><span @text="abstract(post.data.title,10)"></span></div>
+      <div role="img" :alt="post.data.title"><span @text="abstract(post.data.title,10)"></span></div>
       <h2>
         <a :href="post.url" 
              @text="post.data.title"></a>
@@ -73,3 +73,11 @@ layout: base.webc
   }
 
 </style>
+
+<script src="../assets/scripts/microlight.js" webc:bucket="defer"></script>
+<script webc:bucket="defer">
+  const codeBlocks = document.querySelectorAll('pre');
+  codeBlocks.forEach((block) => {
+    block.classList.add('microlight');
+  })
+</script>

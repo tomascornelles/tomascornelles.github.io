@@ -1,6 +1,6 @@
 ---
 title: 'Politica de cookies'
-layout: "base.webc"
+layout: "page.webc"
 ---
 
 Una “Cookie” es un pequeño archivo que se almacena en el ordenador del usuario y nos permite reconocerle. El conjunto de “cookies” nos ayuda a mejorar la calidad de nuestra web, permitiéndonos controlar qué páginas encuentran nuestros usuarios útiles y cuáles no.
