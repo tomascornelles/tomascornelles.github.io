@@ -6,7 +6,7 @@ layout: base.webc
   <h1 @text="title"></h1>
   <section>
     <tc-card webc:for="(post, index) of collections.blog">
-      <div role="image"><span @text="abstract(post.data.title,10)"></span></div>
+      <div role="banner"><span @text="abstract(post.data.title,10)"></span></div>
       <h2>
         <a :href="post.url" 
              @text="post.data.title"></a>

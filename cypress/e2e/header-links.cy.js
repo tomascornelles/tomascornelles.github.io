@@ -1,7 +1,7 @@
 describe('G002 - Header links', () => {
   it('Logo link', () => {
     cy.visit('http://localhost:8080/blog');
-    cy.get('tc-menu main > a').click();
+    cy.get('tc-menu section > a').click();
     cy.location('pathname').should('eq', '/');
   });
   

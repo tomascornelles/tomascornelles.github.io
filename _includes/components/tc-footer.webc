@@ -1,6 +1,6 @@
 <footer>
-  <main id="contacto">
-    <h3>Contáctame</h3>
+  <section id="contacto">
+    <h2>Contáctame</h2>
     <div>
       <p>
       Soy un desarrollador frontend con experiencia desde 2012 que he trabajado para startups, agencias y big tech. No dudes en contactarme si puedo ayudarte o colaborar, me encantan los nuevos proyectos y los retos.
@@ -24,9 +24,9 @@
           <a href="mailto:hola@tomascornelles.com" target="_blank">hola@<strong>tomascornelles</strong>.com</a></li>
       </ul>
     </div>
-  </main>
+  </section>
 
-  <main>
+  <section>
     <p>
     <small>made with ❤️  by <strong>tomascornelles © <span id="year"></span></strong></small>
     </p>
@@ -34,11 +34,11 @@
     <small><a href="/politica-de-cookies">Política de cookies</a></small><br>
     <small><a href="/politica-de-privacidad">Política de privacidad</a></small>
     </p>
-  </main>
+  </section>
 </footer>
 
 <style webc:scoped>
-  main:first-child p {
+  section:first-child p {
     margin-bottom: 5em;
   }
 
@@ -55,17 +55,17 @@
     margin-bottom: 0;
   }
 
-  main:last-child {
+  section:last-child {
     margin-top: 5em;
   }
 
   @media (min-width: 768px) {
-    main:first-child > div, main:last-child {
+    section:first-child > div, section:last-child {
       display: flex;
       justify-content: space-between;
       gap: 5rem;
     }
-    main:first-child > div {
+    section:first-child > div {
       flex-direction: row-reverse;
     }
   }

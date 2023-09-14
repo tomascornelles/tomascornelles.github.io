@@ -40,7 +40,7 @@
       margin: 0;
     }
 
-    main {
+    section {
       max-width: calc(var(--unit) * 120);
       margin: auto;
       padding: var(--unit);
@@ -61,9 +61,7 @@
     }
 
     h3 {
-      font-size: 5rem;
-      margin-block-end: -.75em;
-      opacity: .1;
+      font-size: 2rem;
     }
 
     a, [role=link] {
@@ -106,23 +104,23 @@
     z-index: 1;
   }
 
-  tc-menu main {
+  tc-menu section {
     display: flex;
     align-items: top;
     justify-content: space-between;
   }
 
-  tc-menu main > * {
+  tc-menu section > * {
     flex-grow: 1;
     width: 100%;
     text-align: center;
   }
 
-  tc-menu main > *:first-child {
+  tc-menu section > *:first-child {
     text-align: left;
   }
 
-  tc-menu main > *:last-child {
+  tc-menu section > *:last-child {
     text-align: right;
   }
 
@@ -188,14 +186,14 @@
   tc-menu nav:hover ul {
     height: calc(3 * 3.5em); /* 4 elements, 1.5 line-height + 1 padding-top + 1 padding-bottom */
   }
-.wbgdkybz9 main:first-child p{margin-bottom:5em}.wbgdkybz9 ul{margin:0;padding:0;list-style:none}.wbgdkybz9 ul span{display:block;opacity:.5;margin-top:1em;margin-bottom:0}.wbgdkybz9 main:last-child{margin-top:5em}@media (min-width:768px){.wbgdkybz9 main:first-child>div,.wbgdkybz9 main:last-child{display:flex;justify-content:space-between;gap:5rem}.wbgdkybz9 main:first-child>div{flex-direction:row-reverse}}</style>
+.weduxeuyd section:first-child p{margin-bottom:5em}.weduxeuyd ul{margin:0;padding:0;list-style:none}.weduxeuyd ul span{display:block;opacity:.5;margin-top:1em;margin-bottom:0}.weduxeuyd section:last-child{margin-top:5em}@media (min-width:768px){.weduxeuyd section:first-child>div,.weduxeuyd section:last-child{display:flex;justify-content:space-between;gap:5rem}.weduxeuyd section:first-child>div{flex-direction:row-reverse}}</style>
 </head>
 
 <body>
   <tc-menu title="Política de privacidad"><header>
-  <main>
+  <section>
     <h1>Política de privacidad</h1>
-    <a href="/">
+    <a href="/" title="Logo">
       <svg id="logo" viewBox="0 0 43 67" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4 4H39V7H23V15H20V7H4V4Z" fill="black"></path> <path d="M19 8H4V11H16V15H19V8Z" fill="black"></path> <path d="M24 8H39V11H27V15H24V8Z" fill="black"></path> <path d="M15 12H4V15H15V12Z" fill="black"></path> <path d="M28 12H39V15H28V12Z" fill="black"></path> <path d="M8 20H35V23H8V20Z" fill="black"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M4 16H39V27H4V16ZM7 19H36V24H7V19Z" fill="black"></path> <path d="M39 28H4V39H7V31H20V35H23V31H36V39H39V28Z" fill="black"></path> <path d="M8 32H19V36H24V32H35V39H32V35H27V39H16V35H11V39H8V32Z" fill="black"></path> <path d="M15 36H12V39H15V36Z" fill="black"></path> <path d="M28 36H31V39H28V36Z" fill="black"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M4 40H39V51H36V47H7V51H4V40ZM7 43H36V44H7V43Z" fill="black"></path> <path d="M8 48H35V51H8V48Z" fill="black"></path> <path d="M39 52H4V59H36V60H4V63H39V56H7V55H39V52Z" fill="black"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M43 0H0V67H43V0ZM3 3H40V64H3V3Z" fill="black"></path> </svg>
     </a>
     <nav>
@@ -206,7 +204,7 @@
         <li><a href="/blog">blog</a></li>
       </ul>
     </nav>
-  </main>
+  </section>
 </header>
 
 
@@ -237,9 +235,9 @@
   <tc-favicon>
 </tc-favicon>
 
-  <tc-footer class="wbgdkybz9"><footer>
-  <main id="contacto">
-    <h3>Contáctame</h3>
+  <tc-footer class="weduxeuyd"><footer>
+  <section id="contacto">
+    <h2>Contáctame</h2>
     <div>
       <p>
       Soy un desarrollador frontend con experiencia desde 2012 que he trabajado para startups, agencias y big tech. No dudes en contactarme si puedo ayudarte o colaborar, me encantan los nuevos proyectos y los retos.
@@ -263,9 +261,9 @@
           <a href="mailto:hola@tomascornelles.com" target="_blank">hola@<strong>tomascornelles</strong>.com</a></li>
       </ul>
     </div>
-  </main>
+  </section>
 
-  <main>
+  <section>
     <p>
     <small>made with ❤️  by <strong>tomascornelles © <span id="year"></span></strong></small>
     </p>
@@ -273,7 +271,7 @@
     <small><a href="/politica-de-cookies">Política de cookies</a></small><br>
     <small><a href="/politica-de-privacidad">Política de privacidad</a></small>
     </p>
-  </main>
+  </section>
 </footer>
 
 
