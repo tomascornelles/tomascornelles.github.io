@@ -1,0 +1,8 @@
+---
+layout: base.webc
+---
+
+<section>
+  <h2 @text="title"></h2>
+  <article @html="content"></article>
+</section>

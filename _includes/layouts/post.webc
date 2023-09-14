@@ -2,10 +2,10 @@
 layout: base.webc
 ---
 
-<main>
-  <h1 @text="title"></h1>
+<section>
+  <h2 @text="title"></h2>
   <article @html="content"></article>
-</main>
+</section>
 
 <script src="../assets/scripts/microlight.js" webc:bucket="defer"></script>
 <script webc:bucket="defer">
