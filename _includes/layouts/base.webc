@@ -57,11 +57,13 @@
     }
 
     h2 {
-      font-size: 5rem;
+      font-size: 3rem;
     }
 
     h3 {
-      font-size: 3rem;
+      font-size: 5rem;
+      margin-block-end: -.75em;
+      opacity: .1;
     }
 
     a, [role=link] {

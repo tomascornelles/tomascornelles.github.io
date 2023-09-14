@@ -57,11 +57,13 @@
     }
 
     h2 {
-      font-size: 5rem;
+      font-size: 3rem;
     }
 
     h3 {
-      font-size: 3rem;
+      font-size: 5rem;
+      margin-block-end: -.75em;
+      opacity: .1;
     }
 
     a, [role=link] {
@@ -108,31 +110,10 @@
     font-family: monospace;
   }
 
-  #content h1 {
-    display: flex;
-    height: 60dvh;
-    align-items: flex-end;
-    margin-block: 0;
-    padding-block: 0 20dvh;
-    font-size: 15vw;
-  }
-
   @media (min-width: 768px) {
     #content h1 {
       font-size: 11rem;
     }
-  }
-
-  section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: calc(10 * var(--unit)) calc(4 * var(--unit));
-  }
-
-  tc-card:nth-child(n+4) article {
-    padding: 0;
-    box-shadow: none;
-    background-color: transparent;
   }
 
   tc-card h2 {
@@ -277,11 +258,12 @@ tc-menu header {
 
 <main>
   <section>
+    <h3>Blog</h3>
     <tc-card class="ww6vvljup"><article>
   
-      <h1>
+      <h2>
         <a href="/blog/post1/">Un titulo cualquiera</a>
-      </h1>
+      </h2>
       <div><p>In Git, <span role="link">the</span> git reset <strong>command</strong> is <em>used</em> <em><strong>to</strong></em> reset the state of the <em>repository</em> to a specific point. There are different ways to use git reset depending on what you want to achieve. Here are a few common scenarios:</p>
 <p>Discard Uncommitted Changes:</p>
 <p>If you have made changes to your files but haven't committed them yet and you want to discard those changes, you can use git reset with the --hard option:</p>...</div>
@@ -305,7 +287,7 @@ tc-menu header {
 
   <tc-footer class="wbgdkybz9"><footer>
   <main id="contacto">
-    <h2>Contáctame</h2>
+    <h3>Contáctame</h3>
     <div>
       <p>
       Soy un desarrollador frontend con experiencia desde 2012 que he trabajado para startups, agencias y big tech. No dudes en contactarme si puedo ayudarte o colaborar, me encantan los nuevos proyectos y los retos.
