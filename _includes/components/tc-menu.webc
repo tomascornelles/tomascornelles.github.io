@@ -21,6 +21,7 @@
         <path d="M39 52H4V59H36V60H4V63H39V56H7V55H39V52Z" fill="black"/> 
         <path fill-rule="evenodd" clip-rule="evenodd" d="M43 0H0V67H43V0ZM3 3H40V64H3V3Z" fill="black"/> 
       </svg>
+      <span>Tomás</span>
     </a>
     <nav>
       <span>menu</span>
@@ -74,6 +75,10 @@
 
   tc-menu a, tc-menu a:hover {
     box-shadow: none;
+  }
+
+  tc-menu svg + span {
+    display: none;
   }
 
   tc-menu nav span {
