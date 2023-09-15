@@ -105,7 +105,7 @@
 <body>
   <tc-menu :title="title"></tc-menu>
 
-  <div @raw="content" webc:nokeep></div>
+  <main @raw="content" webc:nokeep></main>
 
   <tc-favicon></tc-favicon>
 
