@@ -11,9 +11,9 @@
   <link rel="icon" href="" type="image/svg+xml">
   <meta name="theme-color" content="black" />
 
-  <style webc:bucket="base">
-    @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" webc:keep>
 
+  <style webc:bucket="base">
     :root {
       --color-bg: white;
       --color-fg: black;
