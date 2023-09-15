@@ -6,7 +6,7 @@ layout: base.webc
   <section>
   <h1 @text="title"></h1>
     <tc-card webc:for="(post, index) of collections.blog">
-      <div role="image" :alt="post.data.title" aria-hidden="true"><span @text="abstract(post.data.title,10)"></span></div>
+      <div role="img" :alt="post.data.title" aria-hidden="true"><span @text="abstract(post.data.title,10)"></span></div>
       <h2>
         <a :href="post.url" 
              @text="post.data.title"></a>
@@ -42,7 +42,7 @@ layout: base.webc
     display: none;
   }
 
-  [role=image] {
+  [role=img] {
     background-color: var(--color-fg);
     color: var(--color-bg);
     position: relative;
@@ -50,7 +50,7 @@ layout: base.webc
     overflow: hidden;
   }
 
-  [role=image] span {
+  [role=img] span {
     font-size: 100vw;
     line-height: 0.1;
     font-weight: bold;
@@ -67,7 +67,7 @@ layout: base.webc
       width: 100%;
     }
 
-    [role=image] span {
+    [role=img] span {
       font-size: 50vw;
     }
   }
