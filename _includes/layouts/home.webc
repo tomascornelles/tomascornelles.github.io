@@ -5,14 +5,14 @@ layout: base.webc
 <section @raw="content" id="content"></section>
 
 <section>
-  <tc-card webc:for="(post, index) of collections.blog" webc:if="!index">
+  <article webc:for="(post, index) of collections.blog" webc:if="!index">
     <h2>
       <a :href="post.url" 
            @text="post.data.title"></a>
     </h2>
     <div @html="abstract(post.content, 500)"></div>
     <p><a :href="post.url">Seguir leyendo</a></p>
-  </tc-card>
+  </article>
   <p><strong><a href="/blog">Leer más artículos en el blog</a></strong></p>
 </section>
 

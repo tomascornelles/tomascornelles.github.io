@@ -2,16 +2,16 @@
 layout: base.webc
 ---
 
-<section role="group">
-  <h1 @text="title"></h1>
-  <tc-card webc:for="(post, index) of collections.blog">
+<h1 @text="title"></h1>
+<section role="list">
+  <article role="listitem" webc:for="(post, index) of collections.blog">
     <div role="img" :alt="post.data.title" aria-hidden="true"><span @text="abstract(post.data.title,10)"></span></div>
     <h2>
       <a :href="post.url" @text="post.data.title"></a>
     </h2>
     <div webc:if="index" @html="abstract(post.content)"></div>
     <div webc:else @html="abstract(post.content, 500)"></div>
-  </tc-card>
+  </article>
 </section>
 
 <style webc:scoped>
