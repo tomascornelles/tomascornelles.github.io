@@ -30,47 +30,44 @@
     <p>
     <small>made with ❤️  by <strong>tomascornelles © <span id="year"></span></strong></small>
     </p>
-    <p>
-    <small><a href="/politica-de-cookies">Política de cookies</a></small><br>
-    <small><a href="/politica-de-privacidad">Política de privacidad</a></small>
-    </p>
   </section>
 </footer>
 
-<style webc:scoped>
-  section:first-child p {
+<style>
+  footer section:first-child p {
     margin-bottom: 5em;
   }
 
-  ul {
+  footer ul {
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
-  ul span {
+  footer ul span {
     display: block;
     opacity: .6;
     margin-top: 1em;
     margin-bottom: 0;
   }
 
-  section:last-child {
+  footer section:last-child {
     margin-top: 5em;
+    text-align: center;
   }
 
-  section:last-child a {
+  footer section:last-child a {
     display: inline-block;
     padding: .5em 0;
   }
 
   @media (min-width: 768px) {
-    section:first-child > div, section:last-child {
+    footer section:first-child > div {
       display: flex;
       justify-content: space-between;
       gap: 5rem;
     }
-    section:first-child > div {
+    footer section:first-child > div {
       flex-direction: row-reverse;
     }
   }
