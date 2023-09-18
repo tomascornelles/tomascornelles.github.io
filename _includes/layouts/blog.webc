@@ -3,50 +3,43 @@ layout: base.webc
 ---
 
 <h1 @text="title"></h1>
-<section role="list">
-  <article role="listitem" webc:for="(post, index) of collections.blog">
-    <div role="img" :alt="post.data.title" aria-hidden="true"><span @text="abstract(post.data.title,10)"></span></div>
+<section id="blog">
+  <article webc:for="(post, index) of collections.blog">
     <h2>
       <a :href="post.url" @text="post.data.title"></a>
     </h2>
     <div webc:if="index" @html="abstract(post.content)"></div>
     <div webc:else @html="abstract(post.content, 500)"></div>
+    <p webc:if="index < 3"><a :href="post.url">Seguir leyendo</a></p>
   </article>
 </section>
 
-<style webc:scoped>
-  section[role=group] {
+<style>
+  #blog {
     display: flex;
     flex-wrap: wrap;
-    gap: calc(10 * var(--unit)) calc(4 * var(--unit));
+    gap: calc(10 * var(--unit)) calc(6 * var(--unit));
+    margin-block-start: 20rem;
   }
 
-  tc-card:nth-child(n+4) article {
+  #blog article:nth-child(n+4) {
     padding: 0;
     box-shadow: none;
     background-color: transparent;
   }
 
-  tc-card h2 {
+  #blog h2 {
     font-size: 3rem;
     line-height: 1.5;
     margin-top: 0;
   }
 
-  tc-card:nth-child(n+4) div, 
-  tc-card:nth-child(n+4) img {
+  #blog article:nth-child(n+4) div, 
+  #blog article:nth-child(n+4) img {
     display: none;
   }
 
-  [role=img] {
-    background-color: var(--color-fg);
-    color: var(--color-bg);
-    position: relative;
-    height: 10rem;
-    overflow: hidden;
-  }
-
-  [role=img] span {
+  #blog [role=img] span {
     font-size: 100vw;
     line-height: 0.1;
     font-weight: bold;
@@ -55,16 +48,12 @@ layout: base.webc
   }
 
   @media (min-width: 768px) {
-    tc-card:nth-child(n+2) {
-      width: calc(50% - 2 * var(--unit));
+    #blog article:nth-child(n+2) {
+      width: calc(50% - 3 * var(--unit));
     }
 
-    tc-card:nth-child(n+4) {
+    #blog article:nth-child(n+4) {
       width: 100%;
-    }
-
-    [role=img] span {
-      font-size: 50vw;
     }
   }
 </style>
