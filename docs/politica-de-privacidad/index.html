@@ -41,12 +41,8 @@
       color: var(--color-fg);
       font-family: var(--font);
       padding-top: 20dvh;
-      margin: 0;
-    }
-
-    section {
       max-width: calc(var(--unit) * 120);
-      margin: auto;
+      margin: 0 auto;
       padding: var(--unit);
     }
 
@@ -99,36 +95,38 @@
     svg path {
       fill: var(--color-fg);
     }</style>
-  <style>tc-menu header {
+  <style>header {
     position: fixed;
     top: 0;
     inset-inline: 0;
     transition: all .4s ease;
     background-color: var(--color-bg);
     z-index: 1;
-  }
-
-  tc-menu section {
     display: flex;
     align-items: top;
     justify-content: space-between;
+    gap: 0;
+    flex-wrap: initial;
+    max-width: calc(var(--unit) * 120);
+    margin: auto;
+    padding: var(--unit);
   }
-
-  tc-menu section > * {
+  
+  header > * {
     flex-grow: 1;
     width: 100%;
     text-align: center;
   }
 
-  tc-menu section > *:first-child {
+  header > *:first-child {
     text-align: left;
   }
 
-  tc-menu section > *:last-child {
+  header > *:last-child {
     text-align: right;
   }
 
-  tc-menu h1 {
+  header p {
     margin: .5rem 0;
     font-size: 2rem;
     visibility: hidden;
@@ -137,43 +135,43 @@
     white-space: nowrap;
   }
 
-  tc-menu a, tc-menu a:hover {
-    box-shadow: none;
+  header.sticky p {
+    visibility: visible;
   }
 
-  tc-menu svg + span {
+  header svg + span {
     display: none;
   }
 
-  tc-menu nav span {
+  header a, header a:hover {
+    box-shadow: none;
+  }
+
+  header nav span {
     margin: 0;
     font-size: 2rem;
   }
 
-  tc-menu nav a {
+  header nav a {
     display: block;
     padding: 1em 1rem;
   }
 
-  tc-menu nav a:hover {
+  header nav a:hover {
     box-shadow: inset 0 -5em var(--color-fg);
   }
 
-  tc-menu .sticky h1 {
-    visibility: visible;
-  }
-
-  tc-menu #logo {
+  header #logo {
     transition: all .4s ease;
     height: 67px;
   }
 
-  tc-menu .sticky #logo {
+  header.sticky #logo {
     height: calc(var(--unit) * 6.7 / 2);
     background-color: var(--color-fg);
   }
 
-  tc-menu nav ul {
+  header nav ul {
     height: 0;
     overflow: hidden;
     list-style: none;
@@ -187,59 +185,118 @@
     max-width: calc(var(--unit) * 120);
   }
 
-  tc-menu .sticky nav ul {
+  header.sticky nav ul {
     margin-top: 1rem;
   }
 
-  tc-menu nav:hover ul {
-    height: calc(3 * 3.5em); /* 4 elements, 1.5 line-height + 1 padding-top + 1 padding-bottom */
+  header nav:hover ul {
+    height: calc(3 * 3.5em); /* 3 elements, 1.5 line-height + 1 padding-top + 1 padding-bottom */
   }
-.w_vedzcgj section:first-child p{margin-bottom:5em}.w_vedzcgj ul{margin:0;padding:0;list-style:none}.w_vedzcgj ul span{display:block;opacity:.6;margin-top:1em;margin-bottom:0}.w_vedzcgj section:last-child{margin-top:5em}.w_vedzcgj section:last-child a{display:inline-block;padding:.5em 0}@media (min-width:768px){.w_vedzcgj section:first-child>div,.w_vedzcgj section:last-child{display:flex;justify-content:space-between;gap:5rem}.w_vedzcgj section:first-child>div{flex-direction:row-reverse}}</style>
+
+  @media (min-width: 768px) {
+    header nav {
+      position: relative;
+      overflow: hidden;
+    }
+
+    header nav span {
+      display: none;
+    }
+
+    header nav ul {
+      height: auto;
+      background-color: transparent;
+    }
+
+    header nav li {
+      display: inline-block;
+    }
+
+    header nav a {
+      display: inline;
+      padding-block: .3em;
+    }
+  }
+footer section:first-child p {
+    margin-bottom: 5em;
+  }
+
+  footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  footer ul span {
+    display: block;
+    opacity: .6;
+    margin-top: 1em;
+    margin-bottom: 0;
+  }
+
+  footer section:last-child {
+    margin-top: 5em;
+    text-align: center;
+  }
+
+  footer section:last-child a {
+    display: inline-block;
+    padding: .5em 0;
+  }
+
+  @media (min-width: 768px) {
+    footer section:first-child > div {
+      display: flex;
+      justify-content: space-between;
+      gap: 5rem;
+    }
+    footer section:first-child > div {
+      flex-direction: row-reverse;
+    }
+  }</style>
 </head>
 
 <body>
-  <tc-menu title="Política de privacidad"><header>
-  <section>
-    <h1>Política de privacidad</h1>
-    <a href="/" title="Logo">
-      <svg id="logo" aria-labelledby="logoTitle logoDesc" role="img" viewBox="0 0 43 67" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <title id="logoTitle">Tomás</title>
-        <desc id="logoDesc">Ir al inicio</desc>
-        <path d="M4 4H39V7H23V15H20V7H4V4Z" fill="black"></path> 
-        <path d="M19 8H4V11H16V15H19V8Z" fill="black"></path> 
-        <path d="M24 8H39V11H27V15H24V8Z" fill="black"></path> 
-        <path d="M15 12H4V15H15V12Z" fill="black"></path> 
-        <path d="M28 12H39V15H28V12Z" fill="black"></path> 
-        <path d="M8 20H35V23H8V20Z" fill="black"></path> 
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 16H39V27H4V16ZM7 19H36V24H7V19Z" fill="black"></path> 
-        <path d="M39 28H4V39H7V31H20V35H23V31H36V39H39V28Z" fill="black"></path> 
-        <path d="M8 32H19V36H24V32H35V39H32V35H27V39H16V35H11V39H8V32Z" fill="black"></path> 
-        <path d="M15 36H12V39H15V36Z" fill="black"></path> 
-        <path d="M28 36H31V39H28V36Z" fill="black"></path> 
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 40H39V51H36V47H7V51H4V40ZM7 43H36V44H7V43Z" fill="black"></path> 
-        <path d="M8 48H35V51H8V48Z" fill="black"></path> 
-        <path d="M39 52H4V59H36V60H4V63H39V56H7V55H39V52Z" fill="black"></path> 
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M43 0H0V67H43V0ZM3 3H40V64H3V3Z" fill="black"></path> 
-      </svg>
-      <span>Tomás</span>
-    </a>
-    <nav>
-      <span>menu</span>
-      <ul>
-        <li><a href="/">sobre mi</a></li>
-        <li><a href="#contacto">contacto</a></li>
-        <li><a href="/blog">blog</a></li>
-      </ul>
-    </nav>
-  </section>
+  <header>
+  <p>Política de privacidad</p>
+  <a href="/" title="Logo">
+    <svg id="logo" aria-labelledby="logoTitle logoDesc" role="img" viewBox="0 0 43 67" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <title id="logoTitle">Tomás</title>
+      <desc id="logoDesc">Ir al inicio</desc>
+      <path d="M4 4H39V7H23V15H20V7H4V4Z" fill="black"></path> 
+      <path d="M19 8H4V11H16V15H19V8Z" fill="black"></path> 
+      <path d="M24 8H39V11H27V15H24V8Z" fill="black"></path> 
+      <path d="M15 12H4V15H15V12Z" fill="black"></path> 
+      <path d="M28 12H39V15H28V12Z" fill="black"></path> 
+      <path d="M8 20H35V23H8V20Z" fill="black"></path> 
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M4 16H39V27H4V16ZM7 19H36V24H7V19Z" fill="black"></path> 
+      <path d="M39 28H4V39H7V31H20V35H23V31H36V39H39V28Z" fill="black"></path> 
+      <path d="M8 32H19V36H24V32H35V39H32V35H27V39H16V35H11V39H8V32Z" fill="black"></path> 
+      <path d="M15 36H12V39H15V36Z" fill="black"></path> 
+      <path d="M28 36H31V39H28V36Z" fill="black"></path> 
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M4 40H39V51H36V47H7V51H4V40ZM7 43H36V44H7V43Z" fill="black"></path> 
+      <path d="M8 48H35V51H8V48Z" fill="black"></path> 
+      <path d="M39 52H4V59H36V60H4V63H39V56H7V55H39V52Z" fill="black"></path> 
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M43 0H0V67H43V0ZM3 3H40V64H3V3Z" fill="black"></path> 
+    </svg>
+    <span>Tomás</span>
+  </a>
+  <nav>
+    <span>menu</span>
+    <ul>
+      <li><a href="/">sobre mi</a></li>
+      <li><a href="#contacto">contacto</a></li>
+      <li><a href="/blog">blog</a></li>
+    </ul>
+  </nav>
 </header>
 
 
 
 
-</tc-menu>
 
-  <p>Propietario: <strong>Tomás Cornelles Calvo</strong> (a partir de ahora “<strong>Tomás</strong>”)</p>
+
+  <main><p>Propietario: <strong>Tomás Cornelles Calvo</strong> (a partir de ahora “<strong>Tomás</strong>”)</p>
 <p>E-mail: hola@tomascornelles.com</p>
 <p>Nombre de dominio: <strong>www.tomascornelles.com</strong></p>
 <p>De conformidad con lodispuesto en la Ley Orgánica 15/1999, de Protección de Datos de Carácter Personal (LOPD) su normativa de desarrollo, y la LSSICE34/2002, de 11 de julio, de la Sociedad de la Información y de Comercio Electrónico, <strong>Tomás</strong> en cumplimiento de lo dispuesto en el art. 5 y 6 de la LOPD, informa atodos los usuarios que faciliten o vayan a facilitar sus datos personales, que estos se enviarán por correo electrónico con el único fin de responder al contacto y no serán almacenados en ningún lugar.</p>
@@ -257,12 +314,9 @@
 <p><strong>Tomás</strong> no se hace responsable de las webs no propias a las que se pueda acceder mediante vínculoso enlaces (&quot;links&quot;) o de cualquier contenido puesto a disposición de terceros. Cualquier uso de un vínculo o acceso a una web no propia será realizado por voluntad y a riesgo y ventura exclusiva del usuario. <strong>Tomás</strong> no recomienda ni garantiza ninguna de la/s Información/es obtenida/s por o a través de un vínculo, ni se responsabiliza de ninguna pérdida, reclamación o perjuicio derivado del uso o mal uso de un vínculo, o de la Información obtenida a través de él, incluyendo otros vínculos o webs, de la interrupción en el servicio o en el acceso, o del intento de usar o usar mal un vínculo, tanto al conectar a la web de <strong>Tomás</strong> como al acceder a la información de otras webs desde la misma.</p>
 <h2>LEY APLICABLE</h2>
 <p>La ley aplicable en caso de disputa o conflicto de interpretación de los términos que conforman esta Política de Privacidad, así como cualquier cuestión relacionadacon los servicios de la presente web, será la ley española.</p>
+</main>
 
-
-  <tc-favicon>
-</tc-favicon>
-
-  <tc-footer class="w_vedzcgj"><footer>
+  <footer>
   <section id="contacto">
     <h2>Contáctame</h2>
     <div>
@@ -294,22 +348,24 @@
     <p>
     <small>made with ❤️  by <strong>tomascornelles © <span id="year"></span></strong></small>
     </p>
-    <p>
-    <small><a href="/politica-de-cookies">Política de cookies</a></small><br>
-    <small><a href="/politica-de-privacidad">Política de privacidad</a></small>
-    </p>
   </section>
 </footer>
 
 
 
 
-</tc-footer>
+
+
+  <tc-favicon>
+</tc-favicon>
 
   <script>window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);
   }
+const today = new Date();
+  const year = today.getFullYear();
+  document.querySelector('#year').innerHTML = year;
 class TcFavicon extends HTMLElement {
     connectedCallback() {
       const link = document.querySelector("link")
@@ -348,10 +404,7 @@ class TcFavicon extends HTMLElement {
     }
   }
 
-  window.customElements.define("tc-favicon", TcFavicon);
-const today = new Date();
-  const year = today.getFullYear();
-  document.querySelector('#year').innerHTML = year;</script>
+  window.customElements.define("tc-favicon", TcFavicon);</script>
 
 
 

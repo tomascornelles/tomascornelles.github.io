@@ -45,12 +45,8 @@
       color: var(--color-fg);
       font-family: var(--font);
       padding-top: 20dvh;
-      margin: 0;
-    }
-
-    section {
       max-width: calc(var(--unit) * 120);
-      margin: auto;
+      margin: 0 auto;
       padding: var(--unit);
     }
 
@@ -110,13 +106,13 @@
 </head>
 
 <body>
-  <tc-menu :title="title"></tc-menu>
+  <tc-header :title="title" webc:nokeep></tc-header>
 
-  <main @raw="content" webc:nokeep></main>
+  <main @raw="content"></main>
+
+  <tc-footer webc:nokeep></tc-footer>
 
   <tc-favicon></tc-favicon>
-
-  <tc-footer></tc-footer>
 
   <script @raw="getBundle('js', 'defer')" webc:keep></script>
 </body>

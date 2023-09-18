@@ -2,24 +2,20 @@
 layout: base.webc
 ---
 
-<main>
-  <section>
+<section role="group">
   <h1 @text="title"></h1>
-    <tc-card webc:for="(post, index) of collections.blog">
-      <div role="img" :alt="post.data.title" aria-hidden="true"><span @text="abstract(post.data.title,10)"></span></div>
-      <h2>
-        <a :href="post.url" 
-             @text="post.data.title"></a>
-      </h2>
-      <div webc:if="index" @html="abstract(post.content)"></div>
-      <div webc:else @html="abstract(post.content, 500)"></div>
-    </tc-card>
-  </section>
-</main>
+  <tc-card webc:for="(post, index) of collections.blog">
+    <div role="img" :alt="post.data.title" aria-hidden="true"><span @text="abstract(post.data.title,10)"></span></div>
+    <h2>
+      <a :href="post.url" @text="post.data.title"></a>
+    </h2>
+    <div webc:if="index" @html="abstract(post.content)"></div>
+    <div webc:else @html="abstract(post.content, 500)"></div>
+  </tc-card>
+</section>
 
 <style webc:scoped>
-
-  section {
+  section[role=group] {
     display: flex;
     flex-wrap: wrap;
     gap: calc(10 * var(--unit)) calc(4 * var(--unit));
@@ -71,7 +67,6 @@ layout: base.webc
       font-size: 50vw;
     }
   }
-
 </style>
 
 <script src="../assets/scripts/microlight.js" webc:bucket="defer"></script>
