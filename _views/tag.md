@@ -8,7 +8,8 @@ pagination:
   alias: tag
   filter:
     - blog
-permalink: /blog/tag/{{ tag }}
+    - all
+permalink: /blog/tag/{{ tag }}/
 ---
 
 {{ tag }}
