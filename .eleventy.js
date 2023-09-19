@@ -23,6 +23,13 @@ module.exports = function(eleventyConfig) {
     return `${content.substring(0, length)}${ellipsis}`;
   });
 
+  eleventyConfig.addFilter("dateFormat", (date) => {
+    const months = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+    return `${date.getDate()}-${months[date.getMonth()]}-${date.getFullYear()}`;
+  });
+
+  eleventyConfig.addFilter("tagUrl", (tag) => `/blog/tag/${tag}`);
+
   // Return your Object options:
   return {
     dir: {

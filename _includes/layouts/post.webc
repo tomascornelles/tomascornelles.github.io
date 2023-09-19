@@ -1,14 +1,13 @@
 ---
 layout: base.webc
+date: 2023-09-19
 ---
 
-<h1 @text="title"></h1>
-<article @html="content"></article>
-
-<script src="../assets/scripts/microlight.js" webc:bucket="defer"></script>
-<script webc:bucket="defer">
-  const codeBlocks = document.querySelectorAll('pre');
-  codeBlocks.forEach((block) => {
-    block.classList.add('microlight');
-  })
-</script>
+<tc-post 
+  :@post-title="title"
+  :@post-content="content"
+  :@post-date="date"
+  :@post-url="url"
+  :@post-tags="tags"
+  :@complete="true"
+  ></tc-post>
