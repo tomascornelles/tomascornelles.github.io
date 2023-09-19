@@ -95,7 +95,32 @@
     svg path {
       fill: var(--color-fg);
     }</style>
-  <style>header {
+  <style>.serif {
+    font-family: serif;
+  }
+
+  .sans {
+    font-family: sans-serif;
+  }
+
+  .mono {
+    font-family: monospace;
+  }
+
+  #content h1 {
+    font-size: 15vw;
+    height: 60dvh;
+    margin-top: 0;
+    display: flex;
+    align-items: end;
+  }
+
+  @media (min-width: 768px) {
+    #content h1 {
+      font-size: 11rem;
+    }
+  }
+header {
     position: fixed;
     top: 0;
     inset-inline: 0;
@@ -295,10 +320,16 @@ footer section:first-child p {
 
 
 
-  <main><section>
-  <h2>Error 404</h2>
-  <article></article>
+  <main><section id="content"><h1>Error<br>404</h1>
+<p>Parece que no encuentro lo que buscas. Donde quieres ir?</p>
+<p><a href="/">inicio</a> - <a href="/blog">blog</a></p>
 </section>
+
+
+
+
+
+
 </main>
 
   <footer>
@@ -344,7 +375,21 @@ footer section:first-child p {
   <tc-favicon>
 </tc-favicon>
 
-  <script>window.onscroll = () => {
+  <script>const hello = document.querySelector('#content h1');
+  const parts = hello.innerHTML.split('<br>');
+  const replaced0 = parts[0].split('').map((letter) => `<span>${letter}</span>`);
+  const replaced1 = parts[1].split('').map((letter) => `<span>${letter}</span>`);
+  hello.innerHTML = `<div>${replaced0.join('')}<br>${replaced1.join('')}</div>`;
+
+  const styles = ['mono', 'serif', 'sans'];
+  const letters = hello.querySelectorAll('span');
+
+  const mix = () => {
+  letters[Math.floor(Math.random() * letters.length)].classList.toggle(styles[Math.floor(Math.random() * styles.length)])
+  }
+
+  setInterval(mix, 200);
+window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);
   }
