@@ -103,9 +103,15 @@
     margin-block-end: 5rem;
   }
 
+  article header h1 {
+    margin-block-end: 2rem;
+    font-size: 3rem;
+  }
+
   article header p {
     visibility: visible;
     font-size: initial;
+    margin-block-end: 10rem;
   }
 
   article header a{
@@ -163,26 +169,6 @@
   @media (min-width: 768px) {
     #content h1 {
       font-size: 11rem;
-    }
-  }
-
-  tc-card h2 {
-    font-size: 3rem;
-    line-height: 1.5;
-  }
-
-  tc-card:nth-child(n+4) div, 
-  tc-card:nth-child(n+4) img {
-    display: none;
-  }
-
-  @media (min-width: 768px) {
-    tc-card:nth-child(n+2) {
-      width: calc(50% - 2 * var(--unit));
-    }
-
-    tc-card:nth-child(n+4) {
-      width: 100%;
     }
   }
 header {
@@ -395,7 +381,7 @@ footer section:first-child p {
 </section>
 
 <section>
-  <tc-post><article>
+  <article>
   <header>
      
     
@@ -429,7 +415,7 @@ footer section:first-child p {
 
 
 
-</tc-post>
+
 
 </section>
 

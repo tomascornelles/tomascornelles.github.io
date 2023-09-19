@@ -4,20 +4,6 @@ layout: base.webc
 
 <section @raw="content" id="content"></section>
 
-<section>
-  <tc-post 
-    webc:nokeep
-    webc:for="(post, index) of collections.blog"
-    webc:if="!index"
-    :@post-title="post.data.title"
-    :@post-content="post.content"
-    :@post-url="post.url"
-    :@post-more="true"
-    :@home="true"
-    :@long="index == 0"
-    ></tc-post>
-
-</section>
 
 
 <script webc:bucket="defer">
