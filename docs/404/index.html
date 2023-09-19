@@ -95,7 +95,56 @@
     svg path {
       fill: var(--color-fg);
     }</style>
-  <style>.serif {
+  <style>article header {
+    position: relative;
+    z-index: 0;
+    display: block;
+    padding: 0;
+    margin-block-end: 5rem;
+  }
+
+  article header p {
+    visibility: visible;
+    font-size: initial;
+  }
+
+  article header a{
+    box-shadow: inset 0 -2px var(--color-fg);
+  }
+
+  article header a:hover {
+    box-shadow: inset 0 -5em var(--color-fg);
+  }
+
+  article header > :last-child {
+    text-align: left;
+  }
+
+  article > div h1,
+  article > div h2,
+  article > div h3,
+  article > div h4 {
+    margin-block-start: 2em;
+  }
+
+  article ul, 
+  article ol {
+    padding-inline-start: 0;
+    list-style-position: inside;
+  }
+
+  article ul {
+    list-style-type: square;
+  }
+
+  article ul::marker {
+    width: 5rem;
+  }
+
+  article footer {
+    margin-block-start: 15rem;
+  }
+.serif {
     font-family: serif;
   }
 
@@ -188,8 +237,9 @@ header {
     display: none;
   }
 
-  header a, header a:hover {
+  header > a, header > a:hover {
     box-shadow: none;
+    max-width: 5rem;
   }
 
   header nav span {
@@ -199,7 +249,7 @@ header {
 
   header nav a {
     display: block;
-    padding: 1em 1rem;
+    padding: 1em 0;
   }
 
   header nav a:hover {
@@ -230,10 +280,6 @@ header {
     max-width: calc(var(--unit) * 120);
   }
 
-  header.sticky nav ul {
-    margin-top: 1rem;
-  }
-
   header nav:hover ul {
     height: calc(3 * 3.5em); /* 3 elements, 1.5 line-height + 1 padding-top + 1 padding-bottom */
   }
@@ -249,8 +295,9 @@ header {
     }
 
     header nav ul {
-      height: auto;
+      height: 2em;
       background-color: transparent;
+      margin-block-start: .5rem;
     }
 
     header nav li {
@@ -259,7 +306,8 @@ header {
 
     header nav a {
       display: inline;
-      padding-block: .3em;
+      padding-block: 0 .3em;
+      margin-inline-start: 2rem;
     }
   }
 footer section:first-child p {
@@ -345,16 +393,42 @@ footer section:first-child p {
 </section>
 
 <section>
-  <article>
+  <tc-post><article>
+  <header>
+     
+    
     <h2>
-      <a href="/blog/post1/">Un titulo cualquiera</a>
+      <a href="/blog/20230919_test/">Test de post</a>
     </h2>
-    <div><p>In Git, <span role="link">the</span> git reset <strong>command</strong> is <em>used</em> <em><strong>to</strong></em> reset the state of the <em>repository</em> to a specific point. There are different ways to use git reset depending on what you want to achieve. Here are a few common scenarios:</p>
-<p>Discard Uncommitted Changes:</p>
-<p>If you have made changes to your files but haven't committed them yet and you want to discard those changes, you can use git reset with the --hard option:</p>...</div>
-    <p><a href="/blog/post1/">Seguir leyendo</a></p>
-  </article>
-  <p><strong><a href="/blog">Leer más artículos en el blog</a></strong></p>
+    
+</header>
+
+   
+  
+  <div><h3>Date.prototype.getMonth()</h3>
+<p>The getMonth() method of Date instances returns the month for this date according to local time, as a zero-based value (where zero indicates the first month of the year).</p>
+<h3>Syntax</h3>
+<pre><code>getMonth()
+</code></pre>
+<h3>Parameters</h3>
+<p>None.</p>
+<h3>Return value</h3>
+<p>An integer, between 0 and 11, representing the month for the given date according to local time: 0 for January, 1 for February, and so on. Returns NaN if the date is invalid.</p></div>
+  
+
+  
+  <p><a href="/blog/20230919_test/">Seguir leyendo</a></p>
+  <p><a href="/blog"><strong>Leer mas articulos en el blog</strong></a></p>
+
+  
+</article>
+
+
+
+
+
+</tc-post>
+
 </section>
 
 
@@ -406,7 +480,12 @@ footer section:first-child p {
   <tc-favicon>
 </tc-favicon>
 
-  <script>const hello = document.querySelector('#content h1');
+  <script>!function(e,t){"function"==typeof define&&define.amd?define(["exports"],t):t("undefined"!=typeof exports?exports:e.microlight={})}(this,function(e){var t,n,i,o=window,r=document,a="appendChild",l="test",c=";text-shadow:",s="opacity:.",d=" 0px 0px ",u="3px 0px 5",f=")",p=function(e){for(n=r.getElementsByClassName(e||"microlight"),t=0;i=n[t++];)for(var p,h,g,m,y,x=i.textContent,b=0,w=x[0],v=1,k=i.innerHTML="",C=0,N=/(\d*\, \d*\, \d*)(, ([.\d]*))?/g.exec(o.getComputedStyle(i).color),E="px rgba("+N[1]+",",S=N[3]||1;h=p,p=7>C&&"\\"==p?1:v;){if(v=w,w=x[++b],m=k.length>1,!v||C>8&&"\n"==v||[/\S/[l](v),1,1,!/[$\w]/[l](v),("/"==p||"\n"==p)&&m,'"'==p&&m,"'"==p&&m,x[b-4]+h+p=="-->",h+p=="*/"][C])for(k&&(i[a](y=r.createElement("span")).setAttribute("style",["",c+d+9+E+.7*S+"),"+d+2+E+.4*S+f,s+6+c+d+7+E+S/4+"),"+d+3+E+S/4+f,s+7+c+u+E+S/5+"),-"+u+E+S/5+f,"font-style:italic;"+s+5+c+u+E+S/4+"),-"+u+E+S/4+f][C?3>C?2:C>6?4:C>3?3:+/^(a(bstract|lias|nd|rguments|rray|s(m|sert)?|uto)|b(ase|egin|ool(ean)?|reak|yte)|c(ase|atch|har|hecked|lass|lone|ompl|onst|ontinue)|de(bugger|cimal|clare|f(ault|er)?|init|l(egate|ete)?)|do|double|e(cho|ls?if|lse(if)?|nd|nsure|num|vent|x(cept|ec|p(licit|ort)|te(nds|nsion|rn)))|f(allthrough|alse|inal(ly)?|ixed|loat|or(each)?|riend|rom|unc(tion)?)|global|goto|guard|i(f|mp(lements|licit|ort)|n(it|clude(_once)?|line|out|stanceof|t(erface|ernal)?)?|s)|l(ambda|et|ock|ong)|m(icrolight|odule|utable)|NaN|n(amespace|ative|ext|ew|il|ot|ull)|o(bject|perator|r|ut|verride)|p(ackage|arams|rivate|rotected|rotocol|ublic)|r(aise|e(adonly|do|f|gister|peat|quire(_once)?|scue|strict|try|turn))|s(byte|ealed|elf|hort|igned|izeof|tatic|tring|truct|ubscript|uper|ynchronized|witch)|t(emplate|hen|his|hrows?|ransient|rue|ry|ype(alias|def|id|name|of))|u(n(checked|def(ined)?|ion|less|signed|til)|se|sing)|v(ar|irtual|oid|olatile)|w(char_t|hen|here|hile|ith)|xor|yield)$/[l](k):0]),y[a](r.createTextNode(k))),g=C&&7>C?C:g,k="",C=11;![1,/[\/{}[(\-+*=<>:;|\\.,?!&@~]/[l](v),/[\])]/[l](v),/[$\w]/[l](v),"/"==v&&2>g&&"<"!=p,'"'==v,"'"==v,v+w+x[b+1]+x[b+2]=="<!--",v+w=="/*",v+w=="//","#"==v][--C];);k+=v}};e.reset=p,"complete"==r.readyState?p():o.addEventListener("load",function(){p()},0)});
+const codeBlocks = document.querySelectorAll('pre');
+  codeBlocks.forEach((block) => {
+    block.classList.add('microlight');
+  })
+const hello = document.querySelector('#content h1');
   const parts = hello.innerHTML.split('<br>');
   const replaced0 = parts[0].split('').map((letter) => `<span>${letter}</span>`);
   const replaced1 = parts[1].split('').map((letter) => `<span>${letter}</span>`);

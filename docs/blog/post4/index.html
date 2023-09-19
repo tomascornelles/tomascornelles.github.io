@@ -95,7 +95,56 @@
     svg path {
       fill: var(--color-fg);
     }</style>
-  <style>header {
+  <style>article header {
+    position: relative;
+    z-index: 0;
+    display: block;
+    padding: 0;
+    margin-block-end: 5rem;
+  }
+
+  article header p {
+    visibility: visible;
+    font-size: initial;
+  }
+
+  article header a{
+    box-shadow: inset 0 -2px var(--color-fg);
+  }
+
+  article header a:hover {
+    box-shadow: inset 0 -5em var(--color-fg);
+  }
+
+  article header > :last-child {
+    text-align: left;
+  }
+
+  article > div h1,
+  article > div h2,
+  article > div h3,
+  article > div h4 {
+    margin-block-start: 2em;
+  }
+
+  article ul, 
+  article ol {
+    padding-inline-start: 0;
+    list-style-position: inside;
+  }
+
+  article ul {
+    list-style-type: square;
+  }
+
+  article ul::marker {
+    width: 5rem;
+  }
+
+  article footer {
+    margin-block-start: 15rem;
+  }
+header {
     position: fixed;
     top: 0;
     inset-inline: 0;
@@ -143,8 +192,9 @@
     display: none;
   }
 
-  header a, header a:hover {
+  header > a, header > a:hover {
     box-shadow: none;
+    max-width: 5rem;
   }
 
   header nav span {
@@ -154,7 +204,7 @@
 
   header nav a {
     display: block;
-    padding: 1em 1rem;
+    padding: 1em 0;
   }
 
   header nav a:hover {
@@ -185,10 +235,6 @@
     max-width: calc(var(--unit) * 120);
   }
 
-  header.sticky nav ul {
-    margin-top: 1rem;
-  }
-
   header nav:hover ul {
     height: calc(3 * 3.5em); /* 3 elements, 1.5 line-height + 1 padding-top + 1 padding-bottom */
   }
@@ -204,8 +250,9 @@
     }
 
     header nav ul {
-      height: auto;
+      height: 2em;
       background-color: transparent;
+      margin-block-start: .5rem;
     }
 
     header nav li {
@@ -214,7 +261,8 @@
 
     header nav a {
       display: inline;
-      padding-block: .3em;
+      padding-block: 0 .3em;
+      margin-inline-start: 2rem;
     }
   }
 footer section:first-child p {
@@ -296,12 +344,38 @@ footer section:first-child p {
 
 
 
-  <main><h1>Post 4</h1>
-<article><p>Lorem <strong>ipsum</strong></p>
+  <main><tc-post><article>
+  <header>
+     
+    <h1>Post 4</h1>
+    
+    <p>
+      <span>19-septiembre-2023</span>
+    </p>
+</header>
+
+   
+  <div><p>Lorem <strong>ipsum</strong></p>
+</div>
+  
+  
+
+  
+  
+  
+
+  <footer>
+     
+    <p>Tags: </p>
+    <p><a href="/blog">Volver al blog</a></p>
+  </footer>
 </article>
 
 
 
+
+
+</tc-post>
 </main>
 
   <footer>

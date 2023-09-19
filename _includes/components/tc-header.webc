@@ -81,8 +81,9 @@
     display: none;
   }
 
-  header a, header a:hover {
+  header > a, header > a:hover {
     box-shadow: none;
+    max-width: 5rem;
   }
 
   header nav span {
@@ -92,7 +93,7 @@
 
   header nav a {
     display: block;
-    padding: 1em 1rem;
+    padding: 1em 0;
   }
 
   header nav a:hover {
@@ -123,10 +124,6 @@
     max-width: calc(var(--unit) * 120);
   }
 
-  header.sticky nav ul {
-    margin-top: 1rem;
-  }
-
   header nav:hover ul {
     height: calc(3 * 3.5em); /* 3 elements, 1.5 line-height + 1 padding-top + 1 padding-bottom */
   }
@@ -142,8 +139,9 @@
     }
 
     header nav ul {
-      height: auto;
+      height: 2em;
       background-color: transparent;
+      margin-block-start: .5rem;
     }
 
     header nav li {
@@ -152,7 +150,8 @@
 
     header nav a {
       display: inline;
-      padding-block: .3em;
+      padding-block: 0 .3em;
+      margin-inline-start: 2rem;
     }
   }
 </style>

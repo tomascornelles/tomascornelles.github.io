@@ -1,0 +1,83 @@
+<article>
+  <header>
+    <!--- Title ---> 
+    <h1 webc:if="complete" @text="postTitle"></h1>
+    <h2 webc:else>
+      <a :href="postUrl" @text="postTitle"></a>
+    </h2>
+    <p webc:if="complete">
+      <span @text="dateFormat(postDate)"></span>
+    </p>
+</header>
+
+  <!--- Abstract/content ---> 
+  <div webc:if="complete" @html="postContent"></div>
+  <div webc:elseif="long" @html="abstract(postContent, 500)"></div>
+  <div webc:elseif="short" @html="abstract(postContent)"></div>
+
+  <!--- Read More --->
+  <p webc:if="postMore"><a :href="postUrl">Seguir leyendo</a></p>
+  <p webc:if="home"><a href="/blog"><strong>Leer mas articulos en el blog</strong></a></p>
+
+  <footer webc:if="complete">
+    <!--- Back ---> 
+    <p>Tags: <a webc:for="tag of postTags" webc:if="tag != 'blog'" :href="tagUrl(tag)" @text="tag"></a></p>
+    <p><a href="/blog">Volver al blog</a></p>
+  </footer>
+</article>
+
+<style>
+  article header {
+    position: relative;
+    z-index: 0;
+    display: block;
+    padding: 0;
+    margin-block-end: 5rem;
+  }
+
+  article header p {
+    visibility: visible;
+    font-size: initial;
+  }
+
+  article header a{
+    box-shadow: inset 0 -2px var(--color-fg);
+  }
+
+  article header a:hover {
+    box-shadow: inset 0 -5em var(--color-fg);
+  }
+
+  article header > :last-child {
+    text-align: left;
+  }
+
+  article > div h1,
+  article > div h2,
+  article > div h3,
+  article > div h4 {
+    margin-block-start: 2em;
+  }
+
+  article ul, 
+  article ol {
+    padding-inline-start: 0;
+    list-style-position: inside;
+  }
+
+  article ul {
+    list-style-type: square;
+  }
+
+  article footer {
+    margin-block-start: 15rem;
+  }
+</style>
+
+<script src="../assets/scripts/microlight.js" webc:bucket="defer"></script>
+<script webc:bucket="defer">
+  const codeBlocks = document.querySelectorAll('pre');
+  codeBlocks.forEach((block) => {
+    block.classList.add('microlight');
+  })
+</script>

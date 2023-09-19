@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Blog</title>
+  <title>Etiqueta: all</title>
   <meta name="description" content="Web personal y blog de Tomas Cornelles, frontend developer.">
 
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -155,20 +155,6 @@
     font-size: 3rem;
     line-height: 1.5;
     margin-top: 0;
-  }
-
-  @media (min-width: 768px) {
-    #blog article:nth-child(n+2) {
-      width: calc(50% - 3 * var(--unit));
-    }
-
-    #blog article:nth-child(n+4) {
-      width: 100%;
-    }
-
-    #blog article:nth-child(n+4) a {
-      display: block;
-    }
   }
 header {
     position: fixed;
@@ -332,7 +318,7 @@ footer section:first-child p {
 
 <body>
   <header>
-  <p>Blog</p>
+  <p>Etiqueta: all</p>
   <a href="/" title="Logo">
     <svg id="logo" aria-labelledby="logoTitle logoDesc" role="img" viewBox="0 0 43 67" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <title id="logoTitle">Tomás</title>
@@ -370,9 +356,149 @@ footer section:first-child p {
 
 
 
-  <main><h1>Blog</h1>
+  <main><h1>Etiqueta: all</h1>
 <section id="blog">
   <article>
+  <header>
+     
+    
+    <h2>
+      <a href="/404/">Index</a>
+    </h2>
+    
+</header>
+
+   
+  
+  
+  <div><h1>404</h1>
+</div>
+
+  
+  <p><a href="/404/">Seguir leyendo</a></p>
+  
+
+  
+</article>
+
+
+
+
+
+
+<article>
+  <header>
+     
+    
+    <h2>
+      <a href="/blog/">Blog</a>
+    </h2>
+    
+</header>
+
+   
+  
+  
+  <div></div>
+
+  
+  <p><a href="/blog/">Seguir leyendo</a></p>
+  
+
+  
+</article>
+
+
+
+
+
+
+<article>
+  <header>
+     
+    
+    <h2>
+      <a href="/politica-de-cookies/">Politica de cookies</a>
+    </h2>
+    
+</header>
+
+   
+  
+  
+  <div><p>Una “Cookie” es un pequeño archivo que se almacena en el ordenador del usuario y nos permite reconocerle. El conjunto de “cookies” nos ayuda a mejorar la calidad de nuestra web, permitiéndonos cont...</p></div>
+
+  
+  <p><a href="/politica-de-cookies/">Seguir leyendo</a></p>
+  
+
+  
+</article>
+
+
+
+
+
+
+<article>
+  <header>
+     
+    
+    <h2>
+      <a href="/politica-de-privacidad/">Política de privacidad</a>
+    </h2>
+    
+</header>
+
+   
+  
+  
+  <div><p>Propietario: <strong>Tomás Cornelles Calvo</strong> (a partir de ahora “<strong>Tomás</strong>”)</p>
+<p>E-mail: hola@tomascornelles.com</p>
+<p>Nombre de dominio: <strong>www.tomascornelles.com</strong></p></div>
+
+  
+  <p><a href="/politica-de-privacidad/">Seguir leyendo</a></p>
+  
+
+  
+</article>
+
+
+
+
+
+
+<article>
+  <header>
+     
+    
+    <h2>
+      <a href="/">¡Hola!</a>
+    </h2>
+    
+</header>
+
+   
+  
+  
+  <div><h1>¡Hola!<br> Soy Tomás</h1>
+<h2>Sobre mi</h2>
+<p>Aunque no lo parezca soy un químico reciclado, tuve la oportunidad de trabajar para el laboratorio de una gran petrolera multinacional y afrontar la ...</p></div>
+
+  
+  <p><a href="/">Seguir leyendo</a></p>
+  
+
+  
+</article>
+
+
+
+
+
+
+<article>
   <header>
      
     
@@ -384,16 +510,9 @@ footer section:first-child p {
 
    
   
-  <div><h3>Date.prototype.getMonth()</h3>
-<p>The getMonth() method of Date instances returns the month for this date according to local time, as a zero-based value (where zero indicates the first month of the year).</p>
-<h3>Syntax</h3>
-<pre><code>getMonth()
-</code></pre>
-<h3>Parameters</h3>
-<p>None.</p>
-<h3>Return value</h3>
-<p>An integer, between 0 and 11, representing the month for the given date according to local time: 0 for January, 1 for February, and so on. Returns NaN if the date is invalid.</p></div>
   
+  <div><h3>Date.prototype.getMonth()</h3>
+<p>The getMonth() method of Date instances returns the month for this date according to local time, as a zero-based value (where zero indicates the first month of th...</p></div>
 
   
   <p><a href="/blog/20230919_test/">Seguir leyendo</a></p>
@@ -476,10 +595,20 @@ footer section:first-child p {
    
   
   
-  
+  <div><p>Lorem <strong>ipsum</strong> <code>code</code></p>
+<pre><code>let code = "variable";
+const pepe = () =&gt; true;
+</code></pre>
+<ul>
+<li>this</li>
+<li>is a</li>
+<li>list</li>
+</ul>
+<ol>
+</ol></div>
 
   
-  
+  <p><a href="/blog/post3/">Seguir leyendo</a></p>
   
 
   
@@ -503,10 +632,39 @@ footer section:first-child p {
    
   
   
+  <div><p>Lorem <strong>ipsum</strong></p>
+</div>
+
+  
+  <p><a href="/blog/post4/">Seguir leyendo</a></p>
   
 
   
+</article>
+
+
+
+
+
+
+<article>
+  <header>
+     
+    
+    <h2>
+      <a href="/blog/tag/all">Etiqueta: all</a>
+    </h2>
+    
+</header>
+
+   
   
+  
+  <div><p>all</p>
+</div>
+
+  
+  <p><a href="/blog/tag/all">Seguir leyendo</a></p>
   
 
   

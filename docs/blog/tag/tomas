@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Blog</title>
+  <title>Etiqueta: tomas</title>
   <meta name="description" content="Web personal y blog de Tomas Cornelles, frontend developer.">
 
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -155,20 +155,6 @@
     font-size: 3rem;
     line-height: 1.5;
     margin-top: 0;
-  }
-
-  @media (min-width: 768px) {
-    #blog article:nth-child(n+2) {
-      width: calc(50% - 3 * var(--unit));
-    }
-
-    #blog article:nth-child(n+4) {
-      width: 100%;
-    }
-
-    #blog article:nth-child(n+4) a {
-      display: block;
-    }
   }
 header {
     position: fixed;
@@ -332,7 +318,7 @@ footer section:first-child p {
 
 <body>
   <header>
-  <p>Blog</p>
+  <p>Etiqueta: tomas</p>
   <a href="/" title="Logo">
     <svg id="logo" aria-labelledby="logoTitle logoDesc" role="img" viewBox="0 0 43 67" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <title id="logoTitle">Tomás</title>
@@ -370,7 +356,7 @@ footer section:first-child p {
 
 
 
-  <main><h1>Blog</h1>
+  <main><h1>Etiqueta: tomas</h1>
 <section id="blog">
   <article>
   <header>
@@ -384,129 +370,12 @@ footer section:first-child p {
 
    
   
-  <div><h3>Date.prototype.getMonth()</h3>
-<p>The getMonth() method of Date instances returns the month for this date according to local time, as a zero-based value (where zero indicates the first month of the year).</p>
-<h3>Syntax</h3>
-<pre><code>getMonth()
-</code></pre>
-<h3>Parameters</h3>
-<p>None.</p>
-<h3>Return value</h3>
-<p>An integer, between 0 and 11, representing the month for the given date according to local time: 0 for January, 1 for February, and so on. Returns NaN if the date is invalid.</p></div>
   
+  <div><h3>Date.prototype.getMonth()</h3>
+<p>The getMonth() method of Date instances returns the month for this date according to local time, as a zero-based value (where zero indicates the first month of th...</p></div>
 
   
   <p><a href="/blog/20230919_test/">Seguir leyendo</a></p>
-  
-
-  
-</article>
-
-
-
-
-
-
-<article>
-  <header>
-     
-    
-    <h2>
-      <a href="/blog/post1/">Un titulo cualquiera</a>
-    </h2>
-    
-</header>
-
-   
-  
-  
-  <div><p>In Git, <span role="link">the</span> git reset <strong>command</strong> is <em>used</em> <em><strong>to</strong></em> reset the state of the <em>repository</em> to a specific point. There are diffe...</p></div>
-
-  
-  <p><a href="/blog/post1/">Seguir leyendo</a></p>
-  
-
-  
-</article>
-
-
-
-
-
-
-<article>
-  <header>
-     
-    
-    <h2>
-      <a href="/blog/post2/">Post 2 To delete a branch in Git, you can use the git branch command with the -d or -D flag.</a>
-    </h2>
-    
-</header>
-
-   
-  
-  
-  <div><p>To delete a branch in Git, you can use the git branch command with the -d or -D flag. Here's how you can do it:</p>
-<p>Delete a Merged Branch:</p>
-<p>If the branch you want to delete has been merge...</p></div>
-
-  
-  <p><a href="/blog/post2/">Seguir leyendo</a></p>
-  
-
-  
-</article>
-
-
-
-
-
-
-<article>
-  <header>
-     
-    
-    <h2>
-      <a href="/blog/post3/">Post 3</a>
-    </h2>
-    
-</header>
-
-   
-  
-  
-  
-
-  
-  
-  
-
-  
-</article>
-
-
-
-
-
-
-<article>
-  <header>
-     
-    
-    <h2>
-      <a href="/blog/post4/">Post 4</a>
-    </h2>
-    
-</header>
-
-   
-  
-  
-  
-
-  
-  
   
 
   

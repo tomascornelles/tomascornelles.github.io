@@ -5,15 +5,17 @@ layout: base.webc
 <section @raw="content" id="content"></section>
 
 <section>
-  <article webc:for="(post, index) of collections.blog" webc:if="!index">
-    <h2>
-      <a :href="post.url" 
-           @text="post.data.title"></a>
-    </h2>
-    <div @html="abstract(post.content, 500)"></div>
-    <p><a :href="post.url">Seguir leyendo</a></p>
-  </article>
-  <p><strong><a href="/blog">Leer más artículos en el blog</a></strong></p>
+  <tc-post 
+    webc:for="(post, index) of collections.blog"
+    webc:if="!index"
+    :@post-title="post.data.title"
+    :@post-content="post.content"
+    :@post-url="post.url"
+    :@post-more="true"
+    :@home="true"
+    :@long="index == 0"
+    ></tc-post>
+
 </section>
 
 

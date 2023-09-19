@@ -95,7 +95,56 @@
     svg path {
       fill: var(--color-fg);
     }</style>
-  <style>header {
+  <style>article header {
+    position: relative;
+    z-index: 0;
+    display: block;
+    padding: 0;
+    margin-block-end: 5rem;
+  }
+
+  article header p {
+    visibility: visible;
+    font-size: initial;
+  }
+
+  article header a{
+    box-shadow: inset 0 -2px var(--color-fg);
+  }
+
+  article header a:hover {
+    box-shadow: inset 0 -5em var(--color-fg);
+  }
+
+  article header > :last-child {
+    text-align: left;
+  }
+
+  article > div h1,
+  article > div h2,
+  article > div h3,
+  article > div h4 {
+    margin-block-start: 2em;
+  }
+
+  article ul, 
+  article ol {
+    padding-inline-start: 0;
+    list-style-position: inside;
+  }
+
+  article ul {
+    list-style-type: square;
+  }
+
+  article ul::marker {
+    width: 5rem;
+  }
+
+  article footer {
+    margin-block-start: 15rem;
+  }
+header {
     position: fixed;
     top: 0;
     inset-inline: 0;
@@ -143,8 +192,9 @@
     display: none;
   }
 
-  header a, header a:hover {
+  header > a, header > a:hover {
     box-shadow: none;
+    max-width: 5rem;
   }
 
   header nav span {
@@ -154,7 +204,7 @@
 
   header nav a {
     display: block;
-    padding: 1em 1rem;
+    padding: 1em 0;
   }
 
   header nav a:hover {
@@ -185,10 +235,6 @@
     max-width: calc(var(--unit) * 120);
   }
 
-  header.sticky nav ul {
-    margin-top: 1rem;
-  }
-
   header nav:hover ul {
     height: calc(3 * 3.5em); /* 3 elements, 1.5 line-height + 1 padding-top + 1 padding-bottom */
   }
@@ -204,8 +250,9 @@
     }
 
     header nav ul {
-      height: auto;
+      height: 2em;
       background-color: transparent;
+      margin-block-start: .5rem;
     }
 
     header nav li {
@@ -214,7 +261,8 @@
 
     header nav a {
       display: inline;
-      padding-block: .3em;
+      padding-block: 0 .3em;
+      margin-inline-start: 2rem;
     }
   }
 footer section:first-child p {
@@ -296,13 +344,33 @@ footer section:first-child p {
 
 
 
-  <main><h1>Un titulo cualquiera</h1>
-<article><p>In Git, <span role="link">the</span> git reset <strong>command</strong> is <em>used</em> <em><strong>to</strong></em> reset the state of the <em>repository</em> to a specific point. There are different ways to use git reset depending on what you want to achieve. Here are a few common scenarios:</p>
+  <main><tc-post><article>
+  <header>
+     
+    <h1>Un titulo cualquiera</h1>
+    
+    <p>
+      <span>19-septiembre-2023</span>
+    </p>
+</header>
+
+   
+  <div><p>In Git, <span role="link">the</span> git reset <strong>command</strong> is <em>used</em> <em><strong>to</strong></em> reset the state of the <em>repository</em> to a specific point. There are different ways to use git reset depending on what you want to achieve. Here are a few common scenarios:</p>
 <p>Discard Uncommitted Changes:</p>
 <p>If you have made changes to your files but haven't committed them yet and you want to discard those changes, you can use git reset with the --hard option:</p>
 <p>bash</p>
 <p>git reset --hard</p>
 <p>This will reset your working directory to match the state of the last commit, discarding all your uncommitted changes.</p>
+<ul>
+<li>unstage</li>
+<li>lista</li>
+<li>normal</li>
+</ul>
+<ol>
+<li>otra</li>
+<li>lista</li>
+<li>numerada</li>
+</ol>
 <p>Unstage Changes:</p>
 <p>If you have staged changes but want to unstage them (move them back to the working directory), you can use git reset without the --hard option:</p>
 <p>bash</p>
@@ -319,10 +387,26 @@ footer section:first-child p {
 <p>git reset --mixed &lt;commit_hash&gt;</p>
 <p>This will unstage any changes you have staged and move the HEAD pointer to &lt;commit_hash&gt;, effectively "uncommitting" the commits after that point.</p>
 <p>Always be cautious when using git reset, especially with the --hard option, as it can result in permanent data loss if used improperly. It's recommended to create backups or use branches before performing operations that alter your commit history or working directory.</p>
+</div>
+  
+  
+
+  
+  
+  
+
+  <footer>
+     
+    <p>Tags: <a href="/blog/tag/test">test</a></p>
+    <p><a href="/blog">Volver al blog</a></p>
+  </footer>
 </article>
 
 
 
+
+
+</tc-post>
 </main>
 
   <footer>
