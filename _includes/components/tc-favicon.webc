@@ -5,28 +5,29 @@
       const theme = document.querySelector("meta[name=theme-color]")
 
       const icons = {
-        6_28: '🌈',
-        8_15: '🏖️',
-        10_31: '🎃',
-        12_24: '🎄',
+        '6_28': '🌈',
+        '8_15': '🏖️',
+        '10_31': '🎃',
+        '12_24': '🎄',
       }
 
       const getToday = () => new Date();
 
       const currentMonth = (() => getToday().getMonth() + 1)();
 
-      const currentDay = (() => getToday().getDate());
+      const currentDay = (() => getToday().getDate())();
 
       const today = `${currentMonth}_${currentDay}`
 
       const favicon = (() => {
+
         if (icons[today]){
-          link.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>${icons[currentMonth()]}</text></svg>`;
+          link.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>${icons[today]}</text></svg>`;
 
         } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
           // dark mode
           link.href = `data:image/svg+xml,<svg width="43" height="67" viewBox="0 0 43 67" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect width="43" height="67" fill="white"/></svg>`;
-          meta.content = "white";
+          theme['content'] = "black";
 
         } else {
           // light mode

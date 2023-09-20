@@ -9,7 +9,7 @@
 
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="white">
 
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="preload" as="font" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
@@ -173,7 +173,7 @@
     font-family: monospace;
   }
 
-  #content h1 {
+  #welcome h1 {
     font-size: 15vw;
     height: 60dvh;
     margin-top: 0;
@@ -182,8 +182,13 @@
   }
 
   @media (min-width: 768px) {
-    #content h1 {
+    #welcome h1 {
       font-size: 11rem;
+    }
+
+    #welcome article {
+      columns: 2;
+      column-gap: 5rem;
     }
   }
 header {
@@ -307,7 +312,11 @@ header {
       margin-inline-start: 2rem;
     }
   }
-footer section:first-child p {
+#hablamos {
+    padding-block-start: 5rem;
+  }
+
+  footer section:first-child p {
     margin-bottom: 5em;
   }
 
@@ -374,8 +383,8 @@ footer section:first-child p {
   <nav>
     <span>menu</span>
     <ul>
-      <li><a href="/">sobre mi</a></li>
-      <li><a href="#contacto">contacto</a></li>
+      <li><a href="/">inicio</a></li>
+      <li><a href="#hablamos">¿hablamos?</a></li>
       <li><a href="/blog">blog</a></li>
     </ul>
   </nav>
@@ -386,13 +395,14 @@ footer section:first-child p {
 
 
 
-  <main><section id="content"><h1>¡Hola!<br> Soy Tomás</h1>
-<h2>Sobre mi</h2>
-<p>Aunque no lo parezca soy un químico reciclado, tuve la oportunidad de trabajar para el laboratorio de una gran petrolera multinacional y afrontar la crisis del 2010 reinventándome.</p>
+  <main><section id="welcome"><h1>¡Hola!<br> Soy Tomás</h1>
+<article>
+Aunque no lo parezca soy un químico reciclado, tuve la oportunidad de trabajar para el laboratorio de una gran petrolera multinacional y afrontar la crisis del 2010 reinventándome.
 <p>La programación siempre fue mi pasión. Autodidacta y perfeccionista me metí en este mundo binario lleno de colores. Obtuve el título de programador de aplicaciones informáticas en 2012 y desde entonces trabajé como freelance, para pymes, fui CTO en una prometedora StartUp y team leader en una agencia de publicidad.</p>
 <p>Ahora desarrollo para un gran portal internacional, ayudo a quien me necesite, sigo aprendiendo y en mis ratos libres juego con mi hijo, dibujo a tinta o ruedo en mi bicicleta.</p>
 <p>Además de los proyectos para clientes, también he buscado practicar con ejercicios que me resultan divertidos. Si encuentro una idea que me gusaría realizar, intento encontrar la forma de desarrollarla, como un pasatiempo.</p>
 <p>Soy un entusiasta del Vanilla JS, aunque siempre estoy dispuesto a aprender y usar cualquier framework, desde grandes proyectos como AMP, Vue o React, hasta pequeños experimentos como CellJS o HTMX.</p>
+</article>
 </section>
 
 <section>
@@ -441,8 +451,8 @@ footer section:first-child p {
 </main>
 
   <footer>
-  <section id="contacto">
-    <h2>Contáctame</h2>
+  <section id="hablamos">
+    <h2>¿Hablamos?</h2>
     <div>
       <p>
       Soy un desarrollador frontend con experiencia desde 2012 que he trabajado para startups, agencias y big tech. No dudes en contactarme si puedo ayudarte o colaborar, me encantan los nuevos proyectos y los retos.
@@ -495,7 +505,7 @@ const codeBlocks = document.querySelectorAll('pre');
   codeBlocks.forEach((block) => {
     block.classList.add('microlight');
   })
-const hello = document.querySelector('#content h1');
+const hello = document.querySelector('#welcome h1');
   const parts = hello.innerHTML.split('<br>');
   const replaced0 = parts[0].split('').map((letter) => `<span>${letter}</span>`);
   const replaced1 = parts[1].split('').map((letter) => `<span>${letter}</span>`);
@@ -513,6 +523,9 @@ window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);
   }
+  document.querySelectorAll('header nav a').forEach((item) => {
+    item.addEventListener('click', (e) => e.target.blur());
+  })
 window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -527,28 +540,29 @@ class TcFavicon extends HTMLElement {
       const theme = document.querySelector("meta[name=theme-color]")
 
       const icons = {
-        6_28: '🌈',
-        8_15: '🏖️',
-        10_31: '🎃',
-        12_24: '🎄',
+        '6_28': '🌈',
+        '8_15': '🏖️',
+        '10_31': '🎃',
+        '12_24': '🎄',
       }
 
       const getToday = () => new Date();
 
       const currentMonth = (() => getToday().getMonth() + 1)();
 
-      const currentDay = (() => getToday().getDate());
+      const currentDay = (() => getToday().getDate())();
 
       const today = `${currentMonth}_${currentDay}`
 
       const favicon = (() => {
+
         if (icons[today]){
-          link.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>${icons[currentMonth()]}</text></svg>`;
+          link.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>${icons[today]}</text></svg>`;
 
         } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
           // dark mode
           link.href = `data:image/svg+xml,<svg width="43" height="67" viewBox="0 0 43 67" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect width="43" height="67" fill="white"/></svg>`;
-          meta.content = "white";
+          theme['content'] = "black";
 
         } else {
           // light mode

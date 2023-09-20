@@ -7,7 +7,7 @@ describe('G002 - Header links', () => {
   
   it('About link', () => {
     cy.visit('http://localhost:8080/blog');
-    cy.contains('sobre mi').click({force: true});
+    cy.contains('inicio').click({force: true});
     cy.location('pathname').should('eq', '/');
   });
   
@@ -19,7 +19,7 @@ describe('G002 - Header links', () => {
   
   it('Contact link', () => {
     cy.visit('http://localhost:8080');
-    // cy.contains('contacto').click({force: true});
-    cy.contains('Contáctame').should('be.visible');
+    cy.contains('¿hablamos?').click({force: true});
+    cy.contains('¿Hablamos?').should('be.visible');
   });
 })
