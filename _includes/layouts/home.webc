@@ -16,7 +16,6 @@ layout: base.webc
     :@home="true"
     :@long="index == 0"
     ></tc-post>
-
 </section>
 
 
@@ -52,10 +51,12 @@ layout: base.webc
 
   #welcome h1 {
     font-size: 15vw;
-    height: 60dvh;
+    height: 80dvh;
     margin-top: 0;
     display: flex;
     align-items: end;
+    padding-block-end: 10vh;
+    box-sizing: border-box;
   }
 
   @media (min-width: 768px) {
