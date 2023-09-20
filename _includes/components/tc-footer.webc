@@ -29,6 +29,8 @@
   <section>
     <p>
     <small>made with ❤️  by <strong>tomascornelles © <span id="year"></span></strong></small>
+    <br>
+    <small><tc-analytics webc:nokeep></tc-analytics></small>
     </p>
   </section>
 </footer>

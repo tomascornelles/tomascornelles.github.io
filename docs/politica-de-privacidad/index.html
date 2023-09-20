@@ -7,8 +7,9 @@
 
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
-  <link rel="icon" href type="image/svg+xml">
-  <meta name="theme-color" content="black">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <meta name="theme-color" content="#ffffff">
 
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="preload" as="font" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
@@ -43,13 +44,17 @@
       padding-top: 20dvh;
       max-width: calc(var(--unit) * 120);
       margin: 0 auto;
-      padding: var(--unit);
+      padding: calc(var(--unit) * 20) var(--unit) var(--unit);
+    }
+
+    main > section {
+      padding-block-end:  calc(var(--unit) * 20);
     }
 
     h1, h2, h3 {
       font-weight: normal;
       line-height: 1.0;
-      margin-top: 20rem;
+      margin-top: 2em;
     }
 
     h1 {
@@ -95,7 +100,68 @@
     svg path {
       fill: var(--color-fg);
     }</style>
-  <style>header {
+  <style>article header {
+    position: relative;
+    z-index: 0;
+    display: block;
+    padding: 0;
+    margin-block-end: 5rem;
+  }
+
+  article header h1 {
+    margin-block-end: 2rem;
+    font-size: 3rem;
+  }
+
+  article header p {
+    visibility: visible;
+    font-size: initial;
+    margin-block-end: 10rem;
+  }
+
+  article header a{
+    box-shadow: inset 0 -2px var(--color-fg);
+  }
+
+  article header a:hover {
+    box-shadow: inset 0 -5em var(--color-fg);
+  }
+
+  article header > :last-child {
+    text-align: left;
+  }
+
+  article > div h1,
+  article > div h2,
+  article > div h3,
+  article > div h4 {
+    margin-block-start: 2em;
+  }
+
+  article ul, 
+  article ol {
+    padding-inline-start: 0;
+    list-style-position: inside;
+  }
+
+  article ul {
+    list-style-type: square;
+  }
+
+  article li {
+    margin-block-end: 2em;
+  }
+
+  article footer {
+    margin-block-start: 15rem;
+  }
+
+  @media (min-width: 768px) {
+    article header h1 {
+      font-size: 5rem;
+    }
+  }
+header {
     position: fixed;
     top: 0;
     inset-inline: 0;
@@ -295,7 +361,18 @@ footer section:first-child p {
 
 
 
-  <main><p>Propietario: <strong>Tomás Cornelles Calvo</strong> (a partir de ahora “<strong>Tomás</strong>”)</p>
+  <main><article>
+  <header>
+     
+    <h1>Política de privacidad</h1>
+    
+    <p>
+      <span>19-septiembre-2023</span>
+    </p>
+</header>
+
+   
+  <div><p>Propietario: <strong>Tomás Cornelles Calvo</strong> (a partir de ahora “<strong>Tomás</strong>”)</p>
 <p>E-mail: hola@tomascornelles.com</p>
 <p>Nombre de dominio: <strong>www.tomascornelles.com</strong></p>
 <p>De conformidad con lodispuesto en la Ley Orgánica 15/1999, de Protección de Datos de Carácter Personal (LOPD) su normativa de desarrollo, y la LSSICE34/2002, de 11 de julio, de la Sociedad de la Información y de Comercio Electrónico, <strong>Tomás</strong> en cumplimiento de lo dispuesto en el art. 5 y 6 de la LOPD, informa atodos los usuarios que faciliten o vayan a facilitar sus datos personales, que estos se enviarán por correo electrónico con el único fin de responder al contacto y no serán almacenados en ningún lugar.</p>
@@ -303,16 +380,36 @@ footer section:first-child p {
 <p>En los formularios de esta web no se requiere de ningún dato personal opbligatorio, y que los datos que el Usuario porporcione serán de forma voluntaria para poder contactarnos.</p>
 <p>En caso de querer eliminar los datos enviados a <strong>Tomás</strong>, el Usuarió podrá enviar un correo electrónico a <strong>tomascornelles@gmail.com</strong> solicitando la eliminación de todos los correos relacionados con el Usuario. De conformidad con lo dispuesto en la Ley Orgánica 15/1999, de Protección de Datos de Carácter Personal (LOPD).</p>
 <h2>PROPIEDAD INDUSTRIALE INTELECTUAL</h2>
-<p>Esta web es propiedad de <strong>Tomás.</strong> Los derechos de Propiedad Intelectual y derechos de explotación y reproducción de esta web, de sus páginas, pantallas, la Información que contienen, su apariencia y diseño, así como los vínculos (&quot;hiperlinks&quot;) que se establezcan desde ella a otras páginas web decualquier sociedad filial y/o dominada de <strong>Tomás</strong>, son propiedad exclusiva de ésta, salvo que expresamente se especifique otra cosa. Cualquier denominación, diseño y/o logotipo, así como cualquier producto o servicio ofrecidos y reflejados en esta página web, son marcas debidamente registradas por <strong>Tomás</strong>, por sus sociedades filiales y/o dominadas o por terceros. Cualquier uso indebido de las mismas por personas diferentes de su legítimo titular y sin el consentimiento expreso e inequívoco por parte de éste podrá ser denunciado y perseguido a través de todos los medio legales existentes en el Ordenamiento Jurídico español y/o comunitario.</p>
+<p>Esta web es propiedad de <strong>Tomás.</strong> Los derechos de Propiedad Intelectual y derechos de explotación y reproducción de esta web, de sus páginas, pantallas, la Información que contienen, su apariencia y diseño, así como los vínculos ("hiperlinks") que se establezcan desde ella a otras páginas web decualquier sociedad filial y/o dominada de <strong>Tomás</strong>, son propiedad exclusiva de ésta, salvo que expresamente se especifique otra cosa. Cualquier denominación, diseño y/o logotipo, así como cualquier producto o servicio ofrecidos y reflejados en esta página web, son marcas debidamente registradas por <strong>Tomás</strong>, por sus sociedades filiales y/o dominadas o por terceros. Cualquier uso indebido de las mismas por personas diferentes de su legítimo titular y sin el consentimiento expreso e inequívoco por parte de éste podrá ser denunciado y perseguido a través de todos los medio legales existentes en el Ordenamiento Jurídico español y/o comunitario.</p>
 <p>Los derechos de propiedad intelectual y marcas de terceros están destacados convenientemente y deben ser respetados por todo aquél que acceda a esta página, no siendo responsabilidad de <strong>Tomás</strong> el uso que el usuario pueda llevar a cabo al respecto, recayendo la responsabilidad exclusiva en supersona.</p>
 <p>Sólo para uso personal y privado se permite descargar los contenidos, copiar o imprimir cualquier página de esta web. Queda prohibido reproducir, transmitir, modificar o suprimir la información,contenido o advertencias de esta web sin la previa autorización por escrito de <strong>Tomás.</strong></p>
 <p>Los contenidos suministrados por <strong>Tomás</strong> están sujetos a los derechos de propiedad intelectual e industrial y son titularidad exclusiva de <strong>Tomás</strong> o de las personas físicas o jurídicas que se informe.</p>
 <p>La propiedad intelectual se extiende, además del contenido incluido en <strong>Tomás</strong>, a sus gráficos,logotipos, diseños, imágenes y códigos fuente utilizado para su programación.</p>
 <p><strong>Tomás</strong> ha obtenido la Información y los materiales incluidos en la web de fuentes consideradas como fiables y, si bien se han tomado medidas razonables para asegurarse de que la información contenida seala correcta, <strong>Tomás</strong> no puede garantizar que en todo momento y circunstancia dicha información sea exacta, completa, actualizada y, consecuentemente, no debe confiarse en ella como si lo fuera. <strong>Tomás</strong> declina expresamente cualquier responsabilidad por error u omisión en la Información contenida en las páginas de esta web.</p>
 <p><strong>Tomás</strong> se reserva la facultad de modificar, suspender, cancelar o restringir el contenido de la web, los vínculos o la información obtenida a través de ella, sin necesidad de previo aviso. Ésta, en ningún caso, asume responsabilidad alguna como consecuencia de la incorrecta utilización dela web que pueda llevar a cabo el usuario, tanto de la información como de los servicios en ella contenidos.</p>
-<p><strong>Tomás</strong> no se hace responsable de las webs no propias a las que se pueda acceder mediante vínculoso enlaces (&quot;links&quot;) o de cualquier contenido puesto a disposición de terceros. Cualquier uso de un vínculo o acceso a una web no propia será realizado por voluntad y a riesgo y ventura exclusiva del usuario. <strong>Tomás</strong> no recomienda ni garantiza ninguna de la/s Información/es obtenida/s por o a través de un vínculo, ni se responsabiliza de ninguna pérdida, reclamación o perjuicio derivado del uso o mal uso de un vínculo, o de la Información obtenida a través de él, incluyendo otros vínculos o webs, de la interrupción en el servicio o en el acceso, o del intento de usar o usar mal un vínculo, tanto al conectar a la web de <strong>Tomás</strong> como al acceder a la información de otras webs desde la misma.</p>
+<p><strong>Tomás</strong> no se hace responsable de las webs no propias a las que se pueda acceder mediante vínculoso enlaces ("links") o de cualquier contenido puesto a disposición de terceros. Cualquier uso de un vínculo o acceso a una web no propia será realizado por voluntad y a riesgo y ventura exclusiva del usuario. <strong>Tomás</strong> no recomienda ni garantiza ninguna de la/s Información/es obtenida/s por o a través de un vínculo, ni se responsabiliza de ninguna pérdida, reclamación o perjuicio derivado del uso o mal uso de un vínculo, o de la Información obtenida a través de él, incluyendo otros vínculos o webs, de la interrupción en el servicio o en el acceso, o del intento de usar o usar mal un vínculo, tanto al conectar a la web de <strong>Tomás</strong> como al acceder a la información de otras webs desde la misma.</p>
 <h2>LEY APLICABLE</h2>
 <p>La ley aplicable en caso de disputa o conflicto de interpretación de los términos que conforman esta Política de Privacidad, así como cualquier cuestión relacionadacon los servicios de la presente web, será la ley española.</p>
+</div>
+  
+  
+
+  
+  
+  
+
+  <footer>
+     
+    <p>Tags: [object Object]</p>
+    <p><a href="/blog">Volver al blog</a></p>
+  </footer>
+</article>
+
+
+
+
+
+
 </main>
 
   <footer>
@@ -346,6 +443,13 @@ footer section:first-child p {
   <section>
     <p>
     <small>made with ❤️  by <strong>tomascornelles © <span id="year"></span></strong></small>
+    <br>
+    <small><a href="/politica-de-cookies">Politica de cookies</a>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8LS4CLZL6D"></script>
+
+</small>
     </p>
   </section>
 </footer>
@@ -358,10 +462,20 @@ footer section:first-child p {
   <tc-favicon>
 </tc-favicon>
 
-  <script>window.onscroll = () => {
+  <script>!function(e,t){"function"==typeof define&&define.amd?define(["exports"],t):t("undefined"!=typeof exports?exports:e.microlight={})}(this,function(e){var t,n,i,o=window,r=document,a="appendChild",l="test",c=";text-shadow:",s="opacity:.",d=" 0px 0px ",u="3px 0px 5",f=")",p=function(e){for(n=r.getElementsByClassName(e||"microlight"),t=0;i=n[t++];)for(var p,h,g,m,y,x=i.textContent,b=0,w=x[0],v=1,k=i.innerHTML="",C=0,N=/(\d*\, \d*\, \d*)(, ([.\d]*))?/g.exec(o.getComputedStyle(i).color),E="px rgba("+N[1]+",",S=N[3]||1;h=p,p=7>C&&"\\"==p?1:v;){if(v=w,w=x[++b],m=k.length>1,!v||C>8&&"\n"==v||[/\S/[l](v),1,1,!/[$\w]/[l](v),("/"==p||"\n"==p)&&m,'"'==p&&m,"'"==p&&m,x[b-4]+h+p=="-->",h+p=="*/"][C])for(k&&(i[a](y=r.createElement("span")).setAttribute("style",["",c+d+9+E+.7*S+"),"+d+2+E+.4*S+f,s+6+c+d+7+E+S/4+"),"+d+3+E+S/4+f,s+7+c+u+E+S/5+"),-"+u+E+S/5+f,"font-style:italic;"+s+5+c+u+E+S/4+"),-"+u+E+S/4+f][C?3>C?2:C>6?4:C>3?3:+/^(a(bstract|lias|nd|rguments|rray|s(m|sert)?|uto)|b(ase|egin|ool(ean)?|reak|yte)|c(ase|atch|har|hecked|lass|lone|ompl|onst|ontinue)|de(bugger|cimal|clare|f(ault|er)?|init|l(egate|ete)?)|do|double|e(cho|ls?if|lse(if)?|nd|nsure|num|vent|x(cept|ec|p(licit|ort)|te(nds|nsion|rn)))|f(allthrough|alse|inal(ly)?|ixed|loat|or(each)?|riend|rom|unc(tion)?)|global|goto|guard|i(f|mp(lements|licit|ort)|n(it|clude(_once)?|line|out|stanceof|t(erface|ernal)?)?|s)|l(ambda|et|ock|ong)|m(icrolight|odule|utable)|NaN|n(amespace|ative|ext|ew|il|ot|ull)|o(bject|perator|r|ut|verride)|p(ackage|arams|rivate|rotected|rotocol|ublic)|r(aise|e(adonly|do|f|gister|peat|quire(_once)?|scue|strict|try|turn))|s(byte|ealed|elf|hort|igned|izeof|tatic|tring|truct|ubscript|uper|ynchronized|witch)|t(emplate|hen|his|hrows?|ransient|rue|ry|ype(alias|def|id|name|of))|u(n(checked|def(ined)?|ion|less|signed|til)|se|sing)|v(ar|irtual|oid|olatile)|w(char_t|hen|here|hile|ith)|xor|yield)$/[l](k):0]),y[a](r.createTextNode(k))),g=C&&7>C?C:g,k="",C=11;![1,/[\/{}[(\-+*=<>:;|\\.,?!&@~]/[l](v),/[\])]/[l](v),/[$\w]/[l](v),"/"==v&&2>g&&"<"!=p,'"'==v,"'"==v,v+w+x[b+1]+x[b+2]=="<!--",v+w=="/*",v+w=="//","#"==v][--C];);k+=v}};e.reset=p,"complete"==r.readyState?p():o.addEventListener("load",function(){p()},0)});
+const codeBlocks = document.querySelectorAll('pre');
+  codeBlocks.forEach((block) => {
+    block.classList.add('microlight');
+  })
+window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);
   }
+window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8LS4CLZL6D');
 const today = new Date();
   const year = today.getFullYear();
   document.querySelector('#year').innerHTML = year;

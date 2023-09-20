@@ -7,8 +7,9 @@
 
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
-  <link rel="icon" href type="image/svg+xml">
-  <meta name="theme-color" content="black">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <meta name="theme-color" content="#ffffff">
 
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="preload" as="font" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
@@ -43,13 +44,17 @@
       padding-top: 20dvh;
       max-width: calc(var(--unit) * 120);
       margin: 0 auto;
-      padding: var(--unit);
+      padding: calc(var(--unit) * 20) var(--unit) var(--unit);
+    }
+
+    main > section {
+      padding-block-end:  calc(var(--unit) * 20);
     }
 
     h1, h2, h3 {
       font-weight: normal;
       line-height: 1.0;
-      margin-top: 20rem;
+      margin-top: 2em;
     }
 
     h1 {
@@ -143,8 +148,18 @@
     list-style-type: square;
   }
 
+  article li {
+    margin-block-end: 2em;
+  }
+
   article footer {
     margin-block-start: 15rem;
+  }
+
+  @media (min-width: 768px) {
+    article header h1 {
+      font-size: 5rem;
+    }
   }
 .serif {
     font-family: serif;
@@ -456,6 +471,13 @@ footer section:first-child p {
   <section>
     <p>
     <small>made with ❤️  by <strong>tomascornelles © <span id="year"></span></strong></small>
+    <br>
+    <small><a href="/politica-de-cookies">Politica de cookies</a>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8LS4CLZL6D"></script>
+
+</small>
     </p>
   </section>
 </footer>
@@ -491,6 +513,11 @@ window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);
   }
+window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8LS4CLZL6D');
 const today = new Date();
   const year = today.getFullYear();
   document.querySelector('#year').innerHTML = year;

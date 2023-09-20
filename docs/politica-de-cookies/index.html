@@ -7,8 +7,9 @@
 
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
-  <link rel="icon" href type="image/svg+xml">
-  <meta name="theme-color" content="black">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <meta name="theme-color" content="#ffffff">
 
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="preload" as="font" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
@@ -43,13 +44,17 @@
       padding-top: 20dvh;
       max-width: calc(var(--unit) * 120);
       margin: 0 auto;
-      padding: var(--unit);
+      padding: calc(var(--unit) * 20) var(--unit) var(--unit);
+    }
+
+    main > section {
+      padding-block-end:  calc(var(--unit) * 20);
     }
 
     h1, h2, h3 {
       font-weight: normal;
       line-height: 1.0;
-      margin-top: 20rem;
+      margin-top: 2em;
     }
 
     h1 {
@@ -95,7 +100,68 @@
     svg path {
       fill: var(--color-fg);
     }</style>
-  <style>header {
+  <style>article header {
+    position: relative;
+    z-index: 0;
+    display: block;
+    padding: 0;
+    margin-block-end: 5rem;
+  }
+
+  article header h1 {
+    margin-block-end: 2rem;
+    font-size: 3rem;
+  }
+
+  article header p {
+    visibility: visible;
+    font-size: initial;
+    margin-block-end: 10rem;
+  }
+
+  article header a{
+    box-shadow: inset 0 -2px var(--color-fg);
+  }
+
+  article header a:hover {
+    box-shadow: inset 0 -5em var(--color-fg);
+  }
+
+  article header > :last-child {
+    text-align: left;
+  }
+
+  article > div h1,
+  article > div h2,
+  article > div h3,
+  article > div h4 {
+    margin-block-start: 2em;
+  }
+
+  article ul, 
+  article ol {
+    padding-inline-start: 0;
+    list-style-position: inside;
+  }
+
+  article ul {
+    list-style-type: square;
+  }
+
+  article li {
+    margin-block-end: 2em;
+  }
+
+  article footer {
+    margin-block-start: 15rem;
+  }
+
+  @media (min-width: 768px) {
+    article header h1 {
+      font-size: 5rem;
+    }
+  }
+header {
     position: fixed;
     top: 0;
     inset-inline: 0;
@@ -295,124 +361,31 @@ footer section:first-child p {
 
 
 
-  <main><section>
-  <h2>Politica de cookies</h2>
-  <article><p>Una “Cookie” es un pequeño archivo que se almacena en el ordenador del usuario y nos permite reconocerle. El conjunto de “cookies” nos ayuda a mejorar la calidad de nuestra web, permitiéndonos controlar qué páginas encuentran nuestros usuarios útiles y cuáles no.</p>
-<p>Las cookies son esenciales para el funcionamiento de internet, aportando innumerables ventajas en la prestación de servicios interactivos, facilitándole la navegación y usabilidad de nuestra web. Tenga en cuenta que las cookies no pueden dañar su equipo y que, a cambio,el que estén activadas nos ayudan a identificar y resolver los errores.</p>
-<p>La información que le proporcionamosa continuación, le ayudará a comprender los diferentes tipos de cookies:</p>
+  <main><article>
+  <header>
+     
+    <h1>Politica de cookies</h1>
+    
+    <p>
+      <span>19-septiembre-2023</span>
+    </p>
+</header>
+
+   
+  <div><p>En cumplimiento con lo dispuesto en el artículo 22.2 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico, esta página web le informa, en esta sección, sobre la política de recogida y tratamiento de cookies.</p>
+<h2>1- ¿Qué son las cookies?</h2>
+<p>Una cookie es un fichero que se descarga en su ordenador al acceder a determinadas páginas web. Las cookies permiten a una página web, entre otras cosas, almacenar y recuperar información sobre los hábitos de navegación de un usuario o de su equipo y, dependiendo de la información que contengan y de la forma en que utilice su equipo, pueden utilizarse para reconocer al usuario.</p>
+<h2>2- ¿Qué tipos de cookies utiliza esta página web?</h2>
+<p>Esta página web utiliza los siguientes tipos de cookies:</p>
 <ul>
-<li>
-<p><strong>Cookies de sesión:</strong> son cookies temporales que permanecen en el archivo de cookies de su navegador hasta que abandone la página web, por loque ninguna queda registrada en el disco duro del usuario. La información obtenida por medio de estas cookies, sirven para analizar pautas de tráfico enla web. A la larga, esto nos permite proporcionar una mejor experiencia para mejorar el contenido y facilitando su uso.</p>
-</li>
-<li>
-<p><strong>Cookies permanentes:</strong> son almacenadas en el disco duro y nuestra web las lee cada vez que usted realiza una nueva visita. Una web permanente posee una fecha de expiración determinada. La cookie dejará de funcionar después de esa fecha.</p>
-</li>
+<li><strong>Cookies de análisis</strong>: Son aquellas que bien tratadas por nosotros o por terceros, nos permiten cuantificar el número de usuarios y así realizar la medición y análisis estadístico de la utilización que hacen los usuarios del servicio ofertado. Para ello se analiza su navegación en nuestra página web con el fin de mejorar la oferta de productos o servicios que le ofrecemos.</li>
+<li><strong>Cookies técnicas</strong>: Son aquellas que permiten al usuario la navegación a través del área restringida y la utilización de sus diferentes funciones, como por ejemplo, llevar a cambio el proceso de compra de un artículo.</li>
+<li><strong>Cookies de personalización</strong>: Son aquellas que permiten al usuario acceder al servicio con algunas características de carácter general predefinidas en función de una serie de criterios en el terminal del usuario como por ejemplo serian el idioma o el tipo de navegador a través del cual se conecta al servicio.</li>
 </ul>
-<p>A continuación publicamos una relación de las principales cookies utilizadas en nuestra Web, distinguiendo:</p>
-<ul>
-<li>
-<p><strong>Las cookies estrictamente necesarias</strong> como por ejemplo, aquellas que sirvan para una correcta navegación o las que permitan realizar servicios solicitados por el usuario o cookies que sirvan para asegurar que el contenido de la páginaweb se carga eficazmente.</p>
-</li>
-<li>
-<p><strong>Las cookies de terceros</strong> como por ejemplo, las usadas por redes sociales, o por complementos externos de contenido.</p>
-</li>
-<li>
-<p><strong>Las cookies analíticas</strong> con propósitos de mantenimiento periódico, y en aras de garantizar el mejor servicio posible al usuario, los sitios web hacen uso normalmente de cookies “analíticas” para recopilar datos estadísticosde la actividad.</p>
-</li>
-</ul>
-<h2>RELACIÓN Y DESCRIPCIÓN DE LAS COOKIES QUEUTILIZAMOS EN LA PÁGINA WEB:</h2>
-<p>La tabla que publicamos acontinuación recoge de forma esquematizada las cookies que utilizamos en nuestrapágina web:</p>
-<table>
-<thead>
-<tr>
-<th><strong>Cookie</strong></th>
-<th><strong>Nombre</strong></th>
-<th><strong>Finalidad /  Más información</strong></th>
-<th><strong>Vencimiento</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>www.tomascornelles.com</strong></td>
-<td>_ga</td>
-<td>Se  usa para distinguir a los usuarios.</td>
-<td>2 años</td>
-</tr>
-<tr>
-<td></td>
-<td>_utma</td>
-<td>Apoyo del uso  de Google Analytics en el sitio web para   poder hacer un seguimiento de la actividad realizada en él.</td>
-<td>2 años</td>
-</tr>
-<tr>
-<td></td>
-<td>_utmb</td>
-<td>Las cookies de Google Analytics recopilan  información de registro estándar y datos sobre los hábitos de los visitantes  de forma anónima.</td>
-<td>30 minutos</td>
-</tr>
-<tr>
-<td></td>
-<td>_utmc</td>
-<td>Determina si es  necesario establecer nueva sesión</td>
-<td>Sesión</td>
-</tr>
-<tr>
-<td></td>
-<td>_utmt</td>
-<td>Se utiliza para procesar el tipo de solicitud  requerida por el usuario.</td>
-<td>Sesión</td>
-</tr>
-<tr>
-<td></td>
-<td>_utmz</td>
-<td>Almacena el  origen del visitante y el camino que ha seguido para acceder a la web</td>
-<td>6 meses</td>
-</tr>
-<tr>
-<td></td>
-<td>_dc_gtm</td>
-<td>Google  Analytic</td>
-<td>1 mes</td>
-</tr>
-<tr>
-<td></td>
-<td>_gid</td>
-<td>Se genera de  forma automática de forma transparente para la Web debido a ciertos códigos  de medición o terceros</td>
-<td>1 día</td>
-</tr>
-<tr>
-<td><strong>Google.com</strong></td>
-<td>1P_JAR</td>
-<td>GOOGLE NID</td>
-<td>1 mes</td>
-</tr>
-<tr>
-<td></td>
-<td>APISID</td>
-<td>Se utilizan para recordar preferencias del  usuario durante su navegación.</td>
-<td>2 años</td>
-</tr>
-<tr>
-<td></td>
-<td>HSID/SID</td>
-<td>Y para proveer de mecanismos de seguridad que  eviten el acceso no autorizado a datos de acceso de usuarios o la información  que éstos facilitan en formularios de contacto.</td>
-<td>2 años</td>
-</tr>
-<tr>
-<td></td>
-<td>NID</td>
-<td>Para hacer la publicidad más atractiva</td>
-<td>6 meses</td>
-</tr>
-<tr>
-<td></td>
-<td>SIDCC</td>
-<td>También para el recuento, por parte de Google,  del número de usuarios que utilizan los mapas</td>
-<td>2 años</td>
-</tr>
-</tbody>
-</table>
-<h2>Garantías complementarias – Gestión de cookies:</h2>
+<h2>3- Desactivar las cookies.</h2>
+<p>Puede usted permitir, bloquear o eliminar las cookies instaladas en su equipo mediante la configuración de las opciones del navegador instalado en su ordenador.</p>
+<p>En la mayoría de los navegadores web se ofrece la posibilidad de permitir, bloquear o eliminar las cookies instaladas en su equipo.</p>
+<h3>Garantías complementarias – Gestión de cookies:</h3>
 <p>Como garantía complementaria a las anteriormente descritas, el registro de las cookies podrá estar sujeto a su aceptación durante la instalación o puesta al día del navegador usado, y esta aceptación puede en todo momento ser revocada mediante las opciones de configuración de contenidos y privacidad disponibles.</p>
 <p>Muchos navegadores permiten activar un modo privado mediante el cual las cookies se borran siempre después de su visita. Dependiendo de cada navegador este modo privado, puede tener diferentes nombres. A continuación encontrará una lista de los navegadores más comunes ylos diferentes nombres de este “modo privado”:</p>
 <ul>
@@ -422,8 +395,33 @@ footer section:first-child p {
 <li><strong>FireFox 3.5</strong> y superior;Navegación Privada</li>
 <li><strong>Google Chrome 10</strong> y superior; Incógnito</li>
 </ul>
+<h2>4- Cookies de terceros.</h2>
+<p>Esta página web utiliza servicios de terceros para recopilar información con fines estadísticos y de uso de la web. Se usan cookies de DoubleClick para mejorar la publicidad que se incluye en el sitio web. Son utilizadas para orientar la publicidad según el contenido que es relevante para un usuario, mejorando así la calidad de experiencia en el uso del mismo.</p>
+<p>En concreto, usamos los servicios de Google Adsense y de Google Analytics para nuestras estadísticas y publicidad. Algunas cookies son esenciales para el funcionamiento del sitio, por ejemplo el buscador incorporado.</p>
+<p>Nuestro sitio incluye otras funcionalidades proporcionadas por terceros. Usted puede fácilmente compartir el contenido en redes sociales como Facebook, Twitter, con los botones que hemos incluido a tal efecto.</p>
+<h2>5- Advertencia sobre eliminar cookies.</h2>
+<p>Usted puede eliminar y bloquear todas las cookies de este sitio, pero parte del sitio no funcionará o la calidad de la página web puede verse afectada.</p>
+<p>Si tiene cualquier duda acerca de nuestra política de cookies, puede contactar con esta página web a través de nuestros canales de Contacto.</p>
+</div>
+  
+  
+
+  
+  
+  
+
+  <footer>
+     
+    <p>Tags: [object Object]</p>
+    <p><a href="/blog">Volver al blog</a></p>
+  </footer>
 </article>
-</section>
+
+
+
+
+
+
 </main>
 
   <footer>
@@ -457,6 +455,13 @@ footer section:first-child p {
   <section>
     <p>
     <small>made with ❤️  by <strong>tomascornelles © <span id="year"></span></strong></small>
+    <br>
+    <small><a href="/politica-de-cookies">Politica de cookies</a>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8LS4CLZL6D"></script>
+
+</small>
     </p>
   </section>
 </footer>
@@ -469,10 +474,20 @@ footer section:first-child p {
   <tc-favicon>
 </tc-favicon>
 
-  <script>window.onscroll = () => {
+  <script>!function(e,t){"function"==typeof define&&define.amd?define(["exports"],t):t("undefined"!=typeof exports?exports:e.microlight={})}(this,function(e){var t,n,i,o=window,r=document,a="appendChild",l="test",c=";text-shadow:",s="opacity:.",d=" 0px 0px ",u="3px 0px 5",f=")",p=function(e){for(n=r.getElementsByClassName(e||"microlight"),t=0;i=n[t++];)for(var p,h,g,m,y,x=i.textContent,b=0,w=x[0],v=1,k=i.innerHTML="",C=0,N=/(\d*\, \d*\, \d*)(, ([.\d]*))?/g.exec(o.getComputedStyle(i).color),E="px rgba("+N[1]+",",S=N[3]||1;h=p,p=7>C&&"\\"==p?1:v;){if(v=w,w=x[++b],m=k.length>1,!v||C>8&&"\n"==v||[/\S/[l](v),1,1,!/[$\w]/[l](v),("/"==p||"\n"==p)&&m,'"'==p&&m,"'"==p&&m,x[b-4]+h+p=="-->",h+p=="*/"][C])for(k&&(i[a](y=r.createElement("span")).setAttribute("style",["",c+d+9+E+.7*S+"),"+d+2+E+.4*S+f,s+6+c+d+7+E+S/4+"),"+d+3+E+S/4+f,s+7+c+u+E+S/5+"),-"+u+E+S/5+f,"font-style:italic;"+s+5+c+u+E+S/4+"),-"+u+E+S/4+f][C?3>C?2:C>6?4:C>3?3:+/^(a(bstract|lias|nd|rguments|rray|s(m|sert)?|uto)|b(ase|egin|ool(ean)?|reak|yte)|c(ase|atch|har|hecked|lass|lone|ompl|onst|ontinue)|de(bugger|cimal|clare|f(ault|er)?|init|l(egate|ete)?)|do|double|e(cho|ls?if|lse(if)?|nd|nsure|num|vent|x(cept|ec|p(licit|ort)|te(nds|nsion|rn)))|f(allthrough|alse|inal(ly)?|ixed|loat|or(each)?|riend|rom|unc(tion)?)|global|goto|guard|i(f|mp(lements|licit|ort)|n(it|clude(_once)?|line|out|stanceof|t(erface|ernal)?)?|s)|l(ambda|et|ock|ong)|m(icrolight|odule|utable)|NaN|n(amespace|ative|ext|ew|il|ot|ull)|o(bject|perator|r|ut|verride)|p(ackage|arams|rivate|rotected|rotocol|ublic)|r(aise|e(adonly|do|f|gister|peat|quire(_once)?|scue|strict|try|turn))|s(byte|ealed|elf|hort|igned|izeof|tatic|tring|truct|ubscript|uper|ynchronized|witch)|t(emplate|hen|his|hrows?|ransient|rue|ry|ype(alias|def|id|name|of))|u(n(checked|def(ined)?|ion|less|signed|til)|se|sing)|v(ar|irtual|oid|olatile)|w(char_t|hen|here|hile|ith)|xor|yield)$/[l](k):0]),y[a](r.createTextNode(k))),g=C&&7>C?C:g,k="",C=11;![1,/[\/{}[(\-+*=<>:;|\\.,?!&@~]/[l](v),/[\])]/[l](v),/[$\w]/[l](v),"/"==v&&2>g&&"<"!=p,'"'==v,"'"==v,v+w+x[b+1]+x[b+2]=="<!--",v+w=="/*",v+w=="//","#"==v][--C];);k+=v}};e.reset=p,"complete"==r.readyState?p():o.addEventListener("load",function(){p()},0)});
+const codeBlocks = document.querySelectorAll('pre');
+  codeBlocks.forEach((block) => {
+    block.classList.add('microlight');
+  })
+window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);
   }
+window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8LS4CLZL6D');
 const today = new Date();
   const year = today.getFullYear();
   document.querySelector('#year').innerHTML = year;
