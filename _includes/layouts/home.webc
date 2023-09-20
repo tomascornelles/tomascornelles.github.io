@@ -2,7 +2,7 @@
 layout: base.webc
 ---
 
-<section @raw="content" id="content"></section>
+<section @raw="content" id="welcome"></section>
 
 <section>
   <tc-post 
@@ -21,7 +21,7 @@ layout: base.webc
 
 
 <script webc:bucket="defer">
-  const hello = document.querySelector('#content h1');
+  const hello = document.querySelector('#welcome h1');
   const parts = hello.innerHTML.split('<br>');
   const replaced0 = parts[0].split('').map((letter) => `<span>${letter}</span>`);
   const replaced1 = parts[1].split('').map((letter) => `<span>${letter}</span>`);
@@ -50,7 +50,7 @@ layout: base.webc
     font-family: monospace;
   }
 
-  #content h1 {
+  #welcome h1 {
     font-size: 15vw;
     height: 60dvh;
     margin-top: 0;
@@ -59,8 +59,13 @@ layout: base.webc
   }
 
   @media (min-width: 768px) {
-    #content h1 {
+    #welcome h1 {
       font-size: 11rem;
+    }
+
+    #welcome article {
+      columns: 2;
+      column-gap: 5rem;
     }
   }
 </style>

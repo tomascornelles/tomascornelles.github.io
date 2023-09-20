@@ -1,6 +1,6 @@
 <footer>
-  <section id="contacto">
-    <h2>Contáctame</h2>
+  <section id="hablamos">
+    <h2>¿Hablamos?</h2>
     <div>
       <p>
       Soy un desarrollador frontend con experiencia desde 2012 que he trabajado para startups, agencias y big tech. No dudes en contactarme si puedo ayudarte o colaborar, me encantan los nuevos proyectos y los retos.
@@ -36,6 +36,10 @@
 </footer>
 
 <style>
+  #hablamos {
+    padding-block-start: 5rem;
+  }
+
   footer section:first-child p {
     margin-bottom: 5em;
   }

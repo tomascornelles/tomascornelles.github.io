@@ -9,7 +9,7 @@
 
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="white">
 
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="preload" as="font" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
@@ -282,7 +282,11 @@ header {
       margin-inline-start: 2rem;
     }
   }
-footer section:first-child p {
+#hablamos {
+    padding-block-start: 5rem;
+  }
+
+  footer section:first-child p {
     margin-bottom: 5em;
   }
 
@@ -349,8 +353,8 @@ footer section:first-child p {
   <nav>
     <span>menu</span>
     <ul>
-      <li><a href="/">sobre mi</a></li>
-      <li><a href="#contacto">contacto</a></li>
+      <li><a href="/">inicio</a></li>
+      <li><a href="#hablamos">¿hablamos?</a></li>
       <li><a href="/blog">blog</a></li>
     </ul>
   </nav>
@@ -427,8 +431,8 @@ footer section:first-child p {
 </main>
 
   <footer>
-  <section id="contacto">
-    <h2>Contáctame</h2>
+  <section id="hablamos">
+    <h2>¿Hablamos?</h2>
     <div>
       <p>
       Soy un desarrollador frontend con experiencia desde 2012 que he trabajado para startups, agencias y big tech. No dudes en contactarme si puedo ayudarte o colaborar, me encantan los nuevos proyectos y los retos.
@@ -485,6 +489,9 @@ window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);
   }
+  document.querySelectorAll('header nav a').forEach((item) => {
+    item.addEventListener('click', (e) => e.target.blur());
+  })
 window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -499,28 +506,29 @@ class TcFavicon extends HTMLElement {
       const theme = document.querySelector("meta[name=theme-color]")
 
       const icons = {
-        6_28: '🌈',
-        8_15: '🏖️',
-        10_31: '🎃',
-        12_24: '🎄',
+        '6_28': '🌈',
+        '8_15': '🏖️',
+        '10_31': '🎃',
+        '12_24': '🎄',
       }
 
       const getToday = () => new Date();
 
       const currentMonth = (() => getToday().getMonth() + 1)();
 
-      const currentDay = (() => getToday().getDate());
+      const currentDay = (() => getToday().getDate())();
 
       const today = `${currentMonth}_${currentDay}`
 
       const favicon = (() => {
+
         if (icons[today]){
-          link.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>${icons[currentMonth()]}</text></svg>`;
+          link.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>${icons[today]}</text></svg>`;
 
         } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
           // dark mode
           link.href = `data:image/svg+xml,<svg width="43" height="67" viewBox="0 0 43 67" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect width="43" height="67" fill="white"/></svg>`;
-          meta.content = "white";
+          theme['content'] = "black";
 
         } else {
           // light mode
