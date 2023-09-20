@@ -1,4 +1,5 @@
 ---
+layout: post.webc
 title: 'Política de privacidad'
 ---
 
