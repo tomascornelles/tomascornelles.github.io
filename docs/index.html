@@ -44,7 +44,7 @@
       padding-top: 20dvh;
       max-width: calc(var(--unit) * 120);
       margin: 0 auto;
-      padding: calc(var(--unit) * 20) var(--unit) var(--unit);
+      padding: 20vh var(--unit) var(--unit);
     }
 
     main > section {
@@ -175,10 +175,12 @@
 
   #welcome h1 {
     font-size: 15vw;
-    height: 60dvh;
+    height: 80dvh;
     margin-top: 0;
     display: flex;
     align-items: end;
+    padding-block-end: 10vh;
+    box-sizing: border-box;
   }
 
   @media (min-width: 768px) {
@@ -315,7 +317,7 @@ header {
 #hablamos {
     padding-block-start: 5rem;
   }
-
+  
   footer section:first-child p {
     margin-bottom: 5em;
   }
@@ -336,11 +338,6 @@ header {
   footer section:last-child {
     margin-top: 5em;
     text-align: center;
-  }
-
-  footer section:last-child a {
-    display: inline-block;
-    padding: .5em 0;
   }
 
   @media (min-width: 768px) {
@@ -398,10 +395,10 @@ header {
   <main><section id="welcome"><h1>¡Hola!<br> Soy Tomás</h1>
 <article>
 Aunque no lo parezca soy un químico reciclado, tuve la oportunidad de trabajar para el laboratorio de una gran petrolera multinacional y afrontar la crisis del 2010 reinventándome.
-<p>La programación siempre fue mi pasión. Autodidacta y perfeccionista me metí en este mundo binario lleno de colores. Obtuve el título de programador de aplicaciones informáticas en 2012 y desde entonces trabajé como freelance, para pymes, fui CTO en una prometedora StartUp y team leader en una agencia de publicidad.</p>
-<p>Ahora desarrollo para un gran portal internacional, ayudo a quien me necesite, sigo aprendiendo y en mis ratos libres juego con mi hijo, dibujo a tinta o ruedo en mi bicicleta.</p>
+<p>La programación siempre fue mi pasión. Autodidacta y perfeccionista me metí en este mundo binario lleno de colores. Obtuve el título de programador de aplicaciones informáticas en 2012 y desde entonces trabajé como freelance, para pymes, fui <strong>CTO</strong> en una prometedora StartUp y <strong>Team lead</strong> en una agencia de publicidad.</p>
+<p>Ahora desarrollo para un gran portal <strong>internacional</strong>, ayudo a quien me necesite, sigo aprendiendo y en mis ratos libres juego con mi hijo, dibujo a tinta o ruedo en mi bicicleta.</p>
 <p>Además de los proyectos para clientes, también he buscado practicar con ejercicios que me resultan divertidos. Si encuentro una idea que me gusaría realizar, intento encontrar la forma de desarrollarla, como un pasatiempo.</p>
-<p>Soy un entusiasta del Vanilla JS, aunque siempre estoy dispuesto a aprender y usar cualquier framework, desde grandes proyectos como AMP, Vue o React, hasta pequeños experimentos como CellJS o HTMX.</p>
+<p>Soy un entusiasta del <strong>Vanilla JS</strong>, aunque siempre estoy dispuesto a aprender y usar cualquier framework, desde grandes proyectos como <strong>AMP, Vue o React</strong>, hasta pequeños experimentos como CellJS o <strong>HTMX</strong>.</p>
 </article>
 </section>
 
@@ -441,7 +438,6 @@ Aunque no lo parezca soy un químico reciclado, tuve la oportunidad de trabajar 
 
 
 
-
 </section>
 
 
@@ -454,14 +450,17 @@ Aunque no lo parezca soy un químico reciclado, tuve la oportunidad de trabajar 
   <section id="hablamos">
     <h2>¿Hablamos?</h2>
     <div>
+      <div>
       <p>
-      Soy un desarrollador frontend con experiencia desde 2012 que he trabajado para startups, agencias y big tech. No dudes en contactarme si puedo ayudarte o colaborar, me encantan los nuevos proyectos y los retos.
+     Tengo experiencia desde 1998 trabajando por mi cuenta, para startups, agencias y portales internacionales. No dudes en contactarme si puedo ayudarte o colaborar, me encantan los nuevos proyectos y los retos.
       </p>
 
+      <p>Puedes solicitar una mentoría personalizada a traves de <strong><a href="https://www.classgap.com/me/tomas-cornelles" target="_blank">ClassGap</a></strong></p>
+      </div>
       <ul>
         <li>
           <span>mastodon</span>
-          <a href="https://mastodon.world/@tomascornelles">&nbsp;&nbsp;&nbsp;&nbsp;@<strong>tomascornelles</strong></a></li>
+          <a href="https://mastodon.world/@tomascornelles" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;@<strong>tomascornelles</strong></a></li>
         <li>
           <span>linkedin</span>
           <a href="https://www.linkedin.com/in/tomascornelles/" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;/<strong>tomascornelles</strong></a></li>
