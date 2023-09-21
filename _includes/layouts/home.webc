@@ -4,7 +4,7 @@ layout: base.webc
 
 <section @raw="content" id="welcome"></section>
 
-<section>
+<section id="blog">
   <tc-post 
     webc:nokeep
     webc:for="(post, index) of collections.blog"
@@ -17,7 +17,6 @@ layout: base.webc
     :@long="index == 0"
     ></tc-post>
 </section>
-
 
 <script webc:bucket="defer">
   const hello = document.querySelector('#welcome h1');
