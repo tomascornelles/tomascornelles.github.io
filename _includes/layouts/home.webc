@@ -20,9 +20,12 @@ layout: base.webc
 
 <script webc:bucket="defer">
   const hello = document.querySelector('#welcome h1');
+  hello.setAttribute('aria-hidden', 'true');
+  hello.setAttribute('aria-label', hello.innerHTML.replace('<br>', ''));
   const parts = hello.innerHTML.split('<br>');
   const replaced0 = parts[0].split('').map((letter) => `<span>${letter}</span>`);
   const replaced1 = parts[1].split('').map((letter) => `<span>${letter}</span>`);
+
   hello.innerHTML = `<div>${replaced0.join('')}<br>${replaced1.join('')}</div>`;
 
   const styles = ['mono', 'serif', 'sans'];
