@@ -397,7 +397,7 @@ header {
 Aunque no lo parezca soy un químico reciclado, tuve la oportunidad de trabajar para el laboratorio de una gran petrolera multinacional y afrontar la crisis del 2010 reinventándome.
 <p>La programación siempre fue mi pasión. Autodidacta y perfeccionista me metí en este mundo binario lleno de colores. Obtuve el título de programador de aplicaciones informáticas en 2012 y desde entonces trabajé como freelance, para pymes, fui <strong>CTO</strong> en una prometedora StartUp y <strong>Team lead</strong> en una agencia de publicidad.</p>
 <p>Ahora desarrollo para un gran portal <strong>internacional</strong>, ayudo a quien me necesite, sigo aprendiendo y en mis ratos libres juego con mi hijo, dibujo a tinta o ruedo en mi bicicleta.</p>
-<p>Además de los proyectos para clientes, también he buscado practicar con ejercicios que me resultan divertidos. Si encuentro una idea que me gusaría realizar, intento encontrar la forma de desarrollarla, como un pasatiempo.</p>
+<p>Además de los proyectos para clientes, también he buscado practicar con ejercicios que me resultan divertidos. Si encuentro una idea que me gustaría realizar, intento encontrar la forma de desarrollarla, como un pasatiempo.</p>
 <p>Soy un entusiasta del <strong>Vanilla JS</strong>, aunque siempre estoy dispuesto a aprender y usar cualquier framework, desde grandes proyectos como <strong>AMP, Vue o React</strong>, hasta pequeños experimentos como CellJS o <strong>HTMX</strong>.</p>
 </article>
 </section>
@@ -505,12 +505,17 @@ const codeBlocks = document.querySelectorAll('pre');
   })
 const hello = document.querySelector('#welcome h1');
   hello.setAttribute('aria-hidden', 'true');
-  hello.setAttribute('aria-label', hello.innerHTML.replace('<br>', ''));
-  const parts = hello.innerHTML.split('<br>');
-  const replaced0 = parts[0].split('').map((letter) => `<span>${letter}</span>`);
-  const replaced1 = parts[1].split('').map((letter) => `<span>${letter}</span>`);
+  hello.setAttribute('aria-label', hello.innerHTML.split('<br>').join(' '));
+  const lines = hello.innerHTML
+                      .split('<br>')
+                      .map(
+                        (line) => line.split('')
+                        .map(
+                          (letter) => `<span>${letter}</span>`
+                        ).join('')
+                      );
 
-  hello.innerHTML = `<div>${replaced0.join('')}<br>${replaced1.join('')}</div>`;
+  hello.innerHTML = `<div>${lines.join('<br>')}</div>`;
 
   const styles = ['mono', 'serif', 'sans'];
   const letters = hello.querySelectorAll('span');

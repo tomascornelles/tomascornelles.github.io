@@ -12,7 +12,7 @@ La programación siempre fue mi pasión. Autodidacta y perfeccionista me metí e
 
 Ahora desarrollo para un gran portal **internacional**, ayudo a quien me necesite, sigo aprendiendo y en mis ratos libres juego con mi hijo, dibujo a tinta o ruedo en mi bicicleta.
 
-Además de los proyectos para clientes, también he buscado practicar con ejercicios que me resultan divertidos. Si encuentro una idea que me gusaría realizar, intento encontrar la forma de desarrollarla, como un pasatiempo.
+Además de los proyectos para clientes, también he buscado practicar con ejercicios que me resultan divertidos. Si encuentro una idea que me gustaría realizar, intento encontrar la forma de desarrollarla, como un pasatiempo.
 
 Soy un entusiasta del **Vanilla JS**, aunque siempre estoy dispuesto a aprender y usar cualquier framework, desde grandes proyectos como **AMP, Vue o React**, hasta pequeños experimentos como CellJS o **HTMX**.
 </article>
