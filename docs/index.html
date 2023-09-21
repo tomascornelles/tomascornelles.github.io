@@ -441,8 +441,6 @@ Aunque no lo parezca soy un químico reciclado, tuve la oportunidad de trabajar 
 </section>
 
 
-
-
 </main>
 
   <footer>
@@ -503,28 +501,6 @@ const codeBlocks = document.querySelectorAll('pre');
   codeBlocks.forEach((block) => {
     block.classList.add('microlight');
   })
-const hello = document.querySelector('#welcome h1');
-  hello.setAttribute('aria-hidden', 'true');
-  hello.setAttribute('aria-label', hello.innerHTML.split('<br>').join(' '));
-  const lines = hello.innerHTML
-                      .split('<br>')
-                      .map(
-                        (line) => line.split('')
-                        .map(
-                          (letter) => `<span>${letter}</span>`
-                        ).join('')
-                      );
-
-  hello.innerHTML = `<div>${lines.join('<br>')}</div>`;
-
-  const styles = ['mono', 'serif', 'sans'];
-  const letters = hello.querySelectorAll('span');
-
-  const mix = () => {
-  letters[Math.floor(Math.random() * letters.length)].classList.toggle(styles[Math.floor(Math.random() * styles.length)])
-  }
-
-  setInterval(mix, 200);
 window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);
