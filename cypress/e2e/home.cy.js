@@ -11,6 +11,6 @@ describe('G003 - Home', () => {
 
   it('Blog link', () => {
     cy.visit('http://localhost:8080');
-    cy.contains('Leer mas articulos en el blog').click();
+    cy.contains('Leer más artículos en el blog').click();
   });
 })
