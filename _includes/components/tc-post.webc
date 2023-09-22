@@ -8,7 +8,7 @@
     <p webc:if="complete">
       <span @text="dateFormat(postDate)"></span>
     </p>
-</header>
+  </header>
 
   <!--- Abstract/content ---> 
   <div webc:if="complete" @html="postContent"></div>
@@ -17,11 +17,11 @@
 
   <!--- Read More --->
   <p webc:if="postMore"><a :href="postUrl">Seguir leyendo</a></p>
-  <p webc:if="home"><a href="/blog"><strong>Leer mas articulos en el blog</strong></a></p>
+  <p webc:if="home"><a href="/blog"><strong>Leer más artículos en el blog</strong></a></p>
 
   <footer webc:if="complete">
     <!--- Back ---> 
-    <p>Tags: <a webc:for="tag of postTags" webc:if="tag != 'blog'" :href="tagUrl(tag)" @text="tag"></a></p>
+    <p webc:if="postTags != 'blog'">Tags: <a webc:for="tag of postTags" webc:if="tag != 'blog'" :href="tagUrl(tag)" @text="tag"></a></p>
     <p><a href="/blog">Volver al blog</a></p>
   </footer>
 </article>
