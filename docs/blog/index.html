@@ -164,14 +164,22 @@
 #blog {
     display: flex;
     flex-wrap: wrap;
-    gap: calc(10 * var(--unit)) calc(6 * var(--unit));
+    gap: 0 calc(6 * var(--unit));
     margin-block-start: 20rem;
   }
 
-  #blog h2 {
+  #blog article {
+    margin-block-end: 15rem;
+  }
+
+  #blog  header h2 {
     font-size: 3rem;
     line-height: 1.5;
     margin-top: 0;
+  }
+
+  #blog article:nth-child(n+4) {
+    margin-block-end: 0;
   }
 
   @media (min-width: 768px) {
