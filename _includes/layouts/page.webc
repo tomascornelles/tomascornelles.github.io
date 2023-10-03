@@ -2,7 +2,76 @@
 layout: base.webc
 ---
 
-<section>
-  <h2 @text="title"></h2>
-  <article @html="content"></article>
-</section>
+<article>
+  <header>
+    <!--- Title ---> 
+    <h1 @text="title"></h1>
+  </header>
+
+  <!--- Abstract/content ---> 
+  <div  @html="content"></div>
+</article>
+
+<style>
+  article header {
+    position: relative;
+    z-index: 0;
+    display: block;
+    padding: 0;
+    margin-block-end: 5rem;
+  }
+
+  article header h1 {
+    margin-block-end: 2rem;
+    font-size: 3rem;
+  }
+
+  article header p {
+    visibility: visible;
+    font-size: initial;
+    margin-block-end: 10rem;
+  }
+
+  article header a{
+    box-shadow: inset 0 -2px var(--color-fg);
+  }
+
+  article header a:hover {
+    box-shadow: inset 0 -5em var(--color-fg);
+  }
+
+  article header > :last-child {
+    text-align: left;
+  }
+
+  article > div h1,
+  article > div h2,
+  article > div h3,
+  article > div h4 {
+    margin-block-start: 2em;
+  }
+
+  article ul, 
+  article ol {
+    padding-inline-start: 0;
+    list-style-position: inside;
+  }
+
+  article ul {
+    list-style-type: square;
+  }
+
+  article li {
+    margin-block-end: 2em;
+  }
+
+  article footer {
+    margin-block-start: 15rem;
+  }
+
+  @media (min-width: 768px) {
+    article header h1 {
+      font-size: 5rem;
+    }
+  }
+</style>
