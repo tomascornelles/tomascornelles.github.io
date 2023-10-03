@@ -301,22 +301,39 @@ header {
     }
   }
 .hide {
-  transition: 1s ease all;
-  opacity: 0;
-}
-      dialog {
-        position: fixed;
-        width: 100vw;
-        box-sizing: border-box;
-        max-width: 400px;
-        inset-block-end: 0;
-        inset-inline-end: 0;
-      }
+    transition: 1s ease all;
+    opacity: 0;
+  }
 
-      dialog button {
-        font-size: 1.2em;
-        cursor: pointer;
-      }
+  dialog {
+    position: fixed;
+    width: 100vw;
+    box-sizing: border-box;
+    max-width: calc(var(--unit) * 120);
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    z-index: 2;
+    border: 0;
+    background-color: var(--color-fg);
+    color: var(--color-bg);
+  }
+
+  dialog a, 
+  dialog [role=link] {
+    color: var(--color-bg);
+    box-shadow: inset 0 -2px var(--color-bg);;
+  }
+
+  dialog a:hover, 
+  dialog [role="link"]:hover {
+    color: var(--color-fg);
+    box-shadow: inset 0 -5em var(--color-bg);
+  }
+
+  dialog button {
+    font-size: 1.5em;
+    cursor: pointer;
+  }
 #hablamos {
     padding-block-start: 5rem;
   }
@@ -497,7 +514,7 @@ header {
     <br>
     <small><a href="/politica-de-cookies">Politica de cookies</a>
 <dialog open class="js-cookies-consent">
-  <p>Utilizo cookies para conocer cuántas personas visitan mi sitio web con GA. Haz clic en Aceptar para ayudarme a mejorar mi contenido. Aquí está la <a href="/politica-de-cookies">Politica de cookies</a>.</p>
+  <p>Utilizo cookies para conocer cuántas personas visitan mi sitio web con Google Analytics. Haz clic en Aceptar para ayudarme a mejorar mi contenido. Aquí está la <a href="/politica-de-cookies">Politica de cookies</a>.</p>
   <p>
     <button role="link" data-consent="Accept" class="js-cookies-consent-button">Aceptar</button>
     <button role="link" data-consent="Reject" class="js-cookies-consent-button">Rechazar</button>
@@ -552,10 +569,16 @@ const cookiePreference = window.localStorage.getItem('cookiePreference');
     const buttons = document.querySelectorAll('.js-cookies-consent-button');
     buttons.forEach((button) => {
       button.addEventListener('click',  () => {
-        window.localStorage.setItem('cookiePreference', event.target.dataset.consent);
+        const {
+          consent
+        } = event.target.dataset;
+        window.localStorage.setItem('cookiePreference', consent);
 
         document.querySelector('.js-cookies-consent').classList.add('hide');
-        setTimeout(() => { window.location.reload() }, 1000);
+
+        if ((window.location.hostname !== 'localhost' && consent === 'Accept') {
+          gtag('event', 'page_view')
+        }
       });
     });
   }
