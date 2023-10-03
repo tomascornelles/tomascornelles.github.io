@@ -716,9 +716,10 @@ const cookiePreference = window.localStorage.getItem('cookiePreference');
         window.localStorage.setItem('cookiePreference', consent);
 
         document.querySelector('.js-cookies-consent').classList.add('hide');
+        document.querySelector('.js-cookies-consent').remove();
 
         if (window.location.hostname !== 'localhost' && consent === 'Accept') {
-          gtag('event', 'page_view')
+          gtag('event', 'page_view');
         }
       });
     });

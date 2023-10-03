@@ -20,6 +20,7 @@ describe('G002 - Header links', () => {
   
   it('Contact link', () => {
     cy.visit('http://localhost:8080');
+    cy.contains('Rechazar').click();
     cy.contains('¿hablamos?').click({force: true});
     cy.get('#hablamos').should('be.visible');
   });
