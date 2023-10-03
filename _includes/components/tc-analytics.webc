@@ -57,7 +57,7 @@
         document.querySelector('.js-cookies-consent').classList.add('hide');
 
         if (window.location.hostname !== 'localhost' && consent === 'Accept') {
-          gtag('event', 'page_view')
+          gtag('event', 'page_view');
         }
       });
     });
