@@ -1,12 +1,58 @@
 <a href="/politica-de-cookies">Politica de cookies</a>
+<dialog open class="js-cookies-consent">
+  <p>Utilizo cookies para conocer cuántas personas visitan mi sitio web con GA. Haz clic en Aceptar para ayudarme a mejorar mi contenido. Aquí está la <a href="/politica-de-cookies">Politica de cookies</a>.</p>
+  <p>
+    <button role="link" class="js-cookies-consent-button" data-consent="Accept">Aceptar</button>
+    <button role="link" class="js-cookies-consent-button" data-consent="Reject">Rechazar</button>
+  </p>
+</dialog>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LS4CLZL6D" webc:keep></script>
 <script webc:bucket="defer">
-  if (window.location.hostname !== 'localhost') {
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8LS4CLZL6D');
+  const cookiePreference = window.localStorage.getItem('cookiePreference');
+  if (cookiePreference  === 'Accept') {
+    document.querySelector('.js-cookies-consent').remove();
+
+    if (window.location.hostname !== 'localhost') {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8LS4CLZL6D');
+    }
+
+  } else if (cookiePreference === 'Reject') {
+    document.querySelector('.js-cookies-consent').remove();
+
+  } else { 
+    const buttons = document.querySelectorAll('.js-cookies-consent-button');
+    buttons.forEach((button) => {
+      button.addEventListener('click',  () => {
+        window.localStorage.setItem('cookiePreference', event.target.dataset.consent);
+
+        document.querySelector('.js-cookies-consent').classList.add('hide');
+        setTimeout(() => { window.location.reload() }, 1000);
+      });
+    });
   }
 </script>
+
+<style>
+.hide {
+  transition: 1s ease all;
+  opacity: 0;
+}
+      dialog {
+        position: fixed;
+        width: 100vw;
+        box-sizing: border-box;
+        max-width: 400px;
+        inset-block-end: 0;
+        inset-inline-end: 0;
+      }
+
+      dialog button {
+        font-size: 1.2em;
+        cursor: pointer;
+      }
+</style>

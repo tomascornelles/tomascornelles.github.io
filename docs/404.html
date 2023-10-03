@@ -73,6 +73,8 @@
       text-decoration: none;
       box-shadow: inset 0 -2px var(--color-fg);
       color: var(--color-fg);
+      background: none;
+      border: none;
       transition: all .5s ease;
     }
 
@@ -185,7 +187,7 @@ header {
 
   header nav a {
     display: block;
-    padding: 1em 0;
+    padding: 1rem;
   }
 
   header nav a:hover {
@@ -207,13 +209,17 @@ header {
     overflow: hidden;
     list-style: none;
     padding: 0;
-    margin: 3.7rem auto 0;
+    margin: 4rem auto 0;
     position: absolute;
     left: 0;
     right: 0;
     background: var(--color-bg);
     transition: all .4s ease;
     max-width: calc(var(--unit) * 120);
+  }
+
+  header.sticky nav ul {
+    margin-top: 2rem;
   }
 
   header nav:hover ul {
@@ -246,6 +252,23 @@ header {
       margin-inline-start: 2rem;
     }
   }
+.hide {
+  transition: 1s ease all;
+  opacity: 0;
+}
+      dialog {
+        position: fixed;
+        width: 100vw;
+        box-sizing: border-box;
+        max-width: 400px;
+        inset-block-end: 0;
+        inset-inline-end: 0;
+      }
+
+      dialog button {
+        font-size: 1.2em;
+        cursor: pointer;
+      }
 #hablamos {
     padding-block-start: 5rem;
   }
@@ -372,9 +395,18 @@ header {
     <small>made with ❤️  by <strong>tomascornelles © <span id="year"></span></strong></small>
     <br>
     <small><a href="/politica-de-cookies">Politica de cookies</a>
+<dialog open class="js-cookies-consent">
+  <p>Utilizo cookies para conocer cuántas personas visitan mi sitio web con GA. Haz clic en Aceptar para ayudarme a mejorar mi contenido. Aquí está la <a href="/politica-de-cookies">Politica de cookies</a>.</p>
+  <p>
+    <button role="link" data-consent="Accept" class="js-cookies-consent-button">Aceptar</button>
+    <button role="link" data-consent="Reject" class="js-cookies-consent-button">Rechazar</button>
+  </p>
+</dialog>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LS4CLZL6D"></script>
+
+
 
 </small>
     </p>
@@ -410,11 +442,30 @@ window.onscroll = () => {
   document.querySelectorAll('header nav a').forEach((item) => {
     item.addEventListener('click', (e) => e.target.blur());
   })
-if (window.location.hostname !== 'localhost') {
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8LS4CLZL6D');
+const cookiePreference = window.localStorage.getItem('cookiePreference');
+  if (cookiePreference  === 'Accept') {
+    document.querySelector('.js-cookies-consent').remove();
+
+    if (window.location.hostname !== 'localhost') {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8LS4CLZL6D');
+    }
+
+  } else if (cookiePreference === 'Reject') {
+    document.querySelector('.js-cookies-consent').remove();
+
+  } else { 
+    const buttons = document.querySelectorAll('.js-cookies-consent-button');
+    buttons.forEach((button) => {
+      button.addEventListener('click',  () => {
+        window.localStorage.setItem('cookiePreference', event.target.dataset.consent);
+
+        document.querySelector('.js-cookies-consent').classList.add('hide');
+        setTimeout(() => { window.location.reload() }, 1000);
+      });
+    });
   }
 const today = new Date();
   const year = today.getFullYear();

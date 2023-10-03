@@ -20,8 +20,11 @@
   <p webc:if="home"><a href="/blog"><strong>Leer más artículos en el blog</strong></a></p>
 
   <footer webc:if="complete">
-    <!--- Back ---> 
-    <p webc:if="postTags != 'blog'">Tags: <a webc:for="tag of postTags" webc:if="tag != 'blog'" :href="tagUrl(tag)" @text="tag"></a></p>
+    <!--- Back and tags (exlude 'blog' tag) ---> 
+    <p webc:if="postTags != 'blog'">Tags: 
+      <a webc:for="tag of postTags" webc:if="tag != 'blog'" :href="tagUrl(tag)" @text="tag"></a>
+    </p>
+
     <p><a href="/blog">Volver al blog</a></p>
   </footer>
 </article>

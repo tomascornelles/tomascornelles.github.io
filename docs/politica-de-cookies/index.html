@@ -73,6 +73,8 @@
       text-decoration: none;
       box-shadow: inset 0 -2px var(--color-fg);
       color: var(--color-fg);
+      background: none;
+      border: none;
       transition: all .5s ease;
     }
 
@@ -221,7 +223,7 @@ header {
 
   header nav a {
     display: block;
-    padding: 1em 0;
+    padding: 1rem;
   }
 
   header nav a:hover {
@@ -243,13 +245,17 @@ header {
     overflow: hidden;
     list-style: none;
     padding: 0;
-    margin: 3.7rem auto 0;
+    margin: 4rem auto 0;
     position: absolute;
     left: 0;
     right: 0;
     background: var(--color-bg);
     transition: all .4s ease;
     max-width: calc(var(--unit) * 120);
+  }
+
+  header.sticky nav ul {
+    margin-top: 2rem;
   }
 
   header nav:hover ul {
@@ -282,6 +288,23 @@ header {
       margin-inline-start: 2rem;
     }
   }
+.hide {
+  transition: 1s ease all;
+  opacity: 0;
+}
+      dialog {
+        position: fixed;
+        width: 100vw;
+        box-sizing: border-box;
+        max-width: 400px;
+        inset-block-end: 0;
+        inset-inline-end: 0;
+      }
+
+      dialog button {
+        font-size: 1.2em;
+        cursor: pointer;
+      }
 #hablamos {
     padding-block-start: 5rem;
   }
@@ -364,10 +387,6 @@ header {
   <header>
      
     <h1>Politica de cookies</h1>
-    
-    <p>
-      <span>19-septiembre-2023</span>
-    </p>
   </header>
 
    
@@ -377,12 +396,10 @@ header {
 <h2>2- ¿Qué tipos de cookies utiliza esta página web?</h2>
 <p>Esta página web utiliza los siguientes tipos de cookies:</p>
 <ul>
-<li><strong>Cookies de análisis</strong>: Son aquellas que bien tratadas por nosotros o por terceros, nos permiten cuantificar el número de usuarios y así realizar la medición y análisis estadístico de la utilización que hacen los usuarios del servicio ofertado. Para ello se analiza su navegación en nuestra página web con el fin de mejorar la oferta de productos o servicios que le ofrecemos.</li>
-<li><strong>Cookies técnicas</strong>: Son aquellas que permiten al usuario la navegación a través del área restringida y la utilización de sus diferentes funciones, como por ejemplo, llevar a cambio el proceso de compra de un artículo.</li>
-<li><strong>Cookies de personalización</strong>: Son aquellas que permiten al usuario acceder al servicio con algunas características de carácter general predefinidas en función de una serie de criterios en el terminal del usuario como por ejemplo serian el idioma o el tipo de navegador a través del cual se conecta al servicio.</li>
+<li><strong>Cookies de análisis</strong>: Son aquellas que bien tratadas por nosotros o por terceros, me permite cuantificar el número de usuarios y así realizar la medición y análisis estadístico de la utilización que hacen los usuarios del servicio ofertado. Para ello se analiza su navegación en nuestra página web con el fin de mejorar la web en su contenido o nevegabilidad.</li>
 </ul>
 <h2>3- Desactivar las cookies.</h2>
-<p>Puede usted permitir, bloquear o eliminar las cookies instaladas en su equipo mediante la configuración de las opciones del navegador instalado en su ordenador.</p>
+<p>Las cookies solo  se guardan en su navegador si las acepta desde el mensaje que  aparece en la  web. Aun así, una vez aceptadas  puede usted permitir, bloquear o eliminar las cookies instaladas en su equipo mediante la configuración de las opciones del navegador instalado en su ordenador.</p>
 <p>En la mayoría de los navegadores web se ofrece la posibilidad de permitir, bloquear o eliminar las cookies instaladas en su equipo.</p>
 <h3>Garantías complementarias – Gestión de cookies:</h3>
 <p>Como garantía complementaria a las anteriormente descritas, el registro de las cookies podrá estar sujeto a su aceptación durante la instalación o puesta al día del navegador usado, y esta aceptación puede en todo momento ser revocada mediante las opciones de configuración de contenidos y privacidad disponibles.</p>
@@ -394,31 +411,8 @@ header {
 <li><strong>FireFox 3.5</strong> y superior;Navegación Privada</li>
 <li><strong>Google Chrome 10</strong> y superior; Incógnito</li>
 </ul>
-<h2>4- Cookies de terceros.</h2>
-<p>Esta página web utiliza servicios de terceros para recopilar información con fines estadísticos y de uso de la web. Se usan cookies de DoubleClick para mejorar la publicidad que se incluye en el sitio web. Son utilizadas para orientar la publicidad según el contenido que es relevante para un usuario, mejorando así la calidad de experiencia en el uso del mismo.</p>
-<p>En concreto, usamos los servicios de Google Adsense y de Google Analytics para nuestras estadísticas y publicidad. Algunas cookies son esenciales para el funcionamiento del sitio, por ejemplo el buscador incorporado.</p>
-<p>Nuestro sitio incluye otras funcionalidades proporcionadas por terceros. Usted puede fácilmente compartir el contenido en redes sociales como Facebook, Twitter, con los botones que hemos incluido a tal efecto.</p>
-<h2>5- Advertencia sobre eliminar cookies.</h2>
-<p>Usted puede eliminar y bloquear todas las cookies de este sitio, pero parte del sitio no funcionará o la calidad de la página web puede verse afectada.</p>
-<p>Si tiene cualquier duda acerca de nuestra política de cookies, puede contactar con esta página web a través de nuestros canales de Contacto.</p>
 </div>
-  
-  
-
-  
-  
-  
-
-  <footer>
-     
-    <p>Tags: [object Object]</p>
-    <p><a href="/blog">Volver al blog</a></p>
-  </footer>
 </article>
-
-
-
-
 
 
 </main>
@@ -459,9 +453,18 @@ header {
     <small>made with ❤️  by <strong>tomascornelles © <span id="year"></span></strong></small>
     <br>
     <small><a href="/politica-de-cookies">Politica de cookies</a>
+<dialog open class="js-cookies-consent">
+  <p>Utilizo cookies para conocer cuántas personas visitan mi sitio web con GA. Haz clic en Aceptar para ayudarme a mejorar mi contenido. Aquí está la <a href="/politica-de-cookies">Politica de cookies</a>.</p>
+  <p>
+    <button role="link" data-consent="Accept" class="js-cookies-consent-button">Aceptar</button>
+    <button role="link" data-consent="Reject" class="js-cookies-consent-button">Rechazar</button>
+  </p>
+</dialog>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LS4CLZL6D"></script>
+
+
 
 </small>
     </p>
@@ -476,23 +479,37 @@ header {
   <tc-favicon>
 </tc-favicon>
 
-  <script>!function(e,t){"function"==typeof define&&define.amd?define(["exports"],t):t("undefined"!=typeof exports?exports:e.microlight={})}(this,function(e){var t,n,i,o=window,r=document,a="appendChild",l="test",c=";text-shadow:",s="opacity:.",d=" 0px 0px ",u="3px 0px 5",f=")",p=function(e){for(n=r.getElementsByClassName(e||"microlight"),t=0;i=n[t++];)for(var p,h,g,m,y,x=i.textContent,b=0,w=x[0],v=1,k=i.innerHTML="",C=0,N=/(\d*\, \d*\, \d*)(, ([.\d]*))?/g.exec(o.getComputedStyle(i).color),E="px rgba("+N[1]+",",S=N[3]||1;h=p,p=7>C&&"\\"==p?1:v;){if(v=w,w=x[++b],m=k.length>1,!v||C>8&&"\n"==v||[/\S/[l](v),1,1,!/[$\w]/[l](v),("/"==p||"\n"==p)&&m,'"'==p&&m,"'"==p&&m,x[b-4]+h+p=="-->",h+p=="*/"][C])for(k&&(i[a](y=r.createElement("span")).setAttribute("style",["",c+d+9+E+.7*S+"),"+d+2+E+.4*S+f,s+6+c+d+7+E+S/4+"),"+d+3+E+S/4+f,s+7+c+u+E+S/5+"),-"+u+E+S/5+f,"font-style:italic;"+s+5+c+u+E+S/4+"),-"+u+E+S/4+f][C?3>C?2:C>6?4:C>3?3:+/^(a(bstract|lias|nd|rguments|rray|s(m|sert)?|uto)|b(ase|egin|ool(ean)?|reak|yte)|c(ase|atch|har|hecked|lass|lone|ompl|onst|ontinue)|de(bugger|cimal|clare|f(ault|er)?|init|l(egate|ete)?)|do|double|e(cho|ls?if|lse(if)?|nd|nsure|num|vent|x(cept|ec|p(licit|ort)|te(nds|nsion|rn)))|f(allthrough|alse|inal(ly)?|ixed|loat|or(each)?|riend|rom|unc(tion)?)|global|goto|guard|i(f|mp(lements|licit|ort)|n(it|clude(_once)?|line|out|stanceof|t(erface|ernal)?)?|s)|l(ambda|et|ock|ong)|m(icrolight|odule|utable)|NaN|n(amespace|ative|ext|ew|il|ot|ull)|o(bject|perator|r|ut|verride)|p(ackage|arams|rivate|rotected|rotocol|ublic)|r(aise|e(adonly|do|f|gister|peat|quire(_once)?|scue|strict|try|turn))|s(byte|ealed|elf|hort|igned|izeof|tatic|tring|truct|ubscript|uper|ynchronized|witch)|t(emplate|hen|his|hrows?|ransient|rue|ry|ype(alias|def|id|name|of))|u(n(checked|def(ined)?|ion|less|signed|til)|se|sing)|v(ar|irtual|oid|olatile)|w(char_t|hen|here|hile|ith)|xor|yield)$/[l](k):0]),y[a](r.createTextNode(k))),g=C&&7>C?C:g,k="",C=11;![1,/[\/{}[(\-+*=<>:;|\\.,?!&@~]/[l](v),/[\])]/[l](v),/[$\w]/[l](v),"/"==v&&2>g&&"<"!=p,'"'==v,"'"==v,v+w+x[b+1]+x[b+2]=="<!--",v+w=="/*",v+w=="//","#"==v][--C];);k+=v}};e.reset=p,"complete"==r.readyState?p():o.addEventListener("load",function(){p()},0)});
-const codeBlocks = document.querySelectorAll('pre');
-  codeBlocks.forEach((block) => {
-    block.classList.add('microlight');
-  })
-window.onscroll = () => {
+  <script>window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);
   }
   document.querySelectorAll('header nav a').forEach((item) => {
     item.addEventListener('click', (e) => e.target.blur());
   })
-if (window.location.hostname !== 'localhost') {
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8LS4CLZL6D');
+const cookiePreference = window.localStorage.getItem('cookiePreference');
+  if (cookiePreference  === 'Accept') {
+    document.querySelector('.js-cookies-consent').remove();
+
+    if (window.location.hostname !== 'localhost') {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8LS4CLZL6D');
+    }
+
+  } else if (cookiePreference === 'Reject') {
+    document.querySelector('.js-cookies-consent').remove();
+
+  } else { 
+    const buttons = document.querySelectorAll('.js-cookies-consent-button');
+    buttons.forEach((button) => {
+      button.addEventListener('click',  () => {
+        window.localStorage.setItem('cookiePreference', event.target.dataset.consent);
+
+        document.querySelector('.js-cookies-consent').classList.add('hide');
+        setTimeout(() => { window.location.reload() }, 1000);
+      });
+    });
   }
 const today = new Date();
   const year = today.getFullYear();
