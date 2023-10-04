@@ -67,6 +67,7 @@
   header p {
     margin: .5rem 0;
     font-size: 2rem;
+    font-family: var(--font-mono);
     visibility: hidden;
     overflow: hidden;
     text-overflow: ellipsis;
