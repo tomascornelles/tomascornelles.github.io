@@ -580,18 +580,20 @@ window.onscroll = () => {
   document.querySelectorAll('header nav a').forEach((item) => {
     item.addEventListener('click', (e) => e.target.blur());
   })
-const cookiePreference = window.localStorage.getItem('cookiePreference');
-  if (cookiePreference  === 'Accept') {
-    document.querySelector('.js-cookies-consent').remove();
+const cookiePreference = () => window.localStorage.getItem('cookiePreference');
+  const localhost = 'ocalhost';
 
-    if (window.location.hostname !== 'localhost') {
+  const ga4_init = () => {
+    if (window.location.hostname !== localhost && cookiePreference() === 'Accept') {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-8LS4CLZL6D');
     }
+  }
 
-  } else if (cookiePreference === 'Reject') {
+  if (cookiePreference()) {
+    ga4_init();
     document.querySelector('.js-cookies-consent').remove();
 
   } else { 
@@ -601,14 +603,13 @@ const cookiePreference = window.localStorage.getItem('cookiePreference');
         const {
           consent
         } = event.target.dataset;
+
         window.localStorage.setItem('cookiePreference', consent);
+        ga4_init();
 
         document.querySelector('.js-cookies-consent').classList.add('hide');
         document.querySelector('.js-cookies-consent').remove();
 
-        if (window.location.hostname !== 'localhost' && consent === 'Accept') {
-          gtag('event', 'page_view');
-        }
       });
     });
   }

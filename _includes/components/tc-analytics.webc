@@ -31,18 +31,20 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LS4CLZL6D" webc:keep></script>
 <script webc:bucket="defer">
-  const cookiePreference = window.localStorage.getItem('cookiePreference');
-  if (cookiePreference  === 'Accept') {
-    document.querySelector('.js-cookies-consent').remove();
+  const cookiePreference = () => window.localStorage.getItem('cookiePreference');
+  const localhost = 'localhost';
 
-    if (window.location.hostname !== 'localhost') {
+  const ga4_init = () => {
+    if (window.location.hostname !== localhost && cookiePreference() === 'Accept') {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-8LS4CLZL6D');
     }
+  }
 
-  } else if (cookiePreference === 'Reject') {
+  if (cookiePreference()) {
+    ga4_init();
     document.querySelector('.js-cookies-consent').remove();
 
   } else { 
@@ -52,14 +54,13 @@
         const {
           consent
         } = event.target.dataset;
+
         window.localStorage.setItem('cookiePreference', consent);
+        ga4_init();
 
         document.querySelector('.js-cookies-consent').classList.add('hide');
         document.querySelector('.js-cookies-consent').remove();
 
-        if (window.location.hostname !== 'localhost' && consent === 'Accept') {
-          gtag('event', 'page_view');
-        }
       });
     });
   }
