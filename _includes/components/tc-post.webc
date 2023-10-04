@@ -17,7 +17,6 @@
 
   <!--- Read More --->
   <p webc:if="postMore"><a :href="postUrl">Seguir leyendo</a></p>
-  <p webc:if="home"><a href="/blog"><strong>Leer más artículos en el blog</strong></a></p>
 
   <footer webc:if="complete">
     <!--- Back and tags (exlude 'blog' tag) ---> 
@@ -26,6 +25,10 @@
     </p>
 
     <p><a href="/blog">Volver al blog</a></p>
+  </footer>
+
+  <footer webc:if="home">
+    <p><a href="/blog"><strong>Leer más artículos en el blog</strong></a></p>
   </footer>
 </article>
 
@@ -83,7 +86,7 @@
   }
 
   article footer {
-    margin-block-start: 15rem;
+    margin-block-start: 10rem;
   }
 
   @media (min-width: 768px) {

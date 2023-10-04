@@ -19,18 +19,6 @@ layout: base.webc
 </section>
 
 <style>
-  .serif {
-    font-family: serif;
-  }
-
-  .sans {
-    font-family: sans-serif;
-  }
-
-  .mono {
-    font-family: monospace;
-  }
-
   #welcome h1 {
     font-size: 15vw;
     height: 80dvh;
