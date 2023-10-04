@@ -12,7 +12,7 @@
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <meta name="theme-color" content="white">
 
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;900&display=swap" 
+  <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100;400;700&family=Roboto:wght@400;700&display=swap" 
         rel="preload" 
         as="font"
         onload="this.onload=null;this.rel='stylesheet'"
@@ -26,7 +26,7 @@
       --color-bg: white;
       --color-fg: black;
       --font: 'Roboto', sans-serif;
-      --font-mono: 'Space Mono', monospace;
+      --font-mono: 'Martian Mono', monospace;
       --unit: 10px;
     }
 
@@ -54,22 +54,29 @@
     }
 
     main > section {
-      padding-block-end:  calc(var(--unit) * 20);
+      padding-block-end:  calc(var(--unit) * 10);
     }
 
     h1, h2, h3 {
       font-family: var(--font-mono);
-      font-weight: normal;
-      line-height: 1.0;
+      font-weight: 300;
+      line-height: 1.5;
       margin-block: 2em 1em;
+      overflow-wrap: break-word;
     }
 
     h1 {
-      font-size: 7rem;
+      font-size: 15vw;
+      height: 80dvh;
+      margin-top: 0;
+      display: flex;
+      align-items: end;
+      padding-block-end: 10vh;
+      box-sizing: border-box;
     }
 
     h2 {
-      font-size: 3rem;
+      font-size: 4rem;
     }
 
     h3 {
@@ -84,12 +91,13 @@
 
     a, [role=link] {
       text-decoration: none;
-      box-shadow: inset 0 -2px var(--color-fg);
+      box-shadow: inset 0 -1px var(--color-fg);
       color: var(--color-fg);
       background: none;
       border: none;
       transition: all .5s ease;
       padding: .2em;
+      cursor: pointer;
     }
 
     a:hover, [role=link]:hover {
@@ -109,18 +117,24 @@
     }
 
     code, pre {
-      background-color: var(--color-fg);
-      color: var(--color-bg);
-      padding: 0 .2em;
       font-family: var(--font-mono);
+      font-size: 0.95em;
     }
 
     pre {
       padding: 1em;
+      background-color: var(--color-fg);
+      color: var(--color-bg);
     }
 
     svg path {
       fill: var(--color-fg);
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 11rem;
+      }
     }
   </style>
 

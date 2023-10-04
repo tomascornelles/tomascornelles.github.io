@@ -4,7 +4,7 @@ image: https://picsum.photos/800/300
 tags: test
 ---
 
-In Git, <span role="link">the</span> git reset **command** is *used* ***to*** reset the state of the *repository* to a specific point. There are different ways to use git reset depending on what you want to achieve. Here are a few common scenarios:
+In Git, <span role="link">the</span> git reset **command** is *used* ***to*** reset the state of the *repository* to a `specific` point. There are different ways to use git reset depending on what you want to achieve. Here are a few common scenarios:
 
     Discard Uncommitted Changes:
 
