@@ -6,6 +6,7 @@ title: ¡Hola!
 # {{ title }}<br> Soy Tomás
 
 <article>
+
 Aunque no lo parezca soy un químico reciclado, tuve la oportunidad de trabajar para el laboratorio de una gran petrolera multinacional y afrontar la crisis del 2010 reinventándome.
 
 La programación siempre fue mi pasión. Autodidacta y perfeccionista me metí en este mundo binario lleno de colores. Obtuve el título de programador de aplicaciones informáticas en 2012 y desde entonces trabajé como freelance, para pymes, fui **CTO** en una prometedora StartUp y **Team lead** en una agencia de publicidad.

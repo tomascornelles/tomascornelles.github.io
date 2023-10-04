@@ -11,9 +11,9 @@
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <meta name="theme-color" content="white">
 
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="preload" as="font" onload="this.onload=null;this.rel='stylesheet'">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;family=Roboto:wght@400;900&amp;display=swap" rel="preload" as="font" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" webc:keep>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&Roboto:wght@400;900&display=swap" webc:keep>
   </noscript>
 
   
@@ -21,7 +21,8 @@
   <style>:root {
       --color-bg: white;
       --color-fg: black;
-      --font: 'Space Mono', monospace;
+      --font: 'Roboto', sans-serif;
+      --font-mono: 'Space Mono', monospace;
       --unit: 10px;
     }
 
@@ -37,13 +38,14 @@
     }
 
     body {
-      font-size: 1.6rem;
       background-color: var(--color-bg);
       color: var(--color-fg);
-      font-family: var(--font);
-      padding-top: 20dvh;
-      max-width: calc(var(--unit) * 120);
+      font-family: var(--font-mono);
+      font-size: 1.6rem;
+      line-height: 1.75;
       margin: 0 auto;
+      max-width: calc(var(--unit) * 120);
+      padding-top: 20dvh;
       padding: 20vh var(--unit) var(--unit);
     }
 
@@ -52,9 +54,10 @@
     }
 
     h1, h2, h3 {
+      font-family: var(--font-mono);
       font-weight: normal;
       line-height: 1.0;
-      margin-top: 2em;
+      margin-block: 2em 1em;
     }
 
     h1 {
@@ -67,6 +70,12 @@
 
     h3 {
       font-size: 2rem;
+    }
+
+    p {
+      font-family: var(--font);
+      margin-block-start: 0;
+      margin-block-end: 1em;
     }
 
     a, [role=link] {
@@ -83,16 +92,22 @@
       box-shadow: inset 0 -5em var(--color-fg);
     }
 
+    strong, b {
+      font-weight: 900;
+    }
+
     kbd {
       border: 1px solid var(--color-fg);
       padding: 0 .2em;
       box-shadow: 0 .1em var(--color-fg);
+      font-family: var(--font-mono);
     }
 
     code, pre {
       background-color: var(--color-fg);
       color: var(--color-bg);
       padding: 0 .2em;
+      font-family: var(--font-mono);
     }
 
     pre {
@@ -278,6 +293,10 @@ header {
       margin-block-start: .5rem;
     }
 
+    header.sticky nav ul {
+      margin-top: 0;
+    }
+
     header nav li {
       display: inline-block;
     }
@@ -342,6 +361,7 @@ header {
     margin: 0;
     padding: 0;
     list-style: none;
+    font-family: var(--font-mono);
   }
 
   footer ul span {
@@ -533,7 +553,7 @@ header {
     item.addEventListener('click', (e) => e.target.blur());
   })
 const cookiePreference = () => window.localStorage.getItem('cookiePreference');
-  const localhost = 'ocalhost';
+  const localhost = 'localhost';
 
   const ga4_init = () => {
     if (window.location.hostname !== localhost && cookiePreference() === 'Accept') {
