@@ -31,9 +31,7 @@ layout: base.webc
   }
 
   #blog  header h2 {
-    font-size: 3rem;
-    line-height: 1.5;
-    margin-top: 0;
+    margin-block-start: 0;
   }
 
   #blog article:nth-child(n+4) {
@@ -47,10 +45,6 @@ layout: base.webc
 
     #blog article:nth-child(n+4) {
       width: 100%;
-    }
-
-    #blog article:nth-child(n+4) a {
-      display: block;
     }
   }
 </style>

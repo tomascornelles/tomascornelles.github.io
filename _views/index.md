@@ -16,4 +16,5 @@ Ahora desarrollo para un gran portal **internacional**, ayudo a quien me necesit
 Además de los proyectos para clientes, también he buscado practicar con ejercicios que me resultan divertidos. Si encuentro una idea que me gustaría realizar, intento encontrar la forma de desarrollarla, como un pasatiempo.
 
 Soy un entusiasta del **Vanilla JS**, aunque siempre estoy dispuesto a aprender y usar cualquier framework, desde grandes proyectos como **AMP, Vue o React**, hasta pequeños experimentos como CellJS o **HTMX**.
-</article>
+
+Puedes solicitar una mentoría personalizada a traves de **[ClassGap](https://www.classgap.com/me/tomas-cornelles)**, o ponerte en [contacto](#hablamos) conmigo para colaborar en algún proyecto.
