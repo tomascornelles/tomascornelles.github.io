@@ -26,6 +26,8 @@ layout: base.webc
 
   #blog article {
     margin-block-end: 15rem;
+    display: block;
+    width: 100%;
   }
 
   #blog  header h2 {
