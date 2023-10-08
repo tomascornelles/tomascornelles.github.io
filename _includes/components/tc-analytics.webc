@@ -29,7 +29,7 @@
 </dialog>
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8LS4CLZL6D" webc:keep></script>
+<script webc:bucket="defer" async src="https://www.googletagmanager.com/gtag/js?id=G-8LS4CLZL6D" webc:keep></script>
 <script webc:bucket="defer">
   const cookiePreference = () => window.localStorage.getItem('cookiePreference');
   const localhost = 'localhost';
