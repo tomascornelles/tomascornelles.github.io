@@ -19,24 +19,63 @@ layout: base.webc
 </section>
 
 <style>
-  #welcome h1 {
-    font-size: 15vw;
-    height: 80dvh;
-    margin-top: 0;
-    display: flex;
-    align-items: end;
-    padding-block-end: 10vh;
-    box-sizing: border-box;
+  #welcome h1::after {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1.5em;
+    background-color: var(--color-fg);
+    animation: blink 1s infinite;
   }
 
   @media (min-width: 768px) {
-    #welcome h1 {
-      font-size: 11rem;
-    }
-
     #welcome article {
       columns: 2;
       column-gap: 5rem;
     }
   }
+
+  @keyframes blink {
+    from {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    51% {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
 </style>
+
+<script  webc:bucket="defer">
+  const title = document.querySelector('#welcome h1');
+  const titleLines = title.innerHTML.split('<br>');
+  title.innerHTML = ''
+
+
+  let i = 0;
+  line = 0;
+  const speed  = 50;
+  function typeWriter(txt) {
+    if (i < txt.length) {
+      title.innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(() => typeWriter(txt), speed);
+    } else {
+      i = 0;
+      line++;
+      if (typeof titleLines[line] !== 'undefined') {
+        title.innerHTML += '<br>';
+        typeWriter(titleLines[line])
+      }
+    }
+  }
+  typeWriter(titleLines[line])
+</script>
