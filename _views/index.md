@@ -7,14 +7,10 @@ title: ¡Hola!
 
 <article>
 
-Aunque no lo parezca soy un químico reciclado, tuve la oportunidad de trabajar para el laboratorio de una gran petrolera multinacional y afrontar la crisis del 2010 reinventándome.
+Empecé como full stack, con PHP y Wordpress. He trabajado como freelance, para pymes, fui CTO en una prometedora StartUp y **Team lead** en una agencia de marketing. Ahora ejerzo como **senior frontend developer** para un gran portal internacional.
 
-La programación siempre fue mi pasión. Autodidacta y perfeccionista me metí en este mundo binario lleno de colores. Obtuve el título de programador de aplicaciones informáticas en 2012 y desde entonces trabajé como freelance, para pymes, fui **CTO** en una prometedora StartUp y **Team lead** en una agencia de publicidad.
+He dirigido pequeños equipos de desarrolladores, he tratado con cliente externo y con otros departamentos para coordinar tareas. En mis roles de **Lead** he podido seleccionar candidatos para mi equipo y esforzarme en que todos trabajen a gusto.
 
-Ahora desarrollo para un gran portal **internacional**, ayudo a quien me necesite, sigo aprendiendo y en mis ratos libres juego con mi hijo, dibujo a tinta o ruedo en mi bicicleta.
+Aunque no sea un experto en ningún framework de JS conozco en profundidad **JavaScript** y eso me permite manejar con fluidez cualquiera de ellos. Mi objetivo es obtener resultados de **calidad**, con **buenas prácticas** y **metodologías ágiles**.
 
-Además de los proyectos para clientes, también he buscado practicar con ejercicios que me resultan divertidos. Si encuentro una idea que me gustaría realizar, intento encontrar la forma de desarrollarla, como un pasatiempo.
-
-Soy un entusiasta del **Vanilla JS**, aunque siempre estoy dispuesto a aprender y usar cualquier framework, desde grandes proyectos como **AMP, Vue o React**, hasta pequeños experimentos como CellJS o **HTMX**.
-
-Puedes solicitar una mentoría personalizada a traves de **[ClassGap](https://www.classgap.com/me/tomas-cornelles)**, o ponerte en [contacto](#hablamos) conmigo para colaborar en algún proyecto.
+Si piensas que puedo ayudarte ponte en [contacto](#hablamos) conmigo por email o redes, o solicita una mentoría personalizada a traves de **[ClassGap](https://www.classgap.com/me/tomas-cornelles)**, donde podemos comentar dudas, code review o clases de programación.
