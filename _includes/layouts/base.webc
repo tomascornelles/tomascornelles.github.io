@@ -12,20 +12,20 @@
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <meta name="theme-color" content="white">
 
-  <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100;400;700&family=Roboto:wght@400;700&display=swap" 
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Martian+Mono:wght@100;400;700&display=swap" 
         rel="preload" 
         as="font"
         onload="this.onload=null;this.rel='stylesheet'"
         webc:keep>
   <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&Roboto:wght@400;900&display=swap" webc:keep>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Martian+Mono:wght@100;400;700&display=swap" webc:keep>
   </noscript>
 
   <style webc:bucket="base">
     :root {
       --color-bg: white;
       --color-fg: black;
-      --font: 'Roboto', sans-serif;
+      --font: 'Lora', serif;
       --font-mono: 'Martian Mono', monospace;
       --unit: 10px;
     }
@@ -44,8 +44,8 @@
     body {
       background-color: var(--color-bg);
       color: var(--color-fg);
-      font-family: var(--font-mono);
-      font-size: 1.6rem;
+      font-family: var(--font);
+      font-size: 1.7rem;
       line-height: 1.75;
       margin: 0 auto;
       max-width: calc(var(--unit) * 120);
@@ -63,6 +63,7 @@
       line-height: 1.5;
       margin-block: 2em 1em;
       overflow-wrap: break-word;
+      letter-spacing: -.1em;
     }
 
     h1 {
@@ -84,7 +85,6 @@
     }
 
     p {
-      font-family: var(--font);
       margin-block-start: 0;
       margin-block-end: 1em;
     }
@@ -118,7 +118,7 @@
 
     code, pre {
       font-family: var(--font-mono);
-      font-size: 0.95em;
+      font-size: 0.9em;
     }
 
     pre {

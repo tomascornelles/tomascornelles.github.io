@@ -49,6 +49,7 @@
     margin: auto;
     padding: var(--unit);
     font-weight: 300;
+    font-family: var(--font-mono);
   }
   
   header > * {
@@ -68,7 +69,7 @@
   header p {
     margin: 0 .5rem;
     font-size: 2rem;
-    font-family: var(--font-mono);
+    letter-spacing: -.1em;
     visibility: hidden;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -167,10 +168,12 @@
 </style>
 
 <script webc:bucket="defer">
+  console.log('Hola');
   window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);
   }
+
   document.querySelectorAll('header nav a').forEach((item) => {
     item.addEventListener('click', (e) => e.target.blur());
   })

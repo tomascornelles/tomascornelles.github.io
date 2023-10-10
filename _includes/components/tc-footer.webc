@@ -4,10 +4,11 @@
     <div>
       <div>
       <p>
-     Tengo experiencia desde 1998 trabajando por mi cuenta, para startups, agencias y portales internacionales. No dudes en contactarme si puedo ayudarte o colaborar, me encantan los nuevos proyectos y los retos.
+      Desde 1998 he podido aprender mucho y ver como cambia el mundo del desarrollo web, también he podido ver lo que no ha cambiado. Las <strong>buenas prácticas</strong>, el <strong>código limpio</strong>, la gestión del trabajo o la calidad del producto final, siempre han de estar en la mente de todo desarrollador, sea frontend, backend o full stack.
       </p>
-
-      <p>Puedes solicitar una mentoría personalizada a traves de <strong><a href="https://www.classgap.com/me/tomas-cornelles" target="_blank">ClassGap</a></strong></p>
+      <p>
+      Si necesitas apoyo en tu formación, <strong>clases de refuerzo</strong>, <strong>prepararte para una entrevista</strong>, mejorar tu código o una mentoría personalizada, contacta conmigo a traves de <strong><a href="https://www.classgap.com/me/tomas-cornelles" target="_blank">ClassGap</a></strong>
+      </p>
       </div>
       <ul>
         <li>
@@ -43,12 +44,9 @@
     padding-block-start: 5rem;
   }
   
-  footer section:first-child p {
-    margin-bottom: 5em;
-  }
-
   footer ul {
     margin: 0;
+    margin-block-start: 5em;
     padding: 0;
     list-style: none;
     font-family: var(--font-mono);
@@ -59,21 +57,29 @@
   footer ul span {
     display: block;
     opacity: .6;
-    margin-top: 1em;
-    margin-bottom: 0;
+    margin-block-end: 0;
+  }
+
+  footer ul li {
+    margin-block-end: 1em;
   }
 
   footer section:last-child {
-    margin-top: 5em;
+    margin-block-start: 5em;
     text-align: center;
   }
 
   @media (min-width: 768px) {
+    footer ul {
+      margin-block-start: 0;
+    }
+
     footer section:first-child > div {
       display: flex;
       justify-content: space-between;
       gap: 5rem;
     }
+
     footer section:first-child > div {
       flex-direction: row-reverse;
     }
