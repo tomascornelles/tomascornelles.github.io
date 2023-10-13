@@ -3,12 +3,10 @@
     <h2>¿Hablamos?</h2>
     <div>
       <div>
-      <p>
-      Desde 1998 he podido aprender mucho y ver como cambia el mundo del desarrollo web, también he podido ver lo que no ha cambiado. Las <strong>buenas prácticas</strong>, el <strong>código limpio</strong>, la gestión del trabajo o la calidad del producto final, siempre han de estar en la mente de todo desarrollador, sea frontend, backend o full stack.
-      </p>
-      <p>
-      Si necesitas apoyo en tu formación, <strong>clases de refuerzo</strong>, <strong>prepararte para una entrevista</strong>, mejorar tu código o una mentoría personalizada, contacta conmigo a traves de <strong><a href="https://www.classgap.com/me/tomas-cornelles" target="_blank">ClassGap</a></strong>
-      </p>
+        <p>
+        Desde 1998 he podido aprender mucho y ver como cambia el mundo del desarrollo web, también he podido ver lo que no ha cambiado. Las <strong>buenas prácticas</strong>, el <strong>código limpio</strong>, la gestión del trabajo o la calidad del producto final, siempre han de estar en la mente de todo desarrollador, sea frontend, backend o full stack.
+        </p>
+        <tc-classgap></tc-classgap>
       </div>
       <ul>
         <li>

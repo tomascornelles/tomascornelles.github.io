@@ -45,7 +45,7 @@
     justify-content: space-between;
     gap: 0;
     flex-wrap: initial;
-    max-width: calc(var(--unit) * 120);
+    max-width: calc(var(--unit) * 100);
     margin: auto;
     padding: var(--unit);
     font-weight: 300;
@@ -68,7 +68,6 @@
 
   header p {
     margin: 0 .5rem;
-    font-size: 2rem;
     letter-spacing: -.1em;
     visibility: hidden;
     overflow: hidden;
@@ -91,12 +90,12 @@
 
   header nav span {
     margin: 0;
-    font-size: 2rem;
   }
 
   header nav a {
     display: block;
     padding: 1rem;
+    letter-spacing: -.1em;
   }
 
   header nav a:hover {
@@ -161,7 +160,7 @@
 
     header nav a {
       display: inline;
-      padding-block: 0 .3em;
+      padding: .3em;
       margin-inline-start: 2rem;
     }
   }

@@ -11,9 +11,9 @@
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <meta name="theme-color" content="white">
 
-  <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100;400;700&amp;family=Roboto:wght@400;700&amp;display=swap" rel="preload" as="font" onload="this.onload=null;this.rel='stylesheet'">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;family=Martian+Mono:wght@100;400;700&amp;display=swap" rel="preload" as="font" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&Roboto:wght@400;900&display=swap" webc:keep>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Martian+Mono:wght@100;400;700&display=swap" webc:keep>
   </noscript>
 
   
@@ -21,7 +21,7 @@
   <style>:root {
       --color-bg: white;
       --color-fg: black;
-      --font: 'Roboto', sans-serif;
+      --font: 'Lora', serif;
       --font-mono: 'Martian Mono', monospace;
       --unit: 10px;
     }
@@ -40,11 +40,11 @@
     body {
       background-color: var(--color-bg);
       color: var(--color-fg);
-      font-family: var(--font-mono);
-      font-size: 1.6rem;
+      font-family: var(--font);
+      font-size: 1.7rem;
       line-height: 1.75;
       margin: 0 auto;
-      max-width: calc(var(--unit) * 120);
+      max-width: calc(var(--unit) * 100);
       padding-top: 20dvh;
       padding: 20vh var(--unit) var(--unit);
     }
@@ -59,6 +59,7 @@
       line-height: 1.5;
       margin-block: 2em 1em;
       overflow-wrap: break-word;
+      letter-spacing: -.1em;
     }
 
     h1 {
@@ -80,7 +81,6 @@
     }
 
     p {
-      font-family: var(--font);
       margin-block-start: 0;
       margin-block-end: 1em;
     }
@@ -101,6 +101,23 @@
       box-shadow: inset 0 -5em var(--color-fg);
     }
 
+    button, [role=button] {
+      display: block;
+      text-align: center;
+      padding: .5em 1em;
+      background-color: var(--color-fg);
+      color: var(--color-bg);
+      border: .1em solid var(--color-fg);
+      font-family: var(--font-mono);
+      font-size: 1.6rem;
+      box-shadow: inset 0 0 var(--color-bg);
+    }
+
+    button:hover, [role=button]:hover {
+      color: var(--color-fg);
+      box-shadow: inset 0 -5em var(--color-bg);
+    }
+
     strong, b {
       font-weight: 900;
     }
@@ -114,7 +131,7 @@
 
     code, pre {
       font-family: var(--font-mono);
-      font-size: 0.95em;
+      font-size: 0.9em;
     }
 
     pre {
@@ -130,6 +147,10 @@
     @media (min-width: 768px) {
       h1 {
         font-size: 8rem;
+      }
+
+      button, [role=button] {
+        display: inline-block;
       }
     }</style>
   <style>.serif {
@@ -169,10 +190,11 @@ header {
     justify-content: space-between;
     gap: 0;
     flex-wrap: initial;
-    max-width: calc(var(--unit) * 120);
+    max-width: calc(var(--unit) * 100);
     margin: auto;
     padding: var(--unit);
     font-weight: 300;
+    font-family: var(--font-mono);
   }
   
   header > * {
@@ -191,8 +213,7 @@ header {
 
   header p {
     margin: 0 .5rem;
-    font-size: 2rem;
-    font-family: var(--font-mono);
+    letter-spacing: -.1em;
     visibility: hidden;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -214,12 +235,12 @@ header {
 
   header nav span {
     margin: 0;
-    font-size: 2rem;
   }
 
   header nav a {
     display: block;
     padding: 1rem;
+    letter-spacing: -.1em;
   }
 
   header nav a:hover {
@@ -284,7 +305,7 @@ header {
 
     header nav a {
       display: inline;
-      padding-block: 0 .3em;
+      padding: .3em;
       margin-inline-start: 2rem;
     }
   }
@@ -334,12 +355,9 @@ header {
     padding-block-start: 5rem;
   }
   
-  footer section:first-child p {
-    margin-bottom: 5em;
-  }
-
   footer ul {
     margin: 0;
+    margin-block-start: 5em;
     padding: 0;
     list-style: none;
     font-family: var(--font-mono);
@@ -350,21 +368,29 @@ header {
   footer ul span {
     display: block;
     opacity: .6;
-    margin-top: 1em;
-    margin-bottom: 0;
+    margin-block-end: 0;
+  }
+
+  footer ul li {
+    margin-block-end: 1em;
   }
 
   footer section:last-child {
-    margin-top: 5em;
+    margin-block-start: 5em;
     text-align: center;
   }
 
   @media (min-width: 768px) {
+    footer ul {
+      margin-block-start: 0;
+    }
+
     footer section:first-child > div {
       display: flex;
       justify-content: space-between;
       gap: 5rem;
     }
+
     footer section:first-child > div {
       flex-direction: row-reverse;
     }
@@ -428,11 +454,13 @@ header {
     <h2>¿Hablamos?</h2>
     <div>
       <div>
-      <p>
-     Tengo experiencia desde 1998 trabajando por mi cuenta, para startups, agencias y portales internacionales. No dudes en contactarme si puedo ayudarte o colaborar, me encantan los nuevos proyectos y los retos.
-      </p>
+        <p>
+        Desde 1998 he podido aprender mucho y ver como cambia el mundo del desarrollo web, también he podido ver lo que no ha cambiado. Las <strong>buenas prácticas</strong>, el <strong>código limpio</strong>, la gestión del trabajo o la calidad del producto final, siempre han de estar en la mente de todo desarrollador, sea frontend, backend o full stack.
+        </p>
+        <p>Si necesitas apoyo en tu formación, <strong>clases de refuerzo, prepararte para una entrevista</strong>, mejorar tu código o una mentoría personalizada, contrata un pack de horas a traves de <strong>ClassGap</strong> para poder <strong>ayudarte en tu proceso de aprendizaje y mejorar profesionalmente</strong> en pocas clases. Dispones de una clase de 20 minutos de <strong>prueba gratuita</strong>.</p>
 
-      <p>Puedes solicitar una mentoría personalizada a traves de <strong><a href="https://www.classgap.com/me/tomas-cornelles" target="_blank">ClassGap</a></strong></p>
+<a role="button" href="https://www.classgap.com/me/tomas-cornelles" target="_blank">Mentoría personalizada</a>
+
       </div>
       <ul>
         <li>
@@ -520,10 +548,12 @@ header {
   }
 
   setInterval(mix, 200);
-window.onscroll = () => {
+console.log('Hola');
+  window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);
   }
+
   document.querySelectorAll('header nav a').forEach((item) => {
     item.addEventListener('click', (e) => e.target.blur());
   })

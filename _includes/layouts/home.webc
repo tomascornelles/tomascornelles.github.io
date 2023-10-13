@@ -4,6 +4,10 @@ layout: base.webc
 
 <section @raw="content" id="welcome"></section>
 
+<section id="cta">
+  <tc-classgap></tc-classgap>
+</section>
+
 <section id="blog">
   <tc-post 
     webc:nokeep
