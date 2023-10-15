@@ -8,16 +8,24 @@ layout: base.webc
 
 <script webc:bucket="defer">
   const hello = document.querySelector('#content h1');
-  const parts = hello.innerHTML.split('<br>');
-  const replaced0 = parts[0].split('').map((letter) => `<span>${letter}</span>`);
-  const replaced1 = parts[1].split('').map((letter) => `<span>${letter}</span>`);
-  hello.innerHTML = `<div>${replaced0.join('')}<br>${replaced1.join('')}</div>`;
+  const parts = hello.innerHTML
+                     .split('<br>')
+                     .map(
+                       (part) => part.split('')
+                                     .map(
+                                       (letter) => `<span>${letter}</span>`));
+  
+  hello.innerHTML = `<div>${parts.map((part) => part.join('')).join('<br>')}</div>`;
 
   const styles = ['mono', 'serif', 'sans'];
   const letters = hello.querySelectorAll('span');
 
   const mix = () => {
-  letters[Math.floor(Math.random() * letters.length)].classList.toggle(styles[Math.floor(Math.random() * styles.length)])
+    const randomLetter = Math.floor(Math.random() * letters.length);
+    const randomStyle = Math.floor(Math.random() * styles.length);
+
+    letters[randomLetter].classList
+                         .toggle(styles[randomStyle])
   }
 
   setInterval(mix, 200);
@@ -25,7 +33,7 @@ layout: base.webc
 
 <style>
   .serif {
-    font-family: serif;
+    font-family: var(--font);
   }
 
   .sans {
@@ -33,20 +41,7 @@ layout: base.webc
   }
 
   .mono {
-    font-family: monospace;
+    font-family: var(--font-mono);
   }
 
-  #content h1 {
-    font-size: 15vw;
-    height: 60dvh;
-    margin-top: 0;
-    display: flex;
-    align-items: end;
-  }
-
-  @media (min-width: 768px) {
-    #content h1 {
-      font-size: 11rem;
-    }
-  }
 </style>
