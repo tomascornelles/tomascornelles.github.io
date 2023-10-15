@@ -1,4 +1,4 @@
-# tomascornelles website
+# tomascornelles.com
 
 ## Stack
 
