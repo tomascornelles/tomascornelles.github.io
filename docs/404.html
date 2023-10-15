@@ -154,7 +154,7 @@
       }
     }</style>
   <style>.serif {
-    font-family: serif;
+    font-family: var(--font);
   }
 
   .sans {
@@ -162,21 +162,7 @@
   }
 
   .mono {
-    font-family: monospace;
-  }
-
-  #content h1 {
-    font-size: 15vw;
-    height: 60dvh;
-    margin-top: 0;
-    display: flex;
-    align-items: end;
-  }
-
-  @media (min-width: 768px) {
-    #content h1 {
-      font-size: 11rem;
-    }
+    font-family: var(--font-mono);
   }
 header {
     position: fixed;
@@ -455,7 +441,7 @@ header {
     <div>
       <div>
         <p>
-        Desde 1998 he podido aprender mucho y ver como cambia el mundo del desarrollo web, también he podido ver lo que no ha cambiado. Las <strong>buenas prácticas</strong>, el <strong>código limpio</strong>, la gestión del trabajo o la calidad del producto final, siempre han de estar en la mente de todo desarrollador, sea frontend, backend o full stack.
+        Desde 1998 he podido aprender mucho y ver como cambia el mundo del desarrollo web, también he podido ver lo que no ha cambiado. Las <strong>buenas prácticas</strong>, el código limpio, el <strong>rendimiento</strong> y la escalabilidad siempre han de estar en la mente de todo desarrollador, sea frontend, backend o full stack.
         </p>
         <p>Si necesitas apoyo en tu formación, <strong>clases de refuerzo, prepararte para una entrevista</strong>, mejorar tu código o una mentoría personalizada, contrata un pack de horas a traves de <strong>ClassGap</strong> para poder <strong>ayudarte en tu proceso de aprendizaje y mejorar profesionalmente</strong> en pocas clases. Dispones de una clase de 20 minutos de <strong>prueba gratuita</strong>.</p>
 
@@ -535,16 +521,24 @@ header {
 </tc-favicon>
 
   <script>const hello = document.querySelector('#content h1');
-  const parts = hello.innerHTML.split('<br>');
-  const replaced0 = parts[0].split('').map((letter) => `<span>${letter}</span>`);
-  const replaced1 = parts[1].split('').map((letter) => `<span>${letter}</span>`);
-  hello.innerHTML = `<div>${replaced0.join('')}<br>${replaced1.join('')}</div>`;
+  const parts = hello.innerHTML
+                     .split('<br>')
+                     .map(
+                       (part) => part.split('')
+                                     .map(
+                                       (letter) => `<span>${letter}</span>`));
+  
+  hello.innerHTML = `<div>${parts.map((part) => part.join('')).join('<br>')}</div>`;
 
   const styles = ['mono', 'serif', 'sans'];
   const letters = hello.querySelectorAll('span');
 
   const mix = () => {
-  letters[Math.floor(Math.random() * letters.length)].classList.toggle(styles[Math.floor(Math.random() * styles.length)])
+    const randomLetter = Math.floor(Math.random() * letters.length);
+    const randomStyle = Math.floor(Math.random() * styles.length);
+
+    letters[randomLetter].classList
+                         .toggle(styles[randomStyle])
   }
 
   setInterval(mix, 200);
