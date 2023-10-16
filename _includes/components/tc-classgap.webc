@@ -3,4 +3,4 @@
 <a role="button" 
    href="https://www.classgap.com/me/tomas-cornelles" 
    target="_blank" 
-   @text="labels.classgap.link">Mentoría personalizada</a>
+   @text="labels.classgap.cta"></a>

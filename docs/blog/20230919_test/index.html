@@ -419,10 +419,10 @@ footer section {
       <li>
         <a href="/">inicio</a>
       </li>
-<li>
+      <li>
         <a href="#hablamos">¿hablamos?</a>
       </li>
-<li>
+      <li>
         <a href="/blog">blog</a>
       </li>
     </ul>
@@ -546,8 +546,7 @@ const codeBlocks = document.querySelectorAll('pre');
   codeBlocks.forEach((block) => {
     block.classList.add('microlight');
   })
-console.log('Hola');
-  window.onscroll = () => {
+window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);
   }

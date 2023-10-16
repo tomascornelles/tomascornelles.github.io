@@ -27,8 +27,17 @@
   <nav>
     <span @text="labels.menu.title"></span>
     <ul>
-      <li webc:for="item of labels.menu.items">
-        <a :href="item.url" @text="item.title"></a>
+      <li>
+        <a :href="labels.menu.items.home.url" 
+          @text="labels.menu.items.home.title"></a>
+      </li>
+      <li>
+        <a :href="labels.menu.items.contact.url" 
+          @text="labels.menu.items.contact.title"></a>
+      </li>
+      <li>
+        <a :href="labels.menu.items.blog.url" 
+          @text="labels.menu.items.blog.title"></a>
       </li>
     </ul>
   </nav>
@@ -169,7 +178,6 @@
 </style>
 
 <script webc:bucket="defer">
-  console.log('Hola');
   window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);
