@@ -1,29 +1,38 @@
 <footer>
-  <section id="hablamos">
-    <h2>¿Hablamos?</h2>
+  <section :id="labels.links.contact">
+    <h2 @text="labels.contact">¿Hablamos?</h2>
     <div>
       <div>
-        <p>
-        Desde 1998 he podido aprender mucho y ver como cambia el mundo del desarrollo web, también he podido ver lo que no ha cambiado. Las <strong>buenas prácticas</strong>, el código limpio, el <strong>rendimiento</strong> y la escalabilidad siempre han de estar en la mente de todo desarrollador, sea frontend, backend o full stack.
-        </p>
-        <tc-classgap></tc-classgap>
+        <tc-classgap :labels="labels"></tc-classgap>
       </div>
+
       <ul>
         <li>
           <span>mastodon</span>
-          <a href="https://mastodon.world/@tomascornelles" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;@<strong>tomascornelles</strong></a></li>
+          <a href="https://mastodon.world/@tomascornelles" 
+            target="_blank">
+            &nbsp;&nbsp;&nbsp;&nbsp;@<strong>tomascornelles</strong>
+          </a>
+        </li>
         <li>
           <span>linkedin</span>
-          <a href="https://www.linkedin.com/in/tomascornelles/" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;/<strong>tomascornelles</strong></a></li>
-        <li>
-          <span>polywork</span>
-          <a href="https://poly.me/tomascornelles" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;/<strong>tomascornelles</strong></a></li>
+          <a href="https://www.linkedin.com/in/tomascornelles/" 
+            target="_blank">
+            &nbsp;&nbsp;&nbsp;&nbsp;/<strong>tomascornelles</strong>
+          </a>
+        </li>
         <li>
           <span>github</span>
-          <a href="https://github.com/tomascornelles" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;@<strong>tomascornelles</strong></a></li>
+          <a href="https://github.com/tomascornelles" 
+            target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;@<strong>tomascornelles</strong>
+          </a>
+        </li>
         <li>
           <span>email</span>
-          <a href="mailto:hola@tomascornelles.com" target="_blank">hola@<strong>tomascornelles</strong>.com</a></li>
+          <a href="mailto:hola@tomascornelles.com" 
+            target="_blank">hola@<strong>tomascornelles</strong>.com
+          </a>
+        </li>
       </ul>
     </div>
   </section>
@@ -31,14 +40,12 @@
   <section>
     <p>
     <small>made with ❤️  by <strong>tomascornelles © <span id="year"></span></strong></small>
-    <br>
-    <small><tc-analytics webc:nokeep></tc-analytics></small>
     </p>
   </section>
 </footer>
 
 <style>
-  #hablamos {
+  footer section {
     padding-block-start: 5rem;
   }
   

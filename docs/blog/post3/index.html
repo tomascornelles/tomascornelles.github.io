@@ -2,15 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Post 3</title>
-  <meta name="description" content="Web personal y blog de Tomas Cornelles, frontend developer.">
-
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
+  
+  <title>Post 3</title>
+  <meta name="description" content="Web personal y blog de Tomás Cornelles, frontend developer.">
+
+  
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <meta name="theme-color" content="white">
 
+  
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;family=Martian+Mono:wght@100;400;700&amp;display=swap" rel="preload" as="font" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Martian+Mono:wght@100;400;700&display=swap" webc:keep>
@@ -337,49 +340,7 @@ header {
       margin-inline-start: 2rem;
     }
   }
-.hide {
-    transition: 1s ease all;
-    opacity: 0;
-  }
-
-  dialog {
-    position: fixed;
-    width: 100vw;
-    box-sizing: border-box;
-    max-width: calc(var(--unit) * 120);
-    inset-block-start: 0;
-    inset-inline-end: 0;
-    z-index: 2;
-    border: 0;
-    background-color: var(--color-fg);
-    color: var(--color-bg);
-  }
-
-  dialog a, 
-  dialog [role=link] {
-    color: var(--color-bg);
-    box-shadow: inset 0 -2px var(--color-bg);;
-  }
-
-  dialog a:hover, 
-  dialog [role="link"]:hover {
-    color: var(--color-fg);
-    box-shadow: inset 0 -5em var(--color-bg);
-  }
-
-  dialog svg {
-    height: 67px;
-  }
-
-  dialog path {
-    fill: var(--color-bg);
-  }
-
-  dialog button {
-    font-size: 1.5em;
-    cursor: pointer;
-  }
-#hablamos {
+footer section {
     padding-block-start: 5rem;
   }
   
@@ -428,6 +389,7 @@ header {
 <body>
   <header>
   <p>Post 3</p>
+
   <a href="/" title="Logo">
     <svg id="logo" aria-labelledby="logoTitle logoDesc" role="img" viewBox="0 0 43 67" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <title id="logoTitle">Tomás</title>
@@ -450,12 +412,19 @@ header {
     </svg>
     <span>Tomás</span>
   </a>
+
   <nav>
     <span>menu</span>
     <ul>
-      <li><a href="/">inicio</a></li>
-      <li><a href="#hablamos">¿hablamos?</a></li>
-      <li><a href="/blog">blog</a></li>
+      <li>
+        <a href="/">inicio</a>
+      </li>
+<li>
+        <a href="#hablamos">¿hablamos?</a>
+      </li>
+<li>
+        <a href="/blog">blog</a>
+      </li>
     </ul>
   </nav>
 </header>
@@ -506,7 +475,9 @@ const pepe = () =&gt; true;
      
     
 
-    <p><a href="/blog">Volver al blog</a></p>
+    <p>
+      <a href="/blog">Volver al Blog</a>
+    </p>
   </footer>
 
   
@@ -524,30 +495,35 @@ const pepe = () =&gt; true;
     <h2>¿Hablamos?</h2>
     <div>
       <div>
-        <p>
-        Desde 1998 he podido aprender mucho y ver como cambia el mundo del desarrollo web, también he podido ver lo que no ha cambiado. Las <strong>buenas prácticas</strong>, el código limpio, el <strong>rendimiento</strong> y la escalabilidad siempre han de estar en la mente de todo desarrollador, sea frontend, backend o full stack.
-        </p>
         <p>Si necesitas apoyo en tu formación, <strong>clases de refuerzo, prepararte para una entrevista</strong>, mejorar tu código o una mentoría personalizada, contrata un pack de horas a traves de <strong>ClassGap</strong> para poder <strong>ayudarte en tu proceso de aprendizaje y mejorar profesionalmente</strong> en pocas clases. Dispones de una clase de 20 minutos de <strong>prueba gratuita</strong>.</p>
 
 <a role="button" href="https://www.classgap.com/me/tomas-cornelles" target="_blank">Mentoría personalizada</a>
 
       </div>
+
       <ul>
         <li>
           <span>mastodon</span>
-          <a href="https://mastodon.world/@tomascornelles" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;@<strong>tomascornelles</strong></a></li>
+          <a href="https://mastodon.world/@tomascornelles" target="_blank">
+            &nbsp;&nbsp;&nbsp;&nbsp;@<strong>tomascornelles</strong>
+          </a>
+        </li>
         <li>
           <span>linkedin</span>
-          <a href="https://www.linkedin.com/in/tomascornelles/" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;/<strong>tomascornelles</strong></a></li>
-        <li>
-          <span>polywork</span>
-          <a href="https://poly.me/tomascornelles" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;/<strong>tomascornelles</strong></a></li>
+          <a href="https://www.linkedin.com/in/tomascornelles/" target="_blank">
+            &nbsp;&nbsp;&nbsp;&nbsp;/<strong>tomascornelles</strong>
+          </a>
+        </li>
         <li>
           <span>github</span>
-          <a href="https://github.com/tomascornelles" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;@<strong>tomascornelles</strong></a></li>
+          <a href="https://github.com/tomascornelles" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;@<strong>tomascornelles</strong>
+          </a>
+        </li>
         <li>
           <span>email</span>
-          <a href="mailto:hola@tomascornelles.com" target="_blank">hola@<strong>tomascornelles</strong>.com</a></li>
+          <a href="mailto:hola@tomascornelles.com" target="_blank">hola@<strong>tomascornelles</strong>.com
+          </a>
+        </li>
       </ul>
     </div>
   </section>
@@ -555,43 +531,6 @@ const pepe = () =&gt; true;
   <section>
     <p>
     <small>made with ❤️  by <strong>tomascornelles © <span id="year"></span></strong></small>
-    <br>
-    <small><a href="/politica-de-cookies">Politica de cookies</a>
-<dialog open class="js-cookies-consent">
-  <p>
-    <svg aria-labelledby="logoTitleCookie logoDescCookie" role="img" viewBox="0 0 43 67" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <title id="logoTitleCookie">Tomás</title>
-      <desc id="logoDescCookie">Ir al inicio</desc>
-      <path d="M4 4H39V7H23V15H20V7H4V4Z" fill="black"></path> 
-      <path d="M19 8H4V11H16V15H19V8Z" fill="black"></path> 
-      <path d="M24 8H39V11H27V15H24V8Z" fill="black"></path> 
-      <path d="M15 12H4V15H15V12Z" fill="black"></path> 
-      <path d="M28 12H39V15H28V12Z" fill="black"></path> 
-      <path d="M8 20H35V23H8V20Z" fill="black"></path> 
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M4 16H39V27H4V16ZM7 19H36V24H7V19Z" fill="black"></path> 
-      <path d="M39 28H4V39H7V31H20V35H23V31H36V39H39V28Z" fill="black"></path> 
-      <path d="M8 32H19V36H24V32H35V39H32V35H27V39H16V35H11V39H8V32Z" fill="black"></path> 
-      <path d="M15 36H12V39H15V36Z" fill="black"></path> 
-      <path d="M28 36H31V39H28V36Z" fill="black"></path> 
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M4 40H39V51H36V47H7V51H4V40ZM7 43H36V44H7V43Z" fill="black"></path> 
-      <path d="M8 48H35V51H8V48Z" fill="black"></path> 
-      <path d="M39 52H4V59H36V60H4V63H39V56H7V55H39V52Z" fill="black"></path> 
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M43 0H0V67H43V0ZM3 3H40V64H3V3Z" fill="black"></path> 
-    </svg>
-  </p>
-  <p>Utilizo cookies para conocer cuántas personas visitan mi sitio web con Google Analytics. Haz clic en Aceptar para ayudarme a mejorar mi contenido. Aquí está la <a href="/politica-de-cookies">Politica de cookies</a>.</p>
-  <p>
-    <button role="link" data-consent="Accept" class="js-cookies-consent-button">Aceptar</button>
-    <button role="link" data-consent="Reject" class="js-cookies-consent-button">Rechazar</button>
-  </p>
-</dialog>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8LS4CLZL6D"></script>
-
-
-
-</small>
     </p>
   </section>
 </footer>
@@ -618,39 +557,6 @@ console.log('Hola');
   document.querySelectorAll('header nav a').forEach((item) => {
     item.addEventListener('click', (e) => e.target.blur());
   })
-const cookiePreference = () => window.localStorage.getItem('cookiePreference');
-  const localhost = 'localhost';
-
-  const ga4_init = () => {
-    if (window.location.hostname !== localhost && cookiePreference() === 'Accept') {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-8LS4CLZL6D');
-    }
-  }
-
-  if (cookiePreference()) {
-    ga4_init();
-    document.querySelector('.js-cookies-consent').remove();
-
-  } else { 
-    const buttons = document.querySelectorAll('.js-cookies-consent-button');
-    buttons.forEach((button) => {
-      button.addEventListener('click',  () => {
-        const {
-          consent
-        } = event.target.dataset;
-
-        window.localStorage.setItem('cookiePreference', consent);
-        ga4_init();
-
-        document.querySelector('.js-cookies-consent').classList.add('hide');
-        document.querySelector('.js-cookies-consent').remove();
-
-      });
-    });
-  }
 const today = new Date();
   const year = today.getFullYear();
   document.querySelector('#year').innerHTML = year;

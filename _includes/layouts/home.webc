@@ -5,7 +5,7 @@ layout: base.webc
 <section @raw="content" id="welcome"></section>
 
 <section id="cta">
-  <tc-classgap></tc-classgap>
+  <tc-classgap :labels="labels"></tc-classgap>
 </section>
 
 <section id="blog">
@@ -19,6 +19,7 @@ layout: base.webc
     :@post-more="true"
     :@home="true"
     :@long="index == 0"
+    :labels="labels"
     ></tc-post>
 </section>
 

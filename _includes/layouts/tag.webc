@@ -12,6 +12,7 @@ layout: base.webc
     :@post-url="post.url"
     :@post-more="true"
     :@short="true"
+    :labels="labels"
     ></tc-post>
 </section>
 
