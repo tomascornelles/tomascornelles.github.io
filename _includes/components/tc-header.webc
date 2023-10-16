@@ -1,5 +1,6 @@
 <header>
   <p @raw="title"></p>
+
   <a href="/" title="Logo">
     <svg id="logo" aria-labelledby="logoTitle logoDesc" role="img" viewBox="0 0 43 67" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <title id="logoTitle">Tomás</title>
@@ -22,12 +23,13 @@
     </svg>
     <span>Tomás</span>
   </a>
+
   <nav>
-    <span>menu</span>
+    <span @text="labels.menu.title"></span>
     <ul>
-      <li><a href="/">inicio</a></li>
-      <li><a href="#hablamos">¿hablamos?</a></li>
-      <li><a href="/blog">blog</a></li>
+      <li webc:for="item of labels.menu.items">
+        <a :href="item.url" @text="item.title"></a>
+      </li>
     </ul>
   </nav>
 </header>

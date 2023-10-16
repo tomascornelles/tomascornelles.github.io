@@ -11,24 +11,41 @@
   </header>
 
   <!--- Abstract/content ---> 
-  <div webc:if="complete" @html="postContent"></div>
-  <div webc:elseif="long" @html="abstract(postContent, 500)"></div>
-  <div webc:elseif="short" @html="abstract(postContent)"></div>
+  <div webc:if="complete" 
+    @html="postContent"></div>
+  <div webc:elseif="long" 
+    @html="abstract(postContent, 500)"></div>
+  <div webc:elseif="short" 
+    @html="abstract(postContent)"></div>
 
   <!--- Read More --->
-  <p webc:if="postMore"><a :href="postUrl">Seguir leyendo</a></p>
+  <p webc:if="postMore">
+    <a :href="postUrl" 
+      @text="labels.blog.more"></a>
+  </p>
 
   <footer webc:if="complete">
     <!--- Back and tags (exlude 'blog' tag) ---> 
-    <p webc:if="postTags != 'blog'">Tags: 
-      <a webc:for="tag of postTags" webc:if="tag != 'blog'" :href="tagUrl(tag)" @text="tag"></a>
+    <p webc:if="postTags != 'blog'">
+      <span @text="labels.blog.tags"></span>: 
+      <a webc:for="tag of postTags" 
+        webc:if="tag != 'blog'" 
+        :href="tagUrl(tag)" 
+        @text="tag"></a>
     </p>
 
-    <p><a href="/blog">Volver al blog</a></p>
+    <p>
+      <a href="/blog" 
+        @text="labels.blog.backToBlog"></a>
+    </p>
   </footer>
 
   <footer webc:if="home">
-    <p><a href="/blog"><strong>Leer más artículos en el blog</strong></a></p>
+    <p>
+      <a href="/blog">
+        <strong @text="labels.blog.goToBlog"></strong>
+      </a>
+    </p>
   </footer>
 </article>
 

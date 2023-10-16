@@ -7,6 +7,7 @@ module.exports = function(eleventyConfig) {
     components: "_includes/components/**/*.webc"
   });
 
+  // Server options
   eleventyConfig.addWatchTarget("_includes/components/**/*.webc");
 
   eleventyConfig.addPassthroughCopy({ "_includes/assets": "assets" });
@@ -15,7 +16,9 @@ module.exports = function(eleventyConfig) {
     watch: ['docs/**/*.*', '_includes/components/**/*.webc'],
   });
 
+  // Global Data
   eleventyConfig.addGlobalData("layout", "base.webc");
+
   eleventyConfig.addGlobalData("description", "Web personal y blog de Tomas Cornelles, frontend developer.");
 
   // Filters

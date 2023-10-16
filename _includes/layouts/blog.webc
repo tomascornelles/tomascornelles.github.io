@@ -13,6 +13,7 @@ layout: base.webc
     :@post-more="index < 3"
     :@long="index == 0"
     :@short="index < 3"
+    :labels="labels"
     ></tc-post>
 </section>
 

@@ -1,17 +1,20 @@
 <!doctype html>
-<html lang="es">
+<html :lang="labels.lang">
 
 <head>
   <meta charset="utf-8">
-  <title @text="title || metadata.title"></title>
-  <meta name="description" :content="description || metadata.description" />
-
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
+  <!--- SEO info --->
+  <title @text="title || metadata.title"></title>
+  <meta name="description" :content="labels.seo.description || metadata.description" />
+
+  <!--- Favicons --->
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <meta name="theme-color" content="white">
 
+  <!--- Fonts are loaded after the page --->
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Martian+Mono:wght@100;400;700&display=swap" 
         rel="preload" 
         as="font"
@@ -164,15 +167,19 @@
 </head>
 
 <body>
-  <tc-header :title="title" webc:nokeep></tc-header>
+  <tc-header webc:nokeep
+    :title="title" 
+    :labels="labels"></tc-header>
 
   <main @raw="content"></main>
 
-  <tc-footer webc:nokeep></tc-footer>
+  <tc-footer webc:nokeep
+    :labels="labels" ></tc-footer>
 
   <tc-favicon></tc-favicon>
 
-  <script @raw="getBundle('js', 'defer')" webc:keep></script>
+  <script webc:keep 
+    @raw="getBundle('js', 'defer')"></script>
 </body>
 
 </html>
