@@ -8,20 +8,20 @@
   },
   "menu": {
     "title": "menu",
-    "items": [
-      {
+    "items": {
+      "home": {
         "title": "inicio",
         "url": "/"
       },
-      {
+      "contact": {
         "title": "¿hablamos?",
         "url": "#hablamos"
       },
-      {
+      "blog": {
         "title": "blog",
         "url": "/blog"
       }
-    ]
+    }
   },
   "contact": "¿Hablamos?",
   "blog": {

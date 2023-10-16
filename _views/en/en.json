@@ -1,0 +1,39 @@
+{
+  "labels": {
+    "lang": "en",
+    "links": {
+      "contact": "contact"
+    },
+    "seo": {
+      "description": "Personal website and Blog about Tomas Cornelles, Senior Frontend Developer"
+    },
+  "menu": {
+    "title": "menu",
+    "items": {
+      "home": {
+        "title": "home",
+        "url": "/"
+      },
+      "contact": {
+        "title": "wanna talk?",
+        "url": "#contact"
+      },
+      "blog": {
+        "title": "blog",
+        "url": "/blog"
+      }
+    }
+  },
+    "contact": "Wanna talk?",
+    "blog": {
+      "more": "Read more",
+      "goToBlog": "Go to my blog",
+      "backToBlog": "back to Blog",
+      "tags": "Tags"
+    },
+    "classgap": {
+      "content": "If you need support in your <strong>training, tutoring, interview preparation</strong>, code improvement, or personalized mentorship, hire a pack of hours through <strong>ClassGap</strong> to <strong>help you in your learning process</strong> and improve professionally in a few classes. You have a <strong>free</strong> 20-minute trial class.",
+      "cta": "Custom class"
+    }
+  }
+}
