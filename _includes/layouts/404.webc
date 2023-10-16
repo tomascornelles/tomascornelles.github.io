@@ -43,5 +43,4 @@ layout: base.webc
   .mono {
     font-family: var(--font-mono);
   }
-
 </style>
