@@ -1,7 +1,7 @@
 <header>
   <p @raw="title"></p>
 
-  <a href="/" title="Logo">
+  <a :href="labels.menu.items.home.url" title="Logo">
     <svg id="logo" aria-labelledby="logoTitle logoDesc" role="img" viewBox="0 0 43 67" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <title id="logoTitle">Tomás</title>
       <desc id="logoDesc">Ir al inicio</desc>

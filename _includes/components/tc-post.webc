@@ -35,14 +35,14 @@
     </p>
 
     <p>
-      <a href="/blog" 
+      <a :href="labels.blog.blogUrl" 
         @text="labels.blog.backToBlog"></a>
     </p>
   </footer>
 
   <footer webc:if="home">
     <p>
-      <a href="/blog">
+      <a :href="labels.blog.blogUrl">
         <strong @text="labels.blog.goToBlog"></strong>
       </a>
     </p>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html :lang="labels.lang">
+<html :lang="page.lang">
 
 <head>
   <meta charset="utf-8">

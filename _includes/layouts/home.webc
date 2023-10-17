@@ -11,7 +11,7 @@ layout: base.webc
 <section id="blog">
   <tc-post 
     webc:nokeep
-    webc:for="(post, index) of collections.blog"
+    webc:for="(post, index) of collections[page.lang]"
     webc:if="!index"
     :@post-title="post.data.title"
     :@post-content="post.content"

@@ -1,10 +1,17 @@
 // Eleventy config
 const pluginWebc = require("@11ty/eleventy-plugin-webc");
+const { EleventyI18nPlugin } = require("@11ty/eleventy");
 
 module.exports = function(eleventyConfig) {
   // Add support for WebC
   eleventyConfig.addPlugin(pluginWebc, {
     components: "_includes/components/**/*.webc"
+  });
+
+  // i18n
+  eleventyConfig.addPlugin(EleventyI18nPlugin, {
+    // any valid BCP 47-compatible language tag is supported
+    defaultLanguage: "es", // Required, this site uses "en"
   });
 
   // Server options
