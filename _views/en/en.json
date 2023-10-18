@@ -9,7 +9,7 @@
     "menu": { "title": "menu",
       "items": {
         "home": {
-          "title": "home",
+          "title": "hello",
           "url": "/en"
         },
         "contact": {

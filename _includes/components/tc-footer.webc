@@ -60,7 +60,6 @@
     list-style: none;
     font-family: var(--font-mono);
     font-weight: 100;
-    font-size: 0.8em;
   }
 
   footer ul span {
@@ -76,6 +75,10 @@
   footer section:last-child {
     margin-block-start: 5em;
     text-align: center;
+  }
+
+  footer section:last-child {
+    font-family: var(--font-mono);
   }
 
   @media (min-width: 768px) {

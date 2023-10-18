@@ -59,7 +59,7 @@
     max-width: calc(var(--unit) * 100);
     margin: auto;
     padding: var(--unit);
-    font-weight: 300;
+    font-weight: 400;
     font-family: var(--font-mono);
   }
   
@@ -79,11 +79,11 @@
 
   header p {
     margin: 0 .5rem;
-    letter-spacing: -.1em;
     visibility: hidden;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    cursor: pointer;
   }
 
   header.sticky p {
@@ -106,7 +106,6 @@
   header nav a {
     display: block;
     padding: 1rem;
-    letter-spacing: -.1em;
   }
 
   header nav a:hover {
@@ -207,5 +206,12 @@
 
   document.querySelectorAll('header nav a').forEach((item) => {
     item.addEventListener('click', (e) => e.target.blur());
-  })
+  });
+
+  document.querySelector('header > p').addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+  });
 </script>
