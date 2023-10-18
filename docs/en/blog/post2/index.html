@@ -201,8 +201,18 @@
     list-style-type: square;
   }
 
-  article li {
-    margin-block-end: 2em;
+  article img {
+    max-width: 100%;
+    margin-inline-start: 50%;
+    transform: translateX(-50%);
+  }
+
+  article img + span {
+    display: block;
+    text-align: center;
+    font-size: .9em;
+    opacity: .8;
+    margin-block-start: -.3em;
   }
 
   article footer {
@@ -574,6 +584,13 @@ const codeBlocks = document.querySelectorAll('pre');
   codeBlocks.forEach((block) => {
     block.classList.add('microlight');
   })
+
+  const images = document.querySelectorAll('img');
+  images.forEach((image) => {
+    const alt = document.createElement('span');
+    alt.innerText = image.alt;
+    image.after(alt);
+  });
 window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);

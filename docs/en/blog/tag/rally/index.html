@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
   
-  <title>Post 4</title>
+  <title>Tag: rally</title>
   <meta name="description" content="Personal website and Blog about Tomas Cornelles, Senior Frontend Developer">
 
   
@@ -218,6 +218,18 @@
   article footer {
     margin-block-start: 10rem;
   }
+#blog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(10 * var(--unit)) calc(6 * var(--unit));
+    margin-block-start: 20rem;
+  }
+
+  #blog h2 {
+    font-size: 3rem;
+    line-height: 1.5;
+    margin-top: 0;
+  }
 header {
     position: fixed;
     top: 0;
@@ -421,7 +433,7 @@ footer section {
 
 <body>
   <header>
-  <p>Post 4</p>
+  <p>Tag: rally</p>
 
   <a href="/en" title="Logo">
     <svg id="logo" aria-labelledby="logoTitle logoDesc" role="img" viewBox="0 0 43 67" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -467,40 +479,39 @@ footer section {
 
 
 
-  <main><article>
+  <main><h1>Tag: rally</h1>
+<section id="blog">
+  <article>
   <header>
      
-    <h1>Post 4</h1>
     
-    <p>
-      <span>19-septiembre-2023</span>
-    </p>
+    <h2>
+      <a href="/blog/2023/ferrari-wrc/">Ferrari WRC, ¡Increible!</a>
+    </h2>
+    
   </header>
 
    
-  <div><p>Lorem <strong>ipsum</strong></p>
-</div>
   
   
+  <div><p>Ferrari ha anunciado su regreso al Campeonato Mundial de Rally (WRC) en 2024, después de una ausencia de más de 40 años. La marca italiana competirá con un nuevo coche de rally basado en el 296 GTB...</p></div>
 
   
+  <p>
+    <a href="/blog/2023/ferrari-wrc/">Read more</a>
+  </p>
+
   
-
-  <footer>
-     
-    <p>
-      <span>Tags</span>: 
-      <a href="/blog/tag/en">en</a>
-    </p>
-
-    <p>
-      <a href="/en/blog">back to Blog</a>
-    </p>
-  </footer>
 
   
 </article>
 
+
+
+
+
+
+</section>
 
 
 
@@ -580,6 +591,10 @@ const codeBlocks = document.querySelectorAll('pre');
     alt.innerText = image.alt;
     image.after(alt);
   });
+const codeBlocks = document.querySelectorAll('pre');
+  codeBlocks.forEach((block) => {
+    block.classList.add('microlight');
+  })
 window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);
