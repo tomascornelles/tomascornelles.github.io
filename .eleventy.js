@@ -18,6 +18,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget("_includes/components/**/*.webc");
 
   eleventyConfig.addPassthroughCopy({ "_includes/assets": "assets" });
+  eleventyConfig.addPassthroughCopy("_views/**/*.jpeg");
   
   eleventyConfig.setServerOptions({
     watch: ['docs/**/*.*', '_includes/components/**/*.webc'],

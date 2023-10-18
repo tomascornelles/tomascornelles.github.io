@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
   
-  <title>Post 4</title>
-  <meta name="description" content="Personal website and Blog about Tomas Cornelles, Senior Frontend Developer">
+  <title>Etiqueta: coches</title>
+  <meta name="description" content="Web personal y blog de Tomás Cornelles, frontend developer.">
 
   
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
@@ -218,6 +218,18 @@
   article footer {
     margin-block-start: 10rem;
   }
+#blog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(10 * var(--unit)) calc(6 * var(--unit));
+    margin-block-start: 20rem;
+  }
+
+  #blog h2 {
+    font-size: 3rem;
+    line-height: 1.5;
+    margin-top: 0;
+  }
 header {
     position: fixed;
     top: 0;
@@ -421,9 +433,9 @@ footer section {
 
 <body>
   <header>
-  <p>Post 4</p>
+  <p>Etiqueta: coches</p>
 
-  <a href="/en" title="Logo">
+  <a href="/" title="Logo">
     <svg id="logo" aria-labelledby="logoTitle logoDesc" role="img" viewBox="0 0 43 67" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <title id="logoTitle">Tomás</title>
       <desc id="logoDesc">Ir al inicio</desc>
@@ -450,13 +462,13 @@ footer section {
     <span>menu</span>
     <ul>
       <li>
-        <a href="/en">hello</a>
+        <a href="/">hola</a>
       </li>
       <li>
-        <a href="#contact">wanna talk?</a>
+        <a href="#hablamos">¿hablamos?</a>
       </li>
       <li>
-        <a href="/en/blog">blog</a>
+        <a href="/blog">blog</a>
       </li>
     </ul>
   </nav>
@@ -467,36 +479,29 @@ footer section {
 
 
 
-  <main><article>
+  <main><h1>Etiqueta: coches</h1>
+<section id="blog">
+  <article>
   <header>
      
-    <h1>Post 4</h1>
     
-    <p>
-      <span>19-septiembre-2023</span>
-    </p>
+    <h2>
+      <a href="/blog/2023/ferrari-wrc/">Ferrari WRC, ¡Increible!</a>
+    </h2>
+    
   </header>
 
    
-  <div><p>Lorem <strong>ipsum</strong></p>
-</div>
   
   
+  <div><p>Ferrari ha anunciado su regreso al Campeonato Mundial de Rally (WRC) en 2024, después de una ausencia de más de 40 años. La marca italiana competirá con un nuevo coche de rally basado en el 296 GTB...</p></div>
 
   
+  <p>
+    <a href="/blog/2023/ferrari-wrc/">Seguir leyendo</a>
+  </p>
+
   
-
-  <footer>
-     
-    <p>
-      <span>Tags</span>: 
-      <a href="/blog/tag/en">en</a>
-    </p>
-
-    <p>
-      <a href="/en/blog">back to Blog</a>
-    </p>
-  </footer>
 
   
 </article>
@@ -506,16 +511,22 @@ footer section {
 
 
 
+</section>
+
+
+
+
+
 </main>
 
   <footer>
-  <section id="contact">
-    <h2>Wanna talk?</h2>
+  <section id="hablamos">
+    <h2>¿Hablamos?</h2>
     <div>
       <div>
-        <p>If you need support in your <strong>training, tutoring, interview preparation</strong>, code improvement, or personalized mentorship, hire a pack of hours through <strong>ClassGap</strong> to <strong>help you in your learning process</strong> and improve professionally in a few classes. You have a <strong>free</strong> 20-minute trial class.</p>
+        <p>Si necesitas apoyo en tu formación, <strong>clases de refuerzo, prepararte para una entrevista</strong>, mejorar tu código o una mentoría personalizada, contrata un pack de horas a traves de <strong>ClassGap</strong> para poder <strong>ayudarte en tu proceso de aprendizaje y mejorar profesionalmente</strong> en pocas clases. Dispones de una clase de 20 minutos de <strong>prueba gratuita</strong>.</p>
 
-<a role="button" href="https://www.classgap.com/me/tomas-cornelles" target="_blank">Custom class</a>
+<a role="button" href="https://www.classgap.com/me/tomas-cornelles" target="_blank">Mentoría personalizada</a>
 
       </div>
 
@@ -580,6 +591,10 @@ const codeBlocks = document.querySelectorAll('pre');
     alt.innerText = image.alt;
     image.after(alt);
   });
+const codeBlocks = document.querySelectorAll('pre');
+  codeBlocks.forEach((block) => {
+    block.classList.add('microlight');
+  })
 window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);

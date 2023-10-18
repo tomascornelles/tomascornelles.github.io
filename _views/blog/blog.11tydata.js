@@ -3,4 +3,5 @@ module.exports = {
 		"es"
 	],
 	"layout": "post.webc",
+  "img": "/assets/blog-images",
 };
