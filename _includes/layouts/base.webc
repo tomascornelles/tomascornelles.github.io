@@ -169,11 +169,13 @@
 <body>
   <tc-header webc:nokeep
     :title="title" 
+    :langs="langs"
     :labels="labels"></tc-header>
 
   <main @raw="content"></main>
 
   <tc-footer webc:nokeep
+    :langs="langs"
     :labels="labels" ></tc-footer>
 
   <tc-favicon></tc-favicon>

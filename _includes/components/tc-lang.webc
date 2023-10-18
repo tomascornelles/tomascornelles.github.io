@@ -1,0 +1,2 @@
+<a webc:for="lang of langs" :href="lang.url" @text="lang.name"></a>
+
