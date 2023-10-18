@@ -1,12 +1,12 @@
 [
   {
     "id": "es",
-    "name": "español",
+    "name": "🇪🇸 español",
     "url": "/"
   },
   {
     "id": "en",
-    "name": "english",
+    "name": "🇬🇧 english",
     "url": "/en"
   }
 ]
