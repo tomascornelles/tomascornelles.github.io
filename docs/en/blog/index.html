@@ -318,7 +318,7 @@ header {
     background-color: var(--color-fg);
   }
 
-  header nav ul {
+  header nav > ul {
     height: 0;
     overflow: hidden;
     list-style: none;
@@ -336,8 +336,20 @@ header {
     margin-top: 2rem;
   }
 
-  header nav:hover ul {
-    height: calc(3 * 3.5em); /* 3 elements, 1.5 line-height + 1 padding-top + 1 padding-bottom */
+  header nav:hover > ul {
+    height: calc(4 * 3.5em); /* 3 elements, 1.5 line-height + 1 padding-top + 1 padding-bottom */
+  }
+
+  header nav ul ul {
+    margin-block-start: 0;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  header nav ul ul li {
+    width: 100%;
   }
 
   @media (min-width: 768px) {
@@ -368,6 +380,16 @@ header {
       display: inline;
       padding: .3em;
       margin-inline-start: 2rem;
+    }
+
+    header nav ul ul {
+      display: inline-block;
+      position: relative;
+    }
+
+    header nav ul ul li {
+      display: inline-block;
+      width: auto;
     }
   }
 footer section {
@@ -420,7 +442,7 @@ footer section {
   <header>
   <p>Blog</p>
 
-  <a href="/" title="Logo">
+  <a href="/en" title="Logo">
     <svg id="logo" aria-labelledby="logoTitle logoDesc" role="img" viewBox="0 0 43 67" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <title id="logoTitle">Tomás</title>
       <desc id="logoDesc">Ir al inicio</desc>
@@ -447,13 +469,13 @@ footer section {
     <span>menu</span>
     <ul>
       <li>
-        <a href="/">home</a>
+        <a href="/en">home</a>
       </li>
       <li>
         <a href="#contact">wanna talk?</a>
       </li>
       <li>
-        <a href="/blog">blog</a>
+        <a href="/en/blog">blog</a>
       </li>
     </ul>
   </nav>
@@ -471,7 +493,7 @@ footer section {
      
     
     <h2>
-      <a href="/blog/20230919_test/">Test de post</a>
+      <a href="/en/blog/20230919_test/">Test de post</a>
     </h2>
     
   </header>
@@ -484,154 +506,8 @@ footer section {
 
   
   <p>
-    <a href="/blog/20230919_test/">Read more</a>
+    <a href="/en/blog/20230919_test/">Read more</a>
   </p>
-
-  
-
-  
-</article>
-
-
-
-
-
-
-<article>
-  <header>
-     
-    
-    <h2>
-      <a href="/blog/post1/">Un titulo cualquiera</a>
-    </h2>
-    
-  </header>
-
-   
-  
-  
-  <div><p>In Git, <span role="link">the</span> git reset <strong>command</strong> is <em>used</em> <em><strong>to</strong></em> reset the state of the <em>repository</em> to a <code>specific</code> point. Th...</p></div>
-
-  
-  <p>
-    <a href="/blog/post1/">Read more</a>
-  </p>
-
-  
-
-  
-</article>
-
-
-
-
-
-
-<article>
-  <header>
-     
-    
-    <h2>
-      <a href="/blog/post2/">Post 2 To delete a branch in Git, you can use the git branch command with the -d or -D flag.</a>
-    </h2>
-    
-  </header>
-
-   
-  
-  
-  <div><p>To delete a branch in Git, you can use the git branch command with the -d or -D flag. Here's how you can do it:</p>
-<p>Delete a Merged Branch:</p>
-<p>If the branch you want to delete has been merge...</p></div>
-
-  
-  <p>
-    <a href="/blog/post2/">Read more</a>
-  </p>
-
-  
-
-  
-</article>
-
-
-
-
-
-
-<article>
-  <header>
-     
-    
-    <h2>
-      <a href="/blog/post3/">Post 3</a>
-    </h2>
-    
-  </header>
-
-   
-  
-  
-  
-
-  
-  
-
-  
-
-  
-</article>
-
-
-
-
-
-
-<article>
-  <header>
-     
-    
-    <h2>
-      <a href="/blog/post4/">Post 4</a>
-    </h2>
-    
-  </header>
-
-   
-  
-  
-  
-
-  
-  
-
-  
-
-  
-</article>
-
-
-
-
-
-
-<article>
-  <header>
-     
-    
-    <h2>
-      <a href="/en/blog/20230919_test/">Test de post</a>
-    </h2>
-    
-  </header>
-
-   
-  
-  
-  
-
-  
-  
 
   
 
@@ -656,10 +532,12 @@ footer section {
    
   
   
-  
+  <div><p>In Git, <span role="link">the</span> git reset <strong>command</strong> is <em>used</em> <em><strong>to</strong></em> reset the state of the <em>repository</em> to a <code>specific</code> point. Th...</p></div>
 
   
-  
+  <p>
+    <a href="/en/blog/post1/">Read more</a>
+  </p>
 
   
 
@@ -684,10 +562,14 @@ footer section {
    
   
   
-  
+  <div><p>To delete a branch in Git, you can use the git branch command with the -d or -D flag. Here's how you can do it:</p>
+<p>Delete a Merged Branch:</p>
+<p>If the branch you want to delete has been merge...</p></div>
 
   
-  
+  <p>
+    <a href="/en/blog/post2/">Read more</a>
+  </p>
 
   
 
@@ -802,6 +684,13 @@ footer section {
   </section>
 
   <section>
+    <p>
+      <a href="/">español</a>
+<a href="/en">english</a>
+
+
+    </p>
+
     <p>
     <small>made with ❤️  by <strong>tomascornelles © <span id="year"></span></strong></small>
     </p>

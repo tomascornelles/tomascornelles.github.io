@@ -288,7 +288,7 @@ header {
     background-color: var(--color-fg);
   }
 
-  header nav ul {
+  header nav > ul {
     height: 0;
     overflow: hidden;
     list-style: none;
@@ -306,8 +306,20 @@ header {
     margin-top: 2rem;
   }
 
-  header nav:hover ul {
-    height: calc(3 * 3.5em); /* 3 elements, 1.5 line-height + 1 padding-top + 1 padding-bottom */
+  header nav:hover > ul {
+    height: calc(4 * 3.5em); /* 3 elements, 1.5 line-height + 1 padding-top + 1 padding-bottom */
+  }
+
+  header nav ul ul {
+    margin-block-start: 0;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  header nav ul ul li {
+    width: 100%;
   }
 
   @media (min-width: 768px) {
@@ -338,6 +350,16 @@ header {
       display: inline;
       padding: .3em;
       margin-inline-start: 2rem;
+    }
+
+    header nav ul ul {
+      display: inline-block;
+      position: relative;
+    }
+
+    header nav ul ul li {
+      display: inline-block;
+      width: auto;
     }
   }
 footer section {
@@ -455,7 +477,10 @@ footer section {
 
   <footer>
      
-    
+    <p>
+      <span>Etiquetas</span>: 
+      <a href="/blog/tag/es">es</a>
+    </p>
 
     <p>
       <a href="/blog">Volver al Blog</a>
@@ -511,6 +536,13 @@ footer section {
   </section>
 
   <section>
+    <p>
+      <a href="/">español</a>
+<a href="/en">english</a>
+
+
+    </p>
+
     <p>
     <small>made with ❤️  by <strong>tomascornelles © <span id="year"></span></strong></small>
     </p>

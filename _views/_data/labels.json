@@ -1,5 +1,4 @@
 {
-  "lang": "es",
   "links": {
     "contact": "hablamos"
   },
@@ -27,6 +26,7 @@
   "blog": {
     "more": "Seguir leyendo",
     "goToBlog": "Leer más artículos en el blog",
+    "blogUrl": "/blog",
     "backToBlog": "Volver al Blog",
     "tags": "Etiquetas"
   },

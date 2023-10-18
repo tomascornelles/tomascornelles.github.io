@@ -1,0 +1,12 @@
+[
+  {
+    "id": "es",
+    "name": "español",
+    "url": "/"
+  },
+  {
+    "id": "en",
+    "name": "english",
+    "url": "/en"
+  }
+]

@@ -288,7 +288,7 @@ header {
     background-color: var(--color-fg);
   }
 
-  header nav ul {
+  header nav > ul {
     height: 0;
     overflow: hidden;
     list-style: none;
@@ -306,8 +306,20 @@ header {
     margin-top: 2rem;
   }
 
-  header nav:hover ul {
-    height: calc(3 * 3.5em); /* 3 elements, 1.5 line-height + 1 padding-top + 1 padding-bottom */
+  header nav:hover > ul {
+    height: calc(4 * 3.5em); /* 3 elements, 1.5 line-height + 1 padding-top + 1 padding-bottom */
+  }
+
+  header nav ul ul {
+    margin-block-start: 0;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  header nav ul ul li {
+    width: 100%;
   }
 
   @media (min-width: 768px) {
@@ -338,6 +350,16 @@ header {
       display: inline;
       padding: .3em;
       margin-inline-start: 2rem;
+    }
+
+    header nav ul ul {
+      display: inline-block;
+      position: relative;
+    }
+
+    header nav ul ul li {
+      display: inline-block;
+      width: auto;
     }
   }
 footer section {
@@ -390,7 +412,7 @@ footer section {
   <header>
   <p>Un titulo cualquiera</p>
 
-  <a href="/" title="Logo">
+  <a href="/en" title="Logo">
     <svg id="logo" aria-labelledby="logoTitle logoDesc" role="img" viewBox="0 0 43 67" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <title id="logoTitle">Tomás</title>
       <desc id="logoDesc">Ir al inicio</desc>
@@ -417,13 +439,13 @@ footer section {
     <span>menu</span>
     <ul>
       <li>
-        <a href="/">home</a>
+        <a href="/en">home</a>
       </li>
       <li>
         <a href="#contact">wanna talk?</a>
       </li>
       <li>
-        <a href="/blog">blog</a>
+        <a href="/en/blog">blog</a>
       </li>
     </ul>
   </nav>
@@ -488,11 +510,12 @@ footer section {
      
     <p>
       <span>Tags</span>: 
-      <a href="/blog/tag/test">test</a>
+      <a href="/blog/tag/en">en</a>
+<a href="/blog/tag/test">test</a>
     </p>
 
     <p>
-      <a href="/blog">back to Blog</a>
+      <a href="/en/blog">back to Blog</a>
     </p>
   </footer>
 
@@ -545,6 +568,13 @@ footer section {
   </section>
 
   <section>
+    <p>
+      <a href="/">español</a>
+<a href="/en">english</a>
+
+
+    </p>
+
     <p>
     <small>made with ❤️  by <strong>tomascornelles © <span id="year"></span></strong></small>
     </p>

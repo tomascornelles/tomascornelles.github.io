@@ -1,33 +1,32 @@
 {
   "labels": {
-    "lang": "en",
     "links": {
       "contact": "contact"
     },
     "seo": {
       "description": "Personal website and Blog about Tomas Cornelles, Senior Frontend Developer"
     },
-  "menu": {
-    "title": "menu",
-    "items": {
-      "home": {
-        "title": "home",
-        "url": "/"
-      },
-      "contact": {
-        "title": "wanna talk?",
-        "url": "#contact"
-      },
-      "blog": {
-        "title": "blog",
-        "url": "/blog"
+    "menu": { "title": "menu",
+      "items": {
+        "home": {
+          "title": "home",
+          "url": "/en"
+        },
+        "contact": {
+          "title": "wanna talk?",
+          "url": "#contact"
+        },
+        "blog": {
+          "title": "blog",
+          "url": "/en/blog"
+        }
       }
-    }
-  },
+    },
     "contact": "Wanna talk?",
     "blog": {
       "more": "Read more",
       "goToBlog": "Go to my blog",
+      "blogUrl": "/en/blog",
       "backToBlog": "back to Blog",
       "tags": "Tags"
     },

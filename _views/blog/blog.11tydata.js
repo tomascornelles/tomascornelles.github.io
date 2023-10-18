@@ -1,6 +1,6 @@
 module.exports = {
 	tags: [
-		"blog"
+		"es"
 	],
 	"layout": "post.webc",
 };

@@ -39,6 +39,10 @@
 
   <section>
     <p>
+      <tc-lang :langs="langs"></tc-lang>
+    </p>
+
+    <p>
     <small>made with ❤️  by <strong>tomascornelles © <span id="year"></span></strong></small>
     </p>
   </section>
