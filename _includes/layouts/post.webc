@@ -11,5 +11,6 @@ date: 2023-09-19
   :@post-url="url"
   :@post-tags="tags"
   :@complete="true"
+  :@page="page"
   :labels="labels"
   ></tc-post>
