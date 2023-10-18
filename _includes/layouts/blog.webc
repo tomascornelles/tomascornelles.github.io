@@ -49,11 +49,3 @@ layout: base.webc
     }
   }
 </style>
-
-<script src="../assets/scripts/microlight.js" webc:bucket="defer"></script>
-<script webc:bucket="defer">
-  const codeBlocks = document.querySelectorAll('pre');
-  codeBlocks.forEach((block) => {
-    block.classList.add('microlight');
-  })
-</script>

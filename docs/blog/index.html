@@ -533,9 +533,6 @@ footer section {
 </section>
 
 
-
-
-
 </main>
 
   <footer>
@@ -610,10 +607,6 @@ const codeBlocks = document.querySelectorAll('pre');
     alt.innerText = image.alt;
     image.after(alt);
   });
-const codeBlocks = document.querySelectorAll('pre');
-  codeBlocks.forEach((block) => {
-    block.classList.add('microlight');
-  })
 window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);
