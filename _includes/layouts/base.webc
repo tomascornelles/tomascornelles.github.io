@@ -166,6 +166,8 @@
 </head>
 
 <body>
+  <tc-wip :labels="labels"></tc-wip>
+
   <tc-header webc:nokeep
     :title="title" 
     :langs="langs"
