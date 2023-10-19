@@ -420,6 +420,48 @@ footer section {
 </head>
 
 <body>
+  <tc-wip labels="[object Object]"><div id="wip">
+  <span>I'm still working on the site</span>
+</div>
+
+<style>
+tc-wip {
+  background: repeating-linear-gradient(
+    45deg,
+    gold,
+    gold 10px,
+    black 10px,
+    black 20px
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 2rem;
+  z-index: 3;
+  transition: all 1s ease;
+}
+
+tc-wip.hide {
+  margin-top: -6rem;
+  opacity: 0;
+}
+
+#wip span {
+  font-family: var(--font-mono);
+  color: white;
+  background: black;
+  font-size: 2rem;
+  font-weight: 700;
+  display: inline-block;
+  padding: 1em;
+}
+</style>
+
+
+</tc-wip>
+
   <header>
   <p>Ferrari WRC, ¡Increible!</p>
 
@@ -621,6 +663,18 @@ const codeBlocks = document.querySelectorAll('pre');
     alt.innerText = image.alt;
     image.after(alt);
   });
+const wip = document.querySelector('tc-wip');
+
+  const hide = () => {
+    wip.classList.add('hide');
+    setTimeout(remove, 1000);
+  }
+
+  const remove = () => {
+    wip.remove();
+  }
+
+  setTimeout(hide, 5000);
 window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);
