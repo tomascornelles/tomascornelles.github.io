@@ -4,7 +4,8 @@
     "contact": "hablamos"
   },
   "seo": {
-    "description": "Web personal y blog de Tomás Cornelles, frontend developer."
+    "description": "Web personal y blog de Tomás Cornelles, frontend developer.",
+    "keywords": "web, developer, frontend, javascript"
   },
   "menu": {
     "title": "menu",

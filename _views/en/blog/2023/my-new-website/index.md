@@ -6,6 +6,7 @@ tags:
     - cypress
     - 11ty
     - a11y
+description: How I remake my personal website with 11ty.
 ---
 
 This year, I've been thinking about updating my website a lot. The previous one was a bit outdated, not for lack of interest, but because I wasn't able to get Grow to work again after I changed laptops, I admit it.
@@ -16,11 +17,19 @@ I tried several generators, including popular ones like Astro, Nuxt, and Next, a
 
 I decided to use **[WebC](//www.11ty.dev/docs/languages/webc/)**, a JavaScript templating language that allows me to create reusable components. This allows me to create more modular and maintainable web pages.
 
+> I try o make the faster website
+
 I also decided to go with a **classless** design, where the HTML tags and their position determine the style of the elements. This allows me to create a cleaner and more efficient design.
 
 ## Performance and Accessibility
 
 The website has been optimized for good performance and accessibility. In PageSpeed Insights tests, the website scored a perfect 100 on both desktop and mobile.
+
+One thing that can slow down a website's load time is images. I decided to **remove all images** that are not essential. I'll keep the logo and favicon, which are both **SVG** files embedded in their components. The images in the posts are uploaded separately, but at least I'm avoiding having you download a hero image to decorate the header.
+
+> No images, no colors, no libraries
+
+Another thing that can slow down a website's load time is external libraries and fonts. I've minimized both. I only use one for syntax highlighting in the posts, and **the fonts are downloaded after** the entire website has loaded.
 
 ![Resultados de PageSpeed Insights](./PageSpeedInsights.png)
 

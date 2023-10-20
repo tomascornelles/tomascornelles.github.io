@@ -5,7 +5,8 @@
       "contact": "contact"
     },
     "seo": {
-      "description": "Personal website and Blog about Tomas Cornelles, Senior Frontend Developer"
+      "description": "Personal website and Blog about Tomas Cornelles, Senior Frontend Developer",
+    "keywords": "web, developer, frontend, javascript"
     },
     "menu": { "title": "menu",
       "items": {
