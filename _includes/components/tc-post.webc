@@ -105,9 +105,10 @@
   article img + span {
     display: block;
     text-align: center;
+    font-style: italic;
     font-size: .9em;
     opacity: .8;
-    margin-block-start: -.3em;
+    margin-block: -.3em 1em;
   }
 
   article footer {
@@ -117,15 +118,26 @@
 
 <script src="../assets/scripts/microlight.js" webc:bucket="defer"></script>
 <script webc:bucket="defer">
+
+  // Syntax highligting
   const codeBlocks = document.querySelectorAll('pre');
   codeBlocks.forEach((block) => {
     block.classList.add('microlight');
   })
 
+  // Add image descriptions
   const images = document.querySelectorAll('img');
   images.forEach((image) => {
     const alt = document.createElement('span');
     alt.innerText = image.alt;
     image.after(alt);
+  });
+
+  // Add target _blank to external links
+  const links = document.querySelectorAll('a');
+  links.forEach((link) => {
+    if (!link.href.includes(window.location.origin)) {
+      link.target = "_blank"
+    }
   });
 </script>
