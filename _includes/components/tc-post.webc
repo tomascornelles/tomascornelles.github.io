@@ -6,7 +6,19 @@
       <a :href="postUrl" @text="postTitle"></a>
     </h2>
     <p webc:if="complete">
-      <span @text="dateFormat(postDate, page.lang)"></span>
+      <strong @text="dateFormat(postDate, page.lang)"></strong>
+      <br>
+      <span @text="labels.blog.readingTime"></span>
+      <span @text="readingTime(postContent)"></span>
+      <span webc:if="readingTime(postContent) == 1" @text="labels.blog.minute"></span>
+      <span webc:else @text="labels.blog.minutes"></span>
+      <br>
+      <span @text="labels.blog.tags"></span>: 
+      <a webc:for="tag of postTags" 
+         webc:if="tag != 'blog'" 
+         :href="tagUrl(tag)" 
+         @text="tag"></a>
+
     </p>
   </header>
 
@@ -23,22 +35,6 @@
     <a :href="postUrl" 
       @text="labels.blog.more"></a>
   </p>
-
-  <footer webc:if="complete">
-    <!--- Back and tags (exlude 'blog' tag) ---> 
-    <p webc:if="postTags != 'blog'">
-      <span @text="labels.blog.tags"></span>: 
-      <a webc:for="tag of postTags" 
-        webc:if="tag != 'blog'" 
-        :href="tagUrl(tag)" 
-        @text="tag"></a>
-    </p>
-
-    <p>
-      <a :href="labels.blog.blogUrl" 
-        @text="labels.blog.backToBlog"></a>
-    </p>
-  </footer>
 
   <footer webc:if="home">
     <p>
@@ -118,7 +114,6 @@
 
 <script src="../assets/scripts/microlight.js" webc:bucket="defer"></script>
 <script webc:bucket="defer">
-
   // Syntax highligting
   const codeBlocks = document.querySelectorAll('pre');
   codeBlocks.forEach((block) => {

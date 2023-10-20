@@ -47,6 +47,12 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter("pageUrl", (page) => `https://tomascornelles.com${page}`);
 
+  eleventyConfig.addFilter("readingTime", (content) => {
+    const wpm = 225;
+    const words = content.trim().split(/\s+/).length;
+    return Math.ceil(words / wpm);
+  });
+
   // Return your Object options:
   return {
     dir: {

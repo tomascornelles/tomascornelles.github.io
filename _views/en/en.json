@@ -30,7 +30,10 @@
       "goToBlog": "Go to my blog",
       "blogUrl": "/en/blog",
       "backToBlog": "back to Blog",
-      "tags": "Tags"
+      "tags": "Tags",
+      "readingTime": "Estimated reading time: ",
+      "minute": "minute",
+      "minutes": "minutes"
     },
     "classgap": {
       "content": "If you need support in your <strong>training, tutoring, interview preparation</strong>, code improvement, or personalized mentorship, hire a pack of hours through <strong>ClassGap</strong> to <strong>help you in your learning process</strong> and improve professionally in a few classes. You have a <strong>free</strong> 20-minute trial class.",
