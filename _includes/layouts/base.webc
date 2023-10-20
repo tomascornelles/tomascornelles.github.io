@@ -7,7 +7,8 @@
 
   <!--- SEO info --->
   <title @text="title || metadata.title"></title>
-  <meta name="description" :content="labels.seo.description || metadata.description" />
+  <meta name="description" :content="description || labels.seo.description" />
+  <meta name="keywords" :content="tags || labels.seo.keywords" />
   <meta property="og:title" :content="title || metadata.title" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://picsum.photos/600" />
@@ -148,6 +149,24 @@
       padding: 1em;
       background-color: var(--color-fg);
       color: var(--color-bg);
+    }
+
+    blockquote {
+      font-style: italic;
+      font-weight: 300;
+      font-size: 3rem;
+      text-align: center;
+      position: relative;
+    }
+
+    blockquote p {
+      margin-block-end: 0;
+    }
+
+    blockquote::before,
+    blockquote::after {
+      content: '~~~o~~~';
+      font-size: .5em;
     }
 
     svg path {

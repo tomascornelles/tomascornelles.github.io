@@ -6,7 +6,8 @@
 
   
   <title>Mi nuevo site con 11ty</title>
-  <meta name="description" content="Web personal y blog de Tomás Cornelles, frontend developer.">
+  <meta name="description" content="Como rehice mi web personal con 11ty">
+  <meta name="keywords" content="es,webc,cypress,11ty,a11y">
   <meta property="og:title" content="Mi nuevo site con 11ty">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://picsum.photos/600">
@@ -144,6 +145,24 @@
       padding: 1em;
       background-color: var(--color-fg);
       color: var(--color-bg);
+    }
+
+    blockquote {
+      font-style: italic;
+      font-weight: 300;
+      font-size: 3rem;
+      text-align: center;
+      position: relative;
+    }
+
+    blockquote p {
+      margin-block-end: 0;
+    }
+
+    blockquote::before,
+    blockquote::after {
+      content: '~~~o~~~';
+      font-size: .5em;
     }
 
     svg path {
@@ -487,10 +506,18 @@ footer section {
 <p>Probé varios generadores, los populres Astro, Nuxt y Next, y otros menos conocidos. Finalmente me decanté por <strong><a href="//11ty.dev">11ty</a></strong>, basado en <strong>JavaScript</strong> y con una gran retro compatibilidad, lo he podido arrancar en varios entornos desde cero con solo <code>npm install</code> sin ir más lejos.</p>
 <h2>Decisiones</h2>
 <p>Con 11ty es muy fácil crear un sitio, bastan unos pocos minutos, pero tambien ofrece versatilidad para crear lo que quieras. <a href="//grow.io/">Grow</a> es un generador de sitios estáticos escrito en Python que usa plantillas Jinja2, muy similares a Twig, algo a lo que ya estaba acostumbrado.</p>
+<blockquote>
+<p>Intenté crear el web más rápido que pude</p>
+</blockquote>
 <p>Yo me decanté por usar <strong><a href="https://www.11ty.dev/docs/languages/webc/">WebC</a></strong>, me gusta la idea de Single Files Components (SFC). A partir de esto usé el template base que recoge el CSS y JS genérico, y cada componente provee de su propio CSS y JS si lo necesita. Por ejemplo, el script para el reslatado de sintaxis solo se descarga en los posts y no en el resto de páginas.</p>
 <p>Para los estilos utilicé una filosofía <strong>sin clases</strong>, las proias etiquetas y su posición ya determinan que estilo debe tener. A fin de cuentas esto aporta homogeneidad a todo el site y tambien mejora el rendimiento, al usar hojas de estilos más pequeñas y añadir menos código al html.</p>
 <h2>Rendimiento</h2>
 <p>Hablando de rendimiento, en las pruebas de <a href="//pagespeed.web.dev/analysis/https-tomascornelles-com/zevwfnslac?form_factor=mobile">PageSpeed Insights</a> este site obtuvo 100 en todos los análisis tanto en desktop como en mobile.</p>
+<p>Algo que ralentiza mucho la carga de una web son las imágenes. Decidí <strong>prescindir de todas las imágenes</strong> que no sean imprescindibles, así que me quedo con el logo y el favicon, ambos son <strong>svg</strong> embebidos en sus componentes. Las imagenes de los posts, si son archivos subidos expresamente, pero al menos os evito descargar una hero image para dacorar la cabecera.</p>
+<blockquote>
+<p>Sin imágenes, sin colores, sin librerias</p>
+</blockquote>
+<p>Otra de las cosas que penaliza al cargar un site son las librerias y fuentes externas. Ambas las he minimizado, solo uso una para resaltado de sintaxis en los posts y <strong>las fuentes se descargan despues</strong> de haber cargado todo el web.</p>
 <p><img src="./PageSpeedInsights.png" alt="Resultados de PageSpeed Insights"></p>
 <p>Además también estuve pendiente de la accesibilidad, realizando pruebas en <a href="//accessibilitytest.org/results/h926oKgJI3-d">Accesibility Test</a>, usando herramientas para lectura en pantalla y un buen contraste de colores entre otras cosas. La jerarquía de encabezados, el uso correcto de <code>role</code>, y otros puntos que iban marcado las diferentes pruebas hasta conseguir resolverlos todos.</p>
 <p><img src="./AccesibilityTest.png" alt="Resultados de Accesibility Test"></p>

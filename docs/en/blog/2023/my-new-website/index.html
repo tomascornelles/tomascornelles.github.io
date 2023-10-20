@@ -6,7 +6,8 @@
 
   
   <title>My new website with 11ty</title>
-  <meta name="description" content="Personal website and Blog about Tomas Cornelles, Senior Frontend Developer">
+  <meta name="description" content="How I remake my personal website with 11ty.">
+  <meta name="keywords" content="en,webc,cypress,11ty,a11y">
   <meta property="og:title" content="My new website with 11ty">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://picsum.photos/600">
@@ -144,6 +145,24 @@
       padding: 1em;
       background-color: var(--color-fg);
       color: var(--color-bg);
+    }
+
+    blockquote {
+      font-style: italic;
+      font-weight: 300;
+      font-size: 3rem;
+      text-align: center;
+      position: relative;
+    }
+
+    blockquote p {
+      margin-block-end: 0;
+    }
+
+    blockquote::before,
+    blockquote::after {
+      content: '~~~o~~~';
+      font-size: .5em;
     }
 
     svg path {
@@ -487,9 +506,17 @@ footer section {
 <p>I tried several generators, including popular ones like Astro, Nuxt, and Next, and some less known ones. I finally settled on <strong><a href="//11ty.dev">11ty</a></strong>, which is based on <strong>JavaScript</strong> and has great backward compatibility. I was able to start it up in several environments from scratch with just <code>npm install</code>.</p>
 <h2>Decisions</h2>
 <p>I decided to use <strong><a href="//www.11ty.dev/docs/languages/webc/">WebC</a></strong>, a JavaScript templating language that allows me to create reusable components. This allows me to create more modular and maintainable web pages.</p>
+<blockquote>
+<p>I try o make the faster website</p>
+</blockquote>
 <p>I also decided to go with a <strong>classless</strong> design, where the HTML tags and their position determine the style of the elements. This allows me to create a cleaner and more efficient design.</p>
 <h2>Performance and Accessibility</h2>
 <p>The website has been optimized for good performance and accessibility. In PageSpeed Insights tests, the website scored a perfect 100 on both desktop and mobile.</p>
+<p>One thing that can slow down a website's load time is images. I decided to <strong>remove all images</strong> that are not essential. I'll keep the logo and favicon, which are both <strong>SVG</strong> files embedded in their components. The images in the posts are uploaded separately, but at least I'm avoiding having you download a hero image to decorate the header.</p>
+<blockquote>
+<p>No images, no colors, no libraries</p>
+</blockquote>
+<p>Another thing that can slow down a website's load time is external libraries and fonts. I've minimized both. I only use one for syntax highlighting in the posts, and <strong>the fonts are downloaded after</strong> the entire website has loaded.</p>
 <p><img src="./PageSpeedInsights.png" alt="Resultados de PageSpeed Insights"></p>
 <p>Accessibility tests have also been performed to ensure that the website is accessible to people with disabilities.</p>
 <p><img src="./AccesibilityTest.png" alt="Resultados de Accesibility Test"></p>

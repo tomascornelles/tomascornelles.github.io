@@ -6,6 +6,7 @@ tags:
     - cypress
     - 11ty
     - a11y
+description: Como rehice mi web personal con 11ty
 ---
 
 Durante este año han sido muchas veces las que se me ha pasado por la cabeza actualizar mi sitio web. El anterior, andaba algo desactualizado, no por falta de interes, sino porque desde que me cambié de portatil no fui capaz de hacer funcionar Grow de nuevo, lo reconozco.
@@ -16,6 +17,8 @@ Probé varios generadores, los populres Astro, Nuxt y Next, y otros menos conoci
 
 Con 11ty es muy fácil crear un sitio, bastan unos pocos minutos, pero tambien ofrece versatilidad para crear lo que quieras. [Grow](//grow.io/) es un generador de sitios estáticos escrito en Python que usa plantillas Jinja2, muy similares a Twig, algo a lo que ya estaba acostumbrado.
 
+> Intenté crear el web más rápido que pude
+
 Yo me decanté por usar **[WebC](https://www.11ty.dev/docs/languages/webc/)**, me gusta la idea de Single Files Components (SFC). A partir de esto usé el template base que recoge el CSS y JS genérico, y cada componente provee de su propio CSS y JS si lo necesita. Por ejemplo, el script para el reslatado de sintaxis solo se descarga en los posts y no en el resto de páginas.
 
 Para los estilos utilicé una filosofía **sin clases**, las proias etiquetas y su posición ya determinan que estilo debe tener. A fin de cuentas esto aporta homogeneidad a todo el site y tambien mejora el rendimiento, al usar hojas de estilos más pequeñas y añadir menos código al html.
@@ -23,6 +26,12 @@ Para los estilos utilicé una filosofía **sin clases**, las proias etiquetas y 
 ## Rendimiento
 
 Hablando de rendimiento, en las pruebas de [PageSpeed Insights](//pagespeed.web.dev/analysis/https-tomascornelles-com/zevwfnslac?form_factor=mobile) este site obtuvo 100 en todos los análisis tanto en desktop como en mobile.
+
+Algo que ralentiza mucho la carga de una web son las imágenes. Decidí **prescindir de todas las imágenes** que no sean imprescindibles, así que me quedo con el logo y el favicon, ambos son **svg** embebidos en sus componentes. Las imagenes de los posts, si son archivos subidos expresamente, pero al menos os evito descargar una hero image para dacorar la cabecera.
+
+> Sin imágenes, sin colores, sin librerias
+
+Otra de las cosas que penaliza al cargar un site son las librerias y fuentes externas. Ambas las he minimizado, solo uso una para resaltado de sintaxis en los posts y **las fuentes se descargan despues** de haber cargado todo el web.
 
 ![Resultados de PageSpeed Insights](./PageSpeedInsights.png)
 
