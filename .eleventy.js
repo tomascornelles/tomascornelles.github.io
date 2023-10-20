@@ -18,7 +18,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget("_includes/components/**/*.webc");
 
   eleventyConfig.addPassthroughCopy({ "_includes/assets": "assets" });
-  eleventyConfig.addPassthroughCopy("_views/**/*.jpeg");
+  eleventyConfig.addPassthroughCopy("_views/**/*.(jpeg|jpg|png|gif|webp)");
   
   eleventyConfig.setServerOptions({
     watch: ['docs/**/*.*', '_includes/components/**/*.webc'],
@@ -44,6 +44,8 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addFilter("tagUrl", (tag) => `/blog/tag/${tag}`);
+
+  eleventyConfig.addFilter("pageUrl", (page) => `https://tomascornelles.com${page}`);
 
   // Return your Object options:
   return {

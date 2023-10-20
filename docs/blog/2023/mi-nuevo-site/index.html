@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
   
-  <title>¡Hola!</title>
+  <title>Mi nuevo site con 11ty</title>
   <meta name="description" content="Web personal y blog de Tomás Cornelles, frontend developer.">
-  <meta property="og:title" content="¡Hola!">
+  <meta property="og:title" content="Mi nuevo site con 11ty">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://picsum.photos/600">
-  <meta property="og:url" content="https://tomascornelles.com/">
+  <meta property="og:url" content="https://tomascornelles.com/blog/2023/mi-nuevo-site/">
 
   
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
@@ -223,39 +223,6 @@
   article footer {
     margin-block-start: 10rem;
   }
-#welcome h1::after {
-    content: '';
-    display: inline-block;
-    width: 0.95em;
-    height: 1.5em;
-    background-color: var(--color-fg);
-    animation: blink 1s infinite;
-  }
-
-  @media (min-width: 768px) {
-    #welcome article {
-      columns: 2;
-      column-gap: 5rem;
-    }
-  }
-
-  @keyframes blink {
-    from {
-      opacity: 1;
-    }
-
-    50% {
-      opacity: 1;
-    }
-
-    51% {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 0;
-    }
-  }
 header {
     position: fixed;
     top: 0;
@@ -459,7 +426,7 @@ footer section {
 
 <body>
   <header>
-  <p>¡Hola!</p>
+  <p>Mi nuevo site con 11ty</p>
 
   <a href="/" title="Logo">
     <svg id="logo" aria-labelledby="logoTitle logoDesc" role="img" viewBox="0 0 43 67" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -505,55 +472,70 @@ footer section {
 
 
 
-  <main><section id="welcome"><h1>¡Hola!<br> Soy Tomás</h1>
-</section>
-
-<section id="cta">
-  <p>Si necesitas apoyo en tu formación, <strong>clases de refuerzo, prepararte para una entrevista</strong>, mejorar tu código o una mentoría personalizada, contrata un pack de horas a traves de <strong>ClassGap</strong> para poder <strong>ayudarte en tu proceso de aprendizaje y mejorar profesionalmente</strong> en pocas clases. Dispones de una clase de 20 minutos de <strong>prueba gratuita</strong>.</p>
-
-<a role="button" href="https://www.classgap.com/me/tomas-cornelles" target="_blank">Mentoría personalizada</a>
-
-</section>
-
-<section id="blog">
-  <article>
+  <main><article>
   <header>
      
+    <h1>Mi nuevo site con 11ty</h1>
     
-    <h2>
-      <a href="/blog/2023/mi-nuevo-site/">Mi nuevo site con 11ty</a>
-    </h2>
-    
+    <p>
+      <span>19-octubre-2023</span>
+    </p>
   </header>
 
    
-  
   <div><p>Durante este año han sido muchas veces las que se me ha pasado por la cabeza actualizar mi sitio web. El anterior, andaba algo desactualizado, no por falta de interes, sino porque desde que me cambié de portatil no fui capaz de hacer funcionar Grow de nuevo, lo reconozco.</p>
-<p>Probé varios generadores, los populres Astro, Nuxt y Next, y otros menos conocidos. Finalmente me decanté por <strong><a href="//11ty.dev">11ty</a></strong>, basado en <strong>JavaScript</strong> y con una gran retro ...</p></div>
+<p>Probé varios generadores, los populres Astro, Nuxt y Next, y otros menos conocidos. Finalmente me decanté por <strong><a href="//11ty.dev">11ty</a></strong>, basado en <strong>JavaScript</strong> y con una gran retro compatibilidad, lo he podido arrancar en varios entornos desde cero con solo <code>npm install</code> sin ir más lejos.</p>
+<h2>Decisiones</h2>
+<p>Con 11ty es muy fácil crear un sitio, bastan unos pocos minutos, pero tambien ofrece versatilidad para crear lo que quieras. <a href="//grow.io/">Grow</a> es un generador de sitios estáticos escrito en Python que usa plantillas Jinja2, muy similares a Twig, algo a lo que ya estaba acostumbrado.</p>
+<p>Yo me decanté por usar <strong><a href="https://www.11ty.dev/docs/languages/webc/">WebC</a></strong>, me gusta la idea de Single Files Components (SFC). A partir de esto usé el template base que recoge el CSS y JS genérico, y cada componente provee de su propio CSS y JS si lo necesita. Por ejemplo, el script para el reslatado de sintaxis solo se descarga en los posts y no en el resto de páginas.</p>
+<p>Para los estilos utilicé una filosofía <strong>sin clases</strong>, las proias etiquetas y su posición ya determinan que estilo debe tener. A fin de cuentas esto aporta homogeneidad a todo el site y tambien mejora el rendimiento, al usar hojas de estilos más pequeñas y añadir menos código al html.</p>
+<h2>Rendimiento</h2>
+<p>Hablando de rendimiento, en las pruebas de <a href="//pagespeed.web.dev/analysis/https-tomascornelles-com/zevwfnslac?form_factor=mobile">PageSpeed Insights</a> este site obtuvo 100 en todos los análisis tanto en desktop como en mobile.</p>
+<p><img src="./PageSpeedInsights.png" alt="Resultados de PageSpeed Insights"></p>
+<p>Además también estuve pendiente de la accesibilidad, realizando pruebas en <a href="//accessibilitytest.org/results/h926oKgJI3-d">Accesibility Test</a>, usando herramientas para lectura en pantalla y un buen contraste de colores entre otras cosas. La jerarquía de encabezados, el uso correcto de <code>role</code>, y otros puntos que iban marcado las diferentes pruebas hasta conseguir resolverlos todos.</p>
+<p><img src="./AccesibilityTest.png" alt="Resultados de Accesibility Test"></p>
+<p>El sitio web utiliza un esquema de color de <strong>alto contraste</strong>, con solo blanco y negro. También hay un <strong>modo oscuro</strong> que utiliza negro y blanco. La <strong>jerarquía del contenido</strong> es evidente en el espaciado entre elementos, el uso de dos fuentes, <code>Source Code Pro</code> para código, encabezados y algunos enlaces de navegación, y <code>Lora</code> para el cuerpo del texto.</p>
+<p>El uso de blanco y negro es una buena opción para la <strong>accesibilidad</strong>, ya que proporciona un buen contraste para las personas con discapacidades visuales. El uso de dos fuentes ayuda a <strong>distinguir entre diferentes tipos de contenido</strong>.</p>
+<p>El espaciado entre elementos ayuda a crear un diseño <strong>claro y conciso</strong>. El uso de encabezados ayuda a <strong>organizar el contenido</strong> y hacer que sea más fácil de escanear.</p>
+<h2>Novedades</h2>
+<p>Una novedad en mi site es el multilenguaje, esta vez quiero escribir en inglés también y por eso todo el site está preparado para ello. La estructura de vistas esta separada por carpetas y todas las templates son compartidas y sepradas del contenido con el uso de labels.</p>
+<p>Otra novedad es el foco del site, ya no es tanto un porfolio online, de hecho deja de serlo, para ser una landing hacia <strong><a href="https://www.classgap.com/me/tomas-cornelles">ClassGap</a></strong>, la plataforma donde imparto clases sobre programación frontend.</p>
+<p>Estas novedades vienen acompañadas de una nueva imagen, más sobria y madura, en blanco y negro. El logo está generado con una <a href="//apps.tomascornelles.com/inkan/">webapp</a> que creé hace un tiempo para la imagen anterior, pero como no se podia ver en tamaño reducido, creé esta version solida y jugar con la forma como si fuera el cursor de la terminal de comandos en que trabajamos. Según como lo veas tambien parece un teléfono apagado 😉.</p>
+<h2>Otras características</h2>
+<p>He añadido test en <strong>Cypress</strong> para la navegacion y elementos dinámicos, en más de una ocasión durante el desarrollo me ha saltado un error y he podido corregirlo.</p>
+<p>También he usado <strong>GitHub Pages</strong> como servidor y <strong>GitHub Actions</strong> para la integración continua. He bloqueado la rama <code>main</code> para no poder hacer commits diréctamente en ella y pasar siempre por una PR desde rama (que me reviso yo mismo). Las PR lanzan los test en Cypress antes de poder hacer merge.</p>
+<h2>Conclusiones</h2>
+<p>Estoy muy contento con el resultado, ha sido divertido montar toda la estructura y aprender de otras facetas del desarrollo web que no suelo tocar. El uso de WebC con SFC ha sido todo un acierto, pues me ha permitido aislar funcionalidades dentro de componentes para reutilizar, por ejemplo el componente de post es el mismo para la home, la página de blog y la entrada, pero con diferente parámetros de entrada.</p>
+<p>También creé otros componentes que no he llegado a usar, como el de analytics, que he preferido no usar de momento. Ese componente ofrece, con solo instanciarlo en el html, coloca el link a la política de cookies, el código de seguimiento, que se carga según si has aceptado o no las cookies, que también se encarga de mostrar el mensaje si no lo has aceptado o rechazado antes.</p>
+<h2>Tu opinión</h2>
+<p>¿Y a ti que te parece? ¿Cambiarias algo del sitio? ¿Conocias todas las tecnologías utilizadas? Puedes contactar conmigo a través de las redes para compartirme tu opinión o sugerirme otros temas.</p>
+</div>
+  
   
 
   
-  <p>
-    <a href="/blog/2023/mi-nuevo-site/">Seguir leyendo</a>
-  </p>
-
   
 
   <footer>
+     
     <p>
-      <a href="/blog">
-        <strong>Leer más artículos en el blog</strong>
-      </a>
+      <span>Etiquetas</span>: 
+      <a href="/blog/tag/es">es</a>
+<a href="/blog/tag/webc">webc</a>
+<a href="/blog/tag/cypress">cypress</a>
+<a href="/blog/tag/11ty">11ty</a>
+<a href="/blog/tag/a11y">a11y</a>
+    </p>
+
+    <p>
+      <a href="/blog">Volver al Blog</a>
     </p>
   </footer>
+
+  
 </article>
 
 
-
-
-
-
-</section>
 
 
 
@@ -642,29 +624,6 @@ footer section {
       link.target = "_blank"
     }
   });
-const title = document.querySelector('#welcome h1');
-  const titleLines = title.innerHTML.split('<br>');
-  title.innerHTML = ''
-
-
-  let i = 0;
-  line = 0;
-  const speed  = 50;
-  function typeWriter(txt) {
-    if (i < txt.length) {
-      title.innerHTML += txt.charAt(i);
-      i++;
-      setTimeout(() => typeWriter(txt), speed);
-    } else {
-      i = 0;
-      line++;
-      if (typeof titleLines[line] !== 'undefined') {
-        title.innerHTML += '<br>';
-        typeWriter(titleLines[line])
-      }
-    }
-  }
-  typeWriter(titleLines[line])
 window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);

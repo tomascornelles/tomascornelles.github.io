@@ -7,6 +7,10 @@
   
   <title>Error 404</title>
   <meta name="description" content="Web personal y blog de Tomás Cornelles, frontend developer.">
+  <meta property="og:title" content="Error 404">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://picsum.photos/600">
+  <meta property="og:url" content="https://tomascornelles.com/404/">
 
   
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
@@ -62,7 +66,7 @@
       line-height: 1.5;
       margin-block: 2em 1em;
       overflow-wrap: break-word;
-      letter-spacing: -.1em;
+      letter-spacing: -.05em;
     }
 
     h1 {
@@ -368,48 +372,6 @@ footer section {
 </head>
 
 <body>
-  <tc-wip labels="[object Object]"><div id="wip">
-  <span> Todavía estoy trabajando en el site</span>
-</div>
-
-<style>
-tc-wip {
-  background: repeating-linear-gradient(
-    45deg,
-    gold,
-    gold 10px,
-    black 10px,
-    black 20px
-  );
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  padding: 2rem;
-  z-index: 3;
-  transition: all 1s ease;
-}
-
-tc-wip.hide {
-  margin-top: -6rem;
-  opacity: 0;
-}
-
-#wip span {
-  font-family: var(--font-mono);
-  color: white;
-  background: black;
-  font-size: 2rem;
-  font-weight: 700;
-  display: inline-block;
-  padding: 1em;
-}
-</style>
-
-
-</tc-wip>
-
   <header>
   <p>Error 404</p>
 
@@ -551,18 +513,6 @@ tc-wip.hide {
   }
 
   setInterval(mix, 200);
-const wip = document.querySelector('tc-wip');
-
-  const hide = () => {
-    wip.classList.add('hide');
-    setTimeout(remove, 1000);
-  }
-
-  const remove = () => {
-    wip.remove();
-  }
-
-  setTimeout(hide, 5000);
 window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);

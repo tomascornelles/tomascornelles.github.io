@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
   
-  <title>¡Hola!</title>
-  <meta name="description" content="Web personal y blog de Tomás Cornelles, frontend developer.">
-  <meta property="og:title" content="¡Hola!">
+  <title>My new website with 11ty</title>
+  <meta name="description" content="Personal website and Blog about Tomas Cornelles, Senior Frontend Developer">
+  <meta property="og:title" content="My new website with 11ty">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://picsum.photos/600">
-  <meta property="og:url" content="https://tomascornelles.com/">
+  <meta property="og:url" content="https://tomascornelles.com/en/blog/2023/my-new-website/">
 
   
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
@@ -223,39 +223,6 @@
   article footer {
     margin-block-start: 10rem;
   }
-#welcome h1::after {
-    content: '';
-    display: inline-block;
-    width: 0.95em;
-    height: 1.5em;
-    background-color: var(--color-fg);
-    animation: blink 1s infinite;
-  }
-
-  @media (min-width: 768px) {
-    #welcome article {
-      columns: 2;
-      column-gap: 5rem;
-    }
-  }
-
-  @keyframes blink {
-    from {
-      opacity: 1;
-    }
-
-    50% {
-      opacity: 1;
-    }
-
-    51% {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 0;
-    }
-  }
 header {
     position: fixed;
     top: 0;
@@ -459,9 +426,9 @@ footer section {
 
 <body>
   <header>
-  <p>¡Hola!</p>
+  <p>My new website with 11ty</p>
 
-  <a href="/" title="Logo">
+  <a href="/en" title="Logo">
     <svg id="logo" aria-labelledby="logoTitle logoDesc" role="img" viewBox="0 0 43 67" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <title id="logoTitle">Tomás</title>
       <desc id="logoDesc">Ir al inicio</desc>
@@ -488,13 +455,13 @@ footer section {
     <span>menu</span>
     <ul>
       <li>
-        <a href="/">hola</a>
+        <a href="/en">hello</a>
       </li>
       <li>
-        <a href="#hablamos">¿hablamos?</a>
+        <a href="#contact">wanna talk?</a>
       </li>
       <li>
-        <a href="/blog">blog</a>
+        <a href="/en/blog">blog</a>
       </li>
     </ul>
   </nav>
@@ -505,47 +472,66 @@ footer section {
 
 
 
-  <main><section id="welcome"><h1>¡Hola!<br> Soy Tomás</h1>
-</section>
-
-<section id="cta">
-  <p>Si necesitas apoyo en tu formación, <strong>clases de refuerzo, prepararte para una entrevista</strong>, mejorar tu código o una mentoría personalizada, contrata un pack de horas a traves de <strong>ClassGap</strong> para poder <strong>ayudarte en tu proceso de aprendizaje y mejorar profesionalmente</strong> en pocas clases. Dispones de una clase de 20 minutos de <strong>prueba gratuita</strong>.</p>
-
-<a role="button" href="https://www.classgap.com/me/tomas-cornelles" target="_blank">Mentoría personalizada</a>
-
-</section>
-
-<section id="blog">
-  <article>
+  <main><article>
   <header>
      
+    <h1>My new website with 11ty</h1>
     
-    <h2>
-      <a href="/blog/2023/mi-nuevo-site/">Mi nuevo site con 11ty</a>
-    </h2>
-    
+    <p>
+      <span>19-october-2023</span>
+    </p>
   </header>
 
    
+  <div><p>This year, I've been thinking about updating my website a lot. The previous one was a bit outdated, not for lack of interest, but because I wasn't able to get Grow to work again after I changed laptops, I admit it.</p>
+<p>I tried several generators, including popular ones like Astro, Nuxt, and Next, and some less known ones. I finally settled on <strong><a href="//11ty.dev">11ty</a></strong>, which is based on <strong>JavaScript</strong> and has great backward compatibility. I was able to start it up in several environments from scratch with just <code>npm install</code>.</p>
+<h2>Decisions</h2>
+<p>I decided to use <strong><a href="//www.11ty.dev/docs/languages/webc/">WebC</a></strong>, a JavaScript templating language that allows me to create reusable components. This allows me to create more modular and maintainable web pages.</p>
+<p>I also decided to go with a <strong>classless</strong> design, where the HTML tags and their position determine the style of the elements. This allows me to create a cleaner and more efficient design.</p>
+<h2>Performance and Accessibility</h2>
+<p>The website has been optimized for good performance and accessibility. In PageSpeed Insights tests, the website scored a perfect 100 on both desktop and mobile.</p>
+<p><img src="./PageSpeedInsights.png" alt="Resultados de PageSpeed Insights"></p>
+<p>Accessibility tests have also been performed to ensure that the website is accessible to people with disabilities.</p>
+<p><img src="./AccesibilityTest.png" alt="Resultados de Accesibility Test"></p>
+<p>The website uses a <strong>high contrast</strong> color scheme, with only white and black. There is also a <strong>dark mode</strong> that uses black and white. The <strong>hierarchy of content</strong> is evident in the spacing between elements, the use of two fonts, <code>Source Code Pro</code> for code, headings, and some navigation links, and <code>Lora</code> for body text.</p>
+<p>The use of white and black is a good choice for <strong>accessibility</strong>, as it provides good contrast for people with visual impairments. The use of two fonts helps to <strong>distinguish between different types of content</strong>.</p>
+<p>The spacing between elements helps to create a <strong>clear and concise</strong> layout. The use of headings helps to <strong>organize the content</strong> and make it easier to scan.</p>
+<h2>New Features</h2>
+<p>The website has several new features, such as support for multiple languages, a new focus, and a new look.</p>
+<p>The website is now ready to be translated into multiple languages. The website structure is divided into folders, and all templates are shared.</p>
+<p>The focus of the website has changed. It is no longer an online portfolio, but rather a landing page for <a href="//www.classgap.com/me/tomas-cornelles">ClassGap</a>, the platform where I teach front-end programming.</p>
+<p>These new features are accompanied by a new, more sober and mature look. The logo is generated with a web app that I created a while ago for the previous image. However, since it could not be seen at a reduced size, I created this solid version and played with the shape as if it were the cursor of the command terminal where we work. Depending on how you look at it, it also looks like a turned-off phone.</p>
+<h2>Other Features</h2>
+<p>The website also includes Cypress tests for navigation and dynamic elements. GitHub Pages is also used as a server and GitHub Actions for continuous integration. The main branch has been blocked so that commits cannot be made directly to it. Instead, pull requests must be made from a branch (which I review myself). Cypress tests are run before a pull request can be merged.</p>
+<h2>Conclusions</h2>
+<p>I am very happy with the results of the website update. It was fun to put together the whole structure and learn about other aspects of web development that I don't usually touch. Using WebC with SFC was a great success, as it allowed me to isolate functionality within components for reuse. For example, the post component is the same for the home page, the blog page, and the entry, but with different input parameters.</p>
+<p>I also created other components that I haven't used yet, such as the analytics component. I preferred not to use it at the moment. This component offers, with just an instance in the HTML, the link to the cookie policy, the tracking code, which is loaded according to whether or not you have accepted cookies. It also takes care of displaying the message if you have not accepted or rejected it before.</p>
+<h2>Your Opinion</h2>
+<p>What do you think? Would you change anything about the site? Were you familiar with all the technologies used? You can contact me through social media to share your opinion or suggest other topics.</p>
+</div>
   
-  <div><p>Durante este año han sido muchas veces las que se me ha pasado por la cabeza actualizar mi sitio web. El anterior, andaba algo desactualizado, no por falta de interes, sino porque desde que me cambié de portatil no fui capaz de hacer funcionar Grow de nuevo, lo reconozco.</p>
-<p>Probé varios generadores, los populres Astro, Nuxt y Next, y otros menos conocidos. Finalmente me decanté por <strong><a href="//11ty.dev">11ty</a></strong>, basado en <strong>JavaScript</strong> y con una gran retro ...</p></div>
   
 
   
-  <p>
-    <a href="/blog/2023/mi-nuevo-site/">Seguir leyendo</a>
-  </p>
-
   
 
   <footer>
+     
     <p>
-      <a href="/blog">
-        <strong>Leer más artículos en el blog</strong>
-      </a>
+      <span>Tags</span>: 
+      <a href="/blog/tag/en">en</a>
+<a href="/blog/tag/webc">webc</a>
+<a href="/blog/tag/cypress">cypress</a>
+<a href="/blog/tag/11ty">11ty</a>
+<a href="/blog/tag/a11y">a11y</a>
+    </p>
+
+    <p>
+      <a href="/en/blog">back to Blog</a>
     </p>
   </footer>
+
+  
 </article>
 
 
@@ -553,21 +539,16 @@ footer section {
 
 
 
-</section>
-
-
-
-
 </main>
 
   <footer>
-  <section id="hablamos">
-    <h2>¿Hablamos?</h2>
+  <section id="contact">
+    <h2>Wanna talk?</h2>
     <div>
       <div>
-        <p>Si necesitas apoyo en tu formación, <strong>clases de refuerzo, prepararte para una entrevista</strong>, mejorar tu código o una mentoría personalizada, contrata un pack de horas a traves de <strong>ClassGap</strong> para poder <strong>ayudarte en tu proceso de aprendizaje y mejorar profesionalmente</strong> en pocas clases. Dispones de una clase de 20 minutos de <strong>prueba gratuita</strong>.</p>
+        <p>If you need support in your <strong>training, tutoring, interview preparation</strong>, code improvement, or personalized mentorship, hire a pack of hours through <strong>ClassGap</strong> to <strong>help you in your learning process</strong> and improve professionally in a few classes. You have a <strong>free</strong> 20-minute trial class.</p>
 
-<a role="button" href="https://www.classgap.com/me/tomas-cornelles" target="_blank">Mentoría personalizada</a>
+<a role="button" href="https://www.classgap.com/me/tomas-cornelles" target="_blank">Custom class</a>
 
       </div>
 
@@ -642,29 +623,6 @@ footer section {
       link.target = "_blank"
     }
   });
-const title = document.querySelector('#welcome h1');
-  const titleLines = title.innerHTML.split('<br>');
-  title.innerHTML = ''
-
-
-  let i = 0;
-  line = 0;
-  const speed  = 50;
-  function typeWriter(txt) {
-    if (i < txt.length) {
-      title.innerHTML += txt.charAt(i);
-      i++;
-      setTimeout(() => typeWriter(txt), speed);
-    } else {
-      i = 0;
-      line++;
-      if (typeof titleLines[line] !== 'undefined') {
-        title.innerHTML += '<br>';
-        typeWriter(titleLines[line])
-      }
-    }
-  }
-  typeWriter(titleLines[line])
 window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);

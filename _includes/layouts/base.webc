@@ -8,6 +8,10 @@
   <!--- SEO info --->
   <title @text="title || metadata.title"></title>
   <meta name="description" :content="labels.seo.description || metadata.description" />
+  <meta property="og:title" :content="title || metadata.title" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://picsum.photos/600" />
+  <meta property="og:url" :content="pageUrl(page.url)" />
 
   <!--- Favicons --->
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
@@ -66,7 +70,7 @@
       line-height: 1.5;
       margin-block: 2em 1em;
       overflow-wrap: break-word;
-      letter-spacing: -.1em;
+      letter-spacing: -.05em;
     }
 
     h1 {
@@ -166,8 +170,6 @@
 </head>
 
 <body>
-  <tc-wip :labels="labels"></tc-wip>
-
   <tc-header webc:nokeep
     :title="title" 
     :langs="langs"
