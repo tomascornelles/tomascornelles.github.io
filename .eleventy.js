@@ -45,6 +45,8 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter("tagUrl", (tag) => `/blog/tag/${tag}`);
 
+  eleventyConfig.addFilter("pageUrl", (page) => `https://tomascornelles.com${page}`);
+
   // Return your Object options:
   return {
     dir: {
