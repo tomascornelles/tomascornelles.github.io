@@ -244,7 +244,7 @@ header {
 
   header > a, header > a:hover {
     box-shadow: none;
-    max-width: 5rem;
+    max-width: 10rem;
   }
 
   header nav span {
@@ -262,7 +262,7 @@ header {
 
   header #logo {
     transition: all .4s ease;
-    height: 67px;
+    height: 134px;
     background: var(--color-fg) url(https://picsum.photos/43/67?blur=5) no-repeat center center;
     background-size: cover;
     transition: all .4s ease;
@@ -282,7 +282,7 @@ header {
     overflow: hidden;
     list-style: none;
     padding: 0;
-    margin: 4rem auto 0;
+    margin: 11rem auto 0;
     position: absolute;
     left: 0;
     right: 0;
@@ -309,6 +309,15 @@ header {
 
   header nav ul ul li {
     width: 100%;
+  }
+
+  @media (max-height: 360px) {
+    header #logo {
+      height: 67px;
+    }
+    header nav > ul {
+      margin-block-start: 5rem;
+    }
   }
 
   @media (min-width: 768px) {
