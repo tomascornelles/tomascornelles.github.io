@@ -108,7 +108,7 @@
   }
 
   article footer {
-    margin-block-start: 10rem;
+    margin-block-start: 4rem;
   }
 </style>
 
