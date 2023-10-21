@@ -25,7 +25,7 @@ I also decided to go with a **classless** design, where the HTML tags and their 
 
 The website has been optimized for good performance and accessibility. In PageSpeed Insights tests, the website scored a perfect 100 on both desktop and mobile.
 
-One thing that can slow down a website's load time is images. I decided to **remove all images** that are not essential. I'll keep the logo and favicon, which are both **SVG** files embedded in their components. The images in the posts are uploaded separately, but at least I'm avoiding having you download a hero image to decorate the header.
+One thing that can slow down a website's load time is images. I decided to **remove all images** that are not essential. I'll keep the logo and favicon, which are both **SVG** files embedded in their components, but also added a background image for the logo through [lorem.picsum](//lorem.picsum) for the new brand language I want. The images in the posts are uploaded separately, but at least I'm avoiding having you download a hero image to decorate the header.
 
 > No images, no colors, no libraries
 

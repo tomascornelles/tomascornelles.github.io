@@ -27,7 +27,7 @@ Para los estilos utilicé una filosofía **sin clases**, las proias etiquetas y 
 
 Hablando de rendimiento, en las pruebas de [PageSpeed Insights](//pagespeed.web.dev/analysis/https-tomascornelles-com/zevwfnslac?form_factor=mobile) este site obtuvo 100 en todos los análisis tanto en desktop como en mobile.
 
-Algo que ralentiza mucho la carga de una web son las imágenes. Decidí **prescindir de todas las imágenes** que no sean imprescindibles, así que me quedo con el logo y el favicon, ambos son **svg** embebidos en sus componentes. Las imagenes de los posts, si son archivos subidos expresamente, pero al menos os evito descargar una hero image para dacorar la cabecera.
+Algo que ralentiza mucho la carga de una web son las imágenes. Decidí **prescindir de todas las imágenes** que no sean imprescindibles, así que me quedo con el logo y el favicon, ambos son **svg** embebidos en sus componentes, aunque anadí una imagen de [lorem.picsum](//lorem.picsum) de fondo del logo para lograr el lenguaje que quiero transmitir con la nuea marca. Las imagenes de los posts, si son archivos subidos expresamente, pero al menos os evito descargar una hero image para decorar la cabecera 😆.
 
 > Sin imágenes, sin colores, sin librerias
 
