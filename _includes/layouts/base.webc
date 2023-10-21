@@ -41,7 +41,7 @@
 
     @media (prefers-color-scheme: dark) {
       :root {
-        --color-bg: #333333;
+        --color-bg: #2b2b33;
         --color-fg: #dddddd;
       }
     }
@@ -173,7 +173,7 @@
     }
 
     svg path {
-      fill: var(--color-accent);
+      fill: var(--color-bg);
     }
 
     @media (min-width: 768px) {

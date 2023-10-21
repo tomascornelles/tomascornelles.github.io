@@ -37,7 +37,7 @@
 
     @media (prefers-color-scheme: dark) {
       :root {
-        --color-bg: #333333;
+        --color-bg: #2b2b33;
         --color-fg: #dddddd;
       }
     }
@@ -169,7 +169,7 @@
     }
 
     svg path {
-      fill: var(--color-accent);
+      fill: var(--color-bg);
     }
 
     @media (min-width: 768px) {
@@ -346,11 +346,18 @@ header {
   header #logo {
     transition: all .4s ease;
     height: 67px;
+    background: var(--color-fg) url(https://picsum.photos/43/67?blur=5) no-repeat center center;
+    background-size: cover;
+    transition: all .4s ease;
   }
 
   header.sticky #logo {
     height: calc(var(--unit) * 6.7 / 2);
-    background-color: var(--color-accent);
+   /* background: var(--color-fg);*/
+  }
+
+  header.sticky #logo path {
+    fill: transparent;
   }
 
   header nav > ul {
@@ -484,21 +491,7 @@ footer section {
     <svg id="logo" aria-labelledby="logoTitle logoDesc" role="img" viewBox="0 0 43 67" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <title id="logoTitle">Tomás</title>
       <desc id="logoDesc">Ir al inicio</desc>
-      <path d="M4 4H39V7H23V15H20V7H4V4Z" fill="black"></path> 
-      <path d="M19 8H4V11H16V15H19V8Z" fill="black"></path> 
-      <path d="M24 8H39V11H27V15H24V8Z" fill="black"></path> 
-      <path d="M15 12H4V15H15V12Z" fill="black"></path> 
-      <path d="M28 12H39V15H28V12Z" fill="black"></path> 
-      <path d="M8 20H35V23H8V20Z" fill="black"></path> 
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M4 16H39V27H4V16ZM7 19H36V24H7V19Z" fill="black"></path> 
-      <path d="M39 28H4V39H7V31H20V35H23V31H36V39H39V28Z" fill="black"></path> 
-      <path d="M8 32H19V36H24V32H35V39H32V35H27V39H16V35H11V39H8V32Z" fill="black"></path> 
-      <path d="M15 36H12V39H15V36Z" fill="black"></path> 
-      <path d="M28 36H31V39H28V36Z" fill="black"></path> 
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M4 40H39V51H36V47H7V51H4V40ZM7 43H36V44H7V43Z" fill="black"></path> 
-      <path d="M8 48H35V51H8V48Z" fill="black"></path> 
-      <path d="M39 52H4V59H36V60H4V63H39V56H7V55H39V52Z" fill="black"></path> 
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M43 0H0V67H43V0ZM3 3H40V64H3V3Z" fill="black"></path> 
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M40 3H3V64H40V3ZM4 4H39V7H23V15H20V7H4V4ZM19 8H4V11H16V15H19V8ZM39 8H24V15H27V11H39V8ZM15 12H4V15H15V12ZM39 12H28V15H39V12ZM8 20H35V23H8V20ZM39 16H4V27H39V16ZM36 19H7V24H36V19ZM39 28H4V39H7V31H20V35H23V31H36V39H39V28ZM19 32H8V39H11V35H16V39H27V35H32V39H35V32H24V36H19V32ZM15 36H12V39H15V36ZM31 36H28V39H31V36ZM4 40H39V51H36V47H7V51H4V40ZM7 43H36V44H7V43ZM35 48H8V51H35V48ZM39 52H4V59H36V60H4V63H39V56H7V55H39V52Z" fill="black"></path>
     </svg>
     <span>Tomás</span>
   </a>
