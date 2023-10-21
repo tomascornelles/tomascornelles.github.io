@@ -28,7 +28,8 @@
 
   <style>:root {
       --color-bg: white;
-      --color-fg: black;
+      --color-fg: #333333;
+      --color-accent: var(--color-fg);
       --font: 'Lora', serif;
       --font-mono: 'Source Code Pro', monospace;
       --unit: 10px;
@@ -36,8 +37,8 @@
 
     @media (prefers-color-scheme: dark) {
       :root {
-        --color-bg: black;
-        --color-fg: white;
+        --color-bg: #333333;
+        --color-fg: #dddddd;
       }
     }
 
@@ -55,6 +56,7 @@
       max-width: calc(var(--unit) * 100);
       padding-top: 20dvh;
       padding: 20vh var(--unit) var(--unit);
+      transition: all .4s ease;
     }
 
     main > section {
@@ -91,6 +93,7 @@
     p {
       margin-block-start: 0;
       margin-block-end: 1em;
+      letter-spacing: .05em;
     }
 
     a, [role=link] {
@@ -166,7 +169,7 @@
     }
 
     svg path {
-      fill: var(--color-fg);
+      fill: var(--color-accent);
     }
 
     @media (min-width: 768px) {
@@ -247,7 +250,7 @@
     display: inline-block;
     width: 0.95em;
     height: 1.5em;
-    background-color: var(--color-fg);
+    background-color: var(--color-accent);
     animation: blink 1s infinite;
   }
 
@@ -350,7 +353,7 @@ header {
 
   header.sticky #logo {
     height: calc(var(--unit) * 6.7 / 2);
-    background-color: var(--color-fg);
+    background-color: var(--color-accent);
   }
 
   header nav > ul {
