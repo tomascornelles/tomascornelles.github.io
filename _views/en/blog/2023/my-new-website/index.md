@@ -31,11 +31,11 @@ One thing that can slow down a website's load time is images. I decided to **rem
 
 Another thing that can slow down a website's load time is external libraries and fonts. I've minimized both. I only use one for syntax highlighting in the posts, and **the fonts are downloaded after** the entire website has loaded.
 
-![Resultados de PageSpeed Insights](./PageSpeedInsights.png)
+![Results of PageSpeed Insights](./PageSpeedInsights.png)
 
 Accessibility tests have also been performed to ensure that the website is accessible to people with disabilities.
 
-![Resultados de Accesibility Test](./AccesibilityTest.png)
+![Results of Accesibility Test](./AccesibilityTest.png)
 
 The website uses a **high contrast** color scheme, with only white and black. There is also a **dark mode** that uses black and white. The **hierarchy of content** is evident in the spacing between elements, the use of two fonts, `Source Code Pro` for code, headings, and some navigation links, and `Lora` for body text.
 

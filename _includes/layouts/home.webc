@@ -29,7 +29,7 @@ layout: base.webc
     display: inline-block;
     width: 0.95em;
     height: 1.5em;
-    background-color: var(--color-fg);
+    background-color: var(--color-accent);
     animation: blink 1s infinite;
   }
 

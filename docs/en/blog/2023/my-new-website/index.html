@@ -28,7 +28,8 @@
 
   <style>:root {
       --color-bg: white;
-      --color-fg: black;
+      --color-fg: #333333;
+      --color-accent: var(--color-fg);
       --font: 'Lora', serif;
       --font-mono: 'Source Code Pro', monospace;
       --unit: 10px;
@@ -36,8 +37,8 @@
 
     @media (prefers-color-scheme: dark) {
       :root {
-        --color-bg: black;
-        --color-fg: white;
+        --color-bg: #333333;
+        --color-fg: #dddddd;
       }
     }
 
@@ -55,6 +56,7 @@
       max-width: calc(var(--unit) * 100);
       padding-top: 20dvh;
       padding: 20vh var(--unit) var(--unit);
+      transition: all .4s ease;
     }
 
     main > section {
@@ -91,6 +93,7 @@
     p {
       margin-block-start: 0;
       margin-block-end: 1em;
+      letter-spacing: .05em;
     }
 
     a, [role=link] {
@@ -166,7 +169,7 @@
     }
 
     svg path {
-      fill: var(--color-fg);
+      fill: var(--color-accent);
     }
 
     @media (min-width: 768px) {
@@ -317,7 +320,7 @@ header {
 
   header.sticky #logo {
     height: calc(var(--unit) * 6.7 / 2);
-    background-color: var(--color-fg);
+    background-color: var(--color-accent);
   }
 
   header nav > ul {
@@ -530,9 +533,9 @@ footer section {
 <p>No images, no colors, no libraries</p>
 </blockquote>
 <p>Another thing that can slow down a website's load time is external libraries and fonts. I've minimized both. I only use one for syntax highlighting in the posts, and <strong>the fonts are downloaded after</strong> the entire website has loaded.</p>
-<p><img src="./PageSpeedInsights.png" alt="Resultados de PageSpeed Insights"></p>
+<p><img src="./PageSpeedInsights.png" alt="Results of PageSpeed Insights"></p>
 <p>Accessibility tests have also been performed to ensure that the website is accessible to people with disabilities.</p>
-<p><img src="./AccesibilityTest.png" alt="Resultados de Accesibility Test"></p>
+<p><img src="./AccesibilityTest.png" alt="Results of Accesibility Test"></p>
 <p>The website uses a <strong>high contrast</strong> color scheme, with only white and black. There is also a <strong>dark mode</strong> that uses black and white. The <strong>hierarchy of content</strong> is evident in the spacing between elements, the use of two fonts, <code>Source Code Pro</code> for code, headings, and some navigation links, and <code>Lora</code> for body text.</p>
 <p>The use of white and black is a good choice for <strong>accessibility</strong>, as it provides good contrast for people with visual impairments. The use of two fonts helps to <strong>distinguish between different types of content</strong>.</p>
 <p>The spacing between elements helps to create a <strong>clear and concise</strong> layout. The use of headings helps to <strong>organize the content</strong> and make it easier to scan.</p>

@@ -119,7 +119,7 @@
 
   header.sticky #logo {
     height: calc(var(--unit) * 6.7 / 2);
-    background-color: var(--color-fg);
+    background-color: var(--color-accent);
   }
 
   header nav > ul {
