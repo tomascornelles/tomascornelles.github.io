@@ -33,11 +33,11 @@ Algo que ralentiza mucho la carga de una web son las imágenes. Decidí **presci
 
 Otra de las cosas que penaliza al cargar un site son las librerias y fuentes externas. Ambas las he minimizado, solo uso una para resaltado de sintaxis en los posts y **las fuentes se descargan despues** de haber cargado todo el web.
 
-![Resultados de PageSpeed Insights](./PageSpeedInsights.png)
+![Resultados del test de rendimiento](./PageSpeedInsights.png)
 
 Además también estuve pendiente de la accesibilidad, realizando pruebas en [Accesibility Test](//accessibilitytest.org/results/h926oKgJI3-d), usando herramientas para lectura en pantalla y un buen contraste de colores entre otras cosas. La jerarquía de encabezados, el uso correcto de `role`, y otros puntos que iban marcado las diferentes pruebas hasta conseguir resolverlos todos.
 
-![Resultados de Accesibility Test](./AccesibilityTest.png)
+![Resultados de los tests de accesibilidad](./AccesibilityTest.png)
 
 El sitio web utiliza un esquema de color de **alto contraste**, con solo blanco y negro. También hay un **modo oscuro** que utiliza negro y blanco. La **jerarquía del contenido** es evidente en el espaciado entre elementos, el uso de dos fuentes, `Source Code Pro` para código, encabezados y algunos enlaces de navegación, y `Lora` para el cuerpo del texto.
 

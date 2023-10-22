@@ -64,7 +64,6 @@
 
   footer ul span {
     display: block;
-    opacity: .6;
     margin-block-end: 0;
   }
 
