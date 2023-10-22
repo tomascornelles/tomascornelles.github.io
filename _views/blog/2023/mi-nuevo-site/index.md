@@ -35,7 +35,7 @@ Otra de las cosas que penaliza al cargar un site son las librerias y fuentes ext
 
 ![Resultados del test de rendimiento](./PageSpeedInsights.png)
 
-Además también estuve pendiente de la accesibilidad, realizando pruebas en [Accesibility Test](//accessibilitytest.org/results/h926oKgJI3-d), usando herramientas para lectura en pantalla y un buen contraste de colores entre otras cosas. La jerarquía de encabezados, el uso correcto de `role`, y otros puntos que iban marcado las diferentes pruebas hasta conseguir resolverlos todos.
+Además también estuve pendiente de la accesibilidad, realizando pruebas en [Accesibility Test](//accessibilitytest.org/results/U9tEJTvb8UFd), usando herramientas para lectura en pantalla y un buen contraste de colores entre otras cosas. La jerarquía de encabezados, el uso correcto de `role`, y otros puntos que iban marcado las diferentes pruebas hasta conseguir resolverlos todos.
 
 ![Resultados de los tests de accesibilidad](./AccesibilityTest.png)
 
