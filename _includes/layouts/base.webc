@@ -172,10 +172,6 @@
       font-size: .5em;
     }
 
-    svg path {
-      fill: var(--color-bg);
-    }
-
     @media (min-width: 768px) {
       h1 {
         font-size: 8rem;
