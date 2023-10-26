@@ -9,6 +9,7 @@ layout: base.webc
     webc:for="(post, index) of collections[tag, page.lang]"
     :@post-title="post.data.title"
     :@post-content="post.content"
+    :@post-date="post.date"
     :@post-url="post.url"
     :@post-more="true"
     :@short="true"
