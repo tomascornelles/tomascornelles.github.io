@@ -7,7 +7,7 @@ describe('G002 - Header links', () => {
   
   it('About link', () => {
     cy.visit('http://localhost:8080/blog');
-    cy.contains('inicio').click({force: true});
+    cy.contains('hola').click({force: true});
     cy.location('pathname').should('eq', '/');
   });
   
