@@ -16,7 +16,7 @@
       <span @text="labels.blog.tags"></span>: 
       <a webc:for="tag of postTags" 
          webc:if="tag != 'blog'" 
-         :href="tagUrl(tag)" 
+         :href="tagUrl(tag, page.lang)" 
          @text="tag"></a>
 
     </p>

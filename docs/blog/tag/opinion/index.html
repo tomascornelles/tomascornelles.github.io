@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
   
-  <title>¡Hola!</title>
+  <title>Etiqueta: opinion</title>
   <meta name="description" content="Web personal y blog de Tomas Cornelles, frontend developer.">
   <meta name="keywords" content="web, developer, frontend, javascript">
-  <meta property="og:title" content="¡Hola!">
+  <meta property="og:title" content="Etiqueta: opinion">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://picsum.photos/600">
-  <meta property="og:url" content="https://tomascornelles.com/">
+  <meta property="og:url" content="https://tomascornelles.com/blog/tag/opinion/">
 
   
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
@@ -242,38 +242,17 @@
   article footer {
     margin-block-start: 4rem;
   }
-#welcome h1::after {
-    content: '';
-    display: inline-block;
-    width: 0.95em;
-    height: 1.5em;
-    background-color: var(--color-accent);
-    animation: blink 1s infinite;
+#blog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(10 * var(--unit)) calc(6 * var(--unit));
+    margin-block-start: 20rem;
   }
 
-  @media (min-width: 768px) {
-    #welcome article {
-      columns: 2;
-      column-gap: 5rem;
-    }
-  }
-
-  @keyframes blink {
-    from {
-      opacity: 1;
-    }
-
-    50% {
-      opacity: 1;
-    }
-
-    51% {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 0;
-    }
+  #blog h2 {
+    font-size: 3rem;
+    line-height: 1.5;
+    margin-top: 0;
   }
 header {
     position: fixed;
@@ -490,7 +469,7 @@ footer section {
 
 <body>
   <header>
-  <p>¡Hola!</p>
+  <p>Etiqueta: opinion</p>
 
   <a href="/" title="Logo">
     <svg id="logo" width="160" height="160" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
@@ -526,16 +505,7 @@ footer section {
 
 
 
-  <main><section id="welcome"><h1>¡Hola!<br> Soy Tomás</h1>
-</section>
-
-<section id="cta">
-  <p>Si necesitas apoyo en tu formación, <strong>clases de refuerzo, prepararte para una entrevista</strong>, mejorar tu código o una mentoría personalizada, contrata un pack de horas a traves de <strong>ClassGap</strong> para poder <strong>ayudarte en tu proceso de aprendizaje y mejorar profesionalmente</strong> en pocas clases. Dispones de una clase de 20 minutos de <strong>prueba gratuita</strong>.</p>
-
-<a role="button" href="https://www.classgap.com/me/tomas-cornelles" target="_blank">Mentoría personalizada</a>
-
-</section>
-
+  <main><h1>Etiqueta: opinion</h1>
 <section id="blog">
   <article>
   <header>
@@ -549,23 +519,43 @@ footer section {
 
    
   
-  <div><p>Es habitual ver los terminales y editores de los programadores con letras de colores sobre fondos oscuros, y desde que los sistemas operativos permiten activar el modo oscuro por todo el sistema, aún más.</p>
-<p>No voy a decir que el asunto Oscuro vs Claro sea un debate como los de vim vs emacs o tabs vs espacios, porque la mayoria ya ha elegido el lado oscuro. Pero ¿Es el modo oscuro el ideal para tí?</p>
-<p>No pretendo demonizar el modo oscuro, ni mucho menos, pero si darte la oportunidad d...</p></div>
   
+  <div><p>Es habitual ver los terminales y editores de los programadores con letras de colores sobre fondos oscuros, y desde que los sistemas operativos permiten activar el modo oscuro por todo el sistema, a...</p></div>
 
   
   <p>
     <a href="/blog/2023/defendiendo-el-modo-claro/">Continúa leyendo</a>
   </p>
 
-  <footer>
-    <p>
-      <a href="/blog">
-        <strong>Leer más artículos en el blog</strong>
-      </a>
-    </p>
-  </footer>
+  
+</article>
+
+
+
+
+
+
+<article>
+  <header>
+     
+    
+    <h2>
+      <a href="/blog/2023/mi-nuevo-site/">Mi nuevo site con 11ty</a>
+    </h2>
+    
+  </header>
+
+   
+  
+  
+  <div><p>Durante este año han sido muchas veces las que se me ha pasado por la cabeza actualizar mi sitio web. El anterior, andaba algo desactualizado, no por falta de interes, sino porque desde que me camb...</p></div>
+
+  
+  <p>
+    <a href="/blog/2023/mi-nuevo-site/">Continúa leyendo</a>
+  </p>
+
+  
 </article>
 
 
@@ -574,6 +564,7 @@ footer section {
 
 
 </section>
+
 
 
 
@@ -662,29 +653,10 @@ footer section {
       link.target = "_blank"
     }
   });
-const title = document.querySelector('#welcome h1');
-  const titleLines = title.innerHTML.split('<br>');
-  title.innerHTML = ''
-
-
-  let i = 0;
-  line = 0;
-  const speed  = 50;
-  function typeWriter(txt) {
-    if (i < txt.length) {
-      title.innerHTML += txt.charAt(i);
-      i++;
-      setTimeout(() => typeWriter(txt), speed);
-    } else {
-      i = 0;
-      line++;
-      if (typeof titleLines[line] !== 'undefined') {
-        title.innerHTML += '<br>';
-        typeWriter(titleLines[line])
-      }
-    }
-  }
-  typeWriter(titleLines[line])
+const codeBlocks = document.querySelectorAll('pre');
+  codeBlocks.forEach((block) => {
+    block.classList.add('microlight');
+  })
 window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);

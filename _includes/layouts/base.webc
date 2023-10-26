@@ -160,6 +160,7 @@
       font-size: 3rem;
       text-align: center;
       position: relative;
+      max-width: 90%;
     }
 
     blockquote p {

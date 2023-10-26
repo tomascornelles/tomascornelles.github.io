@@ -6,7 +6,7 @@ layout: base.webc
 <section id="blog">
   <tc-post 
     webc:nokeep
-    webc:for="(post, index) of collections[tag]"
+    webc:for="(post, index) of collections[tag, page.lang]"
     :@post-title="post.data.title"
     :@post-content="post.content"
     :@post-url="post.url"

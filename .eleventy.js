@@ -43,7 +43,10 @@ module.exports = function(eleventyConfig) {
     return `${date.getDate()}-${months[lang][date.getMonth()]}-${date.getFullYear()}`;
   });
 
-  eleventyConfig.addFilter("tagUrl", (tag) => `/blog/tag/${tag}`);
+  eleventyConfig.addFilter("tagUrl", (tag, lang) => {
+    const urlLang = lang === 'es' ? '' : `/${lang}`;
+    return `${urlLang}/blog/tag/${tag}`;
+  });
 
   eleventyConfig.addFilter("pageUrl", (page) => `https://tomascornelles.com${page}`);
 
