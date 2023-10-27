@@ -39,7 +39,7 @@
 
   <section>
     <p>
-      <tc-lang :langs="langs"></tc-lang>
+      <tc-lang :langs="langs" :id="id"></tc-lang>
     </p>
 
     <p>

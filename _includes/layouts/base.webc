@@ -58,8 +58,7 @@
       line-height: 1.75;
       margin: 0 auto;
       max-width: calc(var(--unit) * 100);
-      padding-top: 20dvh;
-      padding: 20vh var(--unit) var(--unit);
+      padding: 20dvh var(--unit) var(--unit);
       transition: all .4s ease;
     }
 
@@ -79,7 +78,7 @@
     h1 {
       font-size: 4rem;
       min-height: 80dvh;
-      margin-top: 0;
+      margin-block-start: 0;
       display: flex;
       align-items: end;
       padding-block-end: 10vh;
@@ -198,6 +197,7 @@
 
   <tc-footer webc:nokeep
     :langs="langs"
+    :id="id"
     :labels="labels" ></tc-footer>
 
   <tc-favicon></tc-favicon>
