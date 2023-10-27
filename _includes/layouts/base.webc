@@ -58,8 +58,7 @@
       line-height: 1.75;
       margin: 0 auto;
       max-width: calc(var(--unit) * 100);
-      padding-top: 20dvh;
-      padding: 20vh var(--unit) var(--unit);
+      padding: 20dvh var(--unit) var(--unit);
       transition: all .4s ease;
     }
 
