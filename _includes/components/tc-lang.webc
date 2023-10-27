@@ -1,2 +1,7 @@
-<a webc:for="lang of langs" :href="lang.url" @text="lang.name"></a>
-
+<a 
+  webc:for="lang of langs"
+  :href="langUrl(lang.url, id)"
+  >
+  <span @text="lang.flag" webc:nokeep></span>
+  <span @text="lang.name" webc:nokeep></span>
+</a>

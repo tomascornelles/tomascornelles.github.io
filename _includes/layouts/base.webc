@@ -198,6 +198,7 @@
 
   <tc-footer webc:nokeep
     :langs="langs"
+    :id="id"
     :labels="labels" ></tc-footer>
 
   <tc-favicon></tc-favicon>

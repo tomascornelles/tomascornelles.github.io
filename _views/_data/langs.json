@@ -1,12 +1,16 @@
 [
   {
     "id": "es",
-    "name": "🇪🇸 español",
-    "url": "/"
+    "name": "español",
+    "shortName": "esp",
+    "flag": "🇪🇸",
+    "url": ""
   },
   {
     "id": "en",
-    "name": "🇬🇧 english",
+    "name": "english",
+    "shortName": "eng",
+    "flag": "🇬🇧",
     "url": "/en"
   }
 ]

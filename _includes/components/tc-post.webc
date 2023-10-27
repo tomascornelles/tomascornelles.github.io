@@ -20,7 +20,7 @@
          @text="tag"></a>
 
     </p>
-    <em webc:else @text="dateFormat(postDate, page.lang)"></em>
+    <em webc:elseif="!home" @text="dateFormat(postDate, page.lang)"></em>
   </header>
 
   <!--- Abstract/content ---> 
