@@ -48,6 +48,7 @@
 
     html {
       font-size: var(--unit);
+      scroll-behavior: smooth;
     }
 
     body {
