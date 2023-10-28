@@ -91,6 +91,8 @@
 
   header summary {
     margin: 0;
+    list-style-type: none;
+    cursor: pointer;
   }
 
   header details a {
