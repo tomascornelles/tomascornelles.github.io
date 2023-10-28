@@ -298,16 +298,16 @@ header {
     max-width: 16rem;
   }
 
-  header nav span {
+  header summary {
     margin: 0;
   }
 
-  header nav a {
+  header details a {
     display: block;
     padding: 1rem;
   }
 
-  header nav a:hover {
+  header details a:hover {
     box-shadow: inset 0 -5em var(--color-fg);
   }
 
@@ -321,11 +321,7 @@ header {
    /* background: var(--color-fg);*/
   }
 
-  /* header.sticky #logo path {
-    fill: transparent;
-  }*/
-
-  header nav > ul {
+  header details > ul {
     height: 0;
     overflow: hidden;
     list-style: none;
@@ -339,73 +335,20 @@ header {
     max-width: calc(var(--unit) * 120);
   }
 
-  header.sticky nav ul {
+  header.sticky details ul {
     margin-top: 2rem;
   }
 
-  header nav:hover > ul {
-    height: calc(4 * 3.5em); /* 3 elements, 1.5 line-height + 1 padding-top + 1 padding-bottom */
-  }
-
-  header nav ul ul {
-    margin-block-start: 0;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  header nav ul ul li {
-    width: 100%;
+  header details[open] ul {
+    height: 15rem;
   }
 
   @media (max-height: 360px) {
     header #logo {
       height: 67px;
     }
-    header nav > ul {
+    header details > ul {
       margin-block-start: 5rem;
-    }
-  }
-
-  @media (min-width: 768px) {
-    header nav {
-      position: relative;
-      overflow: hidden;
-    }
-
-    header nav span {
-      display: none;
-    }
-
-    header nav ul {
-      height: 2em;
-      background-color: transparent;
-      margin-block-start: .5rem;
-    }
-
-    header.sticky nav ul {
-      margin-top: 0;
-    }
-
-    header nav li {
-      display: inline-block;
-    }
-
-    header nav a {
-      display: inline;
-      padding: .3em;
-      margin-inline-start: 2rem;
-    }
-
-    header nav ul ul {
-      display: inline-block;
-      position: relative;
-    }
-
-    header nav ul ul li {
-      display: inline-block;
-      width: auto;
     }
   }
 footer section {
@@ -473,8 +416,8 @@ footer section {
     <span>Tomás</span>
   </a>
 
-  <nav>
-    <span>menu</span>
+  <details role="nav">
+    <summary>menu</summary>
     <ul>
       <li>
         <a href="/">hola</a>
@@ -486,7 +429,7 @@ footer section {
         <a href="/blog">blog</a>
       </li>
     </ul>
-  </nav>
+  </details>
 </header>
 
 
@@ -662,8 +605,10 @@ window.onscroll = () => {
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);
   }
 
-  document.querySelectorAll('header nav a').forEach((item) => {
-    item.addEventListener('click', (e) => e.target.blur());
+  document.querySelectorAll('header details a').forEach((item) => {
+    item.addEventListener('click', () => {
+      document.querySelector('header details').removeAttribute("open");
+    });  
   });
 
   document.querySelector('header > p').addEventListener('click', () => {
