@@ -214,7 +214,6 @@
   document.querySelector('header > p').addEventListener('click', () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
     })
   });
 </script>
