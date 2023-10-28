@@ -7,19 +7,22 @@ describe('G002 - Header links', () => {
   
   it('About link', () => {
     cy.visit('http://localhost:8080/blog');
-    cy.contains('hola').click({force: true});
+    cy.get('header summary').click();
+    cy.contains('hola').click();
     cy.location('pathname').should('eq', '/');
   });
   
   it('Blog link', () => {
     cy.visit('http://localhost:8080');
-    cy.contains('blog').click({force: true});
+    cy.get('header summary').click();
+    cy.contains('blog').click();
     cy.location('pathname').should('eq', '/blog/');
   });
   
   it('Contact link', () => {
     cy.visit('http://localhost:8080');
-    cy.contains('¿hablamos?').click({force: true});
+    cy.get('header summary').click();
+    cy.contains('¿hablamos?').click();
     cy.get('#hablamos').should('be.visible');
   });
 })
