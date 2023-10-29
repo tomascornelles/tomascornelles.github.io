@@ -228,10 +228,13 @@ header {
     text-overflow: ellipsis;
     white-space: nowrap;
     cursor: pointer;
+    transform: translateY(-2em);
+    transition: all .4s ease;
   }
 
   header.sticky p {
     visibility: visible;
+    transform: translateY(0);
   }
 
   header svg + span {
