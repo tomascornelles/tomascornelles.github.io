@@ -115,25 +115,18 @@
   }
 
   header details > ul {
-    height: 0;
     overflow: hidden;
     list-style: none;
     padding: 0;
     margin: 11rem auto 0;
     position: absolute;
-    left: 0;
-    right: 0;
+    inset-inline: 0;
     background: var(--color-bg);
-    transition: all .4s ease;
     max-width: calc(var(--unit) * 120);
   }
 
   header.sticky details ul {
-    margin-top: 2rem;
-  }
-
-  header details[open] ul {
-    height: 15rem;
+    margin-block-start: 2rem;
   }
 
   @media (max-height: 360px) {
@@ -143,6 +136,17 @@
     header details > ul {
       margin-block-start: 5rem;
     }
+  }
+
+  @media (min-width: 768px) {
+    header details > ul {
+      display: flex;
+      width: 100%;
+    }
+     header details li {
+       width: 100%;
+       text-align: center;
+     }
   }
 </style>
 
