@@ -1,6 +1,6 @@
 <p @raw="labels.classgap.content"></p>
 
 <a role="button" 
-   href="https://www.classgap.com/me/tomas-cornelles" 
+   :href="labels.classgap.link" 
    target="_blank" 
    @text="labels.classgap.cta"></a>
