@@ -4,13 +4,13 @@
     "name": "español",
     "shortName": "esp",
     "flag": "🇪🇸",
-    "url": ""
+    "url": "/"
   },
   {
     "id": "en",
     "name": "english",
     "shortName": "eng",
     "flag": "🇬🇧",
-    "url": "/en"
+    "url": "/en/"
   }
 ]
