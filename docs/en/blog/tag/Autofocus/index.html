@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
   
-  <title>Hello!</title>
+  <title>Tag: Autofocus</title>
   <meta name="description" content="Web personal y blog de Tomas Cornelles, frontend developer.">
   <meta name="keywords" content="web, developer, frontend, javascript">
-  <meta property="og:title" content="Hello!">
+  <meta property="og:title" content="Tag: Autofocus">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://picsum.photos/600">
-  <meta property="og:url" content="https://tomascornelles.com/en/">
+  <meta property="og:url" content="https://tomascornelles.com/en/blog/tag/Autofocus/">
 
   
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
@@ -242,38 +242,17 @@
   article footer {
     margin-block-start: 4rem;
   }
-#welcome h1::after {
-    content: '';
-    display: inline-block;
-    width: 0.95em;
-    height: 1.5em;
-    background-color: var(--color-accent);
-    animation: blink 1s infinite;
+#blog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(10 * var(--unit)) calc(6 * var(--unit));
+    margin-block-start: 20rem;
   }
 
-  @media (min-width: 768px) {
-    #welcome article {
-      columns: 2;
-      column-gap: 5rem;
-    }
-  }
-
-  @keyframes blink {
-    from {
-      opacity: 1;
-    }
-
-    50% {
-      opacity: 1;
-    }
-
-    51% {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 0;
-    }
+  #blog h2 {
+    font-size: 3rem;
+    line-height: 1.5;
+    margin-top: 0;
   }
 header {
     position: fixed;
@@ -461,7 +440,7 @@ footer section {
 
 <body>
   <header>
-  <p>Hello!</p>
+  <p>Tag: Autofocus</p>
 
   <a href="/en" title="Logo">
     <svg id="logo" width="160" height="160" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
@@ -497,16 +476,7 @@ footer section {
 
 
 
-  <main><section id="welcome"><h1>Hello!<br> I'm Tomas</h1>
-</section>
-
-<section id="cta">
-  <p>I am a senior <strong>Frontend developer</strong> with over 15 years of experience. Currently, I work for YourNewSelf/RealSelf, the world's largest aesthetic medicine portal. If you have a proposal that might interest me, please check out my LinkedIn profile and get in touch with me.</p>
-
-<a role="button" href="https://www.linkedin.com/in/tomascornelles/" target="_blank">LinkedIn profile</a>
-
-</section>
-
+  <main><h1>Tag: Autofocus</h1>
 <section id="blog">
   <article>
   <header>
@@ -516,28 +486,79 @@ footer section {
       <a href="/en/blog/2023/use-lists-to-be-more-productive/">Use lists to be more productive</a>
     </h2>
     
-    
+    <em>3-november-2023</em>
   </header>
 
    
   
-  <div><p>Today, I want to share how I create and use lists in my daily life to stay well-organized. I've tried GTD, Autofocus, Bullet Journal, and StrikeTru, but in the end, I've ended up with a bit of each.</p>
-<p>I won't deceive you; I forget many things. That's why I've developed the habit of jotting everything down in lists, especially at work. This way, I can not only keep track of what I need to do but also what I've accomplished and when I did it.</p>
-<p>To begin, let me clarify that I use pen ...</p></div>
   
+  <div><p>Today, I want to share how I create and use lists in my daily life to stay well-organized. I've tried GTD, Autofocus, Bullet Journal, and StrikeTru, but in the end, I've ended up with a bit of each...</p></div>
 
   
   <p>
     <a href="/en/blog/2023/use-lists-to-be-more-productive/">Continue reading</a>
   </p>
 
-  <footer>
-    <p>
-      <a href="/en/blog">
-        <strong>Go to my blog</strong>
-      </a>
-    </p>
-  </footer>
+  
+</article>
+
+
+
+
+
+
+<article>
+  <header>
+     
+    
+    <h2>
+      <a href="/en/blog/2023/defending-light-mode/">Defending Light Mode</a>
+    </h2>
+    
+    <em>27-october-2023</em>
+  </header>
+
+   
+  
+  
+  <div><p>It's common to see programmers' terminals and text editors with colored text on dark backgrounds, and since operating systems allow for system-wide dark mode, even more so.</p>
+<p>I won't say that ...</p></div>
+
+  
+  <p>
+    <a href="/en/blog/2023/defending-light-mode/">Continue reading</a>
+  </p>
+
+  
+</article>
+
+
+
+
+
+
+<article>
+  <header>
+     
+    
+    <h2>
+      <a href="/en/blog/2023/my-new-website/">My new website with 11ty</a>
+    </h2>
+    
+    <em>19-october-2023</em>
+  </header>
+
+   
+  
+  
+  <div><p>This year, I've been thinking about updating my website a lot. The previous one was a bit outdated, not for lack of interest, but because I wasn't able to get Grow to work again after I changed lap...</p></div>
+
+  
+  <p>
+    <a href="/en/blog/2023/my-new-website/">Continue reading</a>
+  </p>
+
+  
 </article>
 
 
@@ -546,6 +567,7 @@ footer section {
 
 
 </section>
+
 
 
 
@@ -592,11 +614,11 @@ footer section {
 
   <section>
     <p>
-      <a href="/">
+      <a href="/blog">
   🇪🇸
   español
 </a>
-<a href="/en/">
+<a href="/en/blog">
   🇬🇧
   english
 </a>
@@ -642,29 +664,10 @@ footer section {
       link.target = "_blank"
     }
   });
-const title = document.querySelector('#welcome h1');
-  const titleLines = title.innerHTML.split('<br>');
-  title.innerHTML = ''
-
-
-  let i = 0;
-  line = 0;
-  const speed  = 50;
-  function typeWriter(txt) {
-    if (i < txt.length) {
-      title.innerHTML += txt.charAt(i);
-      i++;
-      setTimeout(() => typeWriter(txt), speed);
-    } else {
-      i = 0;
-      line++;
-      if (typeof titleLines[line] !== 'undefined') {
-        title.innerHTML += '<br>';
-        typeWriter(titleLines[line])
-      }
-    }
-  }
-  typeWriter(titleLines[line])
+const codeBlocks = document.querySelectorAll('pre');
+  codeBlocks.forEach((block) => {
+    block.classList.add('microlight');
+  })
 window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);
