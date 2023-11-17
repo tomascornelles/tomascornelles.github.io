@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  
+  <title>Tag: svg</title>
+  <meta name="description" content="Web personal y blog de Tomas Cornelles, frontend developer.">
+  <meta name="keywords" content="web, developer, frontend, javascript">
+  <meta property="og:title" content="Tag: svg">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://picsum.photos/600">
+  <meta property="og:url" content="https://tomascornelles.com/en/blog/tag/svg/">
+
+  
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <meta name="theme-color" content="white">
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&amp;family=Source+Code+Pro:wght@300;400;700&amp;display=swap" rel="preload" as="font" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:wght@300;400;700&display=swap" webc:keep>
+  </noscript>
+
+  
+  <style>:root {
+    --color-bg: white;
+    --color-fg: #333333;
+    --color-code-bg:#eeeeee;
+    --color-accent: var(--color-fg);
+    --font: 'Lora', serif;
+    --font-mono: 'Source Code Pro', monospace;
+    --unit: 10px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bg: #222222;
+      --color-fg: #dddddd;
+      --color-code-bg: #111111;
+    }
+  }
+
+  html {
+    font-size: var(--unit);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font);
+    font-size: 1.7rem;
+    line-height: 1.75;
+    margin: 0 auto;
+    max-width: calc(var(--unit) * 100);
+    padding: 20dvh var(--unit) var(--unit);
+    transition: all .4s ease;
+  }
+
+  main > section {
+    padding-block-end:  calc(var(--unit) * 10);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-mono);
+    font-weight: 300;
+    line-height: 1.5;
+    margin-block: 2em 1em;
+    overflow-wrap: break-word;
+    letter-spacing: -.05em;
+  }
+
+  h1 {
+    font-size: 4rem;
+    min-height: 80dvh;
+    margin-block-start: 0;
+    display: flex;
+    align-items: end;
+    padding-block-end: 10vh;
+    box-sizing: border-box;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    margin-block-start: 0;
+    margin-block-end: 1em;
+    letter-spacing: .05em;
+  }
+
+  a, [role=link] {
+    text-decoration: none;
+    box-shadow: inset 0 -1px var(--color-fg);
+    color: var(--color-fg);
+    background: none;
+    border: none;
+    transition: all .5s ease;
+    padding: .2em;
+    cursor: pointer;
+  }
+
+  a:hover, [role=link]:hover {
+    color: var(--color-bg);
+    box-shadow: inset 0 -5em var(--color-fg);
+  }
+
+  button, [role=button] {
+    display: block;
+    text-align: center;
+    padding: .5em 1em;
+    background-color: var(--color-fg);
+    color: var(--color-bg);
+    border: .1em solid var(--color-fg);
+    font-family: var(--font-mono);
+    font-size: 1.6rem;
+    box-shadow: inset 0 0 var(--color-bg);
+  }
+
+  button:hover, [role=button]:hover {
+    color: var(--color-fg);
+    box-shadow: inset 0 -5em var(--color-bg);
+  }
+
+  strong, b {
+    font-weight: 900;
+  }
+
+  kbd {
+    border: 1px solid var(--color-fg);
+    padding: 0 .2em;
+    box-shadow: 0 .1em var(--color-fg);
+    font-family: var(--font-mono);
+  }
+
+  code, pre {
+    font-family: var(--font-mono);
+    background-color: var(--color-code-bg) !important;
+  }
+
+  pre {
+    padding: 1em;
+    /* background-color: var(--color-fg); */
+    /* color: var(--color-bg); */
+    overflow-x: auto;
+  }
+
+  blockquote {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 3rem;
+    text-align: center;
+    position: relative;
+    max-width: 90%;
+  }
+
+  blockquote p {
+    margin-block-end: 0;
+  }
+
+  blockquote::before,
+  blockquote::after {
+    content: '~~~o~~~';
+    font-size: .5em;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 8rem;
+    }
+
+    button, [role=button] {
+      display: inline-block;
+    }
+  }</style>
+  <style>article header {
+    position: relative;
+    z-index: 0;
+    display: block;
+    padding: 0;
+    margin-block-end: 5rem;
+  }
+
+  article header h1,
+  article header h2 {
+    margin-block-end: 0;
+  }
+
+  article header p {
+    visibility: visible;
+    font-size: initial;
+    margin-block-end: 10rem;
+  }
+
+  article header a{
+    box-shadow: inset 0 -1px var(--color-fg);
+  }
+
+  article header a:hover {
+    box-shadow: inset 0 -5em var(--color-fg);
+  }
+
+  article header > :last-child {
+    text-align: left;
+  }
+
+  article > div h2,
+  article > div h3,
+  article > div h4 {
+    margin-block-start: 2em;
+  }
+
+  article ul,
+  article ol {
+    padding-inline-start: 0;
+    list-style-position: inside;
+  }
+
+  article ul {
+    list-style-type: square;
+  }
+
+  article img {
+    max-width: 100%;
+    margin-inline-start: 50%;
+    transform: translateX(-50%);
+  }
+
+  article img + span {
+    display: block;
+    text-align: center;
+    font-style: italic;
+    font-size: .9em;
+    opacity: .8;
+    margin-block: -.3em 1em;
+  }
+
+  article footer {
+    margin-block-start: 4rem;
+  }
+
+  .hljs-addition::before {
+    content: '+';
+    user-select: none
+  }
+
+  .hljs-deletion {
+    user-select: none;
+  }
+#blog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(10 * var(--unit)) calc(6 * var(--unit));
+    margin-block-start: 20rem;
+  }
+
+  #blog h2 {
+    font-size: 3rem;
+    line-height: 1.5;
+    margin-top: 0;
+  }
+header {
+    position: fixed;
+    top: 0;
+    inset-inline: 0;
+    transition: all .4s ease;
+    background-color: var(--color-bg);
+    z-index: 1;
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    gap: 0;
+    flex-wrap: initial;
+    max-width: calc(var(--unit) * 100);
+    margin: auto;
+    padding: var(--unit);
+    font-weight: 400;
+    font-family: var(--font-mono);
+  }
+
+  header > * {
+    flex-grow: 1;
+    width: 100%;
+    text-align: center;
+  }
+
+  header > *:first-child {
+    text-align: left;
+  }
+
+  header > *:last-child {
+    text-align: right;
+  }
+
+  header p {
+    margin: 0 .5rem;
+    visibility: hidden;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    transform: translateY(-2em);
+    transition: all .4s ease;
+  }
+
+  header.sticky p {
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  header svg + span {
+    display: none;
+  }
+
+  header > a, header > a:hover {
+    box-shadow: none;
+    max-width: 16rem;
+  }
+
+  header summary {
+    margin: 0;
+    list-style-type: none;
+    cursor: pointer;
+  }
+
+  details summary::-webkit-details-marker {
+    display:none;
+  }
+
+  header details a {
+    display: block;
+    padding: 1rem;
+  }
+
+  header details a:hover {
+    box-shadow: inset 0 -5em var(--color-fg);
+  }
+
+  header #logo {
+    transition: all .4s ease;
+    height: 134px;
+  }
+
+  header.sticky #logo {
+    height: calc(var(--unit) * 6.7 / 2);
+   /* background: var(--color-fg);*/
+  }
+
+  header details > ul {
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    margin: 11rem auto 0;
+    position: absolute;
+    inset-inline: 0;
+    background: var(--color-bg);
+    max-width: calc(var(--unit) * 120);
+    transition: all .5s ease;
+  }
+
+  header details[open] > ul {
+    animation: slide-down .4s;
+  }
+
+  header.sticky details ul {
+    margin: 2rem  auto 0;
+  }
+
+  @media (max-height: 360px) {
+    header #logo {
+      height: 67px;
+    }
+    header details > ul {
+      margin-block-start: 5rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    header details > ul {
+      display: flex;
+      width: 100%;
+    }
+     header details li {
+       width: 100%;
+       text-align: center;
+     }
+  }
+
+  @keyframes slide-down {
+    from {
+      height: 0;
+    }
+
+    to {
+      height: 100%;
+    }
+  }
+footer section {
+    padding-block-start: 5rem;
+  }
+  
+  footer ul {
+    margin: 0;
+    margin-block-start: 5em;
+    padding: 0;
+    list-style: none;
+    font-family: var(--font-mono);
+    font-weight: 100;
+  }
+
+  footer ul span {
+    display: block;
+    margin-block-end: 0;
+  }
+
+  footer ul li {
+    margin-block-end: 1em;
+  }
+
+  footer section:last-child {
+    margin-block-start: 5em;
+    text-align: center;
+  }
+
+  footer section:last-child {
+    font-family: var(--font-mono);
+  }
+
+  @media (min-width: 768px) {
+    footer ul {
+      margin-block-start: 0;
+    }
+
+    footer section:first-child > div {
+      display: flex;
+      justify-content: space-between;
+      gap: 5rem;
+    }
+
+    footer section:first-child > div {
+      flex-direction: row-reverse;
+    }
+  }</style>
+</head>
+
+<body>
+  <header>
+  <p>Tag: svg</p>
+
+  <a href="/en" title="Logo">
+    <svg id="logo" width="160" height="160" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.08182 0.724701L9.7416 1.58225L9.76556 1.69366C9.8037 1.87098 9.84181 2.04338 9.87991 2.21086C9.90545 2.29538 9.93097 2.38124 9.95649 2.46845L11.8477 1.87797L13.5073 2.7354L13.8704 5.63509L13.6704 5.69021C13.2318 5.81105 12.8079 5.92686 12.3985 6.03765L12.3945 6.03873C12.0901 6.11546 11.7829 6.18923 11.4728 6.26013C11.7048 6.72219 11.9566 7.15947 12.228 7.57212C12.5579 8.05887 12.9237 8.47491 13.3247 8.82186L13.5103 8.98239L12.3711 10.2612L12.8712 10.5196L12.7903 13.8664L12.6219 13.9153C11.6794 14.1892 10.7983 14.3928 9.97894 14.5254C9.16058 14.6579 8.4028 14.7247 7.70625 14.7247C6.09072 14.7247 4.81361 14.3874 3.90864 13.6784C2.99508 12.9727 2.54485 11.967 2.54485 10.6952V10.5248L2.54795 10.5056C2.55605 10.4554 2.55946 10.4132 2.55946 10.3783V10.3708L2.55991 10.3634C2.61066 9.53486 2.83041 8.84531 3.23742 8.31405L3.23926 8.31165C3.4194 8.08255 3.6175 7.87764 3.83337 7.69715L2.25616 6.88226L1.87041 3.86674L2.13362 3.8585C2.76751 3.83865 3.4362 3.78405 4.13983 3.69446C4.75503 3.60736 5.37396 3.50889 5.99662 3.39906L5.43159 1.83724L8.08182 0.724701ZM2.80029 6.28784C3.46321 6.19462 4.14957 6.08542 4.85942 5.9602C5.66523 5.80971 6.46617 5.64919 7.26224 5.47866L7.45108 5.4382L7.52992 5.61595C7.63754 5.85858 7.73564 6.09163 7.82417 6.31506C7.91986 6.53247 8.01541 6.73974 8.11082 6.9369L8.29932 7.32648L7.87179 7.2823C7.78246 7.27307 7.69321 7.26846 7.604 7.26846H7.31186C6.80292 7.26846 6.30391 7.32199 5.81454 7.42893C5.34385 7.5339 4.91728 7.70969 4.53303 7.95548L4.52948 7.95775C4.155 8.18809 3.84594 8.50157 3.60195 8.90255C3.37346 9.29375 3.23048 9.79081 3.18322 10.4035C3.18257 10.4519 3.17732 10.5013 3.16869 10.5512V10.6651C3.16869 11.6019 3.47589 12.2474 4.05814 12.6549C4.66747 13.0712 5.51061 13.2919 6.61073 13.2919C7.79525 13.2919 9.16214 13.0719 10.7141 12.626L10.7598 10.5597C10.4264 10.7174 10.0676 10.8636 9.68364 10.9983L9.67973 10.9997C9.15393 11.1739 8.6229 11.3124 8.08673 11.415L8.08315 11.4157C7.55605 11.5082 7.06501 11.555 6.61073 11.555C6.103 11.555 5.66383 11.4819 5.30315 11.3238C5.11213 11.24 4.95242 11.122 4.84117 10.9618C4.7289 10.8 4.67745 10.6118 4.67745 10.4085V10.3548L4.67803 10.3464C4.70216 9.99741 4.85576 9.70249 5.12487 9.47184C5.38172 9.2418 5.70823 9.07654 6.09418 8.96876C6.47756 8.86169 6.88874 8.80908 7.32647 8.80908C7.82808 8.80908 8.32838 8.88833 8.82663 9.04565C9.26165 9.17182 9.65248 9.35622 9.99691 9.60014L11.1555 8.29515C10.8211 7.96529 10.5011 7.56621 10.1948 7.10028L10.192 7.09599C9.84593 6.54426 9.52504 5.9574 9.22912 5.33565L9.09893 5.06212L9.39254 4.99616C9.83777 4.89615 10.2682 4.79119 10.6839 4.68131L10.6852 4.68097L11.7084 4.41665L11.4927 2.66887C11.1413 2.78388 10.7539 2.905 10.3307 3.03221L10.3267 3.0334C9.78936 3.18484 9.22774 3.33619 8.64193 3.48752L8.43142 3.54191L8.35787 3.33564C8.22062 2.95068 8.09787 2.58542 7.9897 2.23993L7.9878 2.23388C7.91817 1.98925 7.85352 1.75464 7.7937 1.53012L6.21491 2.19434C6.29267 2.40378 6.36778 2.61324 6.44022 2.82273C6.54719 3.09412 6.64937 3.36062 6.74673 3.62221L6.84708 3.89182L6.56629 3.94389C5.8033 4.0854 5.05472 4.20675 4.32057 4.3079C3.68882 4.39494 3.10571 4.45239 2.57158 4.47989L2.80029 6.28784ZM9.71115 10.3048C9.6487 10.2914 9.58578 10.2794 9.52238 10.2689L9.51484 10.2676C9.22745 10.2101 8.94604 10.1815 8.6703 10.1815C8.13522 10.1815 7.67564 10.2815 7.28533 10.474L7.28316 10.4751C7.00037 10.611 6.84886 10.7782 6.79 10.9758C7.24734 10.953 7.76208 10.8728 8.33547 10.733C8.8074 10.6127 9.26594 10.47 9.71115 10.3048Z" fill="url(#pattern0)"></path>
+      <defs>
+      <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+      <use href="#image0_450_106" transform="matrix(0.0116667 0 0 0.01 -0.0833333 0)"></use>
+      </pattern>
+      <image id="image0_450_106" width="100" height="100" href="https://picsum.photos/160/?blur=5"></image>
+      </defs>
+    </svg>
+    <span>Tomás</span>
+  </a>
+
+  <details>
+    <summary>menu</summary>
+    <ul>
+      <li>
+        <a href="/en">hello</a>
+      </li>
+      <li>
+        <a href="#contact">wanna talk?</a>
+      </li>
+      <li>
+        <a href="/en/blog">blog</a>
+      </li>
+    </ul>
+  </details>
+</header>
+
+
+
+
+
+
+  <main><h1>Tag: svg</h1>
+<section id="blog">
+  <article>
+  <header>
+    
+    
+    <h2>
+      <a href="/en/blog/2023/use-an-emoji-as-a-favicon/">Use an Emoji as a Favicon Based on the Day</a>
+    </h2>
+    
+    <em>11-november-2023</em>
+  </header>
+
+  
+  
+  
+  <div><p>It's been a while since Lea Verou <a href="https://twitter.com/LeaVerou/status/1241619866475474946">suggested a way to use emojis</a> as favicons on your website, but I thought it might be interest...</p></div>
+
+  
+  <p>
+    <a href="/en/blog/2023/use-an-emoji-as-a-favicon/">Continue reading</a>
+  </p>
+
+  
+</article>
+
+
+
+
+
+<article>
+  <header>
+    
+    
+    <h2>
+      <a href="/en/blog/2023/developers-and-agile-methodology-a-perfect-match/">Developers and Agile Methodology: A Perfect Match</a>
+    </h2>
+    
+    <em>10-november-2023</em>
+  </header>
+
+  
+  
+  
+  <div><p>Agile Methodology and the Scrum framework have become essential elements in the world of software development. These methodologies have revolutionized how development teams work, enabling greater f...</p></div>
+
+  
+  <p>
+    <a href="/en/blog/2023/developers-and-agile-methodology-a-perfect-match/">Continue reading</a>
+  </p>
+
+  
+</article>
+
+
+
+
+
+<article>
+  <header>
+    
+    
+    <h2>
+      <a href="/en/blog/2023/use-lists-to-be-more-productive/">Use lists to be more productive</a>
+    </h2>
+    
+    <em>3-november-2023</em>
+  </header>
+
+  
+  
+  
+  <div><p>Today, I want to share how I create and use lists in my daily life to stay well-organized. I've tried GTD, Autofocus, Bullet Journal, and StrikeTru, but in the end, I've ended up with a bit of each...</p></div>
+
+  
+  <p>
+    <a href="/en/blog/2023/use-lists-to-be-more-productive/">Continue reading</a>
+  </p>
+
+  
+</article>
+
+
+
+
+
+<article>
+  <header>
+    
+    
+    <h2>
+      <a href="/en/blog/2023/defending-light-mode/">Defending Light Mode</a>
+    </h2>
+    
+    <em>27-october-2023</em>
+  </header>
+
+  
+  
+  
+  <div><p>It's common to see programmers' terminals and text editors with colored text on dark backgrounds, and since operating systems allow for system-wide dark mode, even more so.</p>
+<p>I won't say that ...</p></div>
+
+  
+  <p>
+    <a href="/en/blog/2023/defending-light-mode/">Continue reading</a>
+  </p>
+
+  
+</article>
+
+
+
+
+
+<article>
+  <header>
+    
+    
+    <h2>
+      <a href="/en/blog/2023/my-new-website/">My new website with 11ty</a>
+    </h2>
+    
+    <em>19-october-2023</em>
+  </header>
+
+  
+  
+  
+  <div><p>This year, I've been thinking about updating my website a lot. The previous one was a bit outdated, not for lack of interest, but because I wasn't able to get Grow to work again after I changed lap...</p></div>
+
+  
+  <p>
+    <a href="/en/blog/2023/my-new-website/">Continue reading</a>
+  </p>
+
+  
+</article>
+
+
+
+
+
+</section>
+
+
+
+
+
+</main>
+
+  <footer>
+  <section id="contact">
+    <h2>Wanna talk?</h2>
+    <div>
+      <div>
+        <p>I am a senior <strong>Frontend developer</strong> with over 15 years of experience. Currently, I work for YourNewSelf/RealSelf, the world's largest aesthetic medicine portal. If you have a proposal that might interest me, please check out my LinkedIn profile and get in touch with me.</p>
+
+<a role="button" href="https://www.linkedin.com/in/tomascornelles/" target="_blank">LinkedIn profile</a>
+
+      </div>
+
+      <ul>
+        <li>
+          <span>mastodon</span>
+          <a href="https://mastodon.world/@tomascornelles" target="_blank">
+            &nbsp;&nbsp;&nbsp;&nbsp;@<strong>tomascornelles</strong>
+          </a>
+        </li>
+        <li>
+          <span>linkedin</span>
+          <a href="https://www.linkedin.com/in/tomascornelles/" target="_blank">
+            &nbsp;&nbsp;&nbsp;&nbsp;/<strong>tomascornelles</strong>
+          </a>
+        </li>
+        <li>
+          <span>github</span>
+          <a href="https://github.com/tomascornelles" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;@<strong>tomascornelles</strong>
+          </a>
+        </li>
+        <li>
+          <span>email</span>
+          <a href="mailto:hola@tomascornelles.com" target="_blank">hola@<strong>tomascornelles</strong>.com
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <p>
+      <a href="/blog">
+  🇪🇸
+  español
+</a>
+<a href="/en/blog">
+  🇬🇧
+  english
+</a>
+
+    </p>
+
+    <p>
+    <small>made with ❤️  by <strong>tomascornelles © <span id="year"></span></strong></small>
+    </p>
+  </section>
+</footer>
+
+
+
+
+
+
+  <tc-base-styles>
+</tc-base-styles>
+
+  <tc-favicon>
+</tc-favicon>
+
+  <script>!function(e,t){"function"==typeof define&&define.amd?define(["exports"],t):t("undefined"!=typeof exports?exports:e.microlight={})}(this,function(e){var t,n,i,o=window,r=document,a="appendChild",l="test",c=";text-shadow:",s="opacity:.",d=" 0px 0px ",u="3px 0px 5",f=")",p=function(e){for(n=r.getElementsByClassName(e||"microlight"),t=0;i=n[t++];)for(var p,h,g,m,y,x=i.textContent,b=0,w=x[0],v=1,k=i.innerHTML="",C=0,N=/(\d*\, \d*\, \d*)(, ([.\d]*))?/g.exec(o.getComputedStyle(i).color),E="px rgba("+N[1]+",",S=N[3]||1;h=p,p=7>C&&"\\"==p?1:v;){if(v=w,w=x[++b],m=k.length>1,!v||C>8&&"\n"==v||[/\S/[l](v),1,1,!/[$\w]/[l](v),("/"==p||"\n"==p)&&m,'"'==p&&m,"'"==p&&m,x[b-4]+h+p=="-->",h+p=="*/"][C])for(k&&(i[a](y=r.createElement("span")).setAttribute("style",["",c+d+9+E+.7*S+"),"+d+2+E+.4*S+f,s+6+c+d+7+E+S/4+"),"+d+3+E+S/4+f,s+7+c+u+E+S/5+"),-"+u+E+S/5+f,"font-style:italic;"+s+5+c+u+E+S/4+"),-"+u+E+S/4+f][C?3>C?2:C>6?4:C>3?3:+/^(a(bstract|lias|nd|rguments|rray|s(m|sert)?|uto)|b(ase|egin|ool(ean)?|reak|yte)|c(ase|atch|har|hecked|lass|lone|ompl|onst|ontinue)|de(bugger|cimal|clare|f(ault|er)?|init|l(egate|ete)?)|do|double|e(cho|ls?if|lse(if)?|nd|nsure|num|vent|x(cept|ec|p(licit|ort)|te(nds|nsion|rn)))|f(allthrough|alse|inal(ly)?|ixed|loat|or(each)?|riend|rom|unc(tion)?)|global|goto|guard|i(f|mp(lements|licit|ort)|n(it|clude(_once)?|line|out|stanceof|t(erface|ernal)?)?|s)|l(ambda|et|ock|ong)|m(icrolight|odule|utable)|NaN|n(amespace|ative|ext|ew|il|ot|ull)|o(bject|perator|r|ut|verride)|p(ackage|arams|rivate|rotected|rotocol|ublic)|r(aise|e(adonly|do|f|gister|peat|quire(_once)?|scue|strict|try|turn))|s(byte|ealed|elf|hort|igned|izeof|tatic|tring|truct|ubscript|uper|ynchronized|witch)|t(emplate|hen|his|hrows?|ransient|rue|ry|ype(alias|def|id|name|of))|u(n(checked|def(ined)?|ion|less|signed|til)|se|sing)|v(ar|irtual|oid|olatile)|w(char_t|hen|here|hile|ith)|xor|yield)$/[l](k):0]),y[a](r.createTextNode(k))),g=C&&7>C?C:g,k="",C=11;![1,/[\/{}[(\-+*=<>:;|\\.,?!&@~]/[l](v),/[\])]/[l](v),/[$\w]/[l](v),"/"==v&&2>g&&"<"!=p,'"'==v,"'"==v,v+w+x[b+1]+x[b+2]=="<!--",v+w=="/*",v+w=="//","#"==v][--C];);k+=v}};e.reset=p,"complete"==r.readyState?p():o.addEventListener("load",function(){p()},0)});
+const codeBlocks = document.querySelectorAll('pre');
+  codeBlocks.forEach((block) => {
+    block.classList.add('microlight');
+  })
+window.onscroll = () => {
+    const height = window.innerHeight;
+    document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);
+  }
+
+  document.querySelectorAll('header details a').forEach((item) => {
+    item.addEventListener('click', () => {
+      document.querySelector('header details').removeAttribute("open");
+    });
+  });
+
+  document.querySelector('header > p').addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+    })
+  });
+const today = new Date();
+  const year = today.getFullYear();
+  document.querySelector('#year').innerHTML = year;
+class TcFavicon extends HTMLElement {
+    connectedCallback() {
+      const link = document.querySelector("link")
+      const theme = document.querySelector("meta[name=theme-color]")
+
+      const icons = {
+        '1_5': '👑',
+        '1_6': '🎁',
+        '6_28': '🌈',
+        '8_15': '🏖️',
+        '10_28': '🎃',
+        '10_29': '🎃',
+        '10_30': '🎃',
+        '10_31': '🎃',
+        '11_1': '️️⚱️',
+        '12_7': '️🕯️',
+        '12_16': '🎄',
+        '12_17': '🎄',
+        '12_18': '🎄',
+        '12_19': '🎄',
+        '12_20': '🎄',
+        '12_21': '🎄',
+        '12_22': '🎄',
+        '12_23': '🎄',
+        '12_24': '🎄',
+        '12_25': '🎁',
+        '12_26': '🍲',
+        '12_31': '️🕰️',
+      }
+
+      const getToday = () => new Date();
+
+      const currentMonth = (() => getToday().getMonth() + 1)();
+
+      const currentDay = (() => getToday().getDate())();
+
+      const today = `${currentMonth}_${currentDay}`
+
+      const favicon = (() => {
+
+        if (icons[today]){
+          link.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>${icons[today]}</text></svg>`;
+
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          // dark mode
+          link.href = `data:image/svg+xml,<svg width="160" height="160" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.08182 0.724701L9.7416 1.58225L9.76556 1.69366C9.8037 1.87098 9.84181 2.04338 9.87991 2.21086C9.90545 2.29538 9.93097 2.38124 9.95649 2.46845L11.8477 1.87797L13.5073 2.7354L13.8704 5.63509L13.6704 5.69021C13.2318 5.81105 12.8079 5.92686 12.3985 6.03765L12.3945 6.03873C12.0901 6.11546 11.7829 6.18923 11.4728 6.26013C11.7048 6.72219 11.9566 7.15947 12.228 7.57212C12.5579 8.05887 12.9237 8.47491 13.3247 8.82186L13.5103 8.98239L12.3711 10.2612L12.8712 10.5196L12.7903 13.8664L12.6219 13.9153C11.6794 14.1892 10.7983 14.3928 9.97894 14.5254C9.16058 14.6579 8.4028 14.7247 7.70625 14.7247C6.09072 14.7247 4.81361 14.3874 3.90864 13.6784C2.99508 12.9727 2.54485 11.967 2.54485 10.6952V10.5248L2.54795 10.5056C2.55605 10.4554 2.55946 10.4132 2.55946 10.3783V10.3708L2.55991 10.3634C2.61066 9.53486 2.83041 8.84531 3.23742 8.31405L3.23926 8.31165C3.4194 8.08255 3.6175 7.87764 3.83337 7.69715L2.25616 6.88226L1.87041 3.86674L2.13362 3.8585C2.76751 3.83865 3.4362 3.78405 4.13983 3.69446C4.75503 3.60736 5.37396 3.50889 5.99662 3.39906L5.43159 1.83724L8.08182 0.724701ZM2.80029 6.28784C3.46321 6.19462 4.14957 6.08542 4.85942 5.9602C5.66523 5.80971 6.46617 5.64919 7.26224 5.47866L7.45108 5.4382L7.52992 5.61595C7.63754 5.85858 7.73564 6.09163 7.82417 6.31506C7.91986 6.53247 8.01541 6.73974 8.11082 6.9369L8.29932 7.32648L7.87179 7.2823C7.78246 7.27307 7.69321 7.26846 7.604 7.26846H7.31186C6.80292 7.26846 6.30391 7.32199 5.81454 7.42893C5.34385 7.5339 4.91728 7.70969 4.53303 7.95548L4.52948 7.95775C4.155 8.18809 3.84594 8.50157 3.60195 8.90255C3.37346 9.29375 3.23048 9.79081 3.18322 10.4035C3.18257 10.4519 3.17732 10.5013 3.16869 10.5512V10.6651C3.16869 11.6019 3.47589 12.2474 4.05814 12.6549C4.66747 13.0712 5.51061 13.2919 6.61073 13.2919C7.79525 13.2919 9.16214 13.0719 10.7141 12.626L10.7598 10.5597C10.4264 10.7174 10.0676 10.8636 9.68364 10.9983L9.67973 10.9997C9.15393 11.1739 8.6229 11.3124 8.08673 11.415L8.08315 11.4157C7.55605 11.5082 7.06501 11.555 6.61073 11.555C6.103 11.555 5.66383 11.4819 5.30315 11.3238C5.11213 11.24 4.95242 11.122 4.84117 10.9618C4.7289 10.8 4.67745 10.6118 4.67745 10.4085V10.3548L4.67803 10.3464C4.70216 9.99741 4.85576 9.70249 5.12487 9.47184C5.38172 9.2418 5.70823 9.07654 6.09418 8.96876C6.47756 8.86169 6.88874 8.80908 7.32647 8.80908C7.82808 8.80908 8.32838 8.88833 8.82663 9.04565C9.26165 9.17182 9.65248 9.35622 9.99691 9.60014L11.1555 8.29515C10.8211 7.96529 10.5011 7.56621 10.1948 7.10028L10.192 7.09599C9.84593 6.54426 9.52504 5.9574 9.22912 5.33565L9.09893 5.06212L9.39254 4.99616C9.83777 4.89615 10.2682 4.79119 10.6839 4.68131L10.6852 4.68097L11.7084 4.41665L11.4927 2.66887C11.1413 2.78388 10.7539 2.905 10.3307 3.03221L10.3267 3.0334C9.78936 3.18484 9.22774 3.33619 8.64193 3.48752L8.43142 3.54191L8.35787 3.33564C8.22062 2.95068 8.09787 2.58542 7.9897 2.23993L7.9878 2.23388C7.91817 1.98925 7.85352 1.75464 7.7937 1.53012L6.21491 2.19434C6.29267 2.40378 6.36778 2.61324 6.44022 2.82273C6.54719 3.09412 6.64937 3.36062 6.74673 3.62221L6.84708 3.89182L6.56629 3.94389C5.8033 4.0854 5.05472 4.20675 4.32057 4.3079C3.68882 4.39494 3.10571 4.45239 2.57158 4.47989L2.80029 6.28784ZM9.71115 10.3048C9.6487 10.2914 9.58578 10.2794 9.52238 10.2689L9.51484 10.2676C9.22745 10.2101 8.94604 10.1815 8.6703 10.1815C8.13522 10.1815 7.67564 10.2815 7.28533 10.474L7.28316 10.4751C7.00037 10.611 6.84886 10.7782 6.79 10.9758C7.24734 10.953 7.76208 10.8728 8.33547 10.733C8.8074 10.6127 9.26594 10.47 9.71115 10.3048Z" fill="white"/></svg>`;
+          theme['content'] = "black";
+
+        } else {
+          // light mode
+          link.href = `data:image/svg+xml,<svg width="160" height="160" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.08182 0.724701L9.7416 1.58225L9.76556 1.69366C9.8037 1.87098 9.84181 2.04338 9.87991 2.21086C9.90545 2.29538 9.93097 2.38124 9.95649 2.46845L11.8477 1.87797L13.5073 2.7354L13.8704 5.63509L13.6704 5.69021C13.2318 5.81105 12.8079 5.92686 12.3985 6.03765L12.3945 6.03873C12.0901 6.11546 11.7829 6.18923 11.4728 6.26013C11.7048 6.72219 11.9566 7.15947 12.228 7.57212C12.5579 8.05887 12.9237 8.47491 13.3247 8.82186L13.5103 8.98239L12.3711 10.2612L12.8712 10.5196L12.7903 13.8664L12.6219 13.9153C11.6794 14.1892 10.7983 14.3928 9.97894 14.5254C9.16058 14.6579 8.4028 14.7247 7.70625 14.7247C6.09072 14.7247 4.81361 14.3874 3.90864 13.6784C2.99508 12.9727 2.54485 11.967 2.54485 10.6952V10.5248L2.54795 10.5056C2.55605 10.4554 2.55946 10.4132 2.55946 10.3783V10.3708L2.55991 10.3634C2.61066 9.53486 2.83041 8.84531 3.23742 8.31405L3.23926 8.31165C3.4194 8.08255 3.6175 7.87764 3.83337 7.69715L2.25616 6.88226L1.87041 3.86674L2.13362 3.8585C2.76751 3.83865 3.4362 3.78405 4.13983 3.69446C4.75503 3.60736 5.37396 3.50889 5.99662 3.39906L5.43159 1.83724L8.08182 0.724701ZM2.80029 6.28784C3.46321 6.19462 4.14957 6.08542 4.85942 5.9602C5.66523 5.80971 6.46617 5.64919 7.26224 5.47866L7.45108 5.4382L7.52992 5.61595C7.63754 5.85858 7.73564 6.09163 7.82417 6.31506C7.91986 6.53247 8.01541 6.73974 8.11082 6.9369L8.29932 7.32648L7.87179 7.2823C7.78246 7.27307 7.69321 7.26846 7.604 7.26846H7.31186C6.80292 7.26846 6.30391 7.32199 5.81454 7.42893C5.34385 7.5339 4.91728 7.70969 4.53303 7.95548L4.52948 7.95775C4.155 8.18809 3.84594 8.50157 3.60195 8.90255C3.37346 9.29375 3.23048 9.79081 3.18322 10.4035C3.18257 10.4519 3.17732 10.5013 3.16869 10.5512V10.6651C3.16869 11.6019 3.47589 12.2474 4.05814 12.6549C4.66747 13.0712 5.51061 13.2919 6.61073 13.2919C7.79525 13.2919 9.16214 13.0719 10.7141 12.626L10.7598 10.5597C10.4264 10.7174 10.0676 10.8636 9.68364 10.9983L9.67973 10.9997C9.15393 11.1739 8.6229 11.3124 8.08673 11.415L8.08315 11.4157C7.55605 11.5082 7.06501 11.555 6.61073 11.555C6.103 11.555 5.66383 11.4819 5.30315 11.3238C5.11213 11.24 4.95242 11.122 4.84117 10.9618C4.7289 10.8 4.67745 10.6118 4.67745 10.4085V10.3548L4.67803 10.3464C4.70216 9.99741 4.85576 9.70249 5.12487 9.47184C5.38172 9.2418 5.70823 9.07654 6.09418 8.96876C6.47756 8.86169 6.88874 8.80908 7.32647 8.80908C7.82808 8.80908 8.32838 8.88833 8.82663 9.04565C9.26165 9.17182 9.65248 9.35622 9.99691 9.60014L11.1555 8.29515C10.8211 7.96529 10.5011 7.56621 10.1948 7.10028L10.192 7.09599C9.84593 6.54426 9.52504 5.9574 9.22912 5.33565L9.09893 5.06212L9.39254 4.99616C9.83777 4.89615 10.2682 4.79119 10.6839 4.68131L10.6852 4.68097L11.7084 4.41665L11.4927 2.66887C11.1413 2.78388 10.7539 2.905 10.3307 3.03221L10.3267 3.0334C9.78936 3.18484 9.22774 3.33619 8.64193 3.48752L8.43142 3.54191L8.35787 3.33564C8.22062 2.95068 8.09787 2.58542 7.9897 2.23993L7.9878 2.23388C7.91817 1.98925 7.85352 1.75464 7.7937 1.53012L6.21491 2.19434C6.29267 2.40378 6.36778 2.61324 6.44022 2.82273C6.54719 3.09412 6.64937 3.36062 6.74673 3.62221L6.84708 3.89182L6.56629 3.94389C5.8033 4.0854 5.05472 4.20675 4.32057 4.3079C3.68882 4.39494 3.10571 4.45239 2.57158 4.47989L2.80029 6.28784ZM9.71115 10.3048C9.6487 10.2914 9.58578 10.2794 9.52238 10.2689L9.51484 10.2676C9.22745 10.2101 8.94604 10.1815 8.6703 10.1815C8.13522 10.1815 7.67564 10.2815 7.28533 10.474L7.28316 10.4751C7.00037 10.611 6.84886 10.7782 6.79 10.9758C7.24734 10.953 7.76208 10.8728 8.33547 10.733C8.8074 10.6127 9.26594 10.47 9.71115 10.3048Z" fill="black"/></svg>`;
+
+        }
+      })();
+    }
+  }
+
+  window.customElements.define("tc-favicon", TcFavicon);</script>
+
+
+
+</body>
+</html>
