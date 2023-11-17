@@ -1,6 +1,6 @@
 <article>
   <header>
-    <!--- Title ---> 
+    <!--- Title --->
     <h1 webc:if="complete" @text="postTitle"></h1>
     <h2 webc:else>
       <a :href="postUrl" @text="postTitle"></a>
@@ -13,27 +13,27 @@
       <span webc:if="readingTime(postContent) == 1" @text="labels.blog.minute"></span>
       <span webc:else @text="labels.blog.minutes"></span>
       <br>
-      <span @text="labels.blog.tags"></span>: 
-      <a webc:for="tag of postTags" 
-         webc:if="tag != 'blog'" 
-         :href="tagUrl(tag, page.lang)" 
+      <span @text="labels.blog.tags"></span>:
+      <a webc:for="tag of postTags"
+         webc:if="tag != 'blog' && tag != 'es' && tag != 'en'"
+         :href="tagUrl(tag, page.lang)"
          @text="tag"></a>
 
     </p>
     <em webc:elseif="!home" @text="dateFormat(postDate, page.lang)"></em>
   </header>
 
-  <!--- Abstract/content ---> 
-  <div webc:if="complete" 
+  <!--- Abstract/content --->
+  <div webc:if="complete"
     @html="postContent"></div>
-  <div webc:elseif="long" 
+  <div webc:elseif="long"
     @html="abstract(postContent, 500)"></div>
-  <div webc:elseif="short" 
+  <div webc:elseif="short"
     @html="abstract(postContent)"></div>
 
   <!--- Read More --->
   <p webc:if="postMore">
-    <a :href="postUrl" 
+    <a :href="postUrl"
       @text="labels.blog.more"></a>
   </p>
 
@@ -55,7 +55,7 @@
     margin-block-end: 5rem;
   }
 
-  article header h1, 
+  article header h1,
   article header h2 {
     margin-block-end: 0;
   }
@@ -84,7 +84,7 @@
     margin-block-start: 2em;
   }
 
-  article ul, 
+  article ul,
   article ol {
     padding-inline-start: 0;
     list-style-position: inside;
@@ -112,29 +112,50 @@
   article footer {
     margin-block-start: 4rem;
   }
+
+  .hljs-addition::before {
+    content: '+';
+    user-select: none
+  }
+
+  .hljs-deletion {
+    user-select: none;
+  }
 </style>
 
-<script src="../assets/scripts/microlight.js" webc:bucket="defer"></script>
-<script webc:bucket="defer">
+<div webc:nokeep webc:if="complete">
+<span @text="complete"></span>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" media="(prefers-color-scheme: dark)" webc:keep>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" media="(prefers-color-scheme: light)" webc:keep>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" webc:keep></script>
+  <!---<script src="../assets/scripts/microlight.js" webc:bucket="defer"></script>--->
+  <script webc:bucket="defer">
   // Syntax highligting
-  const codeBlocks = document.querySelectorAll('pre');
-  codeBlocks.forEach((block) => {
-    block.classList.add('microlight');
-  })
+  hljs.highlightAll();
+
+  setTimeout(() => {
+      const additions = document.querySelectorAll('.hljs-addition');
+      additions.forEach((addition) => {
+          const str = addition.innerText
+          addition.innerText = str.substring(1);
+          })
+      }, 50)
 
   // Add image descriptions
   const images = document.querySelectorAll('img');
   images.forEach((image) => {
-    const alt = document.createElement('span');
-    alt.innerText = image.alt;
-    image.after(alt);
-  });
+      const alt = document.createElement('span');
+      alt.innerText = image.alt;
+      image.after(alt);
+      });
 
   // Add target _blank to external links
   const links = document.querySelectorAll('a');
   links.forEach((link) => {
-    if (!link.href.includes(window.location.origin)) {
+      if (!link.href.includes(window.location.origin)) {
       link.target = "_blank"
-    }
-  });
-</script>
+      }
+      });
+  </script>
+
+</div>

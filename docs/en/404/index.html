@@ -28,6 +28,7 @@
   <style>:root {
     --color-bg: white;
     --color-fg: #333333;
+    --color-code-bg:#eeeeee;
     --color-accent: var(--color-fg);
     --font: 'Lora', serif;
     --font-mono: 'Source Code Pro', monospace;
@@ -36,8 +37,9 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --color-bg: #2b2b33;
+      --color-bg: #222222;
       --color-fg: #dddddd;
+      --color-code-bg: #111111;
     }
   }
 
@@ -141,12 +143,14 @@
 
   code, pre {
     font-family: var(--font-mono);
+    background-color: var(--color-code-bg) !important;
   }
 
   pre {
     padding: 1em;
-    background-color: var(--color-fg);
-    color: var(--color-bg);
+    /* background-color: var(--color-fg); */
+    /* color: var(--color-bg); */
+    overflow-x: auto;
   }
 
   blockquote {
@@ -546,7 +550,7 @@ class TcFavicon extends HTMLElement {
         '10_30': '🎃',
         '10_31': '🎃',
         '11_1': '️️⚱️',
-        '12_8': '️🕯️',
+        '12_7': '️🕯️',
         '12_16': '🎄',
         '12_17': '🎄',
         '12_18': '🎄',
