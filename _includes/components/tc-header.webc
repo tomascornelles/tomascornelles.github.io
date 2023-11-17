@@ -14,19 +14,19 @@
     <span>Tomás</span>
   </a>
 
-  <details role="nav">
+  <details>
     <summary @text="labels.menu.title"></summary>
     <ul>
       <li>
-        <a :href="labels.menu.items.home.url" 
+        <a :href="labels.menu.items.home.url"
           @text="labels.menu.items.home.title"></a>
       </li>
       <li>
-        <a :href="labels.menu.items.contact.url" 
+        <a :href="labels.menu.items.contact.url"
           @text="labels.menu.items.contact.title"></a>
       </li>
       <li>
-        <a :href="labels.menu.items.blog.url" 
+        <a :href="labels.menu.items.blog.url"
           @text="labels.menu.items.blog.title"></a>
       </li>
     </ul>
@@ -52,7 +52,7 @@
     font-weight: 400;
     font-family: var(--font-mono);
   }
-  
+
   header > * {
     flex-grow: 1;
     width: 100%;
@@ -181,7 +181,7 @@
   document.querySelectorAll('header details a').forEach((item) => {
     item.addEventListener('click', () => {
       document.querySelector('header details').removeAttribute("open");
-    });  
+    });
   });
 
   document.querySelector('header > p').addEventListener('click', () => {

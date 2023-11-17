@@ -210,7 +210,7 @@ header {
     font-weight: 400;
     font-family: var(--font-mono);
   }
-  
+
   header > * {
     flex-grow: 1;
     width: 100%;
@@ -393,7 +393,7 @@ footer section {
     <span>Tomás</span>
   </a>
 
-  <details role="nav">
+  <details>
     <summary>menu</summary>
     <ul>
       <li>
@@ -524,7 +524,7 @@ window.onscroll = () => {
   document.querySelectorAll('header details a').forEach((item) => {
     item.addEventListener('click', () => {
       document.querySelector('header details').removeAttribute("open");
-    });  
+    });
   });
 
   document.querySelector('header > p').addEventListener('click', () => {
