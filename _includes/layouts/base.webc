@@ -20,8 +20,8 @@
   <meta name="theme-color" content="white">
 
   <!--- Fonts are loaded after the page --->
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:wght@300;400;700&display=swap" 
-        rel="preload" 
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:wght@300;400;700&display=swap"
+        rel="preload"
         as="font"
         onload="this.onload=null;this.rel='stylesheet'"
         webc:keep>
@@ -36,7 +36,7 @@
 
 <body>
   <tc-header webc:nokeep
-    :title="title" 
+    :title="title"
     :langs="langs"
     :labels="labels"></tc-header>
 
@@ -51,8 +51,10 @@
 
   <tc-favicon></tc-favicon>
 
-  <script webc:keep 
+  <script webc:keep
     @raw="getBundle('js', 'defer')"></script>
+
+  <script src="https://cdn.counter.dev/script.js" data-id="849f7333-4359-49fc-a4c0-207458e89c89" data-utcoffset="1" webc:keep></script>
 </body>
 
 </html>
