@@ -625,6 +625,11 @@ footer section {
   <tc-favicon>
 </tc-favicon>
 
+  <tc-analytics><script async src="https://analytics.eu.umami.is/script.js" data-website-id="0bb2094c-801c-426f-917f-0da2ae79f5c2"></script>
+
+
+</tc-analytics>
+
   <script>// Syntax highligting
   hljs.highlightAll();
 
@@ -727,9 +732,15 @@ class TcFavicon extends HTMLElement {
     }
   }
 
-  window.customElements.define("tc-favicon", TcFavicon);</script>
-
-  <script async src="https://analytics.eu.umami.is/script.js" data-website-id="0bb2094c-801c-426f-917f-0da2ae79f5c2"></script>
+  window.customElements.define("tc-favicon", TcFavicon);
+document.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+        umami.track(/^http.*/.test(link.href)
+            ? 'external-link'
+            : 'local-link',
+            {target: link.href})
+        })
+    })</script>
 
 
 
