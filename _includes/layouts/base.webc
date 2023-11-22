@@ -51,10 +51,10 @@
 
   <tc-favicon></tc-favicon>
 
+  <tc-analytics></tc-analytics>
+
   <script webc:keep
     @raw="getBundle('js', 'defer')"></script>
-
-  <script async src="https://analytics.eu.umami.is/script.js" data-website-id="0bb2094c-801c-426f-917f-0da2ae79f5c2" webc:keep></script>
 </body>
 
 </html>
