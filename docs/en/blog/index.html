@@ -801,13 +801,12 @@ class TcFavicon extends HTMLElement {
   }
 
   window.customElements.define("tc-favicon", TcFavicon);
-const BUTTONS = 'a:not([href^="http://localhost"]):not([href^="#"]):not([href^="/"])';
-
-console.log('Entra')
-document.querySelectorAll(BUTTONS).forEach((button) => {
-    console.log(button);
-    button.addEventListener('click', () => {
-        umami.track('external-link', {page: document.location.pathname, target: button.href})
+document.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+        umami.track(/^http.*/.test(link.href)
+            ? 'external-link'
+            : 'local-link',
+            {target: link.href})
         })
     })</script>
 
