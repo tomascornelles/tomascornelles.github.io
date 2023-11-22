@@ -737,14 +737,54 @@ class TcFavicon extends HTMLElement {
   }
 
   window.customElements.define("tc-favicon", TcFavicon);
+const NAMES = {
+  LOCAL: 'local',
+  EXTERNAL: 'external',
+  CLASSGAP: 'classgap',
+  SOCIAL: 'social'
+}
+const isLocalLink = (link) => {
+  const LOCAL_DOMAINS = ['localhost', 'tomascornelles.com'];
+  const FILTERED_DOMAINS = LOCAL_DOMAINS.filter((domain) => link.includes(domain));
+
+  return !!FILTERED_DOMAINS.length;
+}
+
+const setName = (link) => {
+  const {
+    LOCAL,
+    EXTERNAL,
+    CLASSGAP,
+    SOCIAL
+  } = NAMES;
+
+  if (link.includes('classgap'))
+    return CLASSGAP
+  else if (link.includes('localhost')
+    || link.includes('tomascornelles.com'))
+    return LOCAL
+  else if (link.includes('https://mastodon.world/@tomascornelles')
+    || link.includes('https://www.linkedin.com/in/tomascornelles/')
+    || link.includes('https://github.com/tomascornelles')
+    || link.includes('hola@tomascornelles.com'))
+    return SOCIAL
+  else if (link.includes('http'))
+    return EXTERNAL
+  else
+    return LOCAL
+}
+
 document.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-        umami.track(/^http.*/.test(link.href)
-            ? 'external-link'
-            : 'local-link',
-            {target: link.href})
-        })
-    })</script>
+  link.addEventListener('click', () => {
+    umami.track(
+      setName(link.href),
+      {
+        'url': document.location.pathname,
+        'target': link.href,
+      }
+    );
+  });
+});</script>
 
 
 

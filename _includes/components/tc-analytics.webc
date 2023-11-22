@@ -1,13 +1,53 @@
 <script async src="https://analytics.eu.umami.is/script.js" data-website-id="0bb2094c-801c-426f-917f-0da2ae79f5c2" webc:keep></script>
 
 <script webc:bucket="defer">
+const NAMES = {
+  LOCAL: 'local',
+  EXTERNAL: 'external',
+  CLASSGAP: 'classgap',
+  SOCIAL: 'social'
+}
+const isLocalLink = (link) => {
+  const LOCAL_DOMAINS = ['localhost', 'tomascornelles.com'];
+  const FILTERED_DOMAINS = LOCAL_DOMAINS.filter((domain) => link.includes(domain));
+
+  return !!FILTERED_DOMAINS.length;
+}
+
+const setName = (link) => {
+  const {
+    LOCAL,
+    EXTERNAL,
+    CLASSGAP,
+    SOCIAL
+  } = NAMES;
+
+  if (link.includes('classgap'))
+    return CLASSGAP
+  else if (link.includes('localhost')
+    || link.includes('tomascornelles.com'))
+    return LOCAL
+  else if (link.includes('https://mastodon.world/@tomascornelles')
+    || link.includes('https://www.linkedin.com/in/tomascornelles/')
+    || link.includes('https://github.com/tomascornelles')
+    || link.includes('hola@tomascornelles.com'))
+    return SOCIAL
+  else if (link.includes('http'))
+    return EXTERNAL
+  else
+    return LOCAL
+}
+
 document.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-        umami.track(/^http.*/.test(link.href)
-            ? 'external-link'
-            : 'local-link',
-            {target: link.href})
-        })
-    })
+  link.addEventListener('click', () => {
+    umami.track(
+      setName(link.href),
+      {
+        'url': document.location.pathname,
+        'target': link.href,
+      }
+    );
+  });
+});
 
 </script>
