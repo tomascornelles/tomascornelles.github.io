@@ -632,7 +632,7 @@ footer section {
   <tc-favicon>
 </tc-favicon>
 
-  <tc-analytics><script async src="https://analytics.eu.umami.is/script.js" data-website-id="0bb2094c-801c-426f-917f-0da2ae79f5c2"></script>
+  <tc-analytics><script async src="https://analytics.eu.umami.is/script.js" data-website-id="0bb2094c-801c-426f-917f-0da2ae79f5c2" data-do-not-track="true" data-domains="tomascornelles.com"></script>
 
 
 </tc-analytics>
@@ -760,8 +760,7 @@ const setName = (link) => {
 
   if (link.includes('classgap'))
     return CLASSGAP
-  else if (link.includes('localhost')
-    || link.includes('tomascornelles.com'))
+  else if (link.includes('tomascornelles.com'))
     return LOCAL
   else if (link.includes('https://mastodon.world/@tomascornelles')
     || link.includes('https://www.linkedin.com/in/tomascornelles/')
