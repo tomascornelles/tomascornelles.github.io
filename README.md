@@ -1,4 +1,4 @@
-# Welcome to <img src="https://tomascornelles.com/assets/images/favicon.png" alt="さ"> Tomas Cornelles' Personal Website 👋
+# <img src="https://tomascornelles.com/assets/images/favicon.png" alt="さ"> Tomas Cornelles' Personal Website 👋
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/tomascornelles/tomascornelles.github.io)
 ![GitHub repo size](https://img.shields.io/github/repo-size/tomascornelles/tomascornelles.github.io)
