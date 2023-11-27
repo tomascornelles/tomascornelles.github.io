@@ -1,11 +1,11 @@
-# Welcome to Tomas Cornelles' Personal Website 👋
+# Welcome to <img src="https://tomascornelles.com/assets/images/favicon.png" alt="さ"> Tomas Cornelles' Personal Website 👋
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/tomascornelles/tomascornelles.github.io)
 ![GitHub repo size](https://img.shields.io/github/repo-size/tomascornelles/tomascornelles.github.io)
 ![GitHub issues](https://img.shields.io/github/issues-raw/tomascornelles/tomascornelles.github.io)
 ![GitHub stars](https://img.shields.io/github/stars/tomascornelles/tomascornelles.github.io?style=social)
 
-<img src="https://tomascornelles.com/assets/images/favicon.png" alt="さ">
+
 
 This is the repository for Tomas Cornelles' personal website. Here, you'll find the source code and assets that power Tomas's corner of the internet.
 
