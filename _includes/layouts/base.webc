@@ -20,7 +20,12 @@
   <meta name="theme-color" content="white">
 
   <!--- Fonts are loaded after the page --->
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:wght@300;400;700&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="preload"
+        as="font"
+        onload="this.onload=null;this.rel='stylesheet'"
+        webc:keep>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap"
         rel="preload"
         as="font"
         onload="this.onload=null;this.rel='stylesheet'"
