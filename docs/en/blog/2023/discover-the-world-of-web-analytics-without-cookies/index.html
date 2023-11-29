@@ -777,7 +777,7 @@ const setName = (link) => {
     ? 'EMAIL'
     : link.replace(/\/$/, '').split('/').pop();
 
-  return `/${to} ← /${from}`
+  return `[${to.substring(0, 20) || "/"}] ← [${from.substring(0, 20) || "/"}]`
 }
 
 document.querySelectorAll('a').forEach((link) => {
