@@ -1,10 +1,12 @@
 ---
+eleventyExcludeFromCollections: true
 title: "Optimizando la Productividad en el Trabajo Remoto"
 date: 2023-12-01
 description: "Optimiza tu jornada laboral remota con estrategias probadas para mejorar la eficiencia y mantener el equilibrio."
 tags:
   - teletrabajo
   - productividad
+en: "/en/blog/2023/optimizing-productivity-remote-work/"
 ---
 
 En el contexto actual, el concepto de trabajo desde casa ha transcendido más allá de ser una simple tendencia para transformarse en una realidad laboral omnipresente. A pesar de la flexibilidad que esta modalidad proporciona, también presenta desafíos únicos que requieren abordajes específicos para mantener niveles óptimos de productividad. En este artículo, nos sumergiremos en estrategias prácticas que van más allá de los métodos convencionales, proporcionándote herramientas clave para potenciar tu eficiencia y rendimiento mientras te desempeñas en un entorno laboral remoto. Exploraremos tácticas concretas diseñadas para optimizar cada aspecto de tu experiencia de trabajo desde casa, desde la configuración de tu espacio hasta la gestión eficaz del tiempo y la comunicación efectiva con tu equipo. ¡Acompáñanos en este viaje hacia la excelencia en el trabajo remoto!

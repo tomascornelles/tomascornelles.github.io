@@ -32,6 +32,12 @@
   <!--- styles --->
   <style @raw="getBundle('css', 'base')" webc:keep></style>
   <style @raw="getBundle('css')" webc:keep></style>
+
+  <script async src="https://analytics.eu.umami.is/script.js"
+    data-website-id="0bb2094c-801c-426f-917f-0da2ae79f5c2"
+    data-do-not-track="true"
+    data-domains="tomascornelles.com"
+    webc:keep></script>
 </head>
 
 <body>

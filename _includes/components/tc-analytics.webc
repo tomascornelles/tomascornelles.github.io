@@ -1,56 +1,31 @@
-<script async src="https://analytics.eu.umami.is/script.js"
-  data-website-id="0bb2094c-801c-426f-917f-0da2ae79f5c2"
-  data-do-not-track="true"
-  data-domains="tomascornelles.com"
-  webc:keep></script>
-
 <script webc:bucket="defer">
-const NAMES = {
-  LOCAL: 'local',
-  EXTERNAL: 'external',
-  CLASSGAP: 'classgap',
-  SOCIAL: 'social'
-}
-const isLocalLink = (link) => {
-  const LOCAL_DOMAINS = ['localhost', 'tomascornelles.com'];
-  const FILTERED_DOMAINS = LOCAL_DOMAINS.filter((domain) => link.includes(domain));
-
-  return !!FILTERED_DOMAINS.length;
-}
+const LOCAL_DOMAINS = ['http://localhost:8080', 'https://tomascornelles.com'];
 
 const setName = (link) => {
-  const {
-    LOCAL,
-    EXTERNAL,
-    CLASSGAP,
-    SOCIAL
-  } = NAMES;
+  LOCAL_DOMAINS.forEach((DOMAIN) => {
+    if (link.includes(DOMAIN)) {
+      link = link.split(DOMAIN)[1];
+    }
+  });
 
-  if (link.includes('classgap'))
-    return CLASSGAP
-  else if (link.includes('tomascornelles.com'))
-    return LOCAL
-  else if (link.includes('https://mastodon.world/@tomascornelles')
-    || link.includes('https://www.linkedin.com/in/tomascornelles/')
-    || link.includes('https://github.com/tomascornelles')
-    || link.includes('hola@tomascornelles.com'))
-    return SOCIAL
-  else if (link.includes('http'))
-    return EXTERNAL
-  else
-    return LOCAL
+  const from = document.location.pathname.replace(/\/$/, '').split('/').pop()
+  const to = (link.includes('https://www.classgap.com/me/tomas-cornelles'))
+    ? 'CLASSGAP'
+    : (link.includes('https://www.linkedin.com/in/tomascornelles/'))
+    ? 'LINKEDIN'
+    : (link.includes('https://github.com/tomascornelles'))
+    ? 'GITHUB'
+    : (link.includes('https://mastodon.world/@tomascornelles'))
+    ? 'MASTONDON'
+    : (link.includes('hola@tomascornelles.com'))
+    ? 'EMAIL'
+    : link.replace(/\/$/, '').split('/').pop();
+
+  return `/${to} ← /${from}`
 }
 
 document.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    umami.track(
-      setName(link.href),
-      {
-        'url': document.location.pathname,
-        'target': link.href,
-      }
-    );
-  });
+  link.dataset.umamiEvent = setName(link.href);
 });
 
 </script>

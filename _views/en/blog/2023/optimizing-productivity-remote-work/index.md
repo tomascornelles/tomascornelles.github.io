@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: true
 title: "Optimizing Productivity in Remote Work"
 date: 2023-12-01
 description: "Enhance your remote workday with proven strategies to improve efficiency and maintain balance."

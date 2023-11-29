@@ -12,13 +12,15 @@
       <span @text="readingTime(postContent)"></span>
       <span webc:if="readingTime(postContent) == 1" @text="labels.blog.minute"></span>
       <span webc:else @text="labels.blog.minutes"></span>
+      <br webc:if="postEn || postEs">
+      <a webc:if="postEn" :href="postEn">Also available in English</a>
+      <a webc:if="postEs" :href="postEs">Tambien disponible en Español</a>
       <br>
       <span @text="labels.blog.tags"></span>:
       <a webc:for="tag of postTags"
          webc:if="tag != 'blog' && tag != 'es' && tag != 'en'"
          :href="tagUrl(tag, page.lang)"
          @text="tag"></a>
-
     </p>
     <em webc:elseif="!home" @text="dateFormat(postDate, page.lang)"></em>
   </header>
@@ -129,10 +131,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" webc:keep></script>
   <!---<script src="../assets/scripts/microlight.js" webc:bucket="defer"></script>--->
   <script webc:bucket="defer">
-  // Syntax highligting
-  hljs.highlightAll();
+    // Syntax highligting
+    hljs.highlightAll();
 
-  setTimeout(() => {
+    setTimeout(() => {
       const additions = document.querySelectorAll('.hljs-addition');
       additions.forEach((addition) => {
           const str = addition.innerText
@@ -140,20 +142,12 @@
           })
       }, 50)
 
-  // Add image descriptions
-  const images = document.querySelectorAll('img');
-  images.forEach((image) => {
-      const alt = document.createElement('span');
-      alt.innerText = image.alt;
-      image.after(alt);
-      });
-
-  // Add target _blank to external links
-  const links = document.querySelectorAll('a');
-  links.forEach((link) => {
-      if (!link.href.includes(window.location.origin)) {
-      link.target = "_blank"
-      }
-      });
+    // Add image descriptions
+    const images = document.querySelectorAll('img');
+    images.forEach((image) => {
+        const alt = document.createElement('span');
+        alt.innerText = image.alt;
+        image.after(alt);
+        });
   </script>
 </div>
