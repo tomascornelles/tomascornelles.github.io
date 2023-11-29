@@ -437,6 +437,8 @@ footer section {
       flex-direction: row-reverse;
     }
   }</style>
+
+  <script async src="https://analytics.eu.umami.is/script.js" data-website-id="0bb2094c-801c-426f-917f-0da2ae79f5c2" data-do-not-track="true" data-domains="tomascornelles.com"></script>
 </head>
 
 <body>
@@ -489,12 +491,14 @@ footer section {
       <span>4</span>
       
       <span>minutes</span>
+      
+      
+      
       <br>
       <span>Tags</span>:
       <a href="/en/blog/tag/analytics">analytics</a>
 <a href="/en/blog/tag/tracking">tracking</a>
 <a href="/en/blog/tag/privacy">privacy</a>
-
     </p>
     
   </header>
@@ -645,15 +649,13 @@ footer section {
   <tc-favicon>
 </tc-favicon>
 
-  <tc-analytics><script async src="https://analytics.eu.umami.is/script.js" data-website-id="0bb2094c-801c-426f-917f-0da2ae79f5c2" data-do-not-track="true" data-domains="tomascornelles.com"></script>
-
-
+  <tc-analytics>
 </tc-analytics>
 
   <script>// Syntax highligting
-  hljs.highlightAll();
+    hljs.highlightAll();
 
-  setTimeout(() => {
+    setTimeout(() => {
       const additions = document.querySelectorAll('.hljs-addition');
       additions.forEach((addition) => {
           const str = addition.innerText
@@ -661,21 +663,13 @@ footer section {
           })
       }, 50)
 
-  // Add image descriptions
-  const images = document.querySelectorAll('img');
-  images.forEach((image) => {
-      const alt = document.createElement('span');
-      alt.innerText = image.alt;
-      image.after(alt);
-      });
-
-  // Add target _blank to external links
-  const links = document.querySelectorAll('a');
-  links.forEach((link) => {
-      if (!link.href.includes(window.location.origin)) {
-      link.target = "_blank"
-      }
-      });
+    // Add image descriptions
+    const images = document.querySelectorAll('img');
+    images.forEach((image) => {
+        const alt = document.createElement('span');
+        alt.innerText = image.alt;
+        image.after(alt);
+        });
 window.onscroll = () => {
     const height = window.innerHeight;
     document.querySelector('header').classList.toggle('sticky', window.scrollY > 250);
@@ -695,6 +689,14 @@ window.onscroll = () => {
 const today = new Date();
   const year = today.getFullYear();
   document.querySelector('#year').innerHTML = year;
+
+  // Add target _blank to external links
+  const links = document.querySelectorAll('a');
+  links.forEach((link) => {
+    if (!link.href.includes(window.location.origin)) {
+      link.target = "_blank"
+    }
+  });
 class TcFavicon extends HTMLElement {
     connectedCallback() {
       const link = document.querySelector("link")
@@ -753,52 +755,33 @@ class TcFavicon extends HTMLElement {
   }
 
   window.customElements.define("tc-favicon", TcFavicon);
-const NAMES = {
-  LOCAL: 'local',
-  EXTERNAL: 'external',
-  CLASSGAP: 'classgap',
-  SOCIAL: 'social'
-}
-const isLocalLink = (link) => {
-  const LOCAL_DOMAINS = ['localhost', 'tomascornelles.com'];
-  const FILTERED_DOMAINS = LOCAL_DOMAINS.filter((domain) => link.includes(domain));
-
-  return !!FILTERED_DOMAINS.length;
-}
+const LOCAL_DOMAINS = ['http://localhost:8080', 'https://tomascornelles.com'];
 
 const setName = (link) => {
-  const {
-    LOCAL,
-    EXTERNAL,
-    CLASSGAP,
-    SOCIAL
-  } = NAMES;
+  LOCAL_DOMAINS.forEach((DOMAIN) => {
+    if (link.includes(DOMAIN)) {
+      link = link.split(DOMAIN)[1];
+    }
+  });
 
-  if (link.includes('classgap'))
-    return CLASSGAP
-  else if (link.includes('tomascornelles.com'))
-    return LOCAL
-  else if (link.includes('https://mastodon.world/@tomascornelles')
-    || link.includes('https://www.linkedin.com/in/tomascornelles/')
-    || link.includes('https://github.com/tomascornelles')
-    || link.includes('hola@tomascornelles.com'))
-    return SOCIAL
-  else if (link.includes('http'))
-    return EXTERNAL
-  else
-    return LOCAL
+  const from = document.location.pathname.replace(/\/$/, '').split('/').pop()
+  const to = (link.includes('https://www.classgap.com/me/tomas-cornelles'))
+    ? 'CLASSGAP'
+    : (link.includes('https://www.linkedin.com/in/tomascornelles/'))
+    ? 'LINKEDIN'
+    : (link.includes('https://github.com/tomascornelles'))
+    ? 'GITHUB'
+    : (link.includes('https://mastodon.world/@tomascornelles'))
+    ? 'MASTONDON'
+    : (link.includes('hola@tomascornelles.com'))
+    ? 'EMAIL'
+    : link.replace(/\/$/, '').split('/').pop();
+
+  return `/${to} ← /${from}`
 }
 
 document.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    umami.track(
-      setName(link.href),
-      {
-        'url': document.location.pathname,
-        'target': link.href,
-      }
-    );
-  });
+  link.dataset.umamiEvent = setName(link.href);
 });</script>
 
 

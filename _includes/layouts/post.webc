@@ -3,13 +3,15 @@ layout: base.webc
 date: 2023-09-19
 ---
 
-<tc-post 
+<tc-post
   webc:nokeep
   :@post-title="title"
   :@post-content="content"
   :@post-date="date"
   :@post-url="url"
   :@post-tags="tags"
+  :@post-en="en"
+  :@post-es="es"
   :@complete="true"
   :@page="page"
   :labels="labels"

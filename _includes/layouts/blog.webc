@@ -4,16 +4,16 @@ layout: base.webc
 
 <h1 @text="title"></h1>
 <section id="blog">
-  <tc-post 
+  <tc-post
     webc:nokeep
     webc:for="(post, index) of collections[page.lang].reverse()"
     :@post-title="post.data.title"
     :@post-content="post.content"
     :@post-date="post.date"
     :@post-url="post.url"
-    :@post-more="index < 3"
+    :@post-more="index < 5"
     :@long="index == 0"
-    :@short="index < 3"
+    :@short="index < 5"
     :labels="labels"
     ></tc-post>
 </section>
@@ -36,7 +36,7 @@ layout: base.webc
     margin-block-start: 0;
   }
 
-  #blog article:nth-child(n+4) {
+  #blog article:nth-child(n+6) {
     margin-block-end: 0;
   }
 
@@ -45,7 +45,7 @@ layout: base.webc
       width: calc(50% - 3 * var(--unit));
     }
 
-    #blog article:nth-child(n+4) {
+    #blog article:nth-child(n+6) {
       width: 100%;
     }
   }

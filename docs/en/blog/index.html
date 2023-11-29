@@ -272,7 +272,7 @@
     margin-block-start: 0;
   }
 
-  #blog article:nth-child(n+4) {
+  #blog article:nth-child(n+6) {
     margin-block-end: 0;
   }
 
@@ -281,7 +281,7 @@
       width: calc(50% - 3 * var(--unit));
     }
 
-    #blog article:nth-child(n+4) {
+    #blog article:nth-child(n+6) {
       width: 100%;
     }
   }
@@ -467,6 +467,8 @@ footer section {
       flex-direction: row-reverse;
     }
   }</style>
+
+  <script async src="https://analytics.eu.umami.is/script.js" data-website-id="0bb2094c-801c-426f-917f-0da2ae79f5c2" data-do-not-track="true" data-domains="tomascornelles.com"></script>
 </head>
 
 <body>
@@ -607,10 +609,12 @@ footer section {
   
   
   
-  
+  <div><p>Today, I want to share how I create and use lists in my daily life to stay well-organized. I've tried GTD, Autofocus, Bullet Journal, and StrikeTru, but in the end, I've ended up with a bit of each...</p></div>
 
   
-  
+  <p>
+    <a href="/en/blog/2023/use-lists-to-be-more-productive/">Continue reading</a>
+  </p>
 
   
 </article>
@@ -633,10 +637,13 @@ footer section {
   
   
   
-  
+  <div><p>It's common to see programmers' terminals and text editors with colored text on dark backgrounds, and since operating systems allow for system-wide dark mode, even more so.</p>
+<p>I won't say that ...</p></div>
 
   
-  
+  <p>
+    <a href="/en/blog/2023/defending-light-mode/">Continue reading</a>
+  </p>
 
   
 </article>
@@ -744,9 +751,7 @@ footer section {
   <tc-favicon>
 </tc-favicon>
 
-  <tc-analytics><script async src="https://analytics.eu.umami.is/script.js" data-website-id="0bb2094c-801c-426f-917f-0da2ae79f5c2" data-do-not-track="true" data-domains="tomascornelles.com"></script>
-
-
+  <tc-analytics>
 </tc-analytics>
 
   <script>window.onscroll = () => {
@@ -768,6 +773,14 @@ footer section {
 const today = new Date();
   const year = today.getFullYear();
   document.querySelector('#year').innerHTML = year;
+
+  // Add target _blank to external links
+  const links = document.querySelectorAll('a');
+  links.forEach((link) => {
+    if (!link.href.includes(window.location.origin)) {
+      link.target = "_blank"
+    }
+  });
 class TcFavicon extends HTMLElement {
     connectedCallback() {
       const link = document.querySelector("link")
@@ -826,52 +839,33 @@ class TcFavicon extends HTMLElement {
   }
 
   window.customElements.define("tc-favicon", TcFavicon);
-const NAMES = {
-  LOCAL: 'local',
-  EXTERNAL: 'external',
-  CLASSGAP: 'classgap',
-  SOCIAL: 'social'
-}
-const isLocalLink = (link) => {
-  const LOCAL_DOMAINS = ['localhost', 'tomascornelles.com'];
-  const FILTERED_DOMAINS = LOCAL_DOMAINS.filter((domain) => link.includes(domain));
-
-  return !!FILTERED_DOMAINS.length;
-}
+const LOCAL_DOMAINS = ['http://localhost:8080', 'https://tomascornelles.com'];
 
 const setName = (link) => {
-  const {
-    LOCAL,
-    EXTERNAL,
-    CLASSGAP,
-    SOCIAL
-  } = NAMES;
+  LOCAL_DOMAINS.forEach((DOMAIN) => {
+    if (link.includes(DOMAIN)) {
+      link = link.split(DOMAIN)[1];
+    }
+  });
 
-  if (link.includes('classgap'))
-    return CLASSGAP
-  else if (link.includes('tomascornelles.com'))
-    return LOCAL
-  else if (link.includes('https://mastodon.world/@tomascornelles')
-    || link.includes('https://www.linkedin.com/in/tomascornelles/')
-    || link.includes('https://github.com/tomascornelles')
-    || link.includes('hola@tomascornelles.com'))
-    return SOCIAL
-  else if (link.includes('http'))
-    return EXTERNAL
-  else
-    return LOCAL
+  const from = document.location.pathname.replace(/\/$/, '').split('/').pop()
+  const to = (link.includes('https://www.classgap.com/me/tomas-cornelles'))
+    ? 'CLASSGAP'
+    : (link.includes('https://www.linkedin.com/in/tomascornelles/'))
+    ? 'LINKEDIN'
+    : (link.includes('https://github.com/tomascornelles'))
+    ? 'GITHUB'
+    : (link.includes('https://mastodon.world/@tomascornelles'))
+    ? 'MASTONDON'
+    : (link.includes('hola@tomascornelles.com'))
+    ? 'EMAIL'
+    : link.replace(/\/$/, '').split('/').pop();
+
+  return `/${to} ← /${from}`
 }
 
 document.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    umami.track(
-      setName(link.href),
-      {
-        'url': document.location.pathname,
-        'target': link.href,
-      }
-    );
-  });
+  link.dataset.umamiEvent = setName(link.href);
 });</script>
 
 
