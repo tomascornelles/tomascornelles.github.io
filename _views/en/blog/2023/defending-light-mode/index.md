@@ -6,6 +6,7 @@ tags:
     - health
     - opinion
 description: Points in favor of how light mode can be ideal for you over dark mode.
+es: /blog/2023/defendiendo-el-modo-claro/
 ---
 
 It's common to see programmers' terminals and text editors with colored text on dark backgrounds, and since operating systems allow for system-wide dark mode, even more so.

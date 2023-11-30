@@ -6,6 +6,7 @@ tags:
   - favicon
   - javascript
   - svg
+en: /en/blog/2023/use-an-emoji-as-a-favicon/
 ---
 
 Hace tiempo que Lea Verou [propuso una forma de usar emojis](https://twitter.com/LeaVerou/status/1241619866475474946) como favicon en tu web, pero he pensado que puede ser interesante recordar que con javascript se puede personalizar ese emoji según los parámetros que quieras.

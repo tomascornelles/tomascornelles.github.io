@@ -6,6 +6,7 @@ tags:
     - GTD
     - Autofocus
 description: How to use a simple system to get the most out of lists
+es: /blog/2023/usa-listas-para-ser-mas-productivo/
 ---
 
 Today, I want to share how I create and use lists in my daily life to stay well-organized. I've tried GTD, Autofocus, Bullet Journal, and StrikeTru, but in the end, I've ended up with a bit of each.

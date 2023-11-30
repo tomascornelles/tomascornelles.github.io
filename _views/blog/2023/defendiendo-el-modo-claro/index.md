@@ -6,6 +6,7 @@ tags:
     - salud
     - opinión
 description: Puntos a favor sobre como el modo claro puede ser ideal para ti frente al modo oscuro.
+en: /en/blog/2023/defending-light-mode/
 ---
 
 Es habitual ver los terminales y editores de los programadores con letras de colores sobre fondos oscuros, y desde que los sistemas operativos permiten activar el modo oscuro por todo el sistema, aún más.
@@ -64,7 +65,7 @@ Hay muchos themes para modo claro en todas las aplicaciones que lo soportan, uno
 
 ## Experiencia personal
 
-Hace tiempo que tengo astigmatismo y recientemente un neuritis en un ojo me dejó la vista tocada, me canso más que antes y he de cuidarme la visión. 
+Hace tiempo que tengo astigmatismo y recientemente un neuritis en un ojo me dejó la vista tocada, me canso más que antes y he de cuidarme la visión.
 
 Antes solía usar el modo oscuro porque asumía que era mejor para la vista, decían que cansaba menos al emitir menos luz hacia los ojos. No me detuve a analizar hasta hace unos pocos años qué es realmente lo mejor para mi.
 

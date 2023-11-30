@@ -6,6 +6,7 @@ tags:
     - scrum
     - agile
 description: Agile methodologies help developers to produce more and better software, while also generating more continuous product deliveries.
+es: /blog/2023/desarrolladores-y-la-metodologia-agile-una-combinacion-perfecta/
 ---
 
 Agile Methodology and the Scrum framework have become essential elements in the world of software development. These methodologies have revolutionized how development teams work, enabling greater flexibility, collaboration, and adaptability to changes in projects. In this article, I want to focus on the developers' perspective and how Agile and Scrum have transformed the way they approach their work. For many, this is already the usual way of working for the most of us, but not in other places.

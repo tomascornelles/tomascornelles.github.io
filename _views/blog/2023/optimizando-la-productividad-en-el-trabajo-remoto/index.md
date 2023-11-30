@@ -1,5 +1,4 @@
 ---
-eleventyExcludeFromCollections: true
 title: "Optimizando la Productividad en el Trabajo Remoto"
 date: 2023-12-01
 description: "Optimiza tu jornada laboral remota con estrategias probadas para mejorar la eficiencia y mantener el equilibrio."

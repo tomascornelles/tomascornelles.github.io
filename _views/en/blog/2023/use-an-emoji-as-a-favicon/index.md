@@ -6,6 +6,7 @@ tags:
   - favicon
   - javascript
   - svg
+es: /blog/2023/usa-un-emoji-como-favicon-segun-el-dia/
 ---
 
 It's been a while since Lea Verou [suggested a way to use emojis](https://twitter.com/LeaVerou/status/1241619866475474946) as favicons on your website, but I thought it might be interesting to remind you that with JavaScript, you can customize that emoji based on parameters of your choice.
