@@ -7,6 +7,7 @@ tags:
     - 11ty
     - a11y
 description: How I remake my personal website with 11ty.
+es: /blog/2023/mi-nuevo-site/
 ---
 
 This year, I've been thinking about updating my website a lot. The previous one was a bit outdated, not for lack of interest, but because I wasn't able to get Grow to work again after I changed laptops, I admit it.

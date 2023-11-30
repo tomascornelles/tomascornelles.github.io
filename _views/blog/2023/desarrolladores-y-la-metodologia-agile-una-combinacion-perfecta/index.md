@@ -2,11 +2,12 @@
 title: "Desarrolladores y la Metodología Agile: Una Combinación Perfecta"
 date: 2023-11-10
 tags:
-    - productividad
-    - scrum
-    - agile
+  - productividad
+  - scrum
+  - agile
 description: Las metodologías ágiles ayudan a los desarrolladores a producir más
  y mejor software, a la vez que se generan entregas más contínuas de producto.
+en: /en/blog/2023/developers-and-agile-methodology-a-perfect-match/
 ---
 
 La Metodología Agile y el marco de trabajo Scrum se han convertido en elementos esenciales en el mundo del desarrollo de software. Estas metodologías han revolucionado la forma en que los equipos de desarrollo trabajan, permitiendo una mayor **flexibilidad, colaboración y adaptabilidad** a los cambios en los proyectos. En este artículo, quiero centrarme en la perspectiva de los desarrolladores y cómo Agile y Scrum han transformado la forma en que abordan su trabajo. Para muchos esto ya es la forma habitual de trabajar, pero en otros lugares no.
@@ -21,11 +22,11 @@ Los desarrolladores desempeñan un papel fundamental en Scrum. **Son responsable
 
 ## Roles en Scrum
 
-En Scrum, los desarrolladores no son los únicos con roles definidos. También hay otros roles clave, como el Scrum Master y el Product Owner. 
+En Scrum, los desarrolladores no son los únicos con roles definidos. También hay otros roles clave, como el Scrum Master y el Product Owner.
 
 ### Scrum Master
 
-El Scrum Master actúa como facilitador y líder del equipo, asegurando que se sigan los principios de Scrum y que se eliminen los obstáculos para el equipo de desarrollo. 
+El Scrum Master actúa como facilitador y líder del equipo, asegurando que se sigan los principios de Scrum y que se eliminen los obstáculos para el equipo de desarrollo.
 
 ### Product Owner
 

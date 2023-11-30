@@ -7,6 +7,7 @@ tags:
     - 11ty
     - a11y
 description: Como rehice mi web personal con 11ty
+en: /en/blog/2023/my-new-website/
 ---
 
 Durante este año han sido muchas veces las que se me ha pasado por la cabeza actualizar mi sitio web. El anterior, andaba algo desactualizado, no por falta de interes, sino porque desde que me cambié de portatil no fui capaz de hacer funcionar Grow de nuevo, lo reconozco.
@@ -49,7 +50,7 @@ El espaciado entre elementos ayuda a crear un diseño **claro y conciso**. El us
 
 Una novedad en mi site es el multilenguaje, esta vez quiero escribir en inglés también y por eso todo el site está preparado para ello. La estructura de vistas esta separada por carpetas y todas las templates son compartidas y sepradas del contenido con el uso de labels.
 
-Otra novedad es el foco del site, ya no es tanto un porfolio online, de hecho deja de serlo, para ser una landing hacia **[ClassGap](https://www.classgap.com/me/tomas-cornelles)**, la plataforma donde imparto clases sobre programación frontend. 
+Otra novedad es el foco del site, ya no es tanto un porfolio online, de hecho deja de serlo, para ser una landing hacia **[ClassGap](https://www.classgap.com/me/tomas-cornelles)**, la plataforma donde imparto clases sobre programación frontend.
 
 Estas novedades vienen acompañadas de una nueva imagen, más sobria y madura, en blanco y negro. El logo está generado con una [webapp](//apps.tomascornelles.com/inkan/) que creé hace un tiempo para la imagen anterior, pero como no se podia ver en tamaño reducido, creé esta version solida y jugar con la forma como si fuera el cursor de la terminal de comandos en que trabajamos. Según como lo veas tambien parece un teléfono apagado 😉.
 
