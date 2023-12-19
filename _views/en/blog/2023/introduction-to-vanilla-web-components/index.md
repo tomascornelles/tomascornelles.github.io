@@ -10,16 +10,15 @@ Web Components stand as a **set of standards** that enable the construction of m
 
 This approach to development without external dependencies underscores the versatility and intrinsic power of JavaScript as a language that allows the creation of **independent and highly efficient web components**. By doing so, flexibility and portability are fostered, facilitating seamless integration into a variety of projects without the challenges associated with potential dependency conflicts.
 
-In this journey, we will immerse ourselves in the four essential pillars: **Custom Elements, Shadow DOM, HTML Templates, and HTML Imports**. These standards, when skillfully combined and applied, pave the way for the creation of standalone and encapsulated web components, offering a broad spectrum of possibilities in terms of design and functionality.
+In this journey, we will immerse ourselves in the four essential pillars: **Custom Elements, Shadow DOM and HTML Templates**. These standards, when skillfully combined and applied, pave the way for the creation of standalone and encapsulated web components, offering a broad spectrum of possibilities in terms of design and functionality.
 
 ## What are Web Components?
 
-Web Components consist of four core standards: Custom Elements, Shadow DOM, HTML Templates, and HTML Imports. These standards work together to facilitate the creation of standalone and encapsulated web components.
+Web Components consist of four core standards: Custom Elements, Shadow DOM and HTML Templates. These standards work together to facilitate the creation of standalone and encapsulated web components.
 
 - **Custom Elements:** Enable the creation of new HTML elements with specific behaviors.
 - **Shadow DOM:** Provides encapsulation akin to shadowing, allowing a component to have its own DOM tree isolated from the main DOM.
 - **HTML Templates:** Enable the definition of HTML fragments that can be cloned and used dynamically.
-- **HTML Imports:** While deprecated, they allowed for easy importing and reusing of HTML components.
 
 ### Custom Elements
 
@@ -117,21 +116,6 @@ The template can be defined in the HTML of the page:
 
 ```
 
-### HTML Imports
-
-While HTML Imports are deprecated, it's interesting to mention how they were used to import and reuse HTML components easily. Here's a basic example:
-
-```html
-<!-- Import a component -->
-<link rel="import" href="my-component.html">
-
-<!-- Use the component -->
-<my-component></my-component>
-
-```
-
-However, nowadays, it is recommended to use other forms of import, such as JavaScript modules.
-
 ## Advantages of Vanilla Web Components
 
 - **Code Reusability:** Vanilla JavaScript Web Components facilitate the creation of reusable components that can be incorporated into different parts of an application, enhancing code modularity.
@@ -141,6 +125,6 @@ However, nowadays, it is recommended to use other forms of import, such as JavaS
 
 ## Conclusion
 
-In this article, we have thoroughly explored Vanilla Web Components, highlighting each of the standards that compose them: Custom Elements, Shadow DOM, HTML Templates, and HTML Imports. We have examined practical examples to understand how to implement these concepts in the creation of custom web components.
+In this article, we have thoroughly explored Vanilla Web Components, highlighting each of the standards that compose them: Custom Elements, Shadow DOM and HTML Templates. We have examined practical examples to understand how to implement these concepts in the creation of custom web components.
 
 Web Components provide a powerful and modular way to build web interfaces. By adopting these technologies, developers can enhance code reusability, strengthen encapsulation, simplify maintenance, and promote interoperability. Integrating these principles into web development can lead to a more robust and modular architecture, paving the way for more scalable and maintainable web applications.
