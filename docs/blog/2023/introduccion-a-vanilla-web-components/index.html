@@ -513,7 +513,7 @@ footer section {
       <strong>14-diciembre-2023</strong>
       <br>
       <span>Tiempo de lectura estimado: </span>
-      <span>5</span>
+      <span>4</span>
       
       <span>minutos</span>
       <br>
@@ -529,14 +529,13 @@ footer section {
   
   <div><p>Los Web Components se erigen como un <strong>conjunto de estándares</strong> que posibilitan la construcción de elementos modulares, flexibles y altamente personalizables, cuyo propósito fundamental es impulsar la <strong>reutilización</strong> y eficiencia en el diseño de aplicaciones web. En este contexto, nos sumergiremos de manera más detallada en la exploración de los Web Components.</p>
 <p>Este enfoque de desarrollo sin dependencias externas subraya la versatilidad y la potencia intrínseca de JavaScript como un lenguaje que permite la creación de <strong>componentes web independientes</strong> y altamente eficientes. Al hacerlo, se fomenta la flexibilidad y la portabilidad de los Web Components, facilitando su integración fluida en una variedad de proyectos sin los desafíos asociados a posibles conflictos de dependencias.</p>
-<p>En este viaje nos sumergiremos en los cuatro pilares esenciales: <strong>Custom Elements, Shadow DOM, HTML Templates y HTML Imports</strong>. Estos estándares, cuando se combinan y aplican con destreza, allanan el camino para la creación de componentes web autónomos y encapsulados, ofreciendo un espectro amplio de posibilidades en términos de diseño y funcionalidad.</p>
+<p>En este viaje nos sumergiremos en los cuatro pilares esenciales: <strong>Custom Elements, Shadow DOM y HTML Templates</strong>. Estos estándares, cuando se combinan y aplican con destreza, allanan el camino para la creación de componentes web autónomos y encapsulados, ofreciendo un espectro amplio de posibilidades en términos de diseño y funcionalidad.</p>
 <h2>¿Qué son los Web Components?</h2>
-<p>Los Web Components constan de cuatro estándares principales: Custom Elements, Shadow DOM, HTML Templates y HTML Imports. Estos estándares trabajan juntos para facilitar la creación de componentes web autónomos y encapsulados.</p>
+<p>Los Web Components constan de cuatro estándares principales: Custom Elements, Shadow DOM y HTML Templates. Estos estándares trabajan juntos para facilitar la creación de componentes web autónomos y encapsulados.</p>
 <ul>
 <li><strong>Custom Elements:</strong> Permiten la creación de nuevos elementos HTML personalizados con comportamientos específicos.</li>
 <li><strong>Shadow DOM:</strong> Proporciona encapsulamiento al estilo de sombreado, permitiendo que un componente tenga su propio árbol DOM aislado del DOM principal.</li>
 <li><strong>HTML Templates:</strong> Permiten definir fragmentos de HTML que pueden ser clonados y utilizados dinámicamente.</li>
-<li><strong>HTML Imports:</strong> Aunque en desuso, permiten importar y reutilizar componentes HTML fácilmente.</li>
 </ul>
 <h3>Custom Elements</h3>
 <p>Los Custom Elements son la piedra angular de los Web Components. Permiten la creación de elementos HTML personalizados con comportamientos específicos. Veamos un ejemplo más detallado:</p>
@@ -613,15 +612,6 @@ customElements.define('mi-componente-con-template', MiComponenteConTemplate);
   &lt;p&gt;Hola, soy un Web Component con template&lt;/p&gt;
 &lt;/template&gt;
 </code></pre>
-<h3>HTML Imports</h3>
-<p>Aunque HTML Imports está en desuso, es interesante mencionar cómo se usaba para importar y reutilizar componentes HTML fácilmente. Aquí hay un ejemplo básico:</p>
-<pre><code class="language-html">&lt;!-- Importar un componente --&gt;
-&lt;link rel="import" href="mi-componente.html"&gt;
-
-&lt;!-- Usar el componente --&gt;
-&lt;mi-componente&gt;&lt;/mi-componente&gt;
-</code></pre>
-<p>Sin embargo, hoy en día se recomienda utilizar otras formas de importación, como los módulos de JavaScript.</p>
 <h2>Ventajas de Vanilla Web Components</h2>
 <ul>
 <li><strong>Reutilización de Código:</strong> Los Web Components escritos en vanilla JavaScript facilitan la creación de componentes reutilizables que pueden ser incorporados en diferentes partes de una aplicación, mejorando la modularidad del código.</li>
@@ -630,7 +620,7 @@ customElements.define('mi-componente-con-template', MiComponenteConTemplate);
 <li><strong>Interoperabilidad:</strong> Los Web Components escritos en vanilla JavaScript son independientes de frameworks, lo que facilita la integración en proyectos existentes. Esto permite a los desarrolladores aprovechar las ventajas de los Web Components sin comprometer la compatibilidad con otras tecnologías.</li>
 </ul>
 <h2>Conclusión</h2>
-<p>En este artículo, hemos explorado a fondo los Vanilla Web Components, destacando cada uno de los estándares que los componen: Custom Elements, Shadow DOM, HTML Templates y HTML Imports. Hemos examinado ejemplos prácticos para comprender cómo implementar estos conceptos en la creación de componentes web personalizados.</p>
+<p>En este artículo, hemos explorado a fondo los Vanilla Web Components, destacando cada uno de los estándares que los componen: Custom Elements, Shadow DOM y HTML Templates. Hemos examinado ejemplos prácticos para comprender cómo implementar estos conceptos en la creación de componentes web personalizados.</p>
 <p>Los Web Components proporcionan una forma poderosa y modular de construir interfaces web. Al adoptar estas tecnologías, los desarrolladores pueden mejorar la reutilización de código, fortalecer el encapsulamiento, simplificar el mantenimiento y fomentar la interoperabilidad. Integrar estos principios en el desarrollo web puede conducir a una arquitectura más robusta y modular, allanando el camino para aplicaciones web más escalables y mantenibles.</p>
 </div>
   

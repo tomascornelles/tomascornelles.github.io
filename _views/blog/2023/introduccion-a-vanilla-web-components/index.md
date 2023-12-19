@@ -10,16 +10,15 @@ Los Web Components se erigen como un **conjunto de estándares** que posibilitan
 
 Este enfoque de desarrollo sin dependencias externas subraya la versatilidad y la potencia intrínseca de JavaScript como un lenguaje que permite la creación de **componentes web independientes** y altamente eficientes. Al hacerlo, se fomenta la flexibilidad y la portabilidad de los Web Components, facilitando su integración fluida en una variedad de proyectos sin los desafíos asociados a posibles conflictos de dependencias.
 
-En este viaje nos sumergiremos en los cuatro pilares esenciales: **Custom Elements, Shadow DOM, HTML Templates y HTML Imports**. Estos estándares, cuando se combinan y aplican con destreza, allanan el camino para la creación de componentes web autónomos y encapsulados, ofreciendo un espectro amplio de posibilidades en términos de diseño y funcionalidad.
+En este viaje nos sumergiremos en los cuatro pilares esenciales: **Custom Elements, Shadow DOM y HTML Templates**. Estos estándares, cuando se combinan y aplican con destreza, allanan el camino para la creación de componentes web autónomos y encapsulados, ofreciendo un espectro amplio de posibilidades en términos de diseño y funcionalidad.
 
 ## ¿Qué son los Web Components?
 
-Los Web Components constan de cuatro estándares principales: Custom Elements, Shadow DOM, HTML Templates y HTML Imports. Estos estándares trabajan juntos para facilitar la creación de componentes web autónomos y encapsulados.
+Los Web Components constan de cuatro estándares principales: Custom Elements, Shadow DOM y HTML Templates. Estos estándares trabajan juntos para facilitar la creación de componentes web autónomos y encapsulados.
 
 - **Custom Elements:** Permiten la creación de nuevos elementos HTML personalizados con comportamientos específicos.
 - **Shadow DOM:** Proporciona encapsulamiento al estilo de sombreado, permitiendo que un componente tenga su propio árbol DOM aislado del DOM principal.
 - **HTML Templates:** Permiten definir fragmentos de HTML que pueden ser clonados y utilizados dinámicamente.
-- **HTML Imports:** Aunque en desuso, permiten importar y reutilizar componentes HTML fácilmente.
 
 ### Custom Elements
 
@@ -113,20 +112,6 @@ El template puede ser definido en el HTML de la página:
 </template>
 ```
 
-### HTML Imports
-
-Aunque HTML Imports está en desuso, es interesante mencionar cómo se usaba para importar y reutilizar componentes HTML fácilmente. Aquí hay un ejemplo básico:
-
-```html
-<!-- Importar un componente -->
-<link rel="import" href="mi-componente.html">
-
-<!-- Usar el componente -->
-<mi-componente></mi-componente>
-```
-
-Sin embargo, hoy en día se recomienda utilizar otras formas de importación, como los módulos de JavaScript.
-
 ## Ventajas de Vanilla Web Components
 
 - **Reutilización de Código:** Los Web Components escritos en vanilla JavaScript facilitan la creación de componentes reutilizables que pueden ser incorporados en diferentes partes de una aplicación, mejorando la modularidad del código.
@@ -136,6 +121,6 @@ Sin embargo, hoy en día se recomienda utilizar otras formas de importación, co
 
 ## Conclusión
 
-En este artículo, hemos explorado a fondo los Vanilla Web Components, destacando cada uno de los estándares que los componen: Custom Elements, Shadow DOM, HTML Templates y HTML Imports. Hemos examinado ejemplos prácticos para comprender cómo implementar estos conceptos en la creación de componentes web personalizados.
+En este artículo, hemos explorado a fondo los Vanilla Web Components, destacando cada uno de los estándares que los componen: Custom Elements, Shadow DOM y HTML Templates. Hemos examinado ejemplos prácticos para comprender cómo implementar estos conceptos en la creación de componentes web personalizados.
 
 Los Web Components proporcionan una forma poderosa y modular de construir interfaces web. Al adoptar estas tecnologías, los desarrolladores pueden mejorar la reutilización de código, fortalecer el encapsulamiento, simplificar el mantenimiento y fomentar la interoperabilidad. Integrar estos principios en el desarrollo web puede conducir a una arquitectura más robusta y modular, allanando el camino para aplicaciones web más escalables y mantenibles.
