@@ -2,7 +2,10 @@
 title: "HTMX: JavaScript without JavaScript"
 date: 2023-12-22
 description: "Explore how HTMX, the lightweight JavaScript library, seamlessly integrates with your backend to enhance the user experience without altering your frontend development stack."
-
+tags:
+- htmx
+- html
+- javascript
 es: /blog/2023/htmx-javascript-sin-javascript
 ---
 

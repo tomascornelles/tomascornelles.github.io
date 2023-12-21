@@ -19,7 +19,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "_includes/assets": "assets" });
   eleventyConfig.addPassthroughCopy("_views/**/*.(jpeg|jpg|png|gif|webp)");
-  
+
   eleventyConfig.setServerOptions({
     watch: ['docs/**/*.*', '_includes/components/**/*.webc'],
   });
@@ -57,6 +57,10 @@ module.exports = function(eleventyConfig) {
     const words = content.trim().split(/\s+/).length;
     return Math.ceil(words / wpm);
   });
+
+  eleventyConfig.addFilter("filteredTag", (tags, tag) => {
+    return tags.includes(tag)
+  })
 
   // Return your Object options:
   return {

@@ -2,6 +2,10 @@
 title: Exploring the Advent of Code
 date: 2023-12-07
 description: "From basic mathematical challenges to advanced cybernetic enigmas, Advent of Code is not just a programming event but a global celebration that strengthens communities and fosters creativity in the fascinating world of algorithmic problem-solving."
+tags:
+- javascript
+- development
+- challenges
 es: /blog/2023/explorando-el-advent-of-code/
 ---
 

@@ -2,7 +2,10 @@
 title: "Introducción a Vanilla Web Components"
 date: 2023-12-14
 description: "Los Web Components son un conjunto de tecnologías web que permiten la creación de elementos reutilizables y personalizables para interfaces de usuario. En este artículo, exploraremos específicamente los Web Components escritos en vanilla JavaScript, sin depender de ningún framework o biblioteca adicional."
-
+tags:
+- webcomponents
+- javascript
+- html
 en: /en/blog/2023/introduction-to-vanilla-web-components
 ---
 

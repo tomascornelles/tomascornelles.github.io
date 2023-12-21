@@ -2,7 +2,10 @@
 title: "HTMX: JavaScript Sin JavaScript"
 date: 2023-12-22
 description: "Descubre cómo HTMX, la biblioteca JavaScript ligera, se integra perfectamente con tu backend para mejorar la experiencia del usuario sin cambiar tu stack de desarrollo frontend. "
-
+tags:
+- htmx
+- html
+- javascript
 en: /en/blog/2023/htmx-javascript-without-javascript
 ---
 
