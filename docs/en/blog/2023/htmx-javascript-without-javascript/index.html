@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
   
-  <title>Tag: teletrabajo</title>
-  <meta name="description" content="Web personal y blog de Tomas Cornelles, frontend developer.">
-  <meta name="keywords" content="web, developer, frontend, javascript">
-  <meta property="og:title" content="Tag: teletrabajo">
+  <title>HTMX: JavaScript without JavaScript</title>
+  <meta name="description" content="Explore how HTMX, the lightweight JavaScript library, seamlessly integrates with your backend to enhance the user experience without altering your frontend development stack.">
+  <meta name="keywords" content="en">
+  <meta property="og:title" content="HTMX: JavaScript without JavaScript">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://picsum.photos/600">
-  <meta property="og:url" content="https://tomascornelles.com/en/blog/tag/teletrabajo/">
+  <meta property="og:url" content="https://tomascornelles.com/en/blog/2023/htmx-javascript-without-javascript/">
 
   
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
@@ -258,18 +258,6 @@
   .hljs-deletion {
     user-select: none;
   }
-#blog {
-    display: flex;
-    flex-wrap: wrap;
-    gap: calc(10 * var(--unit)) calc(6 * var(--unit));
-    margin-block-start: 20rem;
-  }
-
-  #blog h2 {
-    font-size: 3rem;
-    line-height: 1.5;
-    margin-top: 0;
-  }
 header {
     position: fixed;
     top: 0;
@@ -482,7 +470,7 @@ footer section {
 
 <body>
   <header>
-  <p>Tag: teletrabajo</p>
+  <p>HTMX: JavaScript without JavaScript</p>
 
   <a href="/en" title="Logo">
     <svg id="logo" width="285" height="120" viewBox="0 0 57 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -516,28 +504,115 @@ footer section {
 
 
 
-  <main><h1>Tag: teletrabajo</h1>
-<section id="blog">
-  <article>
+  <main><article>
   <header>
     
+    <h1>HTMX: JavaScript without JavaScript</h1>
     
-    <h2>
-      <a href="/en/blog/2023/htmx-javascript-without-javascript/">HTMX: JavaScript without JavaScript</a>
-    </h2>
+    <p>
+      <strong>22-december-2023</strong>
+      <br>
+      <span>Estimated reading time: </span>
+      <span>4</span>
+      
+      <span>minutes</span>
+      <br>
+      
+      <a href="/blog/2023/htmx-javascript-sin-javascript">
+        También disponible en Español 🇪🇸
+      </a>
+      
+    </p>
     
-    <em>22-december-2023</em>
   </header>
 
   
+  <div><p>In the ever-evolving landscape of web development, the ongoing quest for tools that simplify and enhance the user experience has led to the creation and adoption of various technologies. <a href="https://htmx.org/">HTMX</a>, a relatively new JavaScript library, has gained popularity by providing an efficient way to <strong>update specific parts of a web page without the need for a full reload</strong>. However, it is imperative to understand that HTMX does not intend to be a direct replacement for any JavaScript framework but rather a complementary tool that closely collaborates with the backend.</p>
+<h2>What is HTMX?</h2>
+<p>HTMX is a lightweight <strong>JavaScript library</strong> that facilitates dynamic updates to specific parts of a web page. Its name is a blend of "HTML" and "XMLHttpRequest," reflecting its ability to manipulate the DOM (Document Object Model) swiftly and efficiently.</p>
+<p>Unlike JavaScript frameworks that seek to completely redefine how the frontend is developed, <strong>HTMX focuses on improving user interaction without imposing a specific code structure</strong>. It uses HTML attributes to define client-side logic, simplifying implementation without requiring extensive JavaScript.</p>
+<h2>Fruitful Collaboration between Backend and Frontend</h2>
+<p>One outstanding feature of HTMX is its ability to facilitate smooth communication between the frontend and backend. Updating specific elements without reloading the page reduces server load and significantly improves response speed.</p>
+<p>In contrast to the trend of shifting the load to the frontend, as done by many JavaScript frameworks, HTMX collaborates closely with the backend. This means the backend remains the single source of truth, simplifying frontend logic and ensuring data consistency.</p>
+<h2>Simplicity and Flexibility: Pillars of HTMX</h2>
+<p>HTMX stands out for its simplicity and flexibility. <strong>By not imposing a rigid structure, it allows developers to integrate it gradually into existing projects</strong>. Adopting HTMX does not necessitate a massive code rewrite, as it can be selectively implemented in specific parts of the application.</p>
+<p>Moreover, relying on HTML attributes makes the implementation more readable and understandable. There's no need to learn an entirely new set of concepts or paradigms, facilitating HTMX adoption by development teams. This enables developers to focus on functionality and user experience without getting lost in the complexity of the underlying technology.</p>
+<h2>HTMX in Action: A Practical Example</h2>
+<p>Let's examine a simple example of how HTMX can enhance the interactivity of a web page. In this example I will use nodeJs as the backend, but the HTMX part can be used with any technology you want. Suppose we have a task list, and we want users to mark a task as completed without reloading the entire page. Here's a code snippet using HTMX:</p>
+<ol>
+<li>First, ensure you have Node.js and npm installed on your system.</li>
+<li>Create a <code>package.json</code> file with the following content:</li>
+</ol>
+<pre><code class="language-json">{
+  "name": "htmx-example",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
+
+</code></pre>
+<ol>
+<li>Run <code>npm install</code> to install dependencies.</li>
+<li>Create a <code>server.js</code> file with the following content:</li>
+</ol>
+<pre><code class="language-jsx">const express = require('express');
+const app = express();
+
+app.use(express.static('public'));
+
+app.get('/complete_task/:taskId', (req, res) =&gt; {
+  const taskId = req.params.taskId;
+  // Logic to mark the task as completed in the database
+  // ...
+
+  // Return the response
+  res.send('Task completed successfully');
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () =&gt; {
+  console.log(`Server running at &lt;http://localhost&gt;:${PORT}`);
+});
+
+</code></pre>
+<ol start="3">
+<li>Create a folder named <code>public</code> and inside it, create an <code>index.html</code> file with the following content:</li>
+</ol>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;HTMX Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;ul&gt;
+    &lt;li hx-get="/complete_task/1" hx-swap="outerHTML"&gt;Task 1&lt;/li&gt;
+    &lt;li hx-get="/complete_task/2" hx-swap="outerHTML"&gt;Task 2&lt;/li&gt;
+    &lt;li hx-get="/complete_task/3" hx-swap="outerHTML"&gt;Task 3&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;script src="&lt;https://unpkg.com/htmx.org@1.9.9&gt;"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<ol start="4">
+<li>Run <code>npm start</code> to start the server.</li>
+</ol>
+<p>This example uses Express for the server and HTMX for client-side requests. Clicking on each task triggers a server request to mark the task as completed, and HTMX updates the user interface without reloading the entire page. This is a basic example, and in a production environment, you should implement server logic more robustly and securely.</p>
+<h2>Conclusion: HTMX as a Strategic Complement</h2>
+<p>In summary, HTMX emerges as a valuable tool in the toolkit of any web developer. Its focus on improving user interaction without replacing existing JavaScript frameworks makes it a pragmatic addition to the web development ecosystem.</p>
+<p>By closely collaborating with the backend and offering simplicity and flexibility, HTMX positions itself as an appealing choice for projects seeking a balance between efficiency and complexity. Rather than being a replacement, HTMX is a strategic aid that enhances the backend's ability to deliver dynamic and efficient web experiences. Its non-invasive nature and seamless integration make HTMX a valuable option for developers aiming to improve the interactivity of their web applications effectively and without complications.</p>
+</div>
   
   
-  <div><p>In the ever-evolving landscape of web development, the ongoing quest for tools that simplify and enhance the user experience has led to the creation and adoption of various technologies. </p></div>
 
   
-  <p>
-    <a href="/en/blog/2023/htmx-javascript-without-javascript/">Continue reading</a>
-  </p>
+  
 
   
 </article>
@@ -545,261 +620,11 @@ footer section {
 
 
 
-
-<article>
-  <header>
-    
-    
-    <h2>
-      <a href="/en/blog/2023/introduction-to-vanilla-web-components/">Introduction to Vanilla Web Components</a>
-    </h2>
-    
-    <em>14-december-2023</em>
-  </header>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" media="(prefers-color-scheme: light)">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   
   
-  
-  <div><p>Web Components stand as a <strong>set of standards</strong> that enable the construction of modular, flexible, and highly customizable elements, with the fundamental purpose of <strong>driving reus...</strong></p></div>
-
-  
-  <p>
-    <a href="/en/blog/2023/introduction-to-vanilla-web-components/">Continue reading</a>
-  </p>
-
-  
-</article>
-
-
-
-
-
-<article>
-  <header>
-    
-    
-    <h2>
-      <a href="/en/blog/2023/exploring-the-advent-of-code/">Exploring the Advent of Code</a>
-    </h2>
-    
-    <em>7-december-2023</em>
-  </header>
-
-  
-  
-  
-  <div><p><strong>This annual challenge</strong> not only stands out for the diversity of problems it presents but also for its engaging narrative. Each day, participants uncover a new chapter of a story tha...</p></div>
-
-  
-  <p>
-    <a href="/en/blog/2023/exploring-the-advent-of-code/">Continue reading</a>
-  </p>
-
-  
-</article>
-
-
-
-
-
-<article>
-  <header>
-    
-    
-    <h2>
-      <a href="/en/blog/2023/optimizing-productivity-remote-work/">Optimizing Productivity in Remote Work</a>
-    </h2>
-    
-    <em>1-december-2023</em>
-  </header>
-
-  
-  
-  
-  <div><p>In the current era, the concept of working from home has evolved beyond being a mere trend to become an omnipresent reality in the workforce. Despite the flexibility it provides, it also presents u...</p></div>
-
-  
-  <p>
-    <a href="/en/blog/2023/optimizing-productivity-remote-work/">Continue reading</a>
-  </p>
-
-  
-</article>
-
-
-
-
-
-<article>
-  <header>
-    
-    
-    <h2>
-      <a href="/en/blog/2023/discover-the-world-of-web-analytics-without-cookies/">Discover the World of Web Analytics Without Cookies</a>
-    </h2>
-    
-    <em>24-november-2023</em>
-  </header>
-
-  
-  
-  
-  <div><p>In a digital world where data privacy and security are of utmost importance, <em><a href="https://umami.is">Umami.is</a></em> stands out as an innovative and reliable solution for analyzing online ...</p></div>
-
-  
-  <p>
-    <a href="/en/blog/2023/discover-the-world-of-web-analytics-without-cookies/">Continue reading</a>
-  </p>
-
-  
-</article>
-
-
-
-
-
-<article>
-  <header>
-    
-    
-    <h2>
-      <a href="/en/blog/2023/use-an-emoji-as-a-favicon/">Use an Emoji as a Favicon Based on the Day</a>
-    </h2>
-    
-    <em>11-november-2023</em>
-  </header>
-
-  
-  
-  
-  <div><p>It's been a while since Lea Verou <a href="https://twitter.com/LeaVerou/status/1241619866475474946">suggested a way to use emojis</a> as favicons on your website, but I thought it might be interest...</p></div>
-
-  
-  <p>
-    <a href="/en/blog/2023/use-an-emoji-as-a-favicon/">Continue reading</a>
-  </p>
-
-  
-</article>
-
-
-
-
-
-<article>
-  <header>
-    
-    
-    <h2>
-      <a href="/en/blog/2023/developers-and-agile-methodology-a-perfect-match/">Developers and Agile Methodology: A Perfect Match</a>
-    </h2>
-    
-    <em>10-november-2023</em>
-  </header>
-
-  
-  
-  
-  <div><p>Agile Methodology and the Scrum framework have become essential elements in the world of software development. These methodologies have revolutionized how development teams work, enabling greater f...</p></div>
-
-  
-  <p>
-    <a href="/en/blog/2023/developers-and-agile-methodology-a-perfect-match/">Continue reading</a>
-  </p>
-
-  
-</article>
-
-
-
-
-
-<article>
-  <header>
-    
-    
-    <h2>
-      <a href="/en/blog/2023/use-lists-to-be-more-productive/">Use lists to be more productive</a>
-    </h2>
-    
-    <em>3-november-2023</em>
-  </header>
-
-  
-  
-  
-  <div><p>Today, I want to share how I create and use lists in my daily life to stay well-organized. I've tried GTD, Autofocus, Bullet Journal, and StrikeTru, but in the end, I've ended up with a bit of each...</p></div>
-
-  
-  <p>
-    <a href="/en/blog/2023/use-lists-to-be-more-productive/">Continue reading</a>
-  </p>
-
-  
-</article>
-
-
-
-
-
-<article>
-  <header>
-    
-    
-    <h2>
-      <a href="/en/blog/2023/defending-light-mode/">Defending Light Mode</a>
-    </h2>
-    
-    <em>27-october-2023</em>
-  </header>
-
-  
-  
-  
-  <div><p>It's common to see programmers' terminals and text editors with colored text on dark backgrounds, and since operating systems allow for system-wide dark mode, even more so.</p>
-<p>I won't say that ...</p></div>
-
-  
-  <p>
-    <a href="/en/blog/2023/defending-light-mode/">Continue reading</a>
-  </p>
-
-  
-</article>
-
-
-
-
-
-<article>
-  <header>
-    
-    
-    <h2>
-      <a href="/en/blog/2023/my-new-website/">My new website with 11ty</a>
-    </h2>
-    
-    <em>19-october-2023</em>
-  </header>
-
-  
-  
-  
-  <div><p>This year, I've been thinking about updating my website a lot. The previous one was a bit outdated, not for lack of interest, but because I wasn't able to get Grow to work again after I changed lap...</p></div>
-
-  
-  <p>
-    <a href="/en/blog/2023/my-new-website/">Continue reading</a>
-  </p>
-
-  
-</article>
-
-
-
-
-
-</section>
 
 
 </main>
@@ -875,7 +700,25 @@ footer section {
   <tc-analytics>
 </tc-analytics>
 
-  <script>window.onscroll = () => {
+  <script>// Syntax highligting
+    hljs.highlightAll();
+
+    setTimeout(() => {
+      const additions = document.querySelectorAll('.hljs-addition');
+      additions.forEach((addition) => {
+          const str = addition.innerText
+          addition.innerText = str.substring(1);
+          })
+      }, 50)
+
+    // Add image descriptions
+    const images = document.querySelectorAll('img');
+    images.forEach((image) => {
+        const alt = document.createElement('span');
+        alt.innerText = image.alt;
+        image.after(alt);
+        });
+window.onscroll = () => {
     const height = window.innerHeight;
     let sticky = window.scrollY > 250;
     document.querySelector('header').classList.toggle('sticky',sticky);
