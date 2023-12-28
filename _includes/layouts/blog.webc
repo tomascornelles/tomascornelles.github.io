@@ -36,8 +36,13 @@ layout: base.webc
     margin-block-start: 0;
   }
 
-  #blog article:nth-child(n+6) {
-    margin-block-end: 0;
+  #blog article:nth-child(n+6),
+  #blog article:nth-child(n+6) header {
+    margin-block-end: var(--unit);
+  }
+
+  #blog article:nth-child(n+6) h2 {
+    font-size: 2rem;
   }
 
   @media (min-width: 768px) {
