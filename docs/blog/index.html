@@ -275,8 +275,13 @@
     margin-block-start: 0;
   }
 
-  #blog article:nth-child(n+6) {
-    margin-block-end: 0;
+  #blog article:nth-child(n+6),
+  #blog article:nth-child(n+6) header {
+    margin-block-end: var(--unit);
+  }
+
+  #blog article:nth-child(n+6) h2 {
+    font-size: 2rem;
   }
 
   @media (min-width: 768px) {
@@ -541,16 +546,45 @@ footer section {
     
     
     <h2>
-      <a href="/blog/2023/htmx-javascript-sin-javascript/">HTMX: JavaScript Sin JavaScript</a>
+      <a href="/blog/2023/12/tendencias-en-desarrollo-frontend-para-2024/">Tendencias en desarrollo frontend para 2024</a>
     </h2>
     
-    <em>22-december-2023</em>
+    <em>29-december-2023</em>
   </header>
 
   
   
-  <div><p>En el siempre cambiante panorama del desarrollo web, la búsqueda constante de herramientas que simplifiquen y mejoren la experiencia del usuario ha llevado a la creación y adopción de diversas tecnologías. <a href="https://htmx.org/">HTMX</a>, una biblioteca JavaScript relativamente nueva, ha ganado popularidad al proporcionar una forma eficiente de <strong>actualizar partes específicas de una página web sin necesidad de recargarla por completo</strong>. Sin embargo, es imperativo entender qu...</p></div>
+  <div><p>El desarrollo frontend es una de las áreas más diversificadas del desarrollo web. Los desarrolladores frontend son responsables de crear la interfaz de usuario de las aplicaciones web, que es la parte que los usuarios ven e interactúan. Lo cual incluye desde dar forma a la interfaz hasta dotar de la interactividad y dinamismo a esa interfaz.</p>
+<p>A medida que el mundo digital continúa evolucionando, las tendencias en desarrollo frontend también lo hacen. En 2024, veremos un enfoque en las s...</p></div>
   
+
+  
+  <p>
+    <a href="/blog/2023/12/tendencias-en-desarrollo-frontend-para-2024/">Continúa leyendo</a>
+  </p>
+
+  
+</article>
+
+
+
+
+
+<article>
+  <header>
+    
+    
+    <h2>
+      <a href="/blog/2023/htmx-javascript-sin-javascript/">HTMX: JavaScript Sin JavaScript</a>
+    </h2>
+    
+    <em>22-diciembre-2023</em>
+  </header>
+
+  
+  
+  
+  <div><p>En el siempre cambiante panorama del desarrollo web, la búsqueda constante de herramientas que simplifiquen y mejoren la experiencia del usuario ha llevado a la creación y adopción de diversas tecn...</p></div>
 
   
   <p>
@@ -662,12 +696,10 @@ footer section {
   
   
   
-  <div><p>En un mundo digital donde la privacidad y seguridad de los datos son de suma importancia, <em><a href="https://umami.is">Umami.is</a></em> se destaca como una solución innovadora y confiable para a...</p></div>
+  
 
   
-  <p>
-    <a href="/blog/2023/descubre-el-mundo-de-las-analiticas-web-sin-cookies/">Continúa leyendo</a>
-  </p>
+  
 
   
 </article>

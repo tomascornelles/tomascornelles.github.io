@@ -275,8 +275,13 @@
     margin-block-start: 0;
   }
 
-  #blog article:nth-child(n+6) {
-    margin-block-end: 0;
+  #blog article:nth-child(n+6),
+  #blog article:nth-child(n+6) header {
+    margin-block-end: var(--unit);
+  }
+
+  #blog article:nth-child(n+6) h2 {
+    font-size: 2rem;
   }
 
   @media (min-width: 768px) {
@@ -541,16 +546,44 @@ footer section {
     
     
     <h2>
-      <a href="/en/blog/2023/htmx-javascript-without-javascript/">HTMX: JavaScript without JavaScript</a>
+      <a href="/en/blog/2023/12/trends-in-frontend-development-for-2024/">Trends in Frontend Development for 2024</a>
     </h2>
     
-    <em>22-diciembre-2023</em>
+    <em>29-diciembre-2023</em>
   </header>
 
   
   
-  <div><p>In the ever-evolving landscape of web development, the ongoing quest for tools that simplify and enhance the user experience has led to the creation and adoption of various technologies. <a href="https://htmx.org/">HTMX</a>, a relatively new JavaScript library, has gained popularity by providing an efficient way to <strong>update specific parts of a web page without the need for a full reload</strong>. However, it is imperative to understand that HTMX does not intend to be a direct replacemen...</p></div>
+  <div><p>Frontend development stands as one of the most dynamic and diverse domains within the realm of web development. Tasked with the pivotal role of sculpting the user interface of web applications, frontend developers bear the responsibility of crafting the visual and interactive elements that users encounter. Beyond merely presenting information, their duties encompass the artful design and seamless integration of features that enhance user experience. This multifaceted discipline involves not o...</p></div>
   
+
+  
+  <p>
+    <a href="/en/blog/2023/12/trends-in-frontend-development-for-2024/">Continue reading</a>
+  </p>
+
+  
+</article>
+
+
+
+
+
+<article>
+  <header>
+    
+    
+    <h2>
+      <a href="/en/blog/2023/htmx-javascript-without-javascript/">HTMX: JavaScript without JavaScript</a>
+    </h2>
+    
+    <em>22-december-2023</em>
+  </header>
+
+  
+  
+  
+  <div><p>In the ever-evolving landscape of web development, the ongoing quest for tools that simplify and enhance the user experience has led to the creation and adoption of various technologies. </p></div>
 
   
   <p>
@@ -662,12 +695,10 @@ footer section {
   
   
   
-  <div><p>In a digital world where data privacy and security are of utmost importance, <em><a href="https://umami.is">Umami.is</a></em> stands out as an innovative and reliable solution for analyzing online ...</p></div>
+  
 
   
-  <p>
-    <a href="/en/blog/2023/discover-the-world-of-web-analytics-without-cookies/">Continue reading</a>
-  </p>
+  
 
   
 </article>
