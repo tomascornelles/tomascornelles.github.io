@@ -50,6 +50,8 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter("pageUrl", (page) => `https://tomascornelles.com${page}`);
 
+  eleventyConfig.addFilter("imageUrl", (page, image) => `https://tomascornelles.com${page}${image}`);
+
   eleventyConfig.addFilter("langUrl", (lang, id) => id === 'home' ? `${lang}` : `${lang}blog`);
 
   eleventyConfig.addFilter("readingTime", (content) => {

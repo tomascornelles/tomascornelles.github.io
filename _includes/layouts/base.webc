@@ -11,7 +11,8 @@
   <meta name="keywords" :content="tags || labels.seo.keywords" />
   <meta property="og:title" :content="title || metadata.title" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://picsum.photos/600" />
+  <meta webc:if="image" property="og:image" :content="imageUrl(page.url, image)" />
+  <meta webc:else property="og:image" content="https://picsum.photos/600" />
   <meta property="og:url" :content="pageUrl(page.url)" />
 
   <!--- Favicons --->

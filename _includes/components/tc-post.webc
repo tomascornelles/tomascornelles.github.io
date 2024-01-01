@@ -84,6 +84,10 @@
     text-align: left;
   }
 
+  article > div {
+    overflow-x: hidden;
+  }
+
   article > div h2,
   article > div h3,
   article > div h4 {
