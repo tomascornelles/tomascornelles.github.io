@@ -38,9 +38,13 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("dateFormat", (date, lang) => {
     const months = {
       "es": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
-      "en": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
+      "en": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     };
-    return `${date.getDate()}-${months[lang][date.getMonth()]}-${date.getFullYear()}`;
+    const format = {
+      "es": `${date.getDate()} de ${months[lang][date.getMonth()]} de ${date.getFullYear()}`,
+      "en": `${months[lang][date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`,
+    }
+    return format[lang];
   });
 
   eleventyConfig.addFilter("tagUrl", (tag, lang) => {
