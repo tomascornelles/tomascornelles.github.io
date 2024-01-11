@@ -1,6 +1,8 @@
 ---
+eleventyExcludeFromCollections: true
+
 title: "Modifica el historial con HTML5"
-date: 2024-01-12
+date: 2024-01-19
 description: "Usa las APIs de HTML5 pushState y replaceState para modificar el historial en  tu web"
 tags:
 - html
