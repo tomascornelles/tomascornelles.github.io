@@ -12,6 +12,12 @@
       <span @text="readingTime(postContent)"></span>
       <span webc:if="readingTime(postContent) == 1" @text="labels.blog.minute"></span>
       <span webc:else @text="labels.blog.minutes"></span>
+      <br>
+      <span @text="labels.blog.tags"></span>:
+      <a webc:for="tag of postTags"
+         webc:if="tag != 'blog' && tag != 'es' && tag != 'en'"
+         :href="tagUrl(tag, page.lang)"
+         @text="tag"></a>
       <br webc:if="postEn || postEs">
       <a webc:if="postEn" :href="postEn">
         Also available in English 🇬🇧
@@ -19,12 +25,6 @@
       <a webc:if="postEs" :href="postEs">
         También disponible en Español 🇪🇸
       </a>
-      <br>
-      <span @text="labels.blog.tags"></span>:
-      <a webc:for="tag of postTags"
-         webc:if="tag != 'blog' && tag != 'es' && tag != 'en'"
-         :href="tagUrl(tag, page.lang)"
-         @text="tag"></a>
     </p>
     <em webc:elseif="!home" @text="dateFormat(postDate, page.lang)"></em>
   </header>
