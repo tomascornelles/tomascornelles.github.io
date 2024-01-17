@@ -1,6 +1,4 @@
 ---
-eleventyExcludeFromCollections: true
-
 title: "Modify the history with HTML5"
 date: 2024-01-19
 description: "Use the HTML5 API useState and replaceState for modify the history in your web"
