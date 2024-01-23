@@ -72,13 +72,6 @@
     margin-block-end: 10rem;
   }
 
-  article header a{
-    box-shadow: inset 0 -1px var(--color-fg);
-  }
-
-  article header a:hover {
-    box-shadow: inset 0 -5em var(--color-fg);
-  }
 
   article header > :last-child {
     text-align: left;

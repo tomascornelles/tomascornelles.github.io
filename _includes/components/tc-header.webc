@@ -49,6 +49,7 @@
     padding: var(--unit);
     font-weight: 400;
     font-family: var(--font-mono);
+    color: var(--color-accent);
   }
 
   header > * {
@@ -105,10 +106,6 @@
     padding: 1rem;
   }
 
-  header details a:hover {
-    box-shadow: inset 0 -5em var(--color-fg);
-  }
-
   header #logo {
     transition: all .4s ease;
     height: 134px;
@@ -116,7 +113,7 @@
   }
 
   header #logo path {
-    fill: var(--color-fg);
+    fill: var(--color-accent);
     transition: all 1s ease;
   }
 
