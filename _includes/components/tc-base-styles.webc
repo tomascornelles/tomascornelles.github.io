@@ -1,9 +1,9 @@
 <style webc:bucket="base">
   :root {
-    --color-bg: #ECEFF4;
+    --color-bg: #FFFFFF;
     --color-fg: #2E3440;
-    --color-code-bg: #D8DEE9;
-    --color-accent: #4C566A;
+    --color-code-bg: #ECEFF4;
+    --color-accent: #5E81AC;
     --font: 'Lora', serif;
     --font-mono: 'Source Code Pro', monospace;
     --unit: 10px;
@@ -16,6 +16,11 @@
       --color-code-bg: #3B4252;
       --color-accent: #88C0D0;
     }
+  }
+
+  ::selection {
+    background-color: #8FBCBB;
+    color: #FFFFFF;
   }
 
   html {
