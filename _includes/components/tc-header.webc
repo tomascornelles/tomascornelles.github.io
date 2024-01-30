@@ -49,7 +49,7 @@
     padding: var(--unit);
     font-weight: 400;
     font-family: var(--font-mono);
-    color: var(--color-accent);
+    color: var(--color-fg);
   }
 
   header > * {
@@ -113,8 +113,22 @@
   }
 
   header #logo path {
-    fill: var(--color-accent);
+    fill: var(--color-fg);
     transition: all 1s ease;
+  }
+
+  header #logo #tilde,
+  header #logo #o2 {
+    fill: #81A1C1;
+  }
+
+  header.sticky #logo #tilde,
+  header.sticky #logo #o1 {
+    fill: #81A1C1;
+  }
+
+  header.sticky #logo #o2 {
+    fill: var(--color-fg)
   }
 
   header.sticky #logo {
