@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
   
-  <title>¡Hola!</title>
-  <meta name="description" content="Web personal y blog de Tomas Cornelles, frontend developer.">
-  <meta name="keywords" content="web, developer, frontend, javascript">
-  <meta property="og:title" content="¡Hola!">
+  <title>Funciones Arrow vs Normales en JS</title>
+  <meta name="description" content="JavaScript, el lenguaje amigable y flexible que es, ofrece a los desarrolladores una variedad de formas de definir funciones. Entre estas, exploremos dos enfoques principales: las funciones normales tradicionales y las funciones de flecha más concisas. Prepárate para un viaje a través de las diferencias entre estas dos, cubriendo su sintaxis, comportamiento y casos de uso ideales.">
+  <meta name="keywords" content="es,javascript,desarrollo">
+  <meta property="og:title" content="Funciones Arrow vs Normales en JS">
   <meta property="og:type" content="website">
   
   <meta property="og:image" content="https://picsum.photos/600">
-  <meta property="og:url" content="https://tomascornelles.com/">
+  <meta property="og:url" content="https://tomascornelles.com/blog/2024/02/funciones-arrow-vs-normales-en-js/">
 
   
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
@@ -265,39 +265,6 @@
   .hljs-deletion {
     user-select: none;
   }
-#welcome h1::after {
-    content: '';
-    display: inline-block;
-    width: 0.95em;
-    height: 1.5em;
-    background-color: var(--color-accent);
-    animation: blink 1s infinite;
-  }
-
-  @media (min-width: 768px) {
-    #welcome article {
-      columns: 2;
-      column-gap: 5rem;
-    }
-  }
-
-  @keyframes blink {
-    from {
-      opacity: 1;
-    }
-
-    50% {
-      opacity: 1;
-    }
-
-    51% {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 0;
-    }
-  }
 header {
     position: fixed;
     top: 0;
@@ -521,7 +488,7 @@ footer section {
 
 <body>
   <header>
-  <p>¡Hola!</p>
+  <p>Funciones Arrow vs Normales en JS</p>
 
   <a href="/" title="Logo">
     <svg id="logo" width="285" height="120" viewBox="0 0 57 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -555,55 +522,131 @@ footer section {
 
 
 
-  <main><section id="welcome"><h1>¡Hola!<br> Soy Tomás</h1>
-</section>
-
-<section id="cta">
-  <p>Soy desarrollador <strong>Frontend</strong> senior con más de 15 años de experiencia. Si necesitas apoyo en tu formación, <strong>clases de refuerzo, prepararte para una entrevista</strong>, mejorar tu código o una mentoría personalizada, contrata un pack de horas a traves de <strong>ClassGap</strong> para poder <strong>ayudarte en tu proceso de aprendizaje y mejorar profesionalmente</strong> en pocas clases. Dispones de una clase de 20 minutos de <strong>prueba gratuita</strong>.</p>
-
-<a role="button" href="https://www.classgap.com/me/tomas-cornelles" target="_blank">Mentoría personalizada</a>
-
-</section>
-
-<section id="blog">
-  <article>
+  <main><article>
   <header>
     
+    <h1>Funciones Arrow vs Normales en JS</h1>
     
-    <h2>
-      <a href="/blog/2024/02/funciones-arrow-vs-normales-en-js/">Funciones Arrow vs Normales en JS</a>
-    </h2>
-    
+    <p>
+      <strong>2 de febrero de 2024</strong>
+      <br>
+      <span>Tiempo de lectura estimado: </span>
+      <span>3</span>
+      
+      <span>minutos</span>
+      <br>
+      <span>Etiquetas</span>:
+      <a href="/blog/tag/javascript">javascript</a>
+<a href="/blog/tag/desarrollo">desarrollo</a>
+      <br>
+      <a href="/en/blog/2024/02/arrow-vs-normal-functions-in-js">
+        Also available in English 🇬🇧
+      </a>
+      
+    </p>
     
   </header>
 
   
-  
   <div><p>JavaScript, el lenguaje amigable y flexible que es, ofrece a los desarrolladores una variedad de formas de definir funciones. Entre estas, exploremos dos enfoques principales: las funciones normales tradicionales y las funciones de flecha más concisas. Prepárate para un viaje a través de las diferencias entre estas dos, cubriendo su sintaxis, comportamiento y casos de uso ideales.</p>
 <h2>Sintaxis simplificada:</h2>
 <h3>Sintaxis de Función Normal:</h3>
-<pre><code class="language-javascript">f...</code></pre></div>
+<pre><code class="language-javascript">function sumar(a, b) {
+  return a + b;
+}
+</code></pre>
+<h3>Sintaxis de Función de Flecha:</h3>
+<pre><code class="language-javascript">const sumar = (a, b) =&gt; a + b;
+</code></pre>
+<p>Las funciones de flecha traen un soplo de aire fresco con su sintaxis concisa, especialmente cuando el cuerpo de la función es una sola expresión. Esta brevedad no solo hace que el código sea más limpio, sino que también mejora la legibilidad, convirtiendo a las funciones de flecha en una opción principal para operaciones más simples.</p>
+<h2>Navegando por la palabra clave 'this':</h2>
+<p>Una de las principales diferencias entre las funciones de flecha y las funciones normales radica en cómo manejan la palabra clave <code>this</code>, un aspecto crucial para entender su comportamiento.</p>
+<h3>Función Normal:</h3>
+<pre><code class="language-javascript">function saludar() {
+  console.log("Hola, " + this.nombre);
+}
+
+const persona = {
+  nombre: "Juan",
+  saludar: saludar
+};
+
+persona.saludar(); // Salida: Hola, Juan
+</code></pre>
+<h3>Función de Flecha:</h3>
+<pre><code class="language-javascript">const saludar = () =&gt; {
+  console.log("Hola, " + this.nombre);
+};
+
+const persona = {
+  nombre: "Juan",
+  saludar: saludar
+};
+
+persona.saludar(); // Salida: Hola, undefined
+</code></pre>
+<p>A diferencia de las funciones normales, las funciones de flecha carecen de su propio contexto <code>this</code>, heredándolo del ámbito circundante. Esta peculiaridad puede conducir a un comportamiento inesperado, particularmente en métodos de objetos.</p>
+<h2>El objeto 'arguments':</h2>
+<p>Las funciones normales vienen con una característica útil: acceso al objeto <code>arguments</code>, que contiene todos los parámetros pasados a la función. Por otro lado, las funciones de flecha no tienen su propio objeto <code>arguments</code>.</p>
+<h3>Función Normal:</h3>
+<pre><code class="language-javascript">function mostrarArgumentos() {
+  console.log(arguments);
+}
+
+mostrarArgumentos(1, "hola", true); // Salida: [1, "hola", true]
+</code></pre>
+<h3>Función de Flecha:</h3>
+<pre><code class="language-javascript">const mostrarArgumentos = () =&gt; {
+  console.log(arguments); // ReferenceError: arguments no está definido
+}
+
+mostrarArgumentos(1, "hola", true);
+</code></pre>
+<p>Cuando se trata de un número variable de parámetros, las funciones normales, con su objeto <code>arguments</code>, ofrecen flexibilidad que las funciones de flecha no tienen.</p>
+<h2>Métodos de Objetos y Preferencias:</h2>
+<p>Las funciones normales toman la delantera cuando se trata de definir métodos dentro de objetos, especialmente si necesitas acceso a las propiedades del objeto.</p>
+<h3>Función Normal:</h3>
+<pre><code class="language-javascript">const carro = {
+  marca: "Toyota",
+  mostrarMarca: function() {
+    console.log("Marca: " + this.marca);
+  }
+};
+
+carro.mostrarMarca(); // Salida: Marca: Toyota
+</code></pre>
+<h3>Función de Flecha:</h3>
+<pre><code class="language-javascript">const carro = {
+  marca: "Toyota",
+  mostrarMarca: () =&gt; {
+    console.log("Marca: " + this.marca); // Salida: Marca: undefined
+  }
+};
+
+carro.mostrarMarca();
+</code></pre>
+<p>Las funciones normales demuestran ser la elección para los métodos de objeto que requieren acceso al contexto del objeto, ya que las funciones de flecha carecen de un contexto <code>this</code> distinto.</p>
+<h2>Conclusión:</h2>
+<p>En resumen, la elección entre funciones de flecha y funciones normales se reduce al caso de uso específico. Las funciones de flecha brillan en escenarios que priorizan la brevedad y no implican la manipulación de la palabra clave <code>this</code> o el uso del objeto <code>arguments</code>. Por otro lado, las funciones normales brindan más flexibilidad, lo que las hace más adecuadas para métodos de objetos y situaciones donde un contexto <code>this</code> claro es crucial.</p>
+<p>Comprender las sutilezas entre estos dos tipos de funciones capacita a los desarrolladores para tomar decisiones informadas, seleccionando la herramienta más adecuada para cada escenario de codificación. Tanto las funciones de flecha como las funciones normales desempeñan roles fundamentales en el desarrollo de JavaScript, y dominar cuándo usar cada una sin duda elevará tu competencia en codificación. ¡Feliz codificación!</p>
+</div>
+  
   
 
   
   
 
-  <footer>
-    <p>
-      <a href="/blog">
-        <strong>Leer más artículos en el blog</strong>
-      </a>
-    </p>
-  </footer>
+  
 </article>
 
 
 
 
-
-</section>
-
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" media="(prefers-color-scheme: light)">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  
+  
 
 
 </main>
@@ -648,11 +691,11 @@ footer section {
 
   <section>
     <p>
-      <a href="/">
+      <a href="/blog">
   🇪🇸
   español
 </a>
-<a href="/en/">
+<a href="/en/blog">
   🇬🇧
   english
 </a>
@@ -679,29 +722,24 @@ footer section {
   <tc-analytics>
 </tc-analytics>
 
-  <script>const title = document.querySelector('#welcome h1');
-  const titleLines = title.innerHTML.split('<br>');
-  title.innerHTML = ''
+  <script>// Syntax highligting
+    hljs.highlightAll();
 
+    setTimeout(() => {
+      const additions = document.querySelectorAll('.hljs-addition');
+      additions.forEach((addition) => {
+          const str = addition.innerText
+          addition.innerText = str.substring(1);
+          })
+      }, 50)
 
-  let i = 0;
-  line = 0;
-  const speed  = 50;
-  function typeWriter(txt) {
-    if (i < txt.length) {
-      title.innerHTML += txt.charAt(i);
-      i++;
-      setTimeout(() => typeWriter(txt), speed);
-    } else {
-      i = 0;
-      line++;
-      if (typeof titleLines[line] !== 'undefined') {
-        title.innerHTML += '<br>';
-        typeWriter(titleLines[line])
-      }
-    }
-  }
-  typeWriter(titleLines[line])
+    // Add image descriptions
+    const images = document.querySelectorAll('img');
+    images.forEach((image) => {
+        const alt = document.createElement('span');
+        alt.innerText = image.alt;
+        image.after(alt);
+        });
 window.onscroll = () => {
     const height = window.innerHeight;
     let sticky = window.scrollY > 250;
