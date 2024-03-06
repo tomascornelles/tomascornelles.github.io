@@ -185,6 +185,23 @@
     font-size: .5em;
   }
 
+  table {
+    width: 100%;
+  }
+
+  table th, table td {
+    text-align: left;
+    padding: .5em;
+  }
+
+  table tbody tr:nth-child(2n-1) {
+    background-color: var(--color-code-bg);
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
   @media (min-width: 768px) {
     h1 {
       font-size: 8rem;

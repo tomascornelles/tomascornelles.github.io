@@ -185,6 +185,23 @@
     font-size: .5em;
   }
 
+  table {
+    width: 100%;
+  }
+
+  table th, table td {
+    text-align: left;
+    padding: .5em;
+  }
+
+  table tbody tr:nth-child(2n-1) {
+    background-color: var(--color-code-bg);
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
   @media (min-width: 768px) {
     h1 {
       font-size: 8rem;
@@ -741,6 +758,15 @@ footer section {
         alt.innerText = image.alt;
         image.after(alt);
         });
+
+    // Add div arround tables for horizontal scroll if needed
+    const tables = document.querySelectorAll('table');
+    tables.forEach((table) => {
+        const div = document.createElement('div');
+        div.classList.add('table-wrapper');
+        table.after(div);
+        div.append(table);
+    })
 window.onscroll = () => {
     const height = window.innerHeight;
     let sticky = window.scrollY > 250;
