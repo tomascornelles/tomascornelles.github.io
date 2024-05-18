@@ -17,7 +17,7 @@ layout: base.webc
     :@post-content="post.content"
     :@post-date="post.date"
     :@post-url="post.url"
-    :@post-more="false"
+    :@post-more="true"
     :@home="true"
     :@long="index == 0"
     :labels="labels"
