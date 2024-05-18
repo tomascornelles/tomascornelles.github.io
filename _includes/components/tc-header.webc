@@ -119,12 +119,12 @@
 
   header #logo #tilde,
   header #logo #o2 {
-    fill: #81A1C1;
+    fill: var(--color-accent);
   }
 
   header.sticky #logo #tilde,
   header.sticky #logo #o1 {
-    fill: #81A1C1;
+    fill: var(--color-accent);
   }
 
   header.sticky #logo #o2 {
