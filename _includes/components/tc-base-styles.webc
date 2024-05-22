@@ -100,16 +100,18 @@
     text-align: center;
     padding: .5em 1em;
     background-color: var(--color-bg);
-    color: var(--color-fg);
+    color: var(--color-bg);
     border: .1em solid var(--color-accent);
     font-family: var(--font-mono);
     font-size: 1.6rem;
-    box-shadow: inset 0 0 var(--color-accent);
+    box-shadow: inset 0 3em var(--color-accent);
+    border-radius: .2em;
+    font-weight: 700;
   }
 
   button:hover, [role=button]:hover {
     color: var(--color-fg);
-    box-shadow: inset 0 -5em var(--color-accent);
+    box-shadow: inset 0 0 var(--color-accent);
   }
 
   strong, b {
