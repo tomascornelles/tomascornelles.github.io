@@ -1,4 +1,4 @@
-# <img src="https://tomascornelles.com/assets/images/favicon.png" alt="さ"> Tomas Cornelles' Personal Website 👋
+# <img src="https://tomascornelles.github.io/assets/images/favicon.png" alt="さ"> Tomas Cornelles' Personal Website 👋
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/tomascornelles/tomascornelles.github.io)
 ![GitHub repo size](https://img.shields.io/github/repo-size/tomascornelles/tomascornelles.github.io)
@@ -35,7 +35,7 @@ npm run build
 
 ## 🌐 Live Demo
 
-Check out the live version of the website [here](https://tomascornelles.com).
+Check out the live version of the website [here](https://tomascornelles.github.io).
 
 ## 🛠️ Built With
 
