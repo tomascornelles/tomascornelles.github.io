@@ -3,7 +3,8 @@
     --color-bg: #ECEFF4;
     --color-fg: #3B4252;
     --color-code-bg: #E5E9F0;;
-    --color-accent: #5e81ac;
+    --color-accent: coral;
+    --color-accent2: crimson;
     --font: 'Lora', serif;
     --font-mono: 'Source Code Pro', monospace;
     --unit: 10px;
@@ -82,36 +83,65 @@
 
   a, [role=link] {
     text-decoration: none;
-    box-shadow: inset 0 -1px var(--color-accent);
     color: var(--color-fg);
     background: none;
     border: none;
     transition: all .5s ease;
     padding: .2em;
     cursor: pointer;
+    position: relative;
+    z-index: 0;
+  }
+
+  a::before, [role=link]::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* control the spread */
+    z-index: -1; /* place the element behind */
+    background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent2) 100%);;
+    height: 1px;
+    top: 100%;
+    transition: all .25s ease;
   }
 
   a:hover, [role=link]:hover {
-    box-shadow: inset 0 -5em var(--color-accent);
+    color: var(--color-bg);
+  } 
+  
+  a:hover::before, [role=link]:hover::before {
+    height: 100%;
+    top: 0;
+    border-radius: .25rem;
   }
 
   button, [role=button] {
     display: block;
     text-align: center;
     padding: .5em 1em;
-    background-color: var(--color-bg);
     color: var(--color-bg);
-    border: .1em solid var(--color-accent);
     font-family: var(--font-mono);
     font-size: 1.6rem;
-    box-shadow: inset 0 3em var(--color-accent);
-    border-radius: .2em;
     font-weight: 700;
   }
 
+  button::before, [role=button]::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* control the spread */
+    z-index: -1; /* place the element behind */
+    background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent2) 100%);;
+    height: 100%;
+    border-radius: .25rem;
+    transition: all .25s ease;
+  }
+
   button:hover, [role=button]:hover {
-    color: var(--color-fg);
-    box-shadow: inset 0 0 var(--color-accent);
+    /* color: var(--color-fg); */
+    transform: translateY(-.25em);
+  }
+
+  button:hover::before, [role=button]:hover::before {
+    box-shadow: 0 .25em var(--color-accent2), 0 .5rem .7rem var(--color-fg);
   }
 
   strong, b {
