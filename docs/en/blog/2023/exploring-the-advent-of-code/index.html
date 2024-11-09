@@ -15,8 +15,8 @@
   <meta property="og:url" content="https://tomascornelles.com/en/blog/2023/exploring-the-advent-of-code/">
 
   
-  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link id="faviconSVG" rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link id="faviconPNG" rel="icon" type="image/png" href="/assets/images/favicon.png">
   <meta name="theme-color" content="#ECEFF4">
 
   
@@ -716,6 +716,8 @@ footer section {
 
 
   <tc-base-styles>
+
+
 </tc-base-styles>
 
   <tc-favicon>
@@ -779,9 +781,17 @@ const today = new Date();
       link.target = "_blank"
     }
   });
+const colors = ['coral', 'crimson', 'salmon', 'gold', 'orange'];
+  const index = Math.floor(Math.random() * colors.length);
+  const accent = colors[index];
+  const accent2 = index === colors.length - 1 ? colors[0] : colors[(index + 1)];
+
+  document.documentElement.style.setProperty('--color-accent', accent);
+  document.documentElement.style.setProperty('--color-accent2', accent2);
 class TcFavicon extends HTMLElement {
     connectedCallback() {
-      const link = document.querySelector("link")
+      const faviconSVG = document.querySelector("#faviconSVG");
+      const faviconPNG = document.querySelector("#faviconPNG");
       const theme = document.querySelector("meta[name=theme-color]")
 
       const icons = {
@@ -821,7 +831,10 @@ class TcFavicon extends HTMLElement {
       const favicon = (() => {
 
         if (icons[today]){
-          link.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>${icons[today]}</text></svg>`;
+          faviconSVG.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>${icons[today]}</text></svg>`;
+        } else {
+          faviconPNG.href = '/assets/images/favicon.png?v=' + Math.round(Math.random() * 10000).toString();
+          faviconSVG.href = '/assets/images/favicon.svg?v=' + Math.round(Math.random() * 10000).toString();
         }
       })();
     }
