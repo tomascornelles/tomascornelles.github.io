@@ -30,7 +30,9 @@
   <style>:root {
     --color-bg: #ECEFF4;
     --color-fg: #3B4252;
-    --color-code-bg: #E5E9F0;;
+    --color-code-bg: #E5E9F0;
+    --color-white: #FFFFFF;
+    --color-black: #00000099;
     --color-accent: coral;
     --color-accent2: crimson;
     --font: 'Lora', serif;
@@ -135,7 +137,7 @@
   }
 
   a:hover, [role=link]:hover {
-    color: var(--color-bg);
+    color: var(--color-white);
   } 
   
   a:hover::before, [role=link]:hover::before {
@@ -148,7 +150,8 @@
     display: block;
     text-align: center;
     padding: .5em 1em;
-    color: var(--color-bg);
+    color: var(--color-white);
+    text-shadow: 0 -1px 0 var(--color-black);
     font-family: var(--font-mono);
     font-size: 1.6rem;
     font-weight: 700;
@@ -166,12 +169,16 @@
   }
 
   button:hover, [role=button]:hover {
-    /* color: var(--color-fg); */
+    color: var(--color-white);
     transform: translateY(-.25em);
   }
 
   button:hover::before, [role=button]:hover::before {
-    box-shadow: 0 .25em var(--color-accent2), 0 .5rem .7rem var(--color-fg);
+    box-shadow: 0 .25em var(--color-accent2), 0 .5rem .7rem var(--color-black);
+  }
+
+  button:active::before, [role=button]:active::before {
+background: linear-gradient(90deg, var(--color-accent2) 0%, var(--color-accent) 100%);
   }
 
   strong, b {
@@ -738,10 +745,21 @@ const today = new Date();
       link.target = "_blank"
     }
   });
-const colors = ['salmon', 'crimson', 'coral', 'orangered', 'orange', 'darkorange'];
+const colors = [
+    ['crimson', 'salmon'],
+    ['crimson', 'coral'],
+    ['crimson', 'darkorange'],
+    ['crimson', 'orangered'],
+    ['orangered', 'darkorange'],
+    ['orangered', 'coral'],
+    ['orangered', 'salmon'],
+    ['coral', 'salmon'],
+    ['coral', 'darkorange'],
+    ['salmon', 'darkorange'],
+  ];
   const index = Math.floor(Math.random() * colors.length);
-  const accent = colors[index];
-  const accent2 = index === colors.length - 1 ? colors[0] : colors[(index + 1)];
+  const accent = colors[index][1];
+  const accent2 = colors[index][0];
   console.log({ accent, accent2 });
 
   document.documentElement.style.setProperty('--color-accent', accent);
