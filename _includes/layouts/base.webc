@@ -17,7 +17,7 @@
 
   <!--- Favicons --->
   <link id="faviconSVG" rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-  <link id="faviconPNG" rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <!-- <link id="faviconPNG" rel="icon" type="image/png" href="/assets/images/favicon.png"> -->
   <meta name="theme-color" content="#ECEFF4">
 
   <!--- Fonts are loaded after the page --->
