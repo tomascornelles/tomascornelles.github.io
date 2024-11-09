@@ -747,6 +747,7 @@ footer section {
 </tc-base-styles>
 
   <tc-favicon>
+
 </tc-favicon>
 
   <tc-analytics>
@@ -819,6 +820,7 @@ class TcFavicon extends HTMLElement {
       const faviconSVG = document.querySelector("#faviconSVG");
       const faviconPNG = document.querySelector("#faviconPNG");
       const theme = document.querySelector("meta[name=theme-color]")
+      const svg = `<svg width="114" height="113" viewBox="0 0 114 113" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect x="0.744232" y="0.0102692" width="112.686" height="112.686" rx="20" fill="url(#paint0_linear_44_8)"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M54.7066 57.1137C38.7052 57.1137 30.7045 51.4231 30.7045 40.0419C30.7045 33.5061 32.8737 28.9141 37.2121 26.266C41.6069 23.6743 47.7201 22.3784 55.5517 22.3784C63.4397 22.3784 70.3981 23.8996 76.4267 26.9421C78.0043 30.3227 78.7931 34.6893 78.7931 40.0419C78.7931 51.4231 70.7643 57.1137 54.7066 57.1137ZM77.3564 20.181C72.0038 16.1243 64.3694 14.096 54.453 14.096C44.5367 14.096 37.0149 16.1243 31.8877 20.181C26.7605 24.294 24.1969 30.8016 24.1969 39.7038C24.1969 48.6623 26.9577 55.1699 32.4793 59.2266C38.0009 63.3396 45.7481 65.3961 55.7207 65.3961C65.6934 65.3961 73.1307 63.4805 78.0325 59.6492C82.9907 55.8742 85.4698 49.3666 85.4698 40.1264C85.4698 30.9425 82.7653 24.294 77.3564 20.181ZM68.4542 87.933L87.1319 87.5949C90.3998 94.018 92.3436 97.5958 92.9634 98.3282C94.2593 97.8775 95.6115 97.2859 97.0201 96.5534C96.9074 95.2012 95.4425 90.1867 92.6253 81.5099C92.3436 81.1155 91.583 80.6648 90.3434 80.1577C89.1602 79.6506 88.3151 79.3689 87.808 79.3125L69.3839 82.2705C69.1022 82.1015 67.6373 80.5802 64.9891 77.7068C62.3974 74.8333 60.6507 72.8613 59.7493 71.7908L57.3829 71.3682C56.0306 71.3682 55.0446 71.509 54.4249 71.7908C53.5234 72.8613 51.7486 74.8333 49.1005 77.7068C46.5087 80.5802 45.0719 82.1015 44.7902 82.2705L26.3661 79.3125C25.859 79.3689 25.0139 79.6506 23.8307 80.1577C22.5912 80.6648 21.8305 81.1155 21.5488 81.5099C18.7317 90.1867 17.2668 95.2012 17.1541 96.5534C18.5626 97.2859 19.9149 97.8775 21.2108 98.3282C21.8305 97.5958 23.7744 94.018 27.0422 87.5949L45.7199 87.933C49.1568 87.933 52.5092 83.9608 55.7771 76.0165H58.397C61.6649 83.9608 65.0173 87.933 68.4542 87.933Z" fill="#F5F5F5"/> <defs> <linearGradient id="paint0_linear_44_8" x1="0.744232" y1="56.3531" x2="113.43" y2="56.3531" gradientUnits="userSpaceOnUse"> <stop id="stop1"/> <stop offset="1" id="stop2"/> </linearGradient> </defs><style> #stop1 { stop-color: var(--color-accent); } #stop2 { stop-color: var(--color-accent-2); } </style> </svg>`
 
       const icons = {
         '1_5': '👑',
@@ -860,7 +862,7 @@ class TcFavicon extends HTMLElement {
           faviconSVG.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>${icons[today]}</text></svg>`;
         } else {
           faviconPNG.href = '/assets/images/favicon.png?v=' + Math.round(Math.random() * 10000).toString();
-          faviconSVG.href = '/assets/images/favicon.svg?v=' + Math.round(Math.random() * 10000).toString();
+          faviconSVG.href = 'data:image/svg+xml,' + svg;
         }
       })();
     }
