@@ -16,7 +16,7 @@
 
   
   <link id="faviconSVG" rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-  <!-- <link id="faviconPNG" rel="icon" type="image/png" href="/assets/images/favicon.png"> -->
+  <link id="faviconPNG" rel="icon" type="image/png" href="/assets/images/favicon.png">
   <meta name="theme-color" content="#ECEFF4">
 
   
@@ -639,10 +639,11 @@ const today = new Date();
       link.target = "_blank"
     }
   });
-const colors = ['coral', 'crimson', 'salmon', 'gold', 'orange'];
+const colors = ['salmon', 'crimson', 'coral', 'orangered', 'orange', 'darkorange'];
   const index = Math.floor(Math.random() * colors.length);
   const accent = colors[index];
   const accent2 = index === colors.length - 1 ? colors[0] : colors[(index + 1)];
+  console.log({ accent, accent2 });
 
   document.documentElement.style.setProperty('--color-accent', accent);
   document.documentElement.style.setProperty('--color-accent2', accent2);
