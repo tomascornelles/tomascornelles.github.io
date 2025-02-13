@@ -446,6 +446,27 @@ header {
       height: 100%;
     }
   }
+.flag path,
+  .flag rect {
+    fill: url(#Gradient);
+  }
+
+  #stop1 {
+    stop-color: var(--color-accent);
+  }
+
+  #stop2 {
+    stop-color: var(--color-accent2);
+  }
+  
+  a:hover .flag path,
+  a:hover .flag rect {
+    fill: var(--color-white);
+  }
+  
+  .flag {
+    transform: translateY(2px);
+  }
 footer section {
     padding-block-start: 5rem;
   }
@@ -580,13 +601,50 @@ footer section {
   <section>
     <p>
       <a href="/blog">
-  🇪🇸
+  
+  <tc-flag><svg width="16" height="16" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="flag">
+  <g clip-path="url(#clip0_50_5)">
+  <rect width="100" height="25" fill="black"></rect>
+  <rect y="75" width="100" height="25" fill="black"></rect>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M50 35.9449H27.5118V58.4331C27.5118 61.538 32.546 64.0551 38.7559 64.0551C44.9659 64.0551 50 61.538 50 58.4331V35.9449Z" fill="black"></path>
+  </g>
+  <defs>
+    <clipPath id="clip0_50_5">
+      <rect width="100" height="100"></rect>
+    </clipPath>        
+    <linearGradient id="Gradient">
+      <stop offset="0%" id="stop1"></stop>
+      <stop offset="100%" id="stop2"></stop>
+    </linearGradient>
+</defs></svg>
+
+
+
+
+</tc-flag>
   español
 </a>
 <a href="/en/blog">
-  🇬🇧
+  
+  <tc-flag>
+
+<svg width="16" height="16" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="flag">
+  <g clip-path="url(#clip0_50_32)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M85.8579 0H60V25.8579L85.8579 0ZM40 0H14.1421L40 25.8579V0ZM0 14.1421V85.8579L25.8579 60H4.76837e-06V40H25.8579L0 14.1421ZM14.1421 100H40V74.1421L14.1421 100ZM60 100H85.8579L60 74.1422V100ZM100 85.8579L100 60H74.1421L100 85.8579ZM100 40L100 14.1421L74.1421 40H100Z" fill="black"></path>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M100 0L96.4645 -3.53553L55 37.9289V0H45V45L-2.17075 -2.17075L-5.70627 1.36478L37.929 45H0V55H45V55.189L-3.38995 103.579L0.145569 107.115L45 62.2601V100H55V61.969L98.7808 105.75L102.316 102.214L55.1021 55H100V45H55L100 0Z" fill="black"></path>
+  </g>
+  <defs>
+    <clipPath id="clip0_50_32">
+    <rect width="100" height="100" fill="white"></rect>
+    </clipPath>
+  </defs>
+</svg>
+
+
+</tc-flag>
   english
 </a>
+
 
     </p>
 

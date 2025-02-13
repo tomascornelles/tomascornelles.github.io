@@ -20,10 +20,10 @@
          @text="tag"></a>
       <br webc:if="postEn || postEs">
       <a webc:if="postEn" :href="postEn">
-        Also available in English 🇬🇧
+        Also available in English <tc-flag lang="en"></tc-flag>
       </a>
       <a webc:if="postEs" :href="postEs">
-        También disponible en Español 🇪🇸
+        También disponible en Español <tc-flag lang="es"></tc-flag>
       </a>
     </p>
     <em webc:elseif="!home" @text="dateFormat(postDate, page.lang)"></em>

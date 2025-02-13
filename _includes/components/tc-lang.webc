@@ -2,6 +2,8 @@
   webc:for="lang of langs"
   :href="langUrl(lang.url, id)"
   >
-  <span @text="lang.flag" webc:nokeep></span>
+  
+  <tc-flag></tc-flag>
   <span @text="lang.name" webc:nokeep></span>
 </a>
+
