@@ -48,5 +48,6 @@
   
   .flag {
     transform: translateY(2px);
+    border-radius: .25rem;
   }
 </style>
