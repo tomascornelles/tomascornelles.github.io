@@ -1,4 +1,5 @@
-# <img src="https://tomascornelles.github.io/assets/images/favicon.png" alt="さ"> Tomas Cornelles' Personal Website 👋
+<img src="https://tomascornelles.github.io/assets/images/favicon.png" alt="さ" width="128"> 
+# Tomas Cornelles' Personal Website 👋
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/tomascornelles/tomascornelles.github.io)
 ![GitHub repo size](https://img.shields.io/github/repo-size/tomascornelles/tomascornelles.github.io)
@@ -35,7 +36,7 @@ npm run build
 
 ## 🌐 Live Demo
 
-Check out the live version of the website [here](https://tomascornelles.github.io).
+Check out the live version of the website at [tomascornelles.is-a.dev](https://tomascornelles.is-a.dev).
 
 ## 🛠️ Built With
 
@@ -72,7 +73,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-Feel free to reach out to Tomas Cornelles via [mastodon](https://mastodon.world/@tomascornelles).
+Feel free to reach out to Tomas Cornelles via Github.
 
 ## 🌟 Show your support
 
