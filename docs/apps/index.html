@@ -178,7 +178,7 @@
   }
 
   button:active::before, [role=button]:active::before {
-background: linear-gradient(90deg, var(--color-accent2) 0%, var(--color-accent) 100%);
+    background: linear-gradient(90deg, var(--color-accent2) 0%, var(--color-accent) 100%);
   }
 
   strong, b {
@@ -241,6 +241,26 @@ background: linear-gradient(90deg, var(--color-accent2) 0%, var(--color-accent) 
   .table-wrapper {
     overflow-x: auto;
   }
+  
+  .apps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  .apps h2 {
+    width: 100%;
+    margin-block-start: 0;
+  }
+
+  .apps h2 a {
+    display: block;
+  }
+
+  .apps h2 img {
+    vertical-align: middle;
+  }
 
   @media (min-width: 768px) {
     h1 {
@@ -249,6 +269,10 @@ background: linear-gradient(90deg, var(--color-accent2) 0%, var(--color-accent) 
 
     button, [role=button] {
       display: inline-block;
+    }
+
+    .apps h2 {
+      width: 48%;
     }
   }</style>
   <style>header {
@@ -553,6 +577,15 @@ footer section {
 
 
   <main><h1>My Apps</h1>
+<div class="apps">
+<h2><a href="https://diceboy.netlify.app/"><img src="https://diceboy.netlify.app/favicon.png" alt="DiceBoy" width="32" height="32"> DiceBoy</a></h2>
+<h2><a href="https://oracleboy.netlify.app/"><img src="https://oracleboy.netlify.app/favicon.png" alt="OracleBoy" width="32" height="32"> OracleBoy</a></h2>
+<h2><a href="https://xd6.netlify.app/"><img src="https://xd6.netlify.app/favicon.png" alt="XD6" width="32" height="32"> XD6</a></h2>
+<h2><a href="https://ironsworn-sheet-online.netlify.app/"><img src="https://ironsworn-sheet-online.netlify.app/favicon.232420c8.png" alt="IronSworn" width="32" height="32"> IronSworn</a></h2>
+<h2><a href="https://pixelites.netlify.app/"><img src="https://pixelites.netlify.app/favicon.png" alt="Pixelites" width="32" height="32"> Pixelites</a></h2>
+<h2><a href="https://tc-cuentas.netlify.app/"><img src="https://tc-cuentas.netlify.app/favicon.2a2e97fc.png" alt="Cuentas" width="32" height="32"> Cuentas</a></h2>
+<h2><a href="https://caretes.netlify.app/"><img src="https://caretes.netlify.app/favicon.acf9a95c.png" alt="Caretes" width="32" height="32"> Caretes</a></h2>
+</div>
 </main>
 
   <footer>

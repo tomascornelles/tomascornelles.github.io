@@ -150,7 +150,7 @@
   }
 
   button:active::before, [role=button]:active::before {
-background: linear-gradient(90deg, var(--color-accent2) 0%, var(--color-accent) 100%);
+    background: linear-gradient(90deg, var(--color-accent2) 0%, var(--color-accent) 100%);
   }
 
   strong, b {
@@ -213,6 +213,26 @@ background: linear-gradient(90deg, var(--color-accent2) 0%, var(--color-accent) 
   .table-wrapper {
     overflow-x: auto;
   }
+  
+  .apps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  .apps h2 {
+    width: 100%;
+    margin-block-start: 0;
+  }
+
+  .apps h2 a {
+    display: block;
+  }
+
+  .apps h2 img {
+    vertical-align: middle;
+  }
 
   @media (min-width: 768px) {
     h1 {
@@ -221,6 +241,10 @@ background: linear-gradient(90deg, var(--color-accent2) 0%, var(--color-accent) 
 
     button, [role=button] {
       display: inline-block;
+    }
+
+    .apps h2 {
+      width: 48%;
     }
   }
 </style>
